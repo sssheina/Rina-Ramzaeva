@@ -1,0 +1,41 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --clr-1: #A1E7D9;
+    --clr-2: #BFEBE3;
+    --clr-3: #FFC9C9;
+    --clr-4: #FDACAC;
+    --clr-5: #B0E0FF;
+    --clr-6: #CDEBFF;
+    
+
+}
+
+.cover {
+    position: relative;
+    min-height: 1070px;
+    width: 100%;
+    
+    // background-color: var(--clr-4);
+ }
+
+ .cover::before,
+ .cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        var(--clr-1),
+        var(--clr-3),
+        var(--clr-5),
+    )
+ }
+
+ .cover::after {
+    filter: blur(3.5rem);
+ }
