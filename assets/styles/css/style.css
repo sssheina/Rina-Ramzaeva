@@ -652,6 +652,9 @@ textarea {
 
 body {
   font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
 
 @font-face {
@@ -764,6 +767,7 @@ body {
   right: 0;
   padding: 15px;
   min-width: 33px;
+  z-index: 1000;
 }
 
 .menu__sub-list li {
@@ -957,38 +961,59 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
 }
 
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-:root {
-  --clr-1: #A1E7D9;
-  --clr-2: #BFEBE3;
-  --clr-3: #FFC9C9;
-  --clr-4: #FDACAC;
-  --clr-5: #B0E0FF;
-  --clr-6: #CDEBFF;
-}
-
 .cover {
   position: relative;
   min-height: 1070px;
   width: 100%;
 }
 
-.cover::before,
-.cover::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, var(--clr-1), var(--clr-3), var(--clr-5));
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+:root {
+  --clr-1: #feeded;
+  --clr-2: #ffc9c9;
+  --clr-3: #b0e0ff;
+  --clr-4: #b0e0ff;
+  --clr-5: #a1e7d9;
+  --clr-6: #d8fff7;
 }
 
-.cover::after {
+.card {
+  min-height: 1070px;
+  width: 100%;
+  width: 100vw;
+  aspect-ratio: 1/1.5;
+  background: transparent;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  background: conic-gradient(from var(--gradient-angle), var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+
+.card::after {
   filter: blur(3.5rem);
 }
 
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
 .container {
   max-width: 1520px;
   width: 100%;
