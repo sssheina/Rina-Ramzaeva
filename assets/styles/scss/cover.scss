@@ -12,9 +12,7 @@
 
 :root {
   --clr-1: #feeded;
-
   --clr-2: #ffc9c9;
-
   --clr-3: #b0e0ff;
   --clr-4: #b0e0ff;
   --clr-5: #a1e7d9;
@@ -22,14 +20,9 @@
 }
 
 .card {
-  // height: 60vh;
   height: 1070px;
-  width: 100%;
   width: 100vw;
-  aspect-ratio: 1 / 1.5;
   background: transparent;
-  border-radius: 0.5rem;
-
   position: relative;
 }
 
