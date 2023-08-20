@@ -1,0 +1,17 @@
+.benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 1533px;
+  }
+
+ .benefits__aside {
+    position: absolute;
+    left: -53px;
+ }
+
+ .benefits__aside-span {
+    position: relative;
+ }
