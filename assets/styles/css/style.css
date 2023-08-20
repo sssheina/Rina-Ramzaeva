@@ -1130,8 +1130,135 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .about {
   display: flex;
+  position: relative;
   width: 100%;
-  min-height: 1940px;
+  height: 1940px;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.about__left-side {
+  position: relative;
+  width: 20.21vw;
+  height: 100vh;
+}
+
+.about__right-side {
+  display: flex;
+  position: relative;
+  width: 60vw;
+  height: 100vh;
+}
+
+.about__pic {
+  position: absolute;
+  top: 27vh;
+  left: 0vh;
+  width: 490px;
+  height: 655px;
+  z-index: 1;
+}
+
+.about__dawn {
+  position: absolute;
+  top: 80vh;
+  right: -10vh;
+  z-index: 1;
+}
+
+.about__star_1 {
+  position: absolute;
+  top: 154vh;
+  left: 19vh;
+}
+
+.about__star_2 {
+  position: absolute;
+  top: 27vh;
+  left: 9vh;
+}
+
+.about__text-block {
+  width: 1134px;
+  height: 1352px;
+  background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0.4) 100%);
+  margin-top: 356px;
+}
+
+.about__h2 {
+  margin: 125px 140px 42px 230px;
+}
+
+.about__hr_1 {
+  margin: 0px 0px 40px 230px;
+  width: 140px;
+  height: 2px;
+  color: #635D5D;
+}
+
+.about__text {
+  position: relative;
+  margin-left: 230px;
+  margin-right: 140px;
+  margin-bottom: 75px;
+}
+
+.about__hr_2 {
+  margin-left: 230px;
+  margin-bottom: 30px;
+  width: 140px;
+  height: 1px;
+}
+
+.about__endnote {
+  margin-left: 230px;
+  margin-right: 100px;
+}
+
+.about__waves_1 {
+  position: absolute;
+  top: 140vh;
+  left: -14vh;
+}
+
+.about__waves_2 {
+  position: absolute;
+  top: 176vh;
+  left: 43vh;
+}
+
+.about__waves_3 {
+  position: absolute;
+  top: 17vh;
+  right: 12vh;
+}
+
+.about__star_3 {
+  position: absolute;
+  top: 17vh;
+  left: 72vh;
+}
+
+.about__star_4 {
+  position: absolute;
+  z-index: 1;
+  top: 36vh;
+  right: 35vh;
+}
+
+.about__star_5 {
+  position: absolute;
+  bottom: 3vh;
+  right: 34vh;
+}
+
+.about__circle {
+  position: absolute;
+  top: 33vh;
+  right: 0vw;
 }
 
 .button {
@@ -1145,6 +1272,51 @@ body._touch .menu__list > li._active .menu__arrow {
   line-height: 24px;
   letter-spacing: 0.1em;
   border: none;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #635D5D;
+}
+
+h2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 133%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #635D5D;
+}
+
+h3 {
+  font-size: 24px;
+  font-style: normal;
+  color: #635D5D;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+}
+
+.text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 150%;
+  color: #635D5D;
+}
+
+.endnote {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  color: #635D5D;
 }
 
 /*# sourceMappingURL=style.css.map */
