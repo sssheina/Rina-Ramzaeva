@@ -118,6 +118,11 @@ margin-top: 60px;
 background: $color-pinkdark;
 }
 
+.cover__button:hover {
+  // color: white;
+  background-color: $color-pinklight;
+}
+
 .cover__right-side {
   position: relative;
   width: 50%;
@@ -173,3 +178,5 @@ bottom: 27vh;
   right: -2vw;
     bottom: 55vh;
 }
+
+
