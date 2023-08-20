@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1011,15 +1012,80 @@ body._touch .menu__list > li._active .menu__arrow {
     --gradient-angle: 360deg;
   }
 }
+.cover__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.cover__left-side {
+  width: 748px;
+  height: 100vh;
+}
+
+.cover__over-title {
+  width: 578px;
+  height: 86px;
+  padding-top: 290px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 179.5%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #635D5D;
+}
+
+/* Получи онлайн-консультации психолога Рины Рамзаевой */
+.cover__title {
+  width: 796px;
+  height: 245;
+  padding: 30px 0px;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #635D5D;
+}
+
+.cover__subtitle {
+  width: 718px;
+  height: 76px;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  color: #635D5D;
+}
+
+.cover__button {
+  width: 684px;
+  margin-top: 60px;
+  background: #FDACAC;
+}
+
 .container {
   max-width: 1520px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .about {
   display: flex;
   width: 100%;
   min-height: 1940px;
+}
+
+.button {
+  height: 107px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 53px;
+  text-transform: uppercase;
+  color: #635D5D;
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
