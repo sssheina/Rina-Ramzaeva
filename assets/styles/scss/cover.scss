@@ -1,7 +1,8 @@
 .cover {
   position: relative;
   min-height: 1070px;
-  width: 100%;
+  width: 100vw;
+  margin: 0 auto;
 }
 
 @property --gradient-angle {
@@ -19,15 +20,16 @@
   --clr-6: #d8fff7;
 }
 
-.card {
+.cover__gradient {
   height: 1070px;
   width: 100vw;
   background: transparent;
   position: relative;
+  margin: 0 auto;
 }
 
-.card::before,
-.card::after {
+.cover__gradient::before,
+.cover__gradient::after {
   content: "";
   position: absolute;
   inset: -0.5rem;
@@ -42,11 +44,11 @@
     var(--clr-6)
   );
   border-radius: inherit;
-  animation: rotation 20s linear infinite;
+  animation: rotation 15s linear infinite;
 }
 
-.card::after {
-  filter: blur(3.5rem);
+.cover__gradient::after {
+  filter: blur(3.8rem);
 }
 
 @keyframes rotation {
@@ -64,7 +66,7 @@
 }
 
 .cover__left-side {
-  width: 748px;
+  width: 50%;
   height: 100vh;
 }
 
@@ -79,8 +81,6 @@
   text-transform: uppercase;
   color: $color-black;
 }
-
-/* Получи онлайн-консультации психолога Рины Рамзаевой */
 
 .cover__title {
   width: 796px;
@@ -105,7 +105,65 @@ color: $color-black;
 }
 
 .cover__button {
+  position: relative;
+  z-index: 1;
 width: 684px;
 margin-top: 60px;
 background: $color-pinkdark;
+}
+
+.cover__right-side {
+  position: relative;
+  width: 50%;
+  }
+  
+
+.cover__pic {
+  position: absolute;
+  z-index: 1;
+width: 1100px;
+height: 1046px;
+left: -7vw;
+top: 3.3vh;
+}
+
+.cover__right-circles {
+position: absolute;
+right: 0vw;
+bottom: 0vh;
+}
+
+.cover__left-circles {
+  position: absolute;
+  left: 0vw;
+  top: 8vh;
+}
+
+.cover__arrows {
+  position: absolute;
+  right: 7vw;
+top: 17vh;
+}
+
+.cover__star_1 {
+  position: absolute;
+  left: 0vw;
+top: 67vh;
+}
+.cover__star_2 {
+  position: absolute;
+  left: 32vw;
+top: 28vh;
+}
+.cover__star_3 {
+  position: absolute;
+  left: 43vw;
+bottom: 27vh;
+} 
+
+.cover__present {
+  position: absolute;
+  z-index: 1;
+  right: -2vw;
+    bottom: 55vh;
 }

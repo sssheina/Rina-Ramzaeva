@@ -20,7 +20,7 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
-  min-height: 90px;
+  min-height: 150px;
 }
 .header__logo {
   position: relative;
@@ -50,7 +50,7 @@
 .menu__link {
   color: $color-black;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
 }
 .menu__link:hover {
