@@ -131,6 +131,9 @@ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
    background-color: $color-pinklight;
    width: 667px;
 }
+button:hover {
+   background-color:$color-pinkdark;
+ }
 
 .benefits__star_1 {
    position: absolute;
