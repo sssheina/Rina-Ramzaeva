@@ -1551,9 +1551,12 @@ h3 {
 .help__button {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background: #bae2fc;
+  width: 667px;
+  margin: 0 auto;
 }
-.help__button button {
-  padding: 41px 129px;
+.help__button:hover {
   background: #D9F0FF;
 }
 

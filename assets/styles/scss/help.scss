@@ -32,10 +32,13 @@
   &__button {
     display: flex;
     justify-content: center;
-    & button {
-      padding: 41px 129px;
-      background: $color-bluelight;
-    }
+    align-items: center;
+    background: $color-blue;
+    width: 667px;
+    margin: 0 auto;
+  }
+  &__button:hover {
+    background: $color-bluelight;
   }
 }
 
