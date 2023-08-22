@@ -1,10 +1,8 @@
 .aside {
-    position: absolute;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 0;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
   }
@@ -15,37 +13,14 @@
     line-height: 150%;
     letter-spacing: 0.1em;
     color: $color-black;
-    padding: 0 40px;
-    position: relative;
+    &::before {
+        @include aside-before 
+      }
+      &::after {
+        @include aside-after 
+      }
   }
-  
-  .aside-span::before,
-  .aside-span::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background-color: $color-black;
-  }
-  
-  .aside-span::before {
-    width: 2px;
-    height: 80px;
-    bottom: -25px;
-    left:  265px;
-    transform: translateX(-50%) rotate(-90deg);
-  }
-  
-  .aside-span::after {
-    width: 2px;
-    height: 80px;
-    top: -25px;
-    left: -30px;
-    transform: translateX(-50%) rotate(-90deg);
-  }
-  
+    
   .aside-span:hover {
     transform: scale(1.1);
   }
