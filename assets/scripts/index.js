@@ -4,14 +4,10 @@ const swiper = new Swiper(".swiper", {
   grabCursor: true,
   touchRatio: 2,
   slideToClickedSlide: true,
-  keuboard: {
+  keyboard: {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
-  },
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: ".swiper",
   },
   // slidesPerView: 1, // - по умолчанию значение 1
   slidesPerView: 3,
@@ -30,7 +26,7 @@ const swiper = new Swiper(".swiper", {
   loopedSlides: 3,
   watchOverflow: true,
   spaceBetween: 37,
-  // slidesPerGroup: 3,
+  slidesPerGroup: 2,
   // centeredSlides: true,
   initialSlide: 0,
   freeMode: true,
@@ -42,11 +38,6 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  //   draggable: true,
-  //   hide: true,
-  // },
   // autoplay: {
   //   delay: 5000,
   //   disableOnInteraction: true,
