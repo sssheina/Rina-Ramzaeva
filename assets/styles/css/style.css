@@ -1511,4 +1511,125 @@ h3 {
   transform: scale(1.1);
 }
 
+.help {
+  padding: 220px 0 260px;
+}
+.help__title {
+  text-align: center;
+}
+.help hr {
+  margin: 30px auto 40px;
+  max-width: 285px;
+  height: 2px;
+  border: none;
+  background: #635D5D;
+}
+.help__subtitle {
+  margin: 0 auto;
+  color: #635D5D;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.help__subtitle:nth-child(3) {
+  max-width: 613px;
+}
+.help__subtitle:nth-child(5) {
+  max-width: 800px;
+  margin-bottom: 68px;
+}
+.help__button {
+  display: flex;
+  justify-content: center;
+}
+.help__button button {
+  padding: 41px 129px;
+  background: #D9F0FF;
+}
+
+.swiper {
+  margin: 98px 0 78px;
+  padding-top: 3rem;
+  height: 860px;
+}
+.swiper .swiper-slide {
+  position: relative;
+  max-width: 413px;
+}
+.swiper__picture {
+  height: 100%;
+  max-height: 500px;
+}
+.swiper__picture img {
+  width: 100%;
+  height: 100%;
+}
+.swiper__text {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 330px;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  z-index: 2;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.swiper__text h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+.swiper__text hr {
+  width: 140px;
+  height: 2px;
+  margin: 0;
+  background: #635D5D;
+  border: none;
+}
+.swiper__text p {
+  color: #635D5D;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.swiper-slide:nth-child(1n) .swiper__text {
+  background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
+}
+
+.swiper-slide:nth-child(2n) .swiper__text {
+  background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
+}
+
+.swiper-slide:nth-child(3n) .swiper__text {
+  background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
+}
+
+.swiper-scrollbar-drag {
+  background: #bbbaba;
+}
+
+.swiper-scrollbar-horizontal {
+  background: #e7e6e6;
+}
+
+.swiper-scrollbar {
+  position: absolute;
+  --swiper-scrollbar-top: 0px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #635D5D;
+}
+
 /*# sourceMappingURL=style.css.map */
