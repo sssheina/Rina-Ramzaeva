@@ -1636,6 +1636,7 @@ h3 {
 .swiper-button-prev,
 .swiper-button-next {
   color: #635D5D;
+}
 
 .benefits {
   display: flex;
@@ -2119,3 +2120,5 @@ h3 {
   height: 1042px;
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0) 100%);
 }
+
+/*# sourceMappingURL=style.css.map */
