@@ -1074,8 +1074,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__button {
   position: relative;
   z-index: 1;
-  width: 684px;
-  margin-top: 60px;
+  width: 452px;
+  margin-top: 34px;
   background: #FDACAC;
 }
 
@@ -1301,7 +1301,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .button {
   height: 107px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 53px;
   text-transform: uppercase;
   color: #635D5D;
