@@ -38,15 +38,15 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-    hide: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
+  //   draggable: true,
+  //   hide: true,
+  // },
   // autoplay: {
   //   delay: 5000,
   //   disableOnInteraction: true,
