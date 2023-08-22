@@ -1,7 +1,6 @@
 .help {
   position: relative;
   padding: 220px 0 260px;
-  // border: 6px solid green;
   &__title {
     text-align: center;
   }
@@ -21,11 +20,9 @@
     line-height: 150%;
     &:nth-child(3) {
       max-width: 613px;
-      // background: blue;
     }
     &:nth-child(5) {
       max-width: 800px;
-      // background: red;
       margin-bottom: 68px;
     }
   }
@@ -54,9 +51,8 @@
 .swiper {
   margin: 98px 0 78px;
   // overflow: visible;
-  padding-top: 3rem;
   height: 855px;
-  // border: 5px solid purple;
+  padding-bottom: 3rem;
   & .swiper-slide {
     position: relative;
     max-width: 413px;
@@ -108,68 +104,72 @@
       flex-direction: column;
       gap: 25px;
       margin: 0px 0px 0px 25px;
-      
     }
   }
 }
 
 .swiper-pagination-bullet {
-width: 20px;
-height: 20px;
+  cursor: pointer;
+  opacity: 1;
+  margin: 0 5px;
+  background: $color-blackhover;
+  width: 20px;
+  height: 20px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  --swiper-pagination-bottom: 0px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $color-blue;
 }
 
 .swiper__text-1_inside {
-
   width: 282px;
   height: 270px;
-  }
+}
 
 .swiper__text-2_inside {
-
   width: 316px;
   height: 270px;
 }
 
 .swiper__text-3_inside {
-
   width: 305px;
   height: 210px;
 }
 .swiper__text-4_inside {
-
   width: 323px;
   height: 240px;
-  }
+}
 
 .swiper__text-5_inside {
-
   width: 302px;
   height: 240px;
 }
 
 .swiper__text-6_inside {
-
   width: 323px;
   height: 210px;
 }
 
 .swiper__text-7_inside {
-
   width: 323px;
   height: 210px;
 }
 
 .swiper__text-8_inside {
-
   width: 295px;
   height: 240px;
 }
 
 .swiper:after {
   content: "";
-  top: 47px;
+  top: 0;
   right: 0;
-  height: 168vh;
+  height: 855px;
   position: absolute;
   width: 150px;
   z-index: 2;
@@ -183,14 +183,18 @@ height: 20px;
 .swiper:before {
   content: "";
   left: -2px;
-  height: 168vh;
+  height: 855px;
   position: absolute;
   width: 150px;
   z-index: 2;
-  background: linear-gradient(-90deg, rgba(242, 243, 248, 0) 0%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(
+    -90deg,
+    rgba(242, 243, 248, 0) 0%,
+    rgb(255, 255, 255) 100%
+  );
 }
 
- .swiper__text-1 {
+.swiper__text-1 {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
 .swiper__text-2 {
@@ -215,19 +219,6 @@ height: 20px;
   background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
 }
 
-.swiper-wrapper {
-  // border: 5px solid orangered;
-}
-.swiper-scrollbar-drag {
-  background: $color-blackhover;
-}
-.swiper-scrollbar-horizontal {
-  background: #e7e6e6;
-}
-.swiper-scrollbar {
-  position: absolute;
-  --swiper-scrollbar-top: 0px;
-}
 .swiper-button-prev,
 .swiper-button-next {
   color: $color-black;
@@ -236,4 +227,3 @@ height: 20px;
 // .swiper-button-next {
 // right: var(--swiper-navigation-sides-offset, -100px);
 // }
-
