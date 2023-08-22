@@ -722,6 +722,10 @@ body {
   min-height: 150px;
 }
 
+.header__container.scrolledHeaderContainer {
+  min-height: 12vh;
+}
+
 .header__logo {
   position: relative;
   z-index: 5;
@@ -1037,8 +1041,8 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 578px;
   height: 86px;
   padding-top: 290px;
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 179.5%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1049,7 +1053,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 796px;
   height: 245;
   padding: 30px 0px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 42px;
   line-height: 150%;
   letter-spacing: 0.1em;
@@ -1060,8 +1064,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__subtitle {
   width: 718px;
   height: 76px;
-  font-weight: 400;
-  font-size: 23px;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 150%;
   letter-spacing: 0.1em;
   color: #635D5D;

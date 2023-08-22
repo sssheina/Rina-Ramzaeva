@@ -45,6 +45,13 @@ const swiper = new Swiper(".swiper", {
   speed: 800,
 });
 
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  const headerContainer = document.querySelector(".header__container");
+  header.classList.toggle("scrolled", window.scrollY > 0);
+  headerContainer.classList.toggle("scrolledHeaderContainer", window.scrollY > 0);
+});
+
 // -------------- КНОПКА ВВЕРХ ------------------
 
 const btnUp = {

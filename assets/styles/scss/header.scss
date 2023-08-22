@@ -9,6 +9,7 @@
 }
 .header.scrolled {
     background: white;
+
 }
 .header__container {
   max-width: 1520px;
@@ -19,6 +20,9 @@
   align-items: center;
   justify-content: space-between;
   min-height: 150px;
+}
+.header__container.scrolledHeaderContainer {
+  min-height: 12vh;
 }
 .header__logo {
   position: relative;
