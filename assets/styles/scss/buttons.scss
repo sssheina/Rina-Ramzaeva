@@ -15,15 +15,14 @@
 
 // ____________________________________BUTTON_______________
 
-
 .glow-effect {
   --glow-line-color: #fff;
-  --glow-line-thickness: 2px;
+  --glow-line-thickness: -2px;
   --glow-line-length: 20px;
   --glow-blur-color: #fff;
   --glow-blur-size: 5px;
   --glow-offset: 0px;
-  --animation-speed: 1700ms;
+  --animation-speed: 700ms;
   /* do not change, used for calculations */
   --container-offset: 100px;
   position: relative;
@@ -45,7 +44,7 @@
   height: calc(100% - var(--container-offset) + var(--glow-offset));
   x: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
   y: calc((var(--container-offset) / 2) + calc(var(--glow-offset) / -2));
-  rx: 3.6rem; 
+  rx: 3.6rem;
   fill: transparent;
   stroke: black;
   stroke-width: 5px;

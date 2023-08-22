@@ -3,7 +3,8 @@
     left: -70px;
     content: "";
     top: -25px;
-    background-color: $color-black;    
+    background-color: $color-black;  
+    color: $color-black;   
     width: 2px;
     height: 80px;
     transform: translateX(-50%) rotate(-90deg);
@@ -15,6 +16,7 @@
     right: -70px;
     content: "";
     top: -25px;
+    color: $color-black;
     background-color: $color-black;    
     width: 2px;
     height: 80px;
