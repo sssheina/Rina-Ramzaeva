@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   width: 100%;
-  padding: 213px 0 260px;
+  padding: 220px 0 260px;
   & hr {
     max-width: 285px;
     margin: 0 auto;
@@ -26,8 +26,9 @@
     display: flex;
     justify-content: center;
     & button {
+      max-width: 387px;
+      width: 100%;
       background: $color-pinklight;
-      padding: 41px 111px;
     }
   }
 }
@@ -50,6 +51,10 @@
   gap: 30px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 30px;
+  transition: 0.4s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
   &:nth-child(1) {
     background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
   }
@@ -74,7 +79,7 @@
   }
   & p {
     max-width: 228px;
-    text-align: center;
+    align-self: start;
     &:nth-child(4) {
       font-size: 18px;
       font-weight: 500;
