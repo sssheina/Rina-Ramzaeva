@@ -28,15 +28,6 @@
     min-block-size: 100dvh;
 
  }
-
-//  @media (min-width: 960px) {
-//     .presents__wrapper {
-//        align-items: center;
-//        grid-template-columns: 1fr 1fr;
-//        gap: 4rem;
-//      }
-//    }
-
     
    .presents__guide-block, 
    .presents__webinar-block {
@@ -48,7 +39,8 @@
    .presents__title-block {
     display: flex;  
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
+    justify-content: space-between;  
     position: relative; 
     margin: 220px 0px 150px 0px;
     width: 285px;
@@ -63,6 +55,8 @@
     border: none;
 
    }
+
+   
 
    .presents__guide-block {
     display: flex;
