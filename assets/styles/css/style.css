@@ -2993,7 +2993,7 @@ details[open] summary ~ * {
 }
 
 .footer__card {
-  max-width: 167px;
+  max-width: fit-content;
 }
 .footer__card hr {
   margin: 20px 0;
@@ -3016,6 +3016,17 @@ details[open] summary ~ * {
 }
 .footer__card nav a:hover {
   color: #bbbaba;
+}
+.footer__card div {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer__card:last-child h3 {
+  text-align: right;
+}
+.footer__card:last-child hr {
+  margin-left: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
