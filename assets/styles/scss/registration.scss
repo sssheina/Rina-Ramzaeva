@@ -16,3 +16,221 @@
 .registration__aside-span {
   position: relative;
 }
+
+.registration__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.registration__title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 220px 0px 70px 0px;
+  width: 690px;
+  height: 160px;
+}
+
+.registration__title {
+  text-align: center;
+}
+.registration__title-hr {
+  width: 282px;
+  color: $color-black;
+  background-color: $color-black;
+  height: 2px;
+  border: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+//  ______________________FORM_____________
+
+input {
+  color: $color-black;
+}
+
+:root {
+  --swiper-theme-color: $color-pinkdark;
+}
+
+.ui-underline {
+  border: none;
+  border-bottom: 1px solid $color-black;
+  outline: none;
+  padding: 10px 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+  color: $color-black;
+}
+
+.ui-underline::placeholder {
+  font-weight: 500;
+}
+
+.ui-form-white,
+.ui-form-white .ui-placeholder span {
+  color: #fff;
+}
+
+.ui-form-white input::placeholder,
+.ui-form-white textarea::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.ui-form-white input,
+.ui-form-white textarea {
+  border-bottom-color: #fff;
+}
+
+.ui-placeholder input {
+  color: $color-black;
+}
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.agreedCheckbox {
+  width: 30px;
+  height: 30px;
+}
+
+
+.registration__inputfield label {
+  color: $color-black;
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.form {
+  width: 800px;
+}
+.textarea {
+  width: 760px;
+  height: 100px;
+  border: none;
+  line-height: 26px;
+  font-weight: 600;
+  font-size: 21px;
+  color: $color-black;
+  padding: 20px;
+   &::placeholder{
+    color: $color-blackhover;
+    font-weight: 400;
+   }
+}
+.checkmark {
+  color: #fb7070;
+  font-weight: 900;
+}
+.registration__terms-group {
+  display: flex;
+  gap: 10px;
+}
+
+.ui-form-white .ui-underline {
+  color: #fff;
+}
+
+.ui-form-black,
+.ui-form-black .ui-placeholder span {
+  color: $color-black;
+}
+
+.ui-form-black input::placeholder,
+.ui-form-black textarea::placeholder {
+  color: $color-black;
+  opacity: 0.5;
+}
+
+.ui-form-black input,
+.ui-form-black textarea {
+  border-bottom-color: $color-black;
+}
+
+.ui-form-black .ui-underline {
+  color: $color-black;
+}
+
+.ui-placeholder {
+  position: relative;
+  perspective: 100px;
+}
+
+.ui-placeholder input,
+.ui-placeholder textarea {
+  width: 100%;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.ui-placeholder input ~ span,
+.ui-placeholder textarea ~ span {
+  visibility: visible;
+  position: absolute;
+  opacity: 0;
+  display: inline-block;
+  transition: all 1s cubic-bezier(0.08, 0.86, 0.35, 0.94);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-blackhover;
+}
+
+.ui-placeholder input:not(:placeholder-shown) ~ span,
+.ui-placeholder textarea:not(:placeholder-shown) ~ span {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* perspective origin */
+.ui-placeholder.ui-leftTop {
+  perspective-origin: left top;
+}
+
+/* set position */
+.ui-placeholder.ui-leftTop input ~ span,
+.ui-placeholder.ui-leftTop textarea ~ span {
+  bottom: 100%;
+  left: 0;
+}
+
+/* slide effects */
+/**************************************************************/
+.ui-placeholder.ui-leftTop.ui-slide textarea ~ span {
+  bottom: 90%;
+}
+
+.ui-placeholder.ui-leftTop.ui-slide textarea:not(:placeholder-shown) ~ span {
+  bottom: 100%;
+}
+
+.row > div {
+  margin-bottom: 50px;
+}
+
+.registration__button {
+  width: 400px;
+  background-color: $color-pinkdark;
+  align-self: center;
+}
+
+.registration__button:hover {
+  background-color: $color-pinklight;
+}
