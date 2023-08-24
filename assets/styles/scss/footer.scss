@@ -28,7 +28,7 @@
   }
 }
 .footer__card {
-  max-width: 167px;
+  max-width: fit-content;
   & hr {
     margin: 20px 0;
     max-width: 167px;
@@ -51,5 +51,17 @@
         color: $color-blackhover;
       }
     }
+  }
+  & div {
+    display: flex;
+    gap: 3rem;
+  }
+}
+.footer__card:last-child {
+  & h3 {
+    text-align: right;
+  }
+  & hr {
+    margin-left: auto;
   }
 }
