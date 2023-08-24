@@ -856,6 +856,84 @@
             </div>
             <div class="registration__wrapper container">
 
+                <div class="registration__title-block">
+                    <h2 class="registration__title">запись на бесплатную<br>
+                        мини-сессию</h2>
+                    <hr class="registration__title-hr">
+                </div>
+
+                <form class="form formWithValidation" action="" novalidate>
+
+                    
+                    <div class="registration__col">
+                        <div class="ui-placeholder ui-leftTop ui-rotate">
+                            <input type="text" id="#userName" class="ui-underline" placeholder="Имя (как к тебе обращаться)" spellcheck="false">
+                            <span>Имя</span>
+                        </div>
+                    </div>
+
+                    <div class="registration__col">
+                        <div class="ui-placeholder ui-leftTop ui-rotate">
+                            <input type="text" id="email" class="ui-underline" placeholder="Электронный адрес" spellcheck="false">
+                            <span>Электронный адрес</span>
+                        </div>
+                    </div>
+
+                    <div class="registration__col">
+                        <div class="ui-placeholder ui-leftTop ui-rotate">
+                            <input type="text" class="ui-underline" placeholder="WhatsApp" spellcheck="false">
+                            <span>WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <div class="registration__col">
+                        <div class="ui-placeholder ui-leftTop ui-rotate">
+                            <input type="text" class="ui-underline" placeholder="Telegram" spellcheck="false">
+                            <span>Telegram</span>
+                        </div>
+                    </div>
+
+                    
+
+                <div class="registration__inputfield">
+                    <label>Опиши свой запрос/проблему<br> </label><br>
+                    <textarea class="textarea" id="textarea" placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)" ></textarea>
+                  </div>
+
+                <div class="registration__inputfield terms">
+
+                    <div class="registration__terms-group">
+                      <input type="checkbox" class="agreedCheckbox" required/>
+                      <span class="checkmark">*</span>
+                      <label class="check">Тебе больше 18 лет</label>
+                    </div>
+                  
+                    <div class="registration__terms-group">
+                        <input type="checkbox" class="agreedCheckbox" required/>
+                        <span class="checkmark">*</span>
+                        <label class="check">Согласие на отправку личных данных</label>
+                      </div>
+                  
+                </div>
+
+                  <div id="errorsInfo"></div>
+                  <br>   
+
+                    <button class="registration__button button glow-effect" type="submit" data-glow-offset="true">
+                        отправить
+                        <svg class="glow-container">
+                            <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+                            <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+                        </svg>
+
+                    </button>
+                  
+                </div>
+
+            
+                    
+                  </form>
+
             </div>
         </section>
 
@@ -1065,7 +1143,7 @@
 
                     </div>
                     <video class="presents__video video-presents" muted="" controls="controls"
-                        poster="./assets/images/present_video_cover.png" src="./assets/video/web.mp4" width="644"
+                        poster="./assets/images/present_video_cover_2.png" src="./assets/video/web.mp4" width="644"
                         height="400"></video>
                 </div>
 
