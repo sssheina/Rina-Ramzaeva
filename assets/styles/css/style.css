@@ -2861,6 +2861,28 @@ input {
   background-color: #FFDADA;
 }
 
+#errorsInfo {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+}
+
+.agreedCheckbox {
+  border-color: #635D5D;
+}
+
+.agreedCheckbox:checked {
+  background-color: #FDACAC;
+  color: #635D5D;
+}
+
+input[type=checkbox] {
+  accent-color: #FDACAC;
+  color: #635D5D;
+  border-color: #635D5D;
+}
+
 .faq {
   display: flex;
   flex-direction: column;

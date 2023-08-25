@@ -75,54 +75,96 @@ window.onclick = (event) => {
 }
 
 
+
 // _____________________ФОРМА____________________
 
-let errorsInfo = document.getElementById("errorsInfo");
+const form = document.querySelector('.formWithValidation');
+const userName = document.querySelector('#userName'); 
+const email = document.querySelector('#email');
+const checkboxAdult = document.querySelectorAll('.checkbox_18');
+const checkboxPrivat = document.querySelectorAll('.checkboxPrivat');  
+const errorsInfo = document.querySelector('#errorsInfo');
+const whatsappInput = document.querySelector('#whatsApp');
 
-function checkValidity(input) {
-  var validity = input.validity;
+let submitted = false; 
 
-  if (validity.valueMissing) {
-    errors.push("Поле " + input.placeholder + " не заполнено");
-  }
-  if (validity.patternMismatch) {
-    errors.push("Неверный формат заполнения");
-  }
+const whatsappRegex = /^[0-9]*[()\-+\s]*$/;
+
+function validateEmail(email) {
+  const re =  /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+  return re.test(email);
 }
 
-function checkAll() {
-  errors = [];
-  let inputs = document.querySelectorAll("input");
-
-  for (let input of inputs) {
-    checkValidity(input);
-  }
-
-  errorsInfo.innerHTML = errors.join("/ <br>");
+function validateCheckboxes(checkboxes) {
+  return [...checkboxes].some(checkbox => checkbox.checked); 
 }
 
-const formElement = document.querySelector(".form");
+form.addEventListener('submit', e => {
 
-formElement.addEventListener("submit", function (evt) {
-  evt.preventDefault();
+  if (!submitted) {
+    submitted = true;
+  }
 
-  checkAll();
-  if (errors.length === 0) {
-    let user = {
-      name: document.querySelector("#userName").value,
-      login: document.querySelector("#email").value,
-    };
-    fetch("https://httpbin.org/post", {
-      method: "POST",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-    })
-      .then((res) => res.json())
-      .then((user) => console.log(user));
+  let errors = [];
+
+  if (userName.value === '') {    // Check if the username field is empty
+        errors.push('Имя обязательно');
+      }
+
+  if (email.value === '') {    // Check if the email field is empty
+        errors.push('Email обязателен');
+      } else if (!validateEmail(email.value)) {    // Check if the email format is valid
+        errors.push('Недействительный адрес электронной почты');
+      }
+
+  if (!validateCheckboxes(checkboxAdult)) {
+    errors.push('Подтверди, что тебе больше 18 лет'); 
+  }
+
+  if (!validateCheckboxes(checkboxPrivat)) {
+    errors.push('Необходимо согласиться с условиями');
+  }
+
+  if (!whatsappRegex.test(whatsappInput.value)) {
+    errors.push('Поле WhatsApp может содержать только цифры, "-", "+", "()" и пробелы');
+  }
+
+  if (errors.length > 0) {
+    e.preventDefault();
+    errorsInfo.innerHTML = errors.join('<br>');
+    errorsInfo.style.color = '#fb7070';
+  } else {
+    errorsInfo.innerHTML = '';
+    form.submit();
   }
 });
+
+userName.addEventListener('input', () => {
+  if (submitted) errorsInfo.innerHTML = '';
+});
+
+email.addEventListener('input', () => {
+  if (submitted) errorsInfo.innerHTML = '';
+});
+
+whatsappInput.addEventListener('input', () => {
+  if (submitted) errorsInfo.innerHTML = '';  
+});
+
+checkboxAdult.forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    if(submitted) errorsInfo.innerHTML = '';
+  });
+});
+
+checkboxPrivat.forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+    if(submitted) errorsInfo.innerHTML = '';
+  });  
+});
+
+
+
 
 // -------------- КНОПКА ВВЕРХ ------------------
 
