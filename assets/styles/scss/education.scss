@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  max-width: 1920px;
   width: 100%;
   height: 1395px;
   background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 54.17%);
@@ -57,7 +58,6 @@
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 25px;
-
   margin-bottom: 135px;
 }
 
@@ -69,20 +69,27 @@
 // _______________________________для увеличения
 
 .education__pic-container {
-  width: 100%;
-  height: auto;
+  width: 270px;
+  height: 274px;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.education__pic-container:hover {
+  transform: scale(1.02);
 }
 
 .education__pic {
   width: 100%;
-  transition: transform 0.4s ease;
+  height: 100%;
+  object-fit: cover;
+  transition: .2s linear;
 }
 
 .education__pic:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(2);
+  // -ms-transform: scale(1.03); /* IE 9 */
+  // -webkit-transform: scale(1.03); /* Safari 3-8 */
+  // transform: scale(1.03);
   filter: none;
   z-index: 1000;
 }
@@ -93,4 +100,41 @@
 }
 .education__button:hover {
   background-color: $color-bluelight;
+}
+
+.education__popup {
+  position: fixed;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.education__popup-span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: $color-pinklight;
+  cursor: pointer;
+  z-index: inherit;
+
+}
+
+.education__popup-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .education__popup-img {
+    width: 95%;
+  }
 }
