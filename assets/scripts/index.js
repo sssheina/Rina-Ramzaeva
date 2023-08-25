@@ -55,6 +55,26 @@ window.addEventListener("scroll", function () {
   );
 });
 
+//_____________________Education PIC-ZOOM__________________
+
+document.querySelectorAll('.education__pic').forEach(image =>{
+  image.onclick = () => {
+  document.querySelector('.education__popup').style.display = 'block';
+  document.querySelector('.education__popup-img').src = image.getAttribute('src');
+  }
+});
+document.querySelector('.education__popup-span').onclick = () =>{
+  document.querySelector('.education__popup').style.display = 'none';
+}
+
+window.onclick = (event) => {
+  let popup = document.querySelector('.education__popup');
+  if (event.target == popup) {
+    popup.style.display = 'none';
+  }
+}
+
+
 // _____________________ФОРМА____________________
 
 let errorsInfo = document.getElementById("errorsInfo");

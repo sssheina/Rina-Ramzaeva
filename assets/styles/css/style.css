@@ -1179,14 +1179,12 @@ body._touch .menu__list > li._active .menu__arrow {
 .about__left-side {
   position: relative;
   width: 20.21vw;
-  height: 100vh;
 }
 
 .about__right-side {
   display: flex;
   position: relative;
   width: 60vw;
-  height: 100vh;
 }
 
 .about__pic {
@@ -2100,6 +2098,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  max-width: 1920px;
   width: 100%;
   height: 1395px;
   background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 54.17%);
@@ -2163,20 +2162,24 @@ h3 {
 }
 
 .education__pic-container {
-  width: 100%;
-  height: auto;
+  width: 270px;
+  height: 274px;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.education__pic-container:hover {
+  transform: scale(1.02);
 }
 
 .education__pic {
   width: 100%;
-  transition: transform 0.4s ease;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
 }
 
 .education__pic:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(2);
   filter: none;
   z-index: 1000;
 }
@@ -2190,6 +2193,41 @@ h3 {
   background-color: #D9F0FF;
 }
 
+.education__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.education__popup-span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #FFDADA;
+  cursor: pointer;
+  z-index: inherit;
+}
+
+.education__popup-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .education__popup-img {
+    width: 95%;
+  }
+}
 .steps {
   display: flex;
   flex-direction: column;
