@@ -1579,16 +1579,21 @@ h3 {
 
 .swiper {
   margin: 98px 0 78px;
+  width: 90%;
   height: 855px;
   padding-bottom: 3rem;
 }
 .swiper .swiper-slide {
   position: relative;
-  max-width: 413px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.33vw;
 }
 .swiper__picture {
-  height: 100%;
   max-height: 500px;
+  max-width: 413px;
+  width: 100%;
 }
 .swiper__picture img {
   width: 100%;
@@ -1596,7 +1601,7 @@ h3 {
 }
 .swiper__text {
   position: absolute;
-  bottom: 8px;
+  bottom: 40px;
   left: 50%;
   transform: translate(-50%);
   max-width: 366px;
@@ -1634,6 +1639,10 @@ h3 {
   flex-direction: column;
   gap: 25px;
   margin: 0px 0px 0px 25px;
+}
+
+.swiper-wrapper {
+  margin: 0 auto;
 }
 
 .swiper-pagination-bullet {
@@ -1694,27 +1703,6 @@ h3 {
   height: 240px;
 }
 
-.swiper:after {
-  content: "";
-  top: 0;
-  right: 0;
-  height: 855px;
-  position: absolute;
-  width: 150px;
-  z-index: 2;
-  background: linear-gradient(90deg, rgba(242, 243, 248, 0) 0%, rgb(255, 255, 255) 100%);
-}
-
-.swiper:before {
-  content: "";
-  left: -2px;
-  height: 855px;
-  position: absolute;
-  width: 150px;
-  z-index: 2;
-  background: linear-gradient(-90deg, rgba(242, 243, 248, 0) 0%, rgb(255, 255, 255) 100%);
-}
-
 .swiper__text-1 {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
@@ -1747,9 +1735,19 @@ h3 {
   background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #635D5D;
+.lunchbox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 70px; /* 70px padding to create room for the arrows */
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 0; /* Position the button to the left of the lunchbox */
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 0; /* Position the button to the right of the lunchbox */
 }
 
 .benefits {
