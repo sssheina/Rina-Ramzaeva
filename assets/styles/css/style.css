@@ -2192,6 +2192,7 @@ h3 {
 }
 
 .education__popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -2204,9 +2205,9 @@ h3 {
 .education__popup-span {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 22%;
   font-size: 60px;
-  font-weight: bolder;
+  font-weight: 600;
   color: #FFDADA;
   cursor: pointer;
   z-index: inherit;
