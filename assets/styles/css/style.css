@@ -2692,25 +2692,14 @@ input {
   outline: none;
   padding: 10px 0;
   font-size: 21px;
-  font-weight: 700;
   line-height: 26px;
   -webkit-font-smoothing: antialiased;
   color: #635D5D;
 }
 
-.ui-underline::placeholder {
+input::placeholder {
   font-weight: 500;
-}
-
-.ui-form-white,
-.ui-form-white .ui-placeholder span {
-  color: #fff;
-}
-
-.ui-form-white input::placeholder,
-.ui-form-white textarea::placeholder {
-  color: #fff;
-  opacity: 0.5;
+  color: #635D5D;
 }
 
 .ui-form-white input,
@@ -2725,12 +2714,7 @@ input {
 .terms {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.agreedCheckbox {
-  width: 30px;
-  height: 30px;
+  gap: 15px;
 }
 
 .registration__inputfield label {
@@ -2763,6 +2747,7 @@ input {
 .checkmark {
   color: #fb7070;
   font-weight: 900;
+  font-size: 16px;
 }
 
 .registration__terms-group {
@@ -2772,11 +2757,6 @@ input {
 
 .ui-form-white .ui-underline {
   color: #fff;
-}
-
-.ui-form-black,
-.ui-form-black .ui-placeholder span {
-  color: #635D5D;
 }
 
 .ui-form-black input::placeholder,
@@ -2806,21 +2786,46 @@ input {
   background-color: transparent;
 }
 
-.ui-placeholder input ~ span,
-.ui-placeholder textarea ~ span {
+.input-beforeName:after, .input-beforeEmail:after {
+  position: absolute;
+  padding-top: 16px;
+  cursor: text;
+}
+
+input:invalid + .input-beforeName:after,
+input:invalid + .input-beforeEmail:after {
+  content: "*";
+  color: #fb7070;
+  position: relative;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.input-beforeName:after {
+  left: 20rem;
+  top: -2.1rem;
+}
+
+.input-beforeEmail:after {
+  left: 14.3rem;
+  top: -2.1rem;
+}
+
+.ui-placeholder input ~ .input-after,
+.ui-placeholder textarea ~ .input-after {
   visibility: visible;
   position: absolute;
   opacity: 0;
   display: inline-block;
   transition: all 1s cubic-bezier(0.08, 0.86, 0.35, 0.94);
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 26px;
   color: #bbbaba;
 }
 
-.ui-placeholder input:not(:placeholder-shown) ~ span,
-.ui-placeholder textarea:not(:placeholder-shown) ~ span {
+.ui-placeholder input:not(:placeholder-shown) ~ .input-after,
+.ui-placeholder textarea:not(:placeholder-shown) ~ .input-after {
   visibility: visible;
   opacity: 1;
 }
@@ -2828,22 +2833,23 @@ input {
 /* perspective origin */
 .ui-placeholder.ui-leftTop {
   perspective-origin: left top;
+  position: relative;
 }
 
 /* set position */
-.ui-placeholder.ui-leftTop input ~ span,
-.ui-placeholder.ui-leftTop textarea ~ span {
+.ui-placeholder.ui-leftTop input ~ .input-after,
+.ui-placeholder.ui-leftTop textarea ~ .input-after {
   bottom: 100%;
   left: 0;
 }
 
 /* slide effects */
 /**************************************************************/
-.ui-placeholder.ui-leftTop.ui-slide textarea ~ span {
+.ui-placeholder.ui-leftTop.ui-slide textarea ~ .input-after {
   bottom: 90%;
 }
 
-.ui-placeholder.ui-leftTop.ui-slide textarea:not(:placeholder-shown) ~ span {
+.ui-placeholder.ui-leftTop.ui-slide textarea:not(:placeholder-shown) ~ .input-after {
   bottom: 100%;
 }
 
@@ -2869,18 +2875,11 @@ input {
 }
 
 .agreedCheckbox {
-  border-color: #635D5D;
-}
-
-.agreedCheckbox:checked {
-  background-color: #FDACAC;
-  color: #635D5D;
+  width: 25px;
 }
 
 input[type=checkbox] {
   accent-color: #FDACAC;
-  color: #635D5D;
-  border-color: #635D5D;
 }
 
 .faq {

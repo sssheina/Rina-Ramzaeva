@@ -873,34 +873,36 @@
                     <hr class="registration__title-hr">
                 </div>
 
-                <form class="form formWithValidation" action="" novalidate>
+                <form class="form formWithValidation" action="#" novalidate>
 
                     
                     <div class="registration__col">
-                        <div class="ui-placeholder ui-leftTop ui-rotate">
-                            <input type="text" id="userName" class="ui-underline" placeholder="Имя (как к тебе обращаться)" spellcheck="false">
-                            <span>Имя</span>
+                        <div class="ui-placeholder ui-leftTop">
+                            <input type="text" id="userName" class="ui-underline" placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
+                            <span class="input-beforeName"></span>
+                            <span class="input-after">Имя&nbsp<span class="checkmark">*</span></span>
                         </div>
                     </div>
 
                     <div class="registration__col">
-                        <div class="ui-placeholder ui-leftTop ui-rotate">
-                            <input type="text" id="email" class="ui-underline" placeholder="Электронный адрес" spellcheck="false">
-                            <span>Электронный адрес</span>
+                        <div class="ui-placeholder ui-leftTop">
+                            <input type="text" id="email" class="ui-underline" placeholder="Электронный адрес" spellcheck="false" required>
+                            <span class="input-beforeEmail"></span>
+                            <span class="input-after">Электронный адрес&nbsp<span class="checkmark">*</span></span>
                         </div>
                     </div>
 
                     <div class="registration__col">
-                        <div class="ui-placeholder ui-leftTop ui-rotate">
+                        <div class="ui-placeholder ui-leftTop">
                             <input type="text" id="whatsApp"class="ui-underline" placeholder="WhatsApp" spellcheck="false">
-                            <span>WhatsApp</span>
+                            <span class="input-after">WhatsApp (+7 (123) ***-**-**)</span>
                         </div>
                     </div>
 
                     <div class="registration__col">
-                        <div class="ui-placeholder ui-leftTop ui-rotate">
-                            <input type="text" class="ui-underline" placeholder="Telegram" spellcheck="false">
-                            <span>Telegram</span>
+                        <div class="ui-placeholder ui-leftTop">
+                            <input type="text" id="telegram" class="ui-underline" placeholder="Telegram" spellcheck="false">
+                            <span class="input-after">Telegram ("@name") </span>
                         </div>
                     </div>
 
@@ -908,7 +910,7 @@
 
                 <div class="registration__inputfield">
                     <label>Опиши свой запрос/проблему<br> </label><br>
-                    <textarea class="textarea" id="textarea" placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)" ></textarea>
+                    <textarea class="textarea" id="comment" placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)" ></textarea>
                   </div>
 
                 <div class="registration__inputfield terms">
