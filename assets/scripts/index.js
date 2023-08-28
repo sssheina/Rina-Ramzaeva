@@ -73,99 +73,289 @@ window.onclick = (event) => {
     popup.style.display = 'none';
   }
 }
+// _____________________ Соединённый сценарий____________
 
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.formWithValidation');
+  const userName = document.querySelector('#userName'); 
+  const email = document.querySelector('#email');
+  const checkboxAdult = document.querySelectorAll('.checkbox_18');
+  const checkboxPrivat = document.querySelectorAll('.checkboxPrivat');  
+  const errorsInfo = document.querySelector('#errorsInfo');
+  const whatsappInput = document.querySelector('#whatsApp');
+
+  let submitted = false; 
+
+  function validateEmail(email) {
+    const re = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+    return re.test(email);
+  }
+
+  function validateCheckboxes(checkboxes) {
+    return [...checkboxes].some(checkbox => checkbox.checked); 
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    if (!submitted) {
+      submitted = true;
+    }
+
+    let errors = [];
+
+    if (userName.value === '') {
+      errors.push('Имя обязательно');
+    }
+
+    if (email.value === '') {
+      errors.push('Email обязателен');
+    } else if (!validateEmail(email.value)) {
+      errors.push('Недействительный адрес электронной почты');
+    }
+
+    if (!validateCheckboxes(checkboxAdult)) {
+      errors.push('Подтверди, что тебе больше 18 лет');
+    }
+
+    if (!validateCheckboxes(checkboxPrivat)) {
+      errors.push('Необходимо согласиться с условиями');
+    }
+
+    if (errors.length > 0) {
+      errorsInfo.innerHTML = errors.join('<br>');
+      errorsInfo.style.color = '#fb7070';
+    } else {
+      errorsInfo.innerHTML = '';
+
+      try {
+        form.classList.add('_sending');
+        let formData = new FormData(form);
+        let response = await fetch('sendmail.php', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          let result = await response.json();
+          displaySuccessMessageModal(result.message);
+          form.reset();
+        } else {
+          displayErrorMessage("Ошибка отправки данных");
+        }
+      } catch (error) {
+        displayErrorMessage("Произошла ошибка: " + error.message);
+      } finally {
+        form.classList.remove('_sending');
+      }
+    }
+  });
+
+  function displaySuccessMessageModal(message) {
+    const modal = document.querySelector('#myModal');
+    const successMessageModal = modal.querySelector('#successMessage');
+    successMessageModal.textContent = message;
+    modal.style.display = 'block'; // Open the modal
+  }
+
+  function displayErrorMessage(message) {
+    const errorMessage = document.querySelector('#errorMessage');
+    errorMessage.textContent = message;
+  }
+
+  userName.addEventListener('input', () => {
+    if (submitted) errorsInfo.innerHTML = '';
+  });
+
+  email.addEventListener('input', () => {
+    if (submitted) errorsInfo.innerHTML = '';
+  });
+
+  whatsappInput.addEventListener('input', () => {
+    if (submitted) errorsInfo.innerHTML = '';  
+  });
+
+  checkboxAdult.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      if (submitted) errorsInfo.innerHTML = '';
+    });
+  });
+
+  checkboxPrivat.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      if (submitted) errorsInfo.innerHTML = '';
+    });  
+  });
+});
 
 
 // _____________________ФОРМА____________________
 
 
-const form = document.querySelector('.formWithValidation');
-const userName = document.querySelector('#userName'); 
-const email = document.querySelector('#email');
-const checkboxAdult = document.querySelectorAll('.checkbox_18');
-const checkboxPrivat = document.querySelectorAll('.checkboxPrivat');  
-const errorsInfo = document.querySelector('#errorsInfo');
-const whatsappInput = document.querySelector('#whatsApp');
+// const form = document.querySelector('.formWithValidation');
+// const userName = document.querySelector('#userName'); 
+// const email = document.querySelector('#email');
+// const checkboxAdult = document.querySelectorAll('.checkbox_18');
+// const checkboxPrivat = document.querySelectorAll('.checkboxPrivat');  
+// const errorsInfo = document.querySelector('#errorsInfo');
+// const whatsappInput = document.querySelector('#whatsApp');
 
-let submitted = false; 
-
-
-// const whatsappRegex = /\+[0-9]{1,3}\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
-
-function validateEmail(email) {
-  const re =  /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
-  return re.test(email);
-}
-
-function validateCheckboxes(checkboxes) {
-  return [...checkboxes].some(checkbox => checkbox.checked); 
-}
-
-form.addEventListener('submit', e => {
-
-  if (!submitted) {
-    submitted = true;
-  }
-
-  let errors = [];
-
-  if (userName.value === '') {    // Check if the username field is empty
-        errors.push('Имя обязательно');
-      }
-
-  if (email.value === '') {    // Check if the email field is empty
-        errors.push('Email обязателен');
-      } else if (!validateEmail(email.value)) {    // Check if the email format is valid
-        errors.push('Недействительный адрес электронной почты');
-      }
-
-  if (!validateCheckboxes(checkboxAdult)) {
-    errors.push('Подтверди, что тебе больше 18 лет'); 
-  }
-
-  if (!validateCheckboxes(checkboxPrivat)) {
-    errors.push('Необходимо согласиться с условиями');
-  }
-
-  // if (!whatsappRegex.test(whatsappInput.value)) {
-  //   errors.push('Поле WhatsApp может содержать только цифры, "-", "+", "()" и пробелы');
-  // }
-
-  if (errors.length > 0) {
-    e.preventDefault();
-    errorsInfo.innerHTML = errors.join('<br>');
-    errorsInfo.style.color = '#fb7070';
-  } else {
-    errorsInfo.innerHTML = '';
-    form.submit();
-  }
-});
-
-userName.addEventListener('input', () => {
-  if (submitted) errorsInfo.innerHTML = '';
-});
-
-email.addEventListener('input', () => {
-  if (submitted) errorsInfo.innerHTML = '';
-});
-
-whatsappInput.addEventListener('input', () => {
-  if (submitted) errorsInfo.innerHTML = '';  
-});
-
-checkboxAdult.forEach(checkbox => {
-  checkbox.addEventListener('change', () => {
-    if(submitted) errorsInfo.innerHTML = '';
-  });
-});
-
-checkboxPrivat.forEach(checkbox => {
-  checkbox.addEventListener('change', () => {
-    if(submitted) errorsInfo.innerHTML = '';
-  });  
-});
+// let submitted = false; 
 
 
+// // const whatsappRegex = /\+[0-9]{1,3}\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
+
+// function validateEmail(email) {
+//   const re =  /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+//   return re.test(email);
+// }
+
+// function validateCheckboxes(checkboxes) {
+//   return [...checkboxes].some(checkbox => checkbox.checked); 
+// }
+
+// form.addEventListener('submit', e => {
+
+//   if (!submitted) {
+//     submitted = true;
+//   }
+
+//   let errors = [];
+
+//   if (userName.value === '') {    // Check if the username field is empty
+//         errors.push('Имя обязательно');
+//       }
+
+//   if (email.value === '') {    // Check if the email field is empty
+//         errors.push('Email обязателен');
+//       } else if (!validateEmail(email.value)) {    // Check if the email format is valid
+//         errors.push('Недействительный адрес электронной почты');
+//       }
+
+//   if (!validateCheckboxes(checkboxAdult)) {
+//     errors.push('Подтверди, что тебе больше 18 лет'); 
+//   }
+
+//   if (!validateCheckboxes(checkboxPrivat)) {
+//     errors.push('Необходимо согласиться с условиями');
+//   }
+
+//   // if (!whatsappRegex.test(whatsappInput.value)) {
+//   //   errors.push('Поле WhatsApp может содержать только цифры, "-", "+", "()" и пробелы');
+//   // }
+
+//   if (errors.length > 0) {
+//     e.preventDefault();
+//     errorsInfo.innerHTML = errors.join('<br>');
+//     errorsInfo.style.color = '#fb7070';
+//   } else {
+//     errorsInfo.innerHTML = '';
+//     form.submit();
+//   }
+// });
+
+// userName.addEventListener('input', () => {
+//   if (submitted) errorsInfo.innerHTML = '';
+// });
+
+// email.addEventListener('input', () => {
+//   if (submitted) errorsInfo.innerHTML = '';
+// });
+
+// whatsappInput.addEventListener('input', () => {
+//   if (submitted) errorsInfo.innerHTML = '';  
+// });
+
+// checkboxAdult.forEach(checkbox => {
+//   checkbox.addEventListener('change', () => {
+//     if(submitted) errorsInfo.innerHTML = '';
+//   });
+// });
+
+// checkboxPrivat.forEach(checkbox => {
+//   checkbox.addEventListener('change', () => {
+//     if(submitted) errorsInfo.innerHTML = '';
+//   });  
+// });
+
+// ________________________________________________
+
+// "use strict"
+
+// document.addEventListener('DOMContentLoaded', function () {
+// 	const form = document.getElementById('form');
+// 	form.addEventListener('submit', formSend);
+
+// 	async function formSend(e) {
+// 		e.preventDefault();
+
+// 		let error = formValidate(form);
+
+// 		let formData = new FormData(form);
+// 		formData.append('image', formImage.files[0]);
+
+// 		if (error === 0) {
+// 			form.classList.add('_sending');
+// 			let response = await fetch('sendmail.php', {
+// 				method: 'POST',
+// 				body: formData
+// 			});
+// 			if (response.ok) {
+// 				let result = await response.json();
+// 				alert(result.message);
+// 				formPreview.innerHTML = '';
+// 				form.reset();
+// 				form.classList.remove('_sending');
+// 			} else {
+// 				alert("Ошибка");
+// 				form.classList.remove('_sending');
+// 			}
+// 		} else {
+// 			alert('Заполните обязательные поля');
+// 		}
+
+// 	}
+
+
+// 	function formValidate(form) {
+// 		let error = 0;
+// 		let formReq = document.querySelectorAll('._req');
+
+// 		for (let index = 0; index < formReq.length; index++) {
+// 			const input = formReq[index];
+// 			formRemoveError(input);
+
+// 			if (input.classList.contains('_email')) {
+// 				if (emailTest(input)) {
+// 					formAddError(input);
+// 					error++;
+// 				}
+// 			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+// 				formAddError(input);
+// 				error++;
+// 			} else {
+// 				if (input.value === '') {
+// 					formAddError(input);
+// 					error++;
+// 				}
+// 			}
+// 		}
+// 		return error;
+// 	}
+// 	function formAddError(input) {
+// 		input.parentElement.classList.add('_error');
+// 		input.classList.add('_error');
+// 	}
+// 	function formRemoveError(input) {
+// 		input.parentElement.classList.remove('_error');
+// 		input.classList.remove('_error');
+// 	}
+// 	//Функция теста email
+// 	function emailTest(input) {
+// 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+// 	}
+
+// });
 
 
 // -------------- КНОПКА ВВЕРХ ------------------

@@ -2907,6 +2907,31 @@ input[type=checkbox] {
   accent-color: #FDACAC;
 }
 
+._error {
+  box-shadow: 0 0 15px red;
+}
+
+.form {
+  position: relative;
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../../images/loading.gif") center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.form._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .faq {
   display: flex;
   flex-direction: column;

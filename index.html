@@ -878,7 +878,7 @@
                     
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
-                            <input type="text" id="userName" class="ui-underline" placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
+                            <input type="text" id="userName" class="ui-underline _req name" placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
                             <span class="input-beforeName"></span>
                             <span class="input-after">Имя&nbsp<span class="checkmark">*</span></span>
                         </div>
@@ -886,7 +886,7 @@
 
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
-                            <input type="text" id="email" class="ui-underline" placeholder="Электронный адрес" spellcheck="false" required>
+                            <input type="text" id="email" class="ui-underline _email _req email" placeholder="Электронный адрес" spellcheck="false" required>
                             <span class="input-beforeEmail"></span>
                             <span class="input-after">Электронный адрес&nbsp<span class="checkmark">*</span></span>
                         </div>
@@ -912,19 +912,19 @@
 
                 <div class="registration__inputfield">
                     <label>Опиши свой запрос/проблему<br> </label><br>
-                    <textarea class="textarea" id="comment" placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)" ></textarea>
+                    <textarea class="textarea message" id="comment" placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)" ></textarea>
                   </div>
 
                 <div class="registration__inputfield terms">
 
                     <div class="registration__terms-group">
-                      <input type="checkbox" class="checkbox_18 agreedCheckbox" required/>
+                      <input type="checkbox" class="checkbox_18 agreedCheckbox _req" required/>
                       <span class="checkmark">*</span>
                       <label class="check">Тебе больше 18 лет</label>
                     </div>
                   
                     <div class="registration__terms-group">
-                        <input type="checkbox" class="checkboxPrivat agreedCheckbox" required/>
+                        <input type="checkbox" class="checkboxPrivat agreedCheckbox _req" required/>
                         <span class="checkmark">*</span>
                         <label class="check">Согласие на отправку личных данных</label>
                       </div>
