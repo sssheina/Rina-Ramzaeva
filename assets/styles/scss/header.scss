@@ -8,15 +8,10 @@
   transition: background 0.3s ease-in-out;
 }
 .header.scrolled {
-    background: white;
-
+  background: white;
 }
 .header__container {
-  max-width: 1520px;
-  width: 100%;
-  margin: 0px auto;
   display: flex;
-  padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
   min-height: 150px;
@@ -24,22 +19,19 @@
 .header__container.scrolledHeaderContainer {
   min-height: 12vh;
 }
-.header__logo {
-  position: relative;
-  z-index: 5;
-  width: 86px;
-  height: 43px;
-}
+
 .menu__button {
-    width: 46px;
-    height: 46px;
-    padding-left: 170px;
+  padding-left: 170px;
 }
-.header__logo-img {
+.menu__button img {
+  width: 46px;
+}
+.header__logo img {
+  max-width: 86px;
+  width: 100%;
   vertical-align: baseline;
   height: 43px;
 }
-
 
 .menu__icon {
   display: none;
@@ -153,9 +145,8 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 16px;
     text-align: center;
     margin: 0px 0px 10px 0px;
-    padding: 0px 0px 0px 0px;;
+    padding: 0px 0px 0px 0px;
   }
-
 
   .menu__sub-link {
     color: #ffffff;

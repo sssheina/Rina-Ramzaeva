@@ -15,9 +15,10 @@
     <!-- header -->
 
     <header class="header">
-        <div class="header__container">
-            <a class="header__logo" href="index.html"><img class="header__logo-img" src="./assets/images/logo.svg"
-                    alt="logo" /></a>
+        <div class="header__container container">
+            <a class="header__logo" href="index.html">
+                <img src="./assets/images/logo.svg" alt="logo" />
+            </a>
             <div class="header__menu menu">
                 <div class="menu__icon">
                     <span></span>
@@ -25,36 +26,41 @@
                 <nav class="menu__body">
                     <ul class="menu__list">
                         <li>
-                            <a data-goto=".main__about-section" href="#" class="menu__link">Обо мне</a>
+                            <a href="#about" class="menu__link">Обо мне</a>
                         </li>
                         <li>
-                            <a data-goto=".main__benefits-section" href="#" class="menu__link">Преимущества</a>
+                            <a href="#benefits" class="menu__link">Преимущества</a>
                         </li>
                         <li>
-                            <a data-goto=".main__help-section" href="#" class="menu__link">Помощь</a>
+                            <a href="#help" class="menu__link">Помощь</a>
                         </li>
                         <li>
-                            <a data-goto=".main__registration-section" href="#" class="menu__link">Запись</a>
+                            <a href="#registration" class="menu__link">Запись</a>
                         </li>
                         <li>
-                            <a data-goto=".main__faq-section" href="#" class="menu__link">FAQ</a>
+                            <a href="#faq" class="menu__link">FAQ</a>
                         </li>
                         <li>
-                            <a data-goto=".main__presents-section" href="#" class="menu__link">Подарки</a>
+                            <a href="#present" class="menu__link">Подарки</a>
                         </li>
                         <li>
-                            <a data-goto=".main__footer" href="#" class="menu__link">Контакты</a>
+                            <a href="#contacts" class="menu__link">Контакты</a>
                         </li>
                         <li>
-                            <a class="menu__button"><img class="header__button" src="./assets/images/wa.svg"
-                                    alt="contacts" /></a>
+                            <a class="menu__button">
+                                <img src="./assets/images/wa.svg" alt="Контакты" />
+                            </a>
                         </li>
                         <li>
                             <a class="menu__link language">RU</a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
-                                <li><a href="index_en.html" class="menu__sub-link">EN</a></li>
-                                <li><a href="index_cz.html" class="menu__sub-link">HE</a></li>
+                                <li>
+                                    <a href="index_en.html" class="menu__sub-link">EN</a>
+                                </li>
+                                <li>
+                                    <a href="index_cz.html" class="menu__sub-link">HE</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -65,53 +71,60 @@
 
     <!-- main -->
 
-    <div class="main">
+    <main class="main">
 
         <!-- section COVER -->
 
         <section class="cover">
-            <div class="cover__gradient">
+            <div class="cover__gradient"></div>
 
-                <div class="cover__wrapper container">
-                    <div class="cover__left-side">
-                        <div class="cover__over-title">бесплатная<br>
-                            ознакомительная мини-сессия</div>
-                        <h1 class="cover__title">Получи <br>
-                            онлайн-консультации
-                            психолога <br>
-                            Рины Рамзаевой </h1>
-                        <div class="cover__subtitle">Психолог с татуировками:
-                            без цензуры <br>и предубеждений</div>
-                        <button class="cover__button button glow-effect" data-glow-offset="true">
-                            бесплатная мини-сессия
-                            <svg class="glow-container">
-                                <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-                                <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-                            </svg>
+            <div class="cover__wrapper container">
+                <div class="cover__left-side">
+                    <div class="cover__over-title">бесплатная<br>
+                        ознакомительная мини-сессия</div>
+                    <h1 class="cover__title">Получи <br>
+                        онлайн-консультации
+                        психолога <br>
+                        Рины Рамзаевой </h1>
+                    <div class="cover__subtitle">Психолог с татуировками:
+                        без цензуры <br>и предубеждений</div>
+                    <button class="cover__button button glow-effect" data-glow-offset="true">
+                        бесплатная мини-сессия
+                        <svg class="glow-container">
+                            <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+                            <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+                        </svg>
 
-                        </button>
-                    </div>
-
-                    <div class="cover__right-side">
-                        <img class="cover__pic" src="./assets/images/rina_pic_cover.png"
-                            alt="Psychologist Rina Ramzaeva">
-                        <img class="cover__star_1" src="./assets/images/cover_star.svg" alt="">
-                        <img class="cover__star_2" src="./assets/images/cover_star.svg" alt="">
-                        <img class="cover__star_3" src="./assets/images/cover_star.svg" alt="">
-                        <img class="cover__present" src="./assets/images/cover_present.svg" alt="present sticker">
-                    </div>
-
+                    </button>
                 </div>
+
+                <div class="cover__right-side">
+                    <div class="cover__pic">
+                        <img src="./assets/images/rina_pic_cover.png" alt="Psychologist Rina Ramzaeva">
+                    </div>
+                    <img class="cover__star_1" src="./assets/images/cover_star.svg" alt="">
+                    <img class="cover__star_2" src="./assets/images/cover_star.svg" alt="">
+                    <img class="cover__star_3" src="./assets/images/cover_star.svg" alt="">
+                    <img class="cover__present" src="./assets/images/cover_present.svg" alt="present sticker">
+                </div>
+
             </div>
-            <img class="cover__right-circles" src="./assets/images/cover_right_circles.svg"
-                alt="big circles decoration">
+
+            <!-- <img class="cover__right-circles" src="./assets/images/cover_right_circles.svg"
+                alt="big circles decoration"> -->
+            <svg class="cover__right-circles" xmlns="http://www.w3.org/2000/svg" width="1057" height="823"
+                viewBox="0 0 1057 823" fill="none">
+                <path
+                    d="M664.067 503.538C644.093 518.371 633.747 538.982 636.96 556.035C642.827 587.119 692.946 602.34 724.96 589.473C765.16 573.316 778 512.393 760.96 474.448C736.426 419.811 646.173 404.456 596.96 438.335C539.56 477.858 542.227 581.461 591.627 641.635C636.613 696.446 721.706 716.896 782.293 680.423C855.386 636.406 854.333 532.683 830.293 471.773C793.946 379.659 684.253 332.793 588.96 350.06C502.653 365.709 425.827 434.39 412.96 513.235C389.587 656.508 578.92 823.923 734.293 784.748C821.586 762.733 880.906 682.777 903.626 610.873C906.013 603.303 945.746 469.994 860.96 364.773C770.506 252.516 618.4 271.629 579.627 276.498C544.8 280.871 412.107 297.55 343.627 410.248C260.707 546.726 344.227 705.086 355.627 725.898C431.853 865.051 614.64 968.962 796.96 911.81C947.826 864.516 1051.68 721.578 1055.63 572.085C1059.71 417.256 955.026 315.312 930.293 291.21C800.106 164.415 606.707 144.754 458.293 194.91C429.2 204.741 207.227 283.319 176.96 467.76C157.667 585.353 226.8 682.014 284.96 763.348C335.013 833.339 415.92 946.465 570.293 985.373C770.2 1035.74 930.093 920.531 948.96 906.46C987.64 877.61 1104.24 781.003 1127.63 610.873C1130.55 589.62 1150.19 428.063 1043.63 288.535C915.506 120.786 704.027 114.58 615.627 111.985C543.067 109.859 229.933 100.67 110.293 316.623C9.47983 498.59 116.013 714.114 146.293 775.385C172.706 828.805 241.827 963.692 400.96 1042.89C424 1054.35 633.293 1154.22 855.626 1054.92C995.426 992.488 1064.83 885.047 1106.29 820.86C1153.01 748.528 1244.55 606.833 1212.96 431.648C1193 320.916 1133.11 248.17 1096.96 204.273C1062.85 162.837 958.6 36.2159 788.96 6.32277C718.213 -6.14273 640.467 12.2747 484.96 49.1228C322.027 87.723 240.56 107.037 179.627 154.785C44.1332 260.996 16.0532 424.853 10.2932 458.398C-28.6135 685.385 98.6665 862.029 141.307 914.285"
+                    stroke="white" stroke-opacity="0.4" stroke-width="4" stroke-miterlimit="10" />
+            </svg>
             <img class="cover__left-circles" src="./assets/images/cover_left_circles.svg" alt="circles decoration">
             <img class="cover__arrows" src="./assets/images/cover_arrows_figure.svg" alt="arrows pictire decoration">
         </section>
 
 
         <!-- section ABOUT ОБО МНЕ-->
-        <section class="about">
+        <section class="about" id="about">
 
             <div class="about__aside aside">
                 <span class="about__aside-span aside-span">
@@ -174,7 +187,7 @@
 
         <!-- section benefits ПРЕИМУЩЕСТВА -->
 
-        <section class="benefits">
+        <section class="benefits" id="benefits">
             <div class="benefits__aside aside">
                 <span class="benefits__aside-span aside-span">
                     02 ПРЕИМУЩЕСТВА
@@ -274,7 +287,7 @@
         </section>
 
         <!-- section help ПОМОЩЬ -->
-        <section class="help">
+        <section class="help" id="help">
             <div class="help__aside aside">
                 <span class="help__aside-span aside-span">
                     03 ПОМОЩЬ
@@ -293,141 +306,143 @@
 
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-                    
-                <div class="help__swiper swiper">
-                    <div class="swiper-pagination"></div>
-                    <!-- <div class="swiper-scrollbar"></div> -->
-                    
-                    <div class="swiper-wrapper">
 
-                        <!-- Slides -->
+                    <div class="help__swiper swiper">
+                        <div class="swiper-pagination"></div>
+                        <!-- <div class="swiper-scrollbar"></div> -->
 
-                        <!-- 1. тревожность и страх -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/fear.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-1 swiper__text">
-                                <h3>Тревожность <br> и страх</h3>
-                                <hr>
-                                <div class="swiper__text-1_inside inside">
-                                    Ты испытываешь сильное беспокойство, в том числе без очевидных причин, чувство
-                                    страха. <br><br>
-                                    Возникают навязчивые мысли, переживания <br>о своём будущем, проблемы со сном.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2. эмоциональная неустойчивость -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/unstable.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-2 swiper__text">
-                                <h3>Эмоциональная неустойчивость</h3>
-                                <hr>
-                                <div class="swiper__text-2_inside inside">
-                                    Ты не можешь понять, почему у тебя резко меняется настроение: только что ты была
-                                    спокойна, <br>и вдруг раздражена. <br><br>
-                                    Сначала чувствовала радость, а через час тебе грустно.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 3. прокрастинация и гипобулия -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/procrastination.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-3 swiper__text">
-                                <h3>Прокрастинация <br> и гипобулия</h3>
-                                <hr>
-                                <div class="swiper__text-3_inside inside">
-                                    Ты постоянно откладываешь дела <br>на потом и в процессе чувствуешь вину. <br><br>
-                                    Тебе становится сложнее начать что-то делать, нет сил и желания действовать.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 4. конфликты в отношениях -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/conflicts.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-4 swiper__text">
-                                <h3>Конфликты <br> в отношениях</h3>
-                                <hr>
-                                <div class="swiper__text-4_inside inside">
-                                    Ты чувствуешь, что тебя <br>не слышат и не понимают, <br>не складываются близкие
-                                    отношения.<br><br>
-                                    Испытываешь трудности на работе из-за недопониманий с коллегами.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 5. низкая самооценка -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/self-worth.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-5 swiper__text">
-                                <h3>Низкая <br> самооценка</h3>
-                                <hr>
-                                <div class="swiper__text-5_inside inside">
-                                    Тебе кажется, что ты <br>ни с чем не справляешься, что у тебя ничего <br>не
-                                    получится: ни в
-                                    работе, <br>ни в отношениях.<br><br>
-                                    Будто бы все, кроме тебя, достигают успеха.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 6. негативное восприятие внешности -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/appearance.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-6 swiper__text">
-                                <h3>Негативное восприятие внешности</h3>
-                                <hr>
-                                <div class="swiper__text-6_inside inside">
-                                    Ты избегаешь своего отражения, чувствуешь дискомфорт при покупке одежды.
-                                    Не ходишь в бассейн и на пляж, тебе трудно принимать комплименты <br>о своей
-                                    внешности.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 7. компульсивное переедание -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/overeating.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-7 swiper__text">
-                                <h3>Компульсивное переедание</h3>
-                                <hr>
-                                <div class="swiper__text-7_inside inside">Ты ешь больше, чем требуется для насыщения,
-                                    потом испытываешь тяжесть и боль в
-                                    животе.<br><br>
-                                    Страдаешь от чувства вины <br>и ощущаешь потерю контроля во время еды: “как в
-                                    тумане”.
+                        <div class="swiper-wrapper">
 
+                            <!-- Slides -->
+
+                            <!-- 1. тревожность и страх -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/fear.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-1 swiper__text">
+                                    <h3>Тревожность <br> и страх</h3>
+                                    <hr>
+                                    <div class="swiper__text-1_inside inside">
+                                        Ты испытываешь сильное беспокойство, в том числе без очевидных причин, чувство
+                                        страха. <br><br>
+                                        Возникают навязчивые мысли, переживания <br>о своём будущем, проблемы со сном.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 8. подавленность и апатия -->
-                        <div class="swiper-slide">
-                            <div class="swiper__picture">
-                                <img src="./assets/images/oppressiveness.png" alt="Picture">
-                            </div>
-                            <div class="swiper__text-8 swiper__text">
-                                <h3>Подавленность <br> и апатия</h3>
-                                <hr>
-                                <div class="swiper__text-8_inside inside">
-                                    Ты ощущаешь эмоциональную пустоту, упадок сил, подавленное состояние.<br><br>
-                                    Нет энергии на дела, увлечения, общение — всё стало безразличным.
-
+                            <!-- 2. эмоциональная неустойчивость -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/unstable.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-2 swiper__text">
+                                    <h3>Эмоциональная неустойчивость</h3>
+                                    <hr>
+                                    <div class="swiper__text-2_inside inside">
+                                        Ты не можешь понять, почему у тебя резко меняется настроение: только что ты была
+                                        спокойна, <br>и вдруг раздражена. <br><br>
+                                        Сначала чувствовала радость, а через час тебе грустно.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <!-- 3. прокрастинация и гипобулия -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/procrastination.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-3 swiper__text">
+                                    <h3>Прокрастинация <br> и гипобулия</h3>
+                                    <hr>
+                                    <div class="swiper__text-3_inside inside">
+                                        Ты постоянно откладываешь дела <br>на потом и в процессе чувствуешь вину.
+                                        <br><br>
+                                        Тебе становится сложнее начать что-то делать, нет сил и желания действовать.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4. конфликты в отношениях -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/conflicts.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-4 swiper__text">
+                                    <h3>Конфликты <br> в отношениях</h3>
+                                    <hr>
+                                    <div class="swiper__text-4_inside inside">
+                                        Ты чувствуешь, что тебя <br>не слышат и не понимают, <br>не складываются близкие
+                                        отношения.<br><br>
+                                        Испытываешь трудности на работе из-за недопониманий с коллегами.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 5. низкая самооценка -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/self-worth.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-5 swiper__text">
+                                    <h3>Низкая <br> самооценка</h3>
+                                    <hr>
+                                    <div class="swiper__text-5_inside inside">
+                                        Тебе кажется, что ты <br>ни с чем не справляешься, что у тебя ничего <br>не
+                                        получится: ни в
+                                        работе, <br>ни в отношениях.<br><br>
+                                        Будто бы все, кроме тебя, достигают успеха.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 6. негативное восприятие внешности -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/appearance.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-6 swiper__text">
+                                    <h3>Негативное восприятие внешности</h3>
+                                    <hr>
+                                    <div class="swiper__text-6_inside inside">
+                                        Ты избегаешь своего отражения, чувствуешь дискомфорт при покупке одежды.
+                                        Не ходишь в бассейн и на пляж, тебе трудно принимать комплименты <br>о своей
+                                        внешности.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 7. компульсивное переедание -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/overeating.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-7 swiper__text">
+                                    <h3>Компульсивное переедание</h3>
+                                    <hr>
+                                    <div class="swiper__text-7_inside inside">Ты ешь больше, чем требуется для
+                                        насыщения,
+                                        потом испытываешь тяжесть и боль в
+                                        животе.<br><br>
+                                        Страдаешь от чувства вины <br>и ощущаешь потерю контроля во время еды: “как в
+                                        тумане”.
 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 8. подавленность и апатия -->
+                            <div class="swiper-slide">
+                                <div class="swiper__picture">
+                                    <img src="./assets/images/oppressiveness.png" alt="Picture">
+                                </div>
+                                <div class="swiper__text-8 swiper__text">
+                                    <h3>Подавленность <br> и апатия</h3>
+                                    <hr>
+                                    <div class="swiper__text-8_inside inside">
+                                        Ты ощущаешь эмоциональную пустоту, упадок сил, подавленное состояние.<br><br>
+                                        Нет энергии на дела, увлечения, общение — всё стало безразличным.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <p class="help__subtitle">Я помогу вам преодолеть эти трудности, разобраться в их причинах, освоить
                     техники самопомощи, чтобы в дальнейшем ты могла опираться на себя</p>
@@ -553,16 +568,16 @@
 
                 <div class="education__pic-block">
                     <div class="education__pic-container">
-                    <img class="education__pic gray" src="./assets/images/diplom_1.png" alt="diplom">
+                        <img class="education__pic gray" src="./assets/images/diplom_1.png" alt="diplom">
                     </div>
                     <div class="education__pic-container">
-                    <img class="education__pic gray" src="./assets/images/diplom_2.png" alt="certificate">
+                        <img class="education__pic gray" src="./assets/images/diplom_2.png" alt="certificate">
                     </div>
                     <div class="education__pic-container">
-                    <img class="education__pic gray" src="./assets/images/diplom_3.png" alt="certificate">
+                        <img class="education__pic gray" src="./assets/images/diplom_3.png" alt="certificate">
                     </div>
                     <div class="education__pic-container">
-                    <img class="education__pic gray" src="./assets/images/diplom_4.png" alt="certificate">
+                        <img class="education__pic gray" src="./assets/images/diplom_4.png" alt="certificate">
                     </div>
                 </div>
 
@@ -875,10 +890,11 @@
 
                 <form class="form formWithValidation" action="#" novalidate>
 
-                    
+
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
-                            <input type="text" id="userName" class="ui-underline" placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
+                            <input type="text" id="userName" class="ui-underline"
+                                placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
                             <span class="input-beforeName"></span>
                             <span class="input-after">Имя&nbsp<span class="checkmark">*</span></span>
                         </div>
@@ -886,7 +902,8 @@
 
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
-                            <input type="text" id="email" class="ui-underline" placeholder="Электронный адрес" spellcheck="false" required>
+                            <input type="text" id="email" class="ui-underline" placeholder="Электронный адрес"
+                                spellcheck="false" required>
                             <span class="input-beforeEmail"></span>
                             <span class="input-after">Электронный адрес&nbsp<span class="checkmark">*</span></span>
                         </div>
@@ -894,7 +911,8 @@
 
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
-                            <input type="text" id="whatsApp"class="ui-underline" placeholder="WhatsApp" spellcheck="false" required>
+                            <input type="text" id="whatsApp" class="ui-underline" placeholder="WhatsApp"
+                                spellcheck="false" required>
                             <span class="input-beforeWhatsApp"></span>
                             <span class="input-after">WhatsApp (+7 (123) ***-**-**)</span>
                         </div>
@@ -902,37 +920,39 @@
 
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
-                            <input type="text" id="telegram" class="ui-underline" placeholder="Telegram" spellcheck="false" required>
+                            <input type="text" id="telegram" class="ui-underline" placeholder="Telegram"
+                                spellcheck="false" required>
                             <span class="input-beforeTelegram"></span>
                             <span class="input-after">Telegram ("@name") </span>
                         </div>
                     </div>
 
-                    
 
-                <div class="registration__inputfield">
-                    <label>Опиши свой запрос/проблему<br> </label><br>
-                    <textarea class="textarea" id="comment" placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)" ></textarea>
-                  </div>
 
-                <div class="registration__inputfield terms">
-
-                    <div class="registration__terms-group">
-                      <input type="checkbox" class="checkbox_18 agreedCheckbox" required/>
-                      <span class="checkmark">*</span>
-                      <label class="check">Тебе больше 18 лет</label>
+                    <div class="registration__inputfield">
+                        <label>Опиши свой запрос/проблему<br> </label><br>
+                        <textarea class="textarea" id="comment"
+                            placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)"></textarea>
                     </div>
-                  
-                    <div class="registration__terms-group">
-                        <input type="checkbox" class="checkboxPrivat agreedCheckbox" required/>
-                        <span class="checkmark">*</span>
-                        <label class="check">Согласие на отправку личных данных</label>
-                      </div>
-                  
-                </div>
 
-                  <div id="errorsInfo"></div>
-                   
+                    <div class="registration__inputfield terms">
+
+                        <div class="registration__terms-group">
+                            <input type="checkbox" class="checkbox_18 agreedCheckbox" required />
+                            <span class="checkmark">*</span>
+                            <label class="check">Тебе больше 18 лет</label>
+                        </div>
+
+                        <div class="registration__terms-group">
+                            <input type="checkbox" class="checkboxPrivat agreedCheckbox" required />
+                            <span class="checkmark">*</span>
+                            <label class="check">Согласие на отправку личных данных</label>
+                        </div>
+
+                    </div>
+
+                    <div id="errorsInfo"></div>
+
 
                     <button class="registration__button button glow-effect" type="submit" data-glow-offset="true">
                         отправить
@@ -942,19 +962,14 @@
                         </svg>
 
                     </button>
-                  
-                </div>
-
-            
-                    
-                  </form>
-
+                </form>
             </div>
+
         </section>
 
         <!-- section FAQ -->
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="faq__aside aside">
                 <span class="faq__aside-span aside-span">
                     10 FAQ
@@ -1107,7 +1122,7 @@
 
         <!-- section presents ПОДАРКИ -->
 
-        <section class="presents">
+        <section class="presents" id="present">
             <div class="presents__aside aside">
                 <span class="presents__aside-span aside-span">
                     11 ПОДАРКИ
@@ -1165,11 +1180,11 @@
             </div>
         </section>
 
-    </div>
+    </main>
 
     <!-- footer -->
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="footer__wrapper container">
             <!-- Ссылки -->
             <div class="footer__card">

@@ -687,18 +687,19 @@ textarea {
   font-weight: 900;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
+  max-width: 1920px;
   margin: 0 auto;
   width: 100%;
-  align-items: center;
 }
 
 .header {
@@ -716,11 +717,7 @@ body {
 }
 
 .header__container {
-  max-width: 1520px;
-  width: 100%;
-  margin: 0px auto;
   display: flex;
-  padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
   min-height: 150px;
@@ -730,20 +727,17 @@ body {
   min-height: 12vh;
 }
 
-.header__logo {
-  position: relative;
-  z-index: 5;
-  width: 86px;
-  height: 43px;
-}
-
 .menu__button {
-  width: 46px;
-  height: 46px;
   padding-left: 170px;
 }
 
-.header__logo-img {
+.menu__button img {
+  width: 46px;
+}
+
+.header__logo img {
+  max-width: 86px;
+  width: 100%;
   vertical-align: baseline;
   height: 43px;
 }
@@ -967,21 +961,11 @@ body._touch .menu__list > li._active .menu__arrow {
     color: white;
   }
 }
-.main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 .cover {
   position: relative;
-  min-height: 1070px;
-  width: 100vw;
+  min-height: 100vh;
   margin: 0 auto;
-  place-content: center;
-  margin: 0 auto;
-  width: 100%;
-  align-items: center;
+  padding-bottom: 172px;
 }
 
 @property --gradient-angle {
@@ -999,13 +983,10 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .cover__gradient {
-  height: 1070px;
-  width: 100vw;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: transparent;
-  position: relative;
-  place-content: center;
-  margin: 0 auto;
-  align-items: center;
 }
 
 .cover__gradient::before,
@@ -1033,17 +1014,16 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .cover__wrapper {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  height: 100vh;
 }
 
 .cover__left-side {
   width: 50%;
-  height: 100vh;
 }
 
 .cover__over-title {
   width: 578px;
-  height: 86px;
   padding-top: 338px;
   font-weight: 500;
   font-size: 20px;
@@ -1051,11 +1031,11 @@ body._touch .menu__list > li._active .menu__arrow {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #635D5D;
+  margin-bottom: 1rem;
 }
 
 .cover__title {
   width: 796px;
-  height: 245;
   padding: 3px 0px 30px 0px;
   font-weight: 700;
   font-size: 42px;
@@ -1067,7 +1047,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__subtitle {
   width: 718px;
-  height: 76px;
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
@@ -1076,7 +1055,6 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .cover__button {
-  position: relative;
   z-index: 1;
   width: 452px;
   margin-top: 34px;
@@ -1090,17 +1068,19 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__right-side {
   position: relative;
   width: 50%;
+  height: 100%;
 }
 
 .cover__pic {
-  display: block;
   position: absolute;
+  left: -6rem;
   z-index: 1;
-  width: 1100px;
-  height: 1046px;
-  left: -7vw;
-  top: 2.5vh;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.cover__pic img {
+  max-width: 1049px;
+  display: block;
 }
 
 .cover__right-circles {
@@ -1142,8 +1122,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__present {
   position: absolute;
   z-index: 1;
-  right: -3vw;
-  bottom: 0vh;
+  right: -1vw;
+  top: 30%;
 }
 
 .container {
@@ -1158,7 +1138,6 @@ body._touch .menu__list > li._active .menu__arrow {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 1940px;
   background-color: #FEFEFE;
 }
 
