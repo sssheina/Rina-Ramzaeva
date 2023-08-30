@@ -1,3 +1,6 @@
+var rellax = new Rellax('.rellax');
+
+
 // slider HELP
 
 const swiper = new Swiper(".swiper", {

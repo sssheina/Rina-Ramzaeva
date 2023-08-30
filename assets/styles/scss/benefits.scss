@@ -3,8 +3,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 100%;
-  height: 1533px;
+  padding: 163px 0 206px 0;
 }
 
 .benefits__aside {
@@ -21,15 +20,12 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  gap: 120px;
 }
 
 .benefits__text-block {
   display: flex;
-  flex-direction: row;
-  margin-top: 170px;
-  // padding-top: 170px;
   align-items: flex-start;
-  padding-bottom: 126px;
   z-index: 1;
 }
 
@@ -60,20 +56,20 @@
 
 .benefits__cards-block {
   display: flex;
-  flex-direction: row;
   gap: 25px;
-  margin-bottom: 120px;
 }
 
 .benefits__card-text {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   position: absolute;
-  bottom: 30px;
   z-index: 1;
   width: 320px;
   height: 267px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px 30px 30px; 
+  top: 55%; 
 }
 
 .card-science,
@@ -83,13 +79,11 @@
 
 .card-feminism {
   background: linear-gradient(180deg, #ffdada 0%, #ffffff 100%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
-}
+  }
 
 .card-lgbt {
   background: linear-gradient(180deg, #d9f0ff 0%, #ffffff 100%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
-}
+  }
 
 .card-benefits {
   display: flex;
@@ -106,30 +100,27 @@
   width: 100%;
 }
 
-.benefits__hr-1 {
-  color: $color-black;
-  background-color: $color-black;
-  border: none;
-  height: 2px;
-  width: 45px;
-  margin: 25px 0px 4px 25px;
-}
-
-.benefits__hr-2 {
-  color: $color-black;
-  background-color: $color-black;
-  border: none;
-  height: 2px;
-  width: 45px;
-  margin: 4px 0px 25px 25px;
-}
 
 .benefits__card-title {
-  margin: 0px 0px 0px 25px;
-}
-.benefits__text {
-  margin: 0px 0px 0px 25px;
-}
+  position: relative;
+  &::before, 
+  &::after {
+    content: '';
+    position: absolute;
+    background: $color-black;
+    width: 45px;
+    height: 2px;
+    left: 0;
+  }
+  &::before {
+    top: -10px;
+  }
+  &::after {
+    bottom: -10px;
+  }
+  }
+
+
 
 .benefits__button {
   background-color: $color-pinkdark;

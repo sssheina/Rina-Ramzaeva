@@ -312,19 +312,87 @@ template {
    v2.0-modified | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -339,8 +407,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -348,16 +425,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -963,9 +1044,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .cover {
   position: relative;
-  min-height: 100vh;
   margin: 0 auto;
-  padding-bottom: 172px;
 }
 
 @property --gradient-angle {
@@ -997,7 +1076,7 @@ body._touch .menu__list > li._active .menu__arrow {
   z-index: -1;
   background: conic-gradient(from var(--gradient-angle), var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
   border-radius: inherit;
-  animation: rotation 15s linear infinite;
+  animation: rotation 10s linear infinite;
 }
 
 .cover__gradient::after {
@@ -1020,6 +1099,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__left-side {
   width: 50%;
+  height: 100%;
 }
 
 .cover__over-title {
@@ -1073,13 +1153,12 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__pic {
   position: absolute;
-  left: -6rem;
+  left: -9rem;
   z-index: 1;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
 }
 .cover__pic img {
-  max-width: 1049px;
+  max-width: 1100px;
   display: block;
 }
 
@@ -1091,39 +1170,39 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__left-circles {
   position: absolute;
-  left: 0vw;
-  top: 16vh;
+  left: 0;
+  top: 10%;
 }
 
 .cover__arrows {
   position: absolute;
   right: 7vw;
-  top: 28vh;
+  top: 16vh;
 }
 
 .cover__star_1 {
   position: absolute;
-  left: 0vw;
-  top: 150vh;
+  left: 0;
+  top: 62%;
 }
 
 .cover__star_2 {
   position: absolute;
-  left: 31vw;
-  top: 62vh;
+  left: 75%;
+  top: 25%;
 }
 
 .cover__star_3 {
   position: absolute;
-  left: 38vw;
-  bottom: -53vh;
+  left: 90%;
+  top: 55%;
 }
 
 .cover__present {
   position: absolute;
   z-index: 1;
   right: -1vw;
-  top: 30%;
+  top: 25%;
 }
 
 .container {
@@ -1139,6 +1218,7 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   width: 100%;
   background-color: #FEFEFE;
+  padding: 220px 0 260px;
 }
 
 .about__aside {
@@ -1152,7 +1232,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .about__wrapper {
   display: flex;
-  flex-direction: row;
 }
 
 .about__left-side {
@@ -1163,13 +1242,12 @@ body._touch .menu__list > li._active .menu__arrow {
 .about__right-side {
   display: flex;
   position: relative;
-  width: 60vw;
 }
 
 .about__pic {
   position: absolute;
-  top: 50vh;
-  left: 0vh;
+  top: -5%;
+  left: 0;
   width: 490px;
   height: 655px;
   z-index: 1;
@@ -1195,18 +1273,16 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .about__text-block {
-  width: 1134px;
-  height: 1352px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1134px;
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0.4) 100%);
-  margin-top: 356px;
-}
-
-.about__h2 {
-  margin: 125px 140px 42px 230px;
+  padding: 125px 105px 188px 230px;
 }
 
 .about__hr_1 {
-  margin: 0px 0px 40px 230px;
+  margin: 0;
   width: 140px;
   height: 2px;
   color: #635D5D;
@@ -1216,24 +1292,20 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .about__text {
   position: relative;
-  margin-left: 230px;
-  margin-right: 140px;
-  margin-bottom: 75px;
+  max-width: 773px;
 }
 
 .about__hr_2 {
   color: #635D5D;
   background-color: #635D5D;
-  margin-left: 230px;
-  margin-bottom: 30px;
+  margin: 0;
   width: 140px;
   height: 1px;
   border: none;
 }
 
 .about__endnote {
-  margin-left: 230px;
-  margin-right: 100px;
+  max-width: 800px;
 }
 
 .about__waves_1 {
@@ -1275,8 +1347,8 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .about__circle {
   position: absolute;
-  top: 62vh;
-  right: 0vw;
+  top: 0;
+  right: 0;
 }
 
 .button {
@@ -1734,8 +1806,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 100%;
-  height: 1533px;
+  padding: 163px 0 206px 0;
 }
 
 .benefits__aside {
@@ -1752,14 +1823,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  gap: 120px;
 }
 
 .benefits__text-block {
   display: flex;
-  flex-direction: row;
-  margin-top: 170px;
   align-items: flex-start;
-  padding-bottom: 126px;
   z-index: 1;
 }
 
@@ -1790,20 +1859,20 @@ h3 {
 
 .benefits__cards-block {
   display: flex;
-  flex-direction: row;
   gap: 25px;
-  margin-bottom: 120px;
 }
 
 .benefits__card-text {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   position: absolute;
-  bottom: 30px;
   z-index: 1;
   width: 320px;
   height: 267px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px 30px 30px;
+  top: 55%;
 }
 
 .card-science,
@@ -1813,12 +1882,10 @@ h3 {
 
 .card-feminism {
   background: linear-gradient(180deg, #ffdada 0%, #ffffff 100%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .card-lgbt {
   background: linear-gradient(180deg, #d9f0ff 0%, #ffffff 100%);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .card-benefits {
@@ -1836,30 +1903,22 @@ h3 {
   width: 100%;
 }
 
-.benefits__hr-1 {
-  color: #635D5D;
-  background-color: #635D5D;
-  border: none;
-  height: 2px;
-  width: 45px;
-  margin: 25px 0px 4px 25px;
-}
-
-.benefits__hr-2 {
-  color: #635D5D;
-  background-color: #635D5D;
-  border: none;
-  height: 2px;
-  width: 45px;
-  margin: 4px 0px 25px 25px;
-}
-
 .benefits__card-title {
-  margin: 0px 0px 0px 25px;
+  position: relative;
 }
-
-.benefits__text {
-  margin: 0px 0px 0px 25px;
+.benefits__card-title::before, .benefits__card-title::after {
+  content: "";
+  position: absolute;
+  background: #635D5D;
+  width: 45px;
+  height: 2px;
+  left: 0;
+}
+.benefits__card-title::before {
+  top: -10px;
+}
+.benefits__card-title::after {
+  bottom: -10px;
 }
 
 .benefits__button {
@@ -2603,12 +2662,8 @@ h3 {
 }
 
 .registration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
-  height: 1502px;
+  padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #bfebe3 50.52%);
 }
 
@@ -2622,21 +2677,7 @@ h3 {
 }
 
 .registration__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-}
-
-.registration__title-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  margin: 220px 0px 70px 0px;
-  width: 690px;
-  height: 160px;
 }
 
 .registration__title {
@@ -2649,31 +2690,26 @@ h3 {
   background-color: #635D5D;
   height: 2px;
   border: none;
+  margin: 40px auto;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 input {
+  width: 100%;
+  background: none;
+  height: 73px;
   color: #635D5D;
-}
-
-:root {
-  --swiper-theme-color: $color-pinkdark;
-}
-
-.ui-underline {
   border: none;
-  border-bottom: 1px solid #635D5D;
+  border-bottom: 2px solid #635D5D;
   outline: none;
-  padding: 10px 0;
-  font-size: 21px;
-  line-height: 26px;
-  -webkit-font-smoothing: antialiased;
-  color: #635D5D;
+  font-size: 20px;
 }
 
 input::placeholder {
@@ -2681,13 +2717,8 @@ input::placeholder {
   color: #635D5D;
 }
 
-.ui-form-white input,
-.ui-form-white textarea {
-  border-bottom-color: #fff;
-}
-
-.ui-placeholder input {
-  color: #635D5D;
+:root {
+  --swiper-theme-color: $color-pinkdark;
 }
 
 .terms {
@@ -2732,37 +2763,6 @@ input::placeholder {
 .registration__terms-group {
   display: flex;
   gap: 10px;
-}
-
-.ui-form-white .ui-underline {
-  color: #fff;
-}
-
-.ui-form-black input::placeholder,
-.ui-form-black textarea::placeholder {
-  color: #635D5D;
-  opacity: 0.5;
-}
-
-.ui-form-black input,
-.ui-form-black textarea {
-  border-bottom-color: #635D5D;
-}
-
-.ui-form-black .ui-underline {
-  color: #635D5D;
-}
-
-.ui-placeholder {
-  position: relative;
-  perspective: 100px;
-}
-
-.ui-placeholder input,
-.ui-placeholder textarea {
-  width: 100%;
-  font-weight: 600;
-  background-color: transparent;
 }
 
 .input-beforeName:after,
@@ -2828,39 +2828,7 @@ input:invalid + .input-beforeEmail:after {
   padding: 0px;
 }
 
-.ui-placeholder input:not(:placeholder-shown) ~ .input-after,
-.ui-placeholder textarea:not(:placeholder-shown) ~ .input-after {
-  visibility: visible;
-  opacity: 1;
-}
-
 /* perspective origin */
-.ui-placeholder.ui-leftTop {
-  perspective-origin: left top;
-  position: relative;
-}
-
-/* set position */
-.ui-placeholder.ui-leftTop input ~ .input-after,
-.ui-placeholder.ui-leftTop textarea ~ .input-after {
-  bottom: 100%;
-  left: 0;
-}
-
-/* slide effects */
-/**************************************************************/
-.ui-placeholder.ui-leftTop.ui-slide textarea ~ .input-after {
-  bottom: 90%;
-}
-
-.ui-placeholder.ui-leftTop.ui-slide textarea:not(:placeholder-shown) ~ .input-after {
-  bottom: 100%;
-}
-
-.row > div {
-  margin-bottom: 50px;
-}
-
 .registration__button {
   width: 400px;
   background-color: #FDACAC;
