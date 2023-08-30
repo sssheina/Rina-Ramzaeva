@@ -14,13 +14,8 @@
 }
 
 .registration__wrapper {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   position: relative;
 }
-
-
 
 .registration__title {
   text-align: center;
@@ -34,236 +29,154 @@
   margin: 40px auto;
 }
 
+//  ______________________FORM_____________
 .form {
   display: flex;
   flex-direction: column;
   gap: 35px;
   max-width: 800px;
   margin: 0 auto;
-
 }
-//  ______________________FORM_____________
 
-input{
+.registration__row {
+  position: relative;
+}
+
+.input {
   width: 100%;
-  background: none;
   height: 73px;
+  background: none;
   color: $color-black;
   border: none;
-  border-bottom: 2px solid $color-black;
   outline: none;
-  font-size: 20px;
-
+  font-size: 21px;
+  font-weight: 500;
+  border-bottom: 2px solid $color-black;
+  transition: all 0.5s ease;
 }
 
-input::placeholder{
-  
-  font-weight: 500;
+.input::placeholder {
   color: $color-black;
 }
 
-
-
-// input {
-//   color: $color-black;
-// }
-
-:root {
-  --swiper-theme-color: $color-pinkdark;
+.input-checkmark {
+  position: absolute;
+  top: 22px;
+}
+.input-checkmark-name {
+  left: 325px;
+}
+.input-checkmark-email {
+  left: 232px;
+}
+.checkmark {
+  color: #fb7070;
+  font-weight: 900;
+  font-size: 16px;
+}
+.input-after {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 85%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  font-size: 21px;
+  font-weight: 500;
+  color: $color-blackhover;
 }
 
-// .ui-underline {
-//   border: none;
-//   border-bottom: 1px solid $color-black;
-//   outline: none;
-//   padding: 10px 0;
-//   font-size: 21px;
-//   line-height: 26px;
-//   -webkit-font-smoothing: antialiased;
-//   color: $color-black;
-// }
+/* slide effects */
+.input ~ .input-after {
+  bottom: 40%;
+  scale: 0.95;
+}
 
-
-// .ui-form-white input,
-// .ui-form-white textarea {
-//   border-bottom-color: #fff;
-// }
-
-
+.input:not(:placeholder-shown) ~ .input-after {
+  visibility: visible;
+  opacity: 1;
+  bottom: 90%;
+  scale: 0.9;
+}
+.input:not(:placeholder-shown) ~ .input-checkmark {
+  visibility: hidden;
+}
 
 .terms {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  
 }
 
-
-.registration__inputfield label {
-  color: $color-black;
-  font-weight: 500;
-  line-height: 26px;
-  font-size: 21px;
-  line-height: 26px;
+.registration__message {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  & label {
+    color: $color-black;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  & textarea {
+    border: none;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 26px;
+    color: $color-black;
+    padding: 20px;
+    &::placeholder {
+      color: $color-blackhover;
+      font-weight: 400;
+    }
+  }
 }
 
-.form {
-  width: 800px;
-}
-.textarea {
-  width: 760px;
-  height: 100px;
-  border: none;
-  line-height: 26px;
-  font-weight: 600;
-  font-size: 21px;
-  color: $color-black;
-  padding: 20px;
-   &::placeholder{
-    color: $color-blackhover;
-    font-weight: 400;
-   }
-}
-.checkmark {
-  color: #fb7070;
-  font-weight: 900;
-  font-size: 16px;;
-}
 .registration__terms-group {
   display: flex;
+  align-items: center;
   gap: 10px;
+  &:first-child {
+    margin-bottom: 12px;
+  }
 }
 
-// .ui-form-white .ui-underline {
-//   color: #fff;
-// }
-
-
-// .ui-form-black input::placeholder,
-// .ui-form-black textarea::placeholder {
-//   color: $color-black;
-//   opacity: 0.5;
-// }
-
-// .ui-form-black input,
-// .ui-form-black textarea {
-//   border-bottom-color: $color-black;
-// }
-
-// .ui-form-black .ui-underline {
-//   color: $color-black;
-// }
-
-
-
-
-// .ui-placeholder {
+// input:invalid + .input-beforeName:after,
+// input:invalid + .input-beforeEmail:after {
+//   content: "*";
+//   color: #fb7070;
 //   position: relative;
-//   perspective: 100px;
+//   font-size: 16px;
+//   font-weight: 900;
+//   padding: 0px;
 // }
 
-// .ui-placeholder input,
-// .ui-placeholder textarea {
-//   width: 100%;
-//   font-weight: 600;
-//   background-color: transparent;
-// }
-
-.input-beforeName:after, 
-.input-beforeEmail:after,
-.input-beforeWhatsApp:after,
-.input-beforeTelegram:after
-  {
-  position: absolute;
-    padding-top: 16px;    
-    cursor: text;
-}
-input:invalid + .input-beforeName:after,
-input:invalid + .input-beforeEmail:after  {
-  content: "*";
-  color: #fb7070;
-  position: relative;
-  font-size: 16px;
-  font-weight: 900;
-  padding: 0px;
-  
-}
-
-input:invalid + .input-beforeWhatsApp:after,
-input:invalid + .input-beforeTelegram:after   {
-  content: "*";
-  color: #fb7070;
-  position: relative;
-  font-size: 16px;
-  font-weight: 900;
-  padding: 0px;
-  
-}
-input:invalid + .input-beforeWhatsApp:after {
-  left: 7.4rem;
-  top: -2.1rem;
-}
-input:invalid + .input-beforeTelegram:after {
-  left: 6.6rem;
-  top: -2.1rem;
-}
-
-input:invalid + .input-beforeName:after {
-  left: 20rem;
-  top: -2.1rem;
-  
-}
-
-input:invalid + .input-beforeEmail:after {
-  left: 14.3rem;
-  top: -2.1rem;
-}
-
-.ui-placeholder input ~ .input-after,
-.ui-placeholder textarea ~ .input-after {
-  visibility: visible;
-  position: absolute;
-  opacity: 0;
-  display: inline-block;
-  transition: all 1s cubic-bezier(0.08, 0.86, 0.35, 0.94);
-  font-size: 21px;
-  font-weight: 500;
-  line-height: 26px;
-  color: $color-blackhover;
-  padding: 0px;
-}
-
-// .ui-placeholder input:not(:placeholder-shown) ~ .input-after,
-// .ui-placeholder textarea:not(:placeholder-shown) ~ .input-after {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-/* perspective origin */
-// .ui-placeholder.ui-leftTop {
-//   perspective-origin: left top;
+// input:invalid + .input-beforeWhatsApp:after,
+// input:invalid + .input-beforeTelegram:after {
+//   content: "*";
+//   color: #fb7070;
 //   position: relative;
+//   font-size: 16px;
+//   font-weight: 900;
+//   padding: 0px;
+// }
+// input:invalid + .input-beforeWhatsApp:after {
+//   left: 7.4rem;
+//   top: -2.1rem;
+// }
+// input:invalid + .input-beforeTelegram:after {
+//   left: 6.6rem;
+//   top: -2.1rem;
 // }
 
-// /* set position */
-// .ui-placeholder.ui-leftTop input ~ .input-after,
-// .ui-placeholder.ui-leftTop textarea ~ .input-after {
-//   bottom: 100%;
-//   left: 0;
+// input:invalid + .input-beforeName:after {
+//   left: 20rem;
+//   top: -2.1rem;
 // }
 
-// /* slide effects */
-// /**************************************************************/
-// .ui-placeholder.ui-leftTop.ui-slide textarea ~ .input-after {
-//   bottom: 90%;
-// }
-
-// .ui-placeholder.ui-leftTop.ui-slide textarea:not(:placeholder-shown) ~ .input-after {
-//   bottom: 100%;
-// }
-
-// .row > div {
-//   margin-bottom: 50px;
+// input:invalid + .input-beforeEmail:after {
+//   left: 14.3rem;
+//   top: -2.1rem;
 // }
 
 .registration__button {
@@ -282,15 +195,8 @@ input:invalid + .input-beforeEmail:after {
   letter-spacing: 0.05em;
 }
 
-.agreedCheckbox {
-  width: 25px;;
-}
-
-
-
 input[type="checkbox"] {
   accent-color: $color-pinkdark;
- 
+  width: 30px;
+  height: 30px;
 }
-
-
