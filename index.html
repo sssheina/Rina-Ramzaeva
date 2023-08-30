@@ -74,7 +74,8 @@
 
                 <div class="cover__wrapper container">
                     <div class="cover__left-side">
-                        <div class="cover__over-title">бесплатная<br>
+
+                        <div class="cover__over-title rellax" data-rellax-speed="-4">бесплатная<br>
                             ознакомительная мини-сессия</div>
                         <h1 class="cover__title">Получи <br>
                             онлайн-консультации
@@ -106,7 +107,7 @@
             <img class="cover__right-circles" src="./assets/images/cover_right_circles.svg"
                 alt="big circles decoration">
             <img class="cover__left-circles" src="./assets/images/cover_left_circles.svg" alt="circles decoration">
-            <img class="cover__arrows" src="./assets/images/cover_arrows_figure.svg" alt="arrows pictire decoration">
+            <img class="cover__arrows rellax" data-rellax-speed="-7" src="./assets/images/cover_arrows_figure.svg" alt="arrows pictire decoration">
         </section>
 
 
@@ -879,17 +880,19 @@
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
                             <input type="text" id="userName" class="ui-underline _req name" placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
-                            <span class="input-beforeName"></span>
+                            <span class="input-beforeName">*</span>
                             <span class="input-after">Имя&nbsp<span class="checkmark">*</span></span>
                         </div>
+                        <div id="errorsInfoName"></div>
                     </div>
 
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
                             <input type="text" id="email" class="ui-underline _email _req email" placeholder="Электронный адрес" spellcheck="false" required>
-                            <span class="input-beforeEmail"></span>
+                            <span class="input-beforeEmail">*</span>
                             <span class="input-after">Электронный адрес&nbsp<span class="checkmark">*</span></span>
                         </div>
+                        <div id="errorsInfoEmail"></div>
                     </div>
 
                     <div class="registration__col">
@@ -898,13 +901,15 @@
                             <span class="input-beforeWhatsApp"></span>
                             <span class="input-after">WhatsApp (+7 (123) ***-**-**)</span>
                         </div>
+                        <div id="errorsInfoWhatsApp"></div>
                     </div>
 
                     <div class="registration__col">
                         <div class="ui-placeholder ui-leftTop">
                             <input type="text" id="telegram" class="ui-underline" placeholder="Telegram" spellcheck="false" required>
                             <span class="input-beforeTelegram"></span>
-                            <span class="input-after">Telegram ("@name") </span>
+                            <span class="input-after">Telegram</span>
+                            <div id="errorsInfoTelegram"></div>
                         </div>
                     </div>
 
@@ -921,12 +926,14 @@
                       <input type="checkbox" class="checkbox_18 agreedCheckbox _req" required/>
                       <span class="checkmark">*</span>
                       <label class="check">Тебе больше 18 лет</label>
+                      <div id="errorsInfoAgreed"></div>
                     </div>
                   
                     <div class="registration__terms-group">
                         <input type="checkbox" class="checkboxPrivat agreedCheckbox _req" required/>
                         <span class="checkmark">*</span>
                         <label class="check">Согласие на отправку личных данных</label>
+                        <div id="errorsInfoPrivat"></div>
                       </div>
                   
                 </div>
@@ -943,13 +950,10 @@
 
                     </button>
                   
-                </div>
-
-            
-                    
                   </form>
-
-            </div>
+                </div>
+                
+            
         </section>
 
         <!-- section FAQ -->
@@ -1237,7 +1241,7 @@
     </footer>
 
 
-
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="./assets/scripts/houdini.config.js"></script>

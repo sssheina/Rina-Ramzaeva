@@ -162,54 +162,23 @@ input::placeholder {
   background-color: transparent;
 }
 
-.input-beforeName:after, 
-.input-beforeEmail:after,
-.input-beforeWhatsApp:after,
-.input-beforeTelegram:after
+.input-beforeName, 
+.input-beforeEmail
   {
   position: absolute;
-    padding-top: 16px;    
-    cursor: text;
-}
-input:invalid + .input-beforeName:after,
-input:invalid + .input-beforeEmail:after  {
-  content: "*";
   color: #fb7070;
-  position: relative;
+  position: absolute;
   font-size: 16px;
   font-weight: 900;
-  padding: 0px;
-  
+  top: 0.95rem;
 }
 
-input:invalid + .input-beforeWhatsApp:after,
-input:invalid + .input-beforeTelegram:after   {
-  content: "*";
-  color: #fb7070;
-  position: relative;
-  font-size: 16px;
-  font-weight: 900;
-  padding: 0px;
-  
-}
-input:invalid + .input-beforeWhatsApp:after {
-  left: 7.4rem;
-  top: -2.1rem;
-}
-input:invalid + .input-beforeTelegram:after {
-  left: 6.6rem;
-  top: -2.1rem;
-}
-
-input:invalid + .input-beforeName:after {
+.input-beforeName {
   left: 20rem;
-  top: -2.1rem;
-  
 }
 
-input:invalid + .input-beforeEmail:after {
+.input-beforeEmail {
   left: 14.3rem;
-  top: -2.1rem;
 }
 
 .ui-placeholder input ~ .input-after,
@@ -255,9 +224,9 @@ input:invalid + .input-beforeEmail:after {
   bottom: 100%;
 }
 
-.row > div {
-  margin-bottom: 50px;
-}
+// .row > div {
+//   margin-bottom: 50px;
+// }
 
 .registration__button {
   width: 400px;
