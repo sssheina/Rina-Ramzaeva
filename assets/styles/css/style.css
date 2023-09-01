@@ -1585,7 +1585,7 @@ h3 {
 }
 .help hr {
   margin: 30px auto 40px;
-  width: 14, 8vw;
+  max-width: 285px;
   height: 0.2vh;
   border: none;
   background: #635D5D;
@@ -1610,7 +1610,8 @@ h3 {
   justify-content: center;
   align-items: center;
   background: #bae2fc;
-  width: 34, 7vw;
+  max-width: 667px;
+  width: 100%;
   margin: 0 auto;
 }
 .help__button:hover {
@@ -1628,7 +1629,7 @@ h3 {
 
 .swiper {
   margin: 98px 0 78px;
-  height: 79, 1vh;
+  height: 855px;
   padding-bottom: 3rem;
 }
 .swiper .swiper-slide {
@@ -1651,8 +1652,10 @@ h3 {
   bottom: 40px;
   left: 50%;
   transform: translate(-50%);
-  width: 19vw;
-  height: 41, 9vh;
+  max-width: 19vw;
+  width: 100%;
+  max-height: 453px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -1694,42 +1697,42 @@ h3 {
 }
 
 .swiper__text-1_inside {
-  width: 14, 6vw;
+  width: 14.6vw;
   height: 25vh;
 }
 
 .swiper__text-2_inside {
-  width: 16vw;
+  width: 16.5vw;
   height: 25vh;
 }
 
 .swiper__text-3_inside {
-  width: 15, 8vw;
-  height: 19, 4vh;
+  width: 15.8vw;
+  height: 19.4vh;
 }
 
 .swiper__text-4_inside {
-  width: 16, 8vw;
+  width: 16.8vw;
   height: 22vh;
 }
 
 .swiper__text-5_inside {
-  width: 15, 7vw;
+  width: 15.7vw;
   height: 22vh;
 }
 
 .swiper__text-6_inside {
-  width: 16, 8vw;
-  height: 19, 4vh;
+  width: 16.8vw;
+  height: 19.4vh;
 }
 
 .swiper__text-7_inside {
-  width: 16, 8vw;
-  height: 19, 4vh;
+  width: 16.8vw;
+  height: 19.4vh;
 }
 
 .swiper__text-8_inside {
-  width: 15, 3vw;
+  width: 15.3vw;
   height: 22vh;
 }
 
