@@ -642,8 +642,6 @@ input[type=checkbox],
 input[type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-  *height: 13px; /* 3 */
-  *width: 13px; /* 3 */
 }
 
 /**
@@ -1455,7 +1453,7 @@ h3 {
   color: #635D5D;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 29px;
+  line-height: 150%;
   letter-spacing: 0.1em;
 }
 
@@ -1587,8 +1585,8 @@ h3 {
 }
 .help hr {
   margin: 30px auto 40px;
-  max-width: 285px;
-  height: 2px;
+  width: 14, 8vw;
+  height: 0.2vh;
   border: none;
   background: #635D5D;
 }
@@ -1601,10 +1599,10 @@ h3 {
   line-height: 150%;
 }
 .help__subtitle:nth-child(3) {
-  max-width: 613px;
+  width: 31, 9vw;
 }
 .help__subtitle:nth-child(5) {
-  max-width: 800px;
+  width: 41, 6vw;
   margin-bottom: 68px;
 }
 .help__button {
@@ -1612,7 +1610,7 @@ h3 {
   justify-content: center;
   align-items: center;
   background: #bae2fc;
-  width: 667px;
+  width: 34, 7vw;
   margin: 0 auto;
 }
 .help__button:hover {
@@ -1630,8 +1628,7 @@ h3 {
 
 .swiper {
   margin: 98px 0 78px;
-  width: 90%;
-  height: 855px;
+  height: 79, 1vh;
   padding-bottom: 3rem;
 }
 .swiper .swiper-slide {
@@ -1639,7 +1636,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 33.33vw;
 }
 .swiper__picture {
   max-height: 500px;
@@ -1655,31 +1651,21 @@ h3 {
   bottom: 40px;
   left: 50%;
   transform: translate(-50%);
-  max-width: 366px;
-  width: 100%;
-  height: 100%;
-  max-height: 453px;
+  width: 19vw;
+  height: 41, 9vh;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  padding: 25px 30px;
   z-index: 2;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.swiper__text h3 {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 150%;
-  letter-spacing: 2.4px;
-  text-transform: uppercase;
-  margin: 25px 0px 0px 25px;
-}
 .swiper__text hr {
-  width: 140px;
-  height: 2px;
+  width: 7.3vw;
+  height: 0.2vh;
   margin: 0;
   background: #635D5D;
   border: none;
-  margin: 0px 0px 0px 25px;
 }
 .swiper__text .inside {
   color: #635D5D;
@@ -1688,12 +1674,6 @@ h3 {
   line-height: 150%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin: 0px 0px 0px 25px;
-}
-
-.swiper-wrapper {
-  margin: 0 auto;
 }
 
 .swiper-pagination-bullet {
@@ -1707,7 +1687,6 @@ h3 {
 
 .swiper-pagination {
   position: absolute;
-  --swiper-pagination-bottom: 0px;
 }
 
 .swiper-pagination-bullet-active {
@@ -1715,75 +1694,55 @@ h3 {
 }
 
 .swiper__text-1_inside {
-  width: 282px;
-  height: 270px;
+  width: 14, 6vw;
+  height: 25vh;
 }
 
 .swiper__text-2_inside {
-  width: 316px;
-  height: 270px;
+  width: 16vw;
+  height: 25vh;
 }
 
 .swiper__text-3_inside {
-  width: 305px;
-  height: 210px;
+  width: 15, 8vw;
+  height: 19, 4vh;
 }
 
 .swiper__text-4_inside {
-  width: 323px;
-  height: 240px;
+  width: 16, 8vw;
+  height: 22vh;
 }
 
 .swiper__text-5_inside {
-  width: 302px;
-  height: 240px;
+  width: 15, 7vw;
+  height: 22vh;
 }
 
 .swiper__text-6_inside {
-  width: 323px;
-  height: 210px;
+  width: 16, 8vw;
+  height: 19, 4vh;
 }
 
 .swiper__text-7_inside {
-  width: 323px;
-  height: 210px;
+  width: 16, 8vw;
+  height: 19, 4vh;
 }
 
 .swiper__text-8_inside {
-  width: 295px;
-  height: 240px;
+  width: 15, 3vw;
+  height: 22vh;
 }
 
-.swiper__text-1 {
+.swiper__text-1, .swiper__text-4, .swiper__text-7 {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
 
-.swiper__text-2 {
+.swiper__text-2, .swiper__text-5, .swiper__text-8 {
   background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
 }
 
-.swiper__text-3 {
+.swiper__text-3, .swiper__text-6 {
   background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
-}
-
-.swiper__text-4 {
-  background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
-}
-
-.swiper__text-5 {
-  background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
-}
-
-.swiper__text-6 {
-  background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
-}
-
-.swiper__text-7 {
-  background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
-}
-
-.swiper__text-8 {
-  background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
 }
 
 .lunchbox {
@@ -1795,10 +1754,12 @@ h3 {
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
   left: 0; /* Position the button to the left of the lunchbox */
+  color: #635D5D;
 }
 
 .swiper-button-next, .swiper-rtl .swiper-button-prev {
   right: 0; /* Position the button to the right of the lunchbox */
+  color: #635D5D;
 }
 
 .benefits {
@@ -2824,6 +2785,11 @@ h3 {
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.05em;
+}
+
+.error {
+  color: red;
+  display: none;
 }
 
 input[type=checkbox] {

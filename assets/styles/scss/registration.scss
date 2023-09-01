@@ -179,6 +179,8 @@
 //   top: -2.1rem;
 // }
 
+
+
 .registration__button {
   width: 400px;
   background-color: $color-pinkdark;
@@ -193,6 +195,10 @@
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.05em;
+}
+.error {
+  color: red;
+  display: none;
 }
 
 input[type="checkbox"] {

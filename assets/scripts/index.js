@@ -169,6 +169,46 @@ checkboxPrivat.forEach(checkbox => {
 });
 
 
+// ______________________________Посточные ошибки в инпутах_______________________
+
+// JavaScript
+// document.getElementById('username').addEventListener('input', function (e) {
+//   let target = e.target;
+//   let error = document.getElementById('usernameError');
+
+//   if (target.value === '') {
+//       error.textContent = 'Username is required';
+//       error.style.display = 'block';
+//   } else {
+//       error.style.display = 'none';
+//   }
+// });
+
+// document.getElementById('email').addEventListener('input', function (e) {
+//   let target = e.target;
+//   let error = document.getElementById('emailError');
+
+//   if (target.value === '') {
+//       error.textContent = 'Email is required';
+//       error.style.display = 'block';
+//   } else if (!target.validity.valid) {
+//       error.textContent = 'Please enter a valid email';
+//       error.style.display = 'block';
+//   } else {
+//       error.style.display = 'none';
+//   }
+// });
+
+// document.getElementById('myForm').addEventListener('submit', function (e) {
+//   let username = document.getElementById('username');
+//   let email = document.getElementById('email');
+
+//   if (username.value === '' || email.value === '' || !email.validity.valid) {
+//       e.preventDefault();
+//   }
+// });
+
+
 
 
 // -------------- КНОПКА ВВЕРХ ------------------
