@@ -1,7 +1,26 @@
 var rellax = new Rellax('.rellax');
 
+//________________Защита от двойного клика кнопки сабмита формы (от отправки двух писем)_____________________
 
-// slider HELP
+
+document.querySelector(".form").addEventListener('submit', function(e) {
+  // Prevent form submission
+  e.preventDefault();
+
+  // Disable the submit button
+  var submitBtn = document.querySelector(".registration__button");
+  submitBtn.disabled = true;
+
+  // Submit the form manually
+  this.submit();
+
+  // Re-enable the submit button after 3 seconds
+  setTimeout(function() {
+      submitBtn.disabled = false;
+  }, 3000);
+});
+
+// _______________slider HELP______________________
 
 const swiper = new Swiper(".swiper", {
   grabCursor: true,
