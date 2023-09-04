@@ -1,10 +1,6 @@
 .tv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 2326px;
+   position: relative;
+   padding: 220px 0 260px;
 }
 
 .tv__aside {
@@ -18,37 +14,18 @@
 
  .tv__wrapper {
     display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-
-    max-inline-size: 1262px;
-    margin-inline: auto;
-    min-block-size: 100vh;
-    min-block-size: 100dvh;
-
+    justify-items: center;
  }
 
-
-//  @media (min-width: 960px) {
-//    .tv__wrapper {
-//       align-items: center;
-//       grid-template-columns: 1fr 1fr;
-//       gap: 4rem;
-//     }
-//   }
-
-
-
- .tv__text-block, .tv__body .tv__fem  {
-    display: flex;  
-    flex-direction: row;  
+ .tv__text-block, .tv__body, .tv__fem  {
+    display: flex;    
     position: relative;    
  }
 
  .tv__text-block {
-    margin: 220px 0px 150px 0px;
-    width: 1260px;
-    height: 520px;
+    margin: 0px 0px 150px 0px;
+    max-width: 1260px;
+    width: 100%;
  }
 
  .tv__marker-box {
@@ -93,7 +70,6 @@
     border: none;
 }
 
-
 .tv__body, .tv__fem {
     position: relative;
     width: 1262px;
@@ -110,55 +86,51 @@
   .card-tv {
    display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
-    width: 644px;
-    height: 425px;
+    max-width: 644px;
+    width: 100%;
+    max-height: 425px;
+    height: 100%;
+    padding: 40px 30px 30px 30px;
+    gap: 30px;
     background: linear-gradient(180deg, #FFDADA 0%, #D9F0FF 100%);
   }
 
-
-  .tv__video-body, .tv__video-fem {
+  .tv__video {
     position: absolute;
-    top: 57px;
+    top: 55px;
     right: 0px;
-    width: 669px;
-    height: 425px;
+    max-width: 669px;
     z-index: 2;
   }
 
-
-  .tv__hr-1 {
-    color: $color-black;
-    background-color: $color-black;
-    height: 2px;
-    width: 45px;
-    margin: 0px 0px 4px 30px;
-    border: none;
-  }
-
-  .tv__hr-2 {
-    color: $color-black;
-    background-color: $color-black;
-    height: 2px;
-    width: 45px;
-    margin: 4px 0px 25px 30px;
-    border: none;
-  }
+  .tv__video::-webkit-media-controls-panel {
+   background-image: linear-gradient(to bottom, #00000000, #5c53a1);
+ }
 
   .tv__card-title {
-    margin: 0px 0px 0px 30px;
-  }
+   position: relative;
+   &::before, 
+   &::after {
+     content: '';
+     position: absolute;
+     background: $color-black;
+     width: 45px;
+     height: 2px;
+     left: 0;
+   }
+   &::before {
+     top: -10px;
+   }
+   &::after {
+     bottom: -10px;
+   }
+   }
 
   .tv__card-text {
     width: 530px;
     min-height: 260px;
-    margin: 0px 0px 0px 30px;
   }
-
-  .video-tv::-webkit-media-controls-panel {
-   background-image: linear-gradient(to bottom, #00000000, #5c53a1);
- }
 
  .tv__button {
     width: 665px;
