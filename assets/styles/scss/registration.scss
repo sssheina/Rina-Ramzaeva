@@ -21,12 +21,7 @@
   text-align: center;
 }
 .registration__title-hr {
-  width: 282px;
-  color: $color-black;
-  background-color: $color-black;
-  height: 2px;
-  border: none;
-  margin: 40px auto;
+  @include hr(285px, 30px auto 40px);
 }
 
 //  ______________________FORM_____________

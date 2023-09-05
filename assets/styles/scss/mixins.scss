@@ -23,3 +23,11 @@
     transform: translateX(-50%) rotate(-90deg);
   }
   
+
+  @mixin hr($width, $margin){
+    max-width: $width;
+    margin: $margin;
+    background-color: $color-black;
+    height: 2px;
+    border: none;
+  }

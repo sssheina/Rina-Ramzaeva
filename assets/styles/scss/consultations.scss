@@ -1,9 +1,5 @@
 .consultations {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
   background: linear-gradient(180deg, #ffdada 31.77%, #d9f0ff 72.92%);
   padding: 220px 0 260px;
   &__wrapper {
@@ -13,11 +9,7 @@
     text-align: center;
   }
   & hr {
-    max-width: 285px;
-    margin: 30px auto 40px;
-    background: $color-black;
-    height: 2px;
-    border: none;
+    @include hr(285px, 30px auto 40px);
   }
   &__subtitle {
     text-align: center;
@@ -59,7 +51,6 @@
   position: relative;
 }
 .consultations__card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -81,11 +72,7 @@
     background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
   }
   & hr {
-    width: 77px;
-    margin: 0;
-    background: $color-black;
-    height: 2px;
-    border: none;
+    @include hr(77px, 0);
   }
   & ul li {
     color: $color-black;

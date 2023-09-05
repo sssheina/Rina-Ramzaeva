@@ -1210,11 +1210,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
   background-color: #FEFEFE;
   padding: 220px 0 260px;
 }
@@ -1280,11 +1276,10 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .about__hr_1 {
+  max-width: 140px;
   margin: 0;
-  width: 140px;
-  height: 2px;
-  color: #635D5D;
   background-color: #635D5D;
+  height: 2px;
   border: none;
 }
 
@@ -1584,11 +1579,11 @@ h3 {
   text-align: center;
 }
 .help hr {
-  margin: 30px auto 40px;
   max-width: 285px;
-  height: 0.2vh;
+  margin: 30px auto 40px;
+  background-color: #635D5D;
+  height: 2px;
   border: none;
-  background: #635D5D;
 }
 .help__subtitle {
   margin: 0 auto;
@@ -1664,10 +1659,10 @@ h3 {
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .swiper__text hr {
-  width: 7.3vw;
-  height: 0.2vh;
+  max-width: 140px;
   margin: 0;
-  background: #635D5D;
+  background-color: #635D5D;
+  height: 2px;
   border: none;
 }
 .swiper__text .inside {
@@ -1987,9 +1982,8 @@ h3 {
 }
 
 .tv__hr-title {
-  width: 130px;
-  margin: 40px 0px;
-  color: #635D5D;
+  max-width: 140px;
+  margin: 40px 0;
   background-color: #635D5D;
   height: 2px;
   border: none;
@@ -2081,13 +2075,8 @@ h3 {
 }
 
 .education {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  max-width: 1920px;
-  width: 100%;
-  height: 1395px;
+  padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 54.17%);
 }
 
@@ -2108,21 +2097,19 @@ h3 {
 }
 
 .education__title-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
-  margin: 220px 0px 158px 0px;
-  width: 722px;
-  height: 152px;
+  max-width: 722px;
+  width: 100%;
+}
+
+.education__title {
+  text-align: center;
 }
 
 .education__title-hr {
-  width: 282px;
-  color: #635D5D;
+  max-width: 285px;
+  margin: 30px auto 40px;
   background-color: #635D5D;
-  margin: 30px 0px 40px 0px;
   height: 2px;
   border: none;
 }
@@ -2140,7 +2127,7 @@ h3 {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 25px;
-  margin-bottom: 135px;
+  margin: 158px 0 135px;
 }
 
 .gray {
@@ -2193,8 +2180,8 @@ h3 {
 
 .education__popup-span {
   position: absolute;
-  top: 0;
-  right: 22%;
+  top: 4rem;
+  right: 28rem;
   font-size: 60px;
   font-weight: 600;
   color: #FDACAC;
@@ -2217,11 +2204,7 @@ h3 {
   }
 }
 .steps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
   padding: 220px 0 260px;
 }
 .steps__title {
@@ -2230,7 +2213,7 @@ h3 {
 .steps hr {
   max-width: 285px;
   margin: 30px auto 40px;
-  background: #635D5D;
+  background-color: #635D5D;
   height: 2px;
   border: none;
 }
@@ -2277,7 +2260,6 @@ h3 {
 }
 
 .steps__card {
-  box-sizing: border-box;
   max-width: 313px;
   min-height: 266px;
   display: flex;
@@ -2351,11 +2333,7 @@ h3 {
 }
 
 .consultations {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
   background: linear-gradient(180deg, #ffdada 31.77%, #d9f0ff 72.92%);
   padding: 220px 0 260px;
 }
@@ -2368,7 +2346,7 @@ h3 {
 .consultations hr {
   max-width: 285px;
   margin: 30px auto 40px;
-  background: #635D5D;
+  background-color: #635D5D;
   height: 2px;
   border: none;
 }
@@ -2412,7 +2390,6 @@ h3 {
 }
 
 .consultations__card {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -2435,9 +2412,9 @@ h3 {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
 .consultations__card hr {
-  width: 77px;
+  max-width: 77px;
   margin: 0;
-  background: #635D5D;
+  background-color: #635D5D;
   height: 2px;
   border: none;
 }
@@ -2517,23 +2494,18 @@ h3 {
 }
 
 .payment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
   padding: 220px 0 260px;
 }
 .payment hr {
   max-width: 285px;
-  margin: 0 auto;
-  background: #635D5D;
+  margin: 30px auto 40px;
+  background-color: #635D5D;
   height: 2px;
   border: none;
 }
 .payment__title {
   text-align: center;
-  margin-bottom: 40px;
 }
 .payment__cards {
   margin: 100px 0 125px;
@@ -2561,7 +2533,6 @@ h3 {
 }
 
 .payment__card {
-  box-sizing: border-box;
   max-width: 300px;
   width: 100%;
   display: flex;
@@ -2592,10 +2563,12 @@ h3 {
   white-space: nowrap;
 }
 .payment__card hr {
-  width: 45px;
-  background: #635D5D;
+  max-width: 45px;
+  margin: 0;
+  background-color: #635D5D;
   height: 2px;
   border: none;
+  width: 100%;
 }
 .payment__card p {
   max-width: 228px;
@@ -2636,12 +2609,11 @@ h3 {
 }
 
 .registration__title-hr {
-  width: 282px;
-  color: #635D5D;
+  max-width: 285px;
+  margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
   border: none;
-  margin: 40px auto;
 }
 
 .form {
@@ -2991,8 +2963,7 @@ details[open] summary ~ * {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 100%;
-  height: 1666px;
+  padding: 220px 0 260px;
 }
 
 .presents__aside {
@@ -3023,19 +2994,18 @@ details[open] summary ~ * {
 }
 
 .presents__title-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  margin: 220px 0px 150px 0px;
+  margin-bottom: 150px;
   width: 285px;
   height: 83px;
 }
 
+.presents__title {
+  text-align: center;
+}
+
 .presents__title-hr {
-  width: 282px;
-  color: #635D5D;
+  max-width: 285px;
+  margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
   border: none;
@@ -3060,10 +3030,8 @@ details[open] summary ~ * {
 }
 
 .presents__guide-text {
-  display: flex;
-  flex-direction: column;
-  width: 772px;
-  height: 320px;
+  max-width: 772px;
+  width: 100%;
   margin-right: 140px;
 }
 
@@ -3072,16 +3040,11 @@ details[open] summary ~ * {
 }
 
 .presents__guide-hr {
-  width: 130px;
-  margin: 40px 0px 40px 0px;
-  color: #635D5D;
+  max-width: 130px;
+  margin: 30px 0 40px;
   background-color: #635D5D;
-  height: 1px;
+  height: 2px;
   border: none;
-}
-
-.presents__guide-text {
-  width: 633px;
 }
 
 .presents__guide-button {
@@ -3095,20 +3058,15 @@ details[open] summary ~ * {
 
 .presents__webinar-block {
   position: relative;
-  width: 1262px;
-  height: 454px;
-  margin-bottom: 260px;
+  max-width: 1262px;
+  width: 100%;
 }
 
 .presents__webinar-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-  width: 644px;
-  height: 425px;
-  background: linear-gradient(180deg, #FFDADA 0%, #D9F0FF 100%);
+  max-width: 644px;
+  width: 100%;
   background: linear-gradient(180deg, #D9F0FF 0%, #FFDADA 100%);
+  padding: 40px 30px 40px 30px;
 }
 
 .presents__video {
@@ -3121,21 +3079,16 @@ details[open] summary ~ * {
 }
 
 .presents__webinar-hr {
-  color: #635D5D;
+  max-width: 90px;
+  margin: 30px 0 30px;
   background-color: #635D5D;
   height: 2px;
-  width: 45px;
-  margin: 30px 0px 25px 30px;
   border: none;
 }
 
-.presents__webinar-title {
-  margin: 30px 0px 0px 30px;
-}
-
 .presents__webinar-text {
-  margin: 0px 0px 0px 30px;
-  width: 538px;
+  max-width: 538px;
+  width: 100%;
 }
 
 .presents__video::-webkit-media-controls-panel {
@@ -3176,7 +3129,9 @@ details[open] summary ~ * {
 .footer__card hr {
   margin: 20px 0;
   max-width: 167px;
-  background: #635D5D;
+  max-width: 167px;
+  margin: 20px 0;
+  background-color: #635D5D;
   height: 2px;
   border: none;
 }

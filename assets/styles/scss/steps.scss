@@ -1,19 +1,11 @@
 .steps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  width: 100%;
   padding: 220px 0 260px;
   &__title {
     text-align: center;
   }
   & hr {
-    max-width: 285px;
-    margin: 30px auto 40px;
-    background: $color-black;
-    height: 2px;
-    border: none;
+    @include hr(285px, 30px auto 40px);
   }
   &__subtitle {
     margin: 0 auto;
@@ -58,7 +50,6 @@
   position: relative;
 }
 .steps__card {
-  box-sizing: border-box;
   max-width: 313px;
   min-height: 266px;
   display: flex;

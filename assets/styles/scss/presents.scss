@@ -3,8 +3,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 100%;
-    height: 1666px;
+    padding: 220px 0 260px;
 }
 
 .presents__aside {
@@ -37,23 +36,17 @@
    }
 
    .presents__title-block {
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;  
-    position: relative; 
-    margin: 220px 0px 150px 0px;
+    margin-bottom: 150px;
     width: 285px;
     height: 83px;
    }
 
-   .presents__title-hr {
-    width: 282px;
-    color: $color-black;
-    background-color: $color-black;
-    height: 2px;
-    border: none;
+   .presents__title {
+    text-align: center;
+   }
 
+   .presents__title-hr {
+    @include hr(285px, 30px auto 40px);
    }
 
    
@@ -77,11 +70,8 @@
  }
 
  .presents__guide-text {
-    display: flex;
-    flex-direction: column;
-    width: 772px;
-    height: 320px;
-
+    max-width: 772px;
+    width: 100%;
     margin-right: 140px;
  }
 
@@ -90,16 +80,7 @@
  }
 
  .presents__guide-hr {
-    width: 130px;
-    margin: 40px 0px 40px 0px;
-    color: $color-black;
-    background-color: $color-black;
-    height: 1px;
-    border: none;
- }
-
-.presents__guide-text {
-    width: 633px;
+    @include hr(130px, 30px 0 40px);
  }
 
 .presents__guide-button {
@@ -112,20 +93,15 @@
 
 .presents__webinar-block {
     position: relative;
-    width: 1262px;
-    height: 454px;
-    margin-bottom: 260px;
+    max-width: 1262px;  
+    width: 100%;
 }
 
 .presents__webinar-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    width: 644px;
-    height: 425px;
-    background: linear-gradient(180deg, #FFDADA 0%, #D9F0FF 100%);
-background: linear-gradient(180deg, #D9F0FF 0%, #FFDADA 100%);
+    max-width: 644px;
+    width: 100%;
+    background: linear-gradient(180deg, #D9F0FF 0%, #FFDADA 100%);
+    padding: 40px 30px 40px 30px;
 
 }
 
@@ -139,20 +115,14 @@ background: linear-gradient(180deg, #D9F0FF 0%, #FFDADA 100%);
 }
 
 .presents__webinar-hr {
-    color: $color-black;
-    background-color: $color-black;
-    height: 2px;
-    width: 45px;
-    margin: 30px 0px 25px 30px;
-    border: none;
+    // margin: 30px 0px 25px 30px;
+    @include hr(90px, 30px 0 30px);
 }
 
-.presents__webinar-title {
-    margin: 30px 0px 0px 30px;
-}
+
 .presents__webinar-text {
-    margin: 0px 0px 0px 30px;
-    width: 538px;
+    max-width: 538px;
+    width: 100%;
 }
 
 .presents__video::-webkit-media-controls-panel {

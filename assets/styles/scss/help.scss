@@ -5,11 +5,7 @@
     text-align: center;
   }
   & hr {
-    margin: 30px auto 40px;
-    max-width: 285px;
-    height: 0.2vh;
-    border: none;
-    background: $color-black;
+    @include hr(285px, 30px auto 40px);
   }
   &__subtitle {
     margin: 0 auto;
@@ -85,11 +81,7 @@
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
     
     & hr {
-      width: 7.3vw;
-      height: 0.2vh;
-      margin: 0;
-      background: $color-black;
-      border: none;
+      @include hr(140px, 0);
     }
     & .inside {
       color: $color-black;

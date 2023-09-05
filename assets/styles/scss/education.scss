@@ -1,11 +1,6 @@
 .education {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  max-width: 1920px;
-  width: 100%;
-  height: 1395px;
+  padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 54.17%);
 }
 
@@ -23,26 +18,21 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  
 }
 
 .education__title-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
-  margin: 220px 0px 158px 0px;
-  width: 722px;
-  height: 152px;
+  max-width: 722px;
+  width: 100%;
+}
+
+.education__title {
+  text-align: center;
 }
 
 .education__title-hr {
-  width: 282px;
-  color: $color-black;
-  background-color: $color-black;
-  margin: 30px 0px 40px 0px;
-  height: 2px;
-  border: none;
+  @include hr(285px, 30px auto 40px);
 }
 
 .education__subtitle {
@@ -58,7 +48,7 @@
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 25px;
-  margin-bottom: 135px;
+  margin: 158px 0 135px;
 }
 
 .gray {
@@ -115,8 +105,8 @@
 
 .education__popup-span {
   position: absolute;
-  top: 0;
-  right: 22%;
+  top: 4rem;
+  right: 28rem;
   font-size: 60px;
   font-weight: 600;
   color: $color-pinkdark;

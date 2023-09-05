@@ -50,12 +50,7 @@
  }
 
  .tv__hr-title {
-    width: 130px;
-    margin: 40px 0px;
-    color: $color-black;
-    background-color: $color-black;
-    height: 2px;
-    border: none;
+    @include hr(140px, 40px 0);
  }
 .tv__text {
     margin-bottom: 44px;
