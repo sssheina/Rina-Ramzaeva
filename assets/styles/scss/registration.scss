@@ -64,6 +64,15 @@
 .input-checkmark-email {
   left: 232px;
 }
+
+.check {
+font-weight: 500;
+font-size: 18px;
+line-height: 150%;
+letter-spacing: 0.1em;
+color: $color-black;
+}
+
 .checkmark {
   color: #fb7070;
   font-weight: 900;
@@ -136,46 +145,6 @@
   }
 }
 
-// input:invalid + .input-beforeName:after,
-// input:invalid + .input-beforeEmail:after {
-//   content: "*";
-//   color: #fb7070;
-//   position: relative;
-//   font-size: 16px;
-//   font-weight: 900;
-//   padding: 0px;
-// }
-
-// input:invalid + .input-beforeWhatsApp:after,
-// input:invalid + .input-beforeTelegram:after {
-//   content: "*";
-//   color: #fb7070;
-//   position: relative;
-//   font-size: 16px;
-//   font-weight: 900;
-//   padding: 0px;
-// }
-// input:invalid + .input-beforeWhatsApp:after {
-//   left: 7.4rem;
-//   top: -2.1rem;
-// }
-// input:invalid + .input-beforeTelegram:after {
-//   left: 6.6rem;
-//   top: -2.1rem;
-// }
-
-// input:invalid + .input-beforeName:after {
-//   left: 20rem;
-//   top: -2.1rem;
-// }
-
-// input:invalid + .input-beforeEmail:after {
-//   left: 14.3rem;
-//   top: -2.1rem;
-// }
-
-
-
 .registration__button {
   width: 400px;
   background-color: $color-pinkdark;
@@ -191,10 +160,7 @@
   line-height: 150%;
   letter-spacing: 0.05em;
 }
-// .error {
-//   color: red;
-//   display: none;
-// }
+
 
 input[type="checkbox"] {
   accent-color: $color-pinkdark;

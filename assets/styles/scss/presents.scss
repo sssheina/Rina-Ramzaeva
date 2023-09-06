@@ -17,44 +17,30 @@
 
  .presents__wrapper {
     display: grid;
-    grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-
-    max-inline-size: 1262px;
-    margin-inline: auto;
-    min-block-size: 100vh;
-    min-block-size: 100dvh;
-
- }
+}
     
    .presents__guide-block, 
    .presents__webinar-block {
-    display: flex;  
-    flex-direction: row;  
+    display: flex;    
     position: relative;  
    }
 
-   .presents__title-block {
-    margin-bottom: 150px;
-    width: 285px;
-    height: 83px;
-   }
+
 
    .presents__title {
     text-align: center;
    }
 
    .presents__title-hr {
-    @include hr(285px, 30px auto 40px);
+    @include hr(285px, 30px auto 150px);
+    width: 100%;
    }
-
-   
 
    .presents__guide-block {
     display: flex;
     align-items: center;
-    max-inline-size: 1262px;
     margin-bottom: 170px;
    }
 
@@ -64,19 +50,16 @@
  }
 
  .presents__marker_blue {
-    width: 40px;
-    height: 320px;
+    max-width: 40px;
+    max-height: 320px;
+    height: 100%;
     background-color: $color-bluelight;
  }
 
  .presents__guide-text {
     max-width: 772px;
-    width: 100%;
+    width: 100%;    
     margin-right: 140px;
- }
-
- .presents__guide-title {
-    width: 440px;
  }
 
  .presents__guide-hr {
@@ -84,7 +67,8 @@
  }
 
 .presents__guide-button {
-    width: 386px;
+    max-width: 386px;
+    width: 100%;
     background-color: $color-pinkdark;
 }
 .presents__guide-button:hover {
@@ -109,13 +93,12 @@
     position: absolute;
     top: 57px;
     right: 0px;
-    width: 669px;
+    max-width: 669px;
     height: 425px;
     z-index: 2;
 }
 
 .presents__webinar-hr {
-    // margin: 30px 0px 25px 30px;
     @include hr(90px, 30px 0 30px);
 }
 
