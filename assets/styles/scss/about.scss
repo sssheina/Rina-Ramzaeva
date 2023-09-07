@@ -1,7 +1,7 @@
 .about {
   position: relative;
   background-color: $color-white;
-  padding: 220px 0 260px
+  padding: 356px 0 260px;
 }
 
 .about__aside {
@@ -35,19 +35,19 @@
 
 .about__dawn {
   position: absolute;
-  top: 146vh;
-  right: -17vh;
+  top: 37%;
+  right: -27%;
   z-index: 1;
 }
 .about__star_1 {
   position: absolute;
-  top: 154vh;
-  left: 19vh;
+  top: 128%;
+  left: 52%;
 }
 .about__star_2 {
   position: absolute;
-  top: 48vh;
-  left: 15vh;
+  top: 15%;
+  left: 5%;
 }
 
 .about__text-block {
@@ -88,34 +88,34 @@
 
 .about__waves_1 {
   position: absolute;
-  top: 269vh;
-  left: -26vh;
+  top: 76%;
+  left: -7%;
 }
 .about__waves_2 {
   position: absolute;
-  top: 297vh;
-  left: 87vh;
+  top: 96%;
+  left: 26%;
 }
 .about__waves_3 {
   position: absolute;
-  top: 34vh;
-  right: 24vh;
+  top: 10%;
+  right: 7%;
 }
 .about__star_3 {
   position: absolute;
-  top: 34vh;
-  left: 140vh;
+  top: 20%;
+  left: 78%;
 }
 .about__star_4 {
   position: absolute;
   z-index: 1;
-  top: 69vh;
-  right: 61vh;
+  top: 10%;
+  right: 56%;
 }
 .about__star_5 {
   position: absolute;
-  bottom: 8vh;
-  right: 62vh;
+  bottom: 2%;
+  right: 20%;
 }
 
 .about__circle {

@@ -57,6 +57,7 @@
 .benefits__cards-block {
   display: flex;
   gap: 25px;
+  z-index: 1;
 }
 
 .benefits__card-text {
@@ -132,36 +133,37 @@
 
 .benefits__star_1 {
   position: absolute;
-  top: 85px;
-  left: 885px;
+  top: -25%;
+  left: 58%;
 }
 .benefits__star_2 {
   position: absolute;
-  top: 412px;
-  left: 603px;
+  top: 95%;
+  left: 37%;
 }
 .benefits__star_3 {
   position: absolute;
-  bottom: 180px;
-  left: -126px;
+  bottom: 67%;
+  left: -6%;
 }
 .benefits__star_4 {
   position: absolute;
-  bottom: -92px;
-  right: 454px;
+  bottom: 75%;
+    left: 80%;
 }
 .benefits__star_5 {
   position: absolute;
-  bottom: -42px;
-  left: 187px;
+  bottom: -137%;
+  left: 18%;
 }
 .benefits__waves_1 {
   position: absolute;
-  bottom: -183px;
-  left: 454px;
+  bottom: -18%;
+  left: 28%;
 }
 .benefits__arrows {
   position: absolute;
-  top: 236px;
-  right: 126px;
+  top: -35%;
+  right: 5%;
+  z-index: 0;
 }
