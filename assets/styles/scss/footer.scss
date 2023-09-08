@@ -1,9 +1,4 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 100%;
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0) 100%);
 
   &__wrapper {
@@ -13,7 +8,6 @@
   }
 
   &__rights {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
