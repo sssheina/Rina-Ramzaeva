@@ -1,5 +1,9 @@
 var rellax = new Rellax('.rellax');
 
+var rellax = new Rellax('.rellax', {
+  wrapper:'.custom-element'
+});
+
 //________________Защита от двойного клика кнопки сабмита формы (от отправки двух писем)_____________________
 
 
