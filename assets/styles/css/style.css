@@ -1331,7 +1331,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .about__star_4 {
   position: absolute;
   z-index: 1;
-  top: 10%;
+  top: 3%;
   right: 56%;
 }
 
@@ -1509,14 +1509,14 @@ h3 {
 
 .numbers__star {
   position: absolute;
-  left: 1%;
-  top: 50%;
+  left: 20%;
+  top: -184%;
 }
 
 .numbers__waves {
   position: absolute;
-  right: 22vw;
-  top: 8vh;
+  right: 25%;
+  top: 18%;
 }
 
 .numbers__circle_left {
