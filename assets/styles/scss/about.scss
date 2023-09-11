@@ -34,11 +34,20 @@
 }
 
 .about__dawn {
+  display: inline-block;
+   animation: rotate 35s linear infinite;
   position: absolute;
   top: 37%;
   right: -27%;
   z-index: 1;
 }
+
+@keyframes rotate {
+  to {
+   transform: rotate(360deg);
+ }
+}
+
 .about__star_1 {
   position: absolute;
   top: 128%;

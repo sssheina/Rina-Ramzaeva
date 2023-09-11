@@ -229,12 +229,21 @@
 }
 
 .help__spiral {
+  display: inline-block;
+   animation: rotate 15s linear infinite;
   position: absolute;
   top: 2%;
   left: 7%;
 }
+@keyframes rotate {
+  to {
+   transform: rotate(360deg);
+ }
+}
 
 .help__party-star {
+  display: inline-block;
+   animation: rotate 55s linear infinite;
   position: absolute;
   top: 7%;
   left: 57%;

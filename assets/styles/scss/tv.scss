@@ -42,6 +42,7 @@
  .tv__text-wrap {
     width: 1100px;
     height: 520px;
+    z-index: 1;
  }
 
  .tv__title {
@@ -136,3 +137,75 @@
  .tv__button:hover {
    background-color:$color-pinklight;
  }
+
+
+.tv__star-1 {
+   position: absolute;
+   top: -85%;
+   left: 10%;
+}
+
+.tv__star-2 {
+   position: absolute;
+   top: 5%;
+   left: 32%;
+}
+
+.tv__star-3 {
+   position: absolute;
+   top: -40%;
+   left: 60%;
+}
+
+.tv__star-4 {
+   position: absolute;
+   top: -25%;
+   right: 11%;
+}
+
+.tv__star-5 {
+   position: absolute;
+   top: 33%;
+   left: 36%;
+}
+
+.tv__star-6 {
+   position: absolute;
+   top: -1%;
+   left: 10%;
+}
+
+.tv__dawn {
+   display: inline-block;
+   animation: rotate 35s linear infinite;
+   position: absolute;
+   top: 8%;
+   right: 8%;
+}
+
+.tv__wave {
+   position: absolute;
+   top: 35%;
+   right: 25%;
+}
+
+.tv__spiral {
+   display: inline-block;
+   animation: rotate 20s linear infinite;
+   position: absolute;
+   top: 73%;
+   left: 10%;
+   z-index: -1;
+}
+   @keyframes rotate {
+    to {
+     transform: rotate(360deg);
+   }
+ }
+
+.tv__star_big {
+   position: absolute;
+   top: 27%;
+   right: 20%;
+}
+
