@@ -42,12 +42,6 @@
   z-index: 1;
 }
 
-@keyframes rotate {
-  to {
-   transform: rotate(360deg);
- }
-}
-
 .about__star_1 {
   position: absolute;
   top: 128%;
@@ -132,3 +126,4 @@
   top: 0;
   right: 0;
 }
+

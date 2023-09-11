@@ -730,6 +730,11 @@ textarea {
   padding: 0.2em 0;
 }
 
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @font-face {
   font-family: "Montserrat", sans-serif;
   src: url(../../fonts/Montserrat-Regular.ttf);
@@ -1200,19 +1205,12 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .cover__present {
-  display: inline-block;
-  animation: rotate 40s linear infinite;
   position: absolute;
   z-index: 1;
   right: -1%;
   top: 25%;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .container {
   max-width: 1520px;
   width: 100%;
@@ -1266,11 +1264,6 @@ body._touch .menu__list > li._active .menu__arrow {
   z-index: 1;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .about__star_1 {
   position: absolute;
   top: 128%;
@@ -1826,18 +1819,11 @@ h3 {
 }
 
 .help__spiral {
-  display: inline-block;
-  animation: rotate 15s linear infinite;
   position: absolute;
   top: 2%;
   left: 7%;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .help__party-star {
   display: inline-block;
   animation: rotate 55s linear infinite;
@@ -2229,11 +2215,6 @@ h3 {
   z-index: -1;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .tv__star_big {
   position: absolute;
   top: 27%;
@@ -2302,10 +2283,11 @@ h3 {
 }
 
 .education__pic-container {
-  width: 270px;
-  height: 274px;
+  width: 360px;
+  height: 365.333px;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
 }
 
 .education__pic-container:hover {
@@ -2369,6 +2351,68 @@ h3 {
     width: 95%;
   }
 }
+.education__circles_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.education__circles_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.education__star-1_pink {
+  position: absolute;
+  top: -174%;
+  left: 10%;
+}
+
+.education__star-2_pink {
+  position: absolute;
+  top: -94%;
+  right: 27%;
+}
+
+.education__spiral {
+  display: inline-block;
+  animation: rotate 10s linear infinite;
+  position: absolute;
+  top: -2%;
+  right: 7%;
+}
+
+.education__star-1_blue {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__star-2_blue {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__dawn {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__wave {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__arrows {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
 .steps {
   position: relative;
   padding: 220px 0 260px;

@@ -171,16 +171,8 @@
 }
 
 .cover__present {
-  display: inline-block;
-  animation: rotate 40s linear infinite;
   position: absolute;
   z-index: 1;
   right: -1%;
   top: 25%;
-}
-
-@keyframes rotate {
-  to {
-   transform: rotate(360deg);
- }
 }

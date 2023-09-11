@@ -59,10 +59,11 @@
 // _______________________________для увеличения
 
 .education__pic-container {
-  width: 270px;
-  height: 274px;
+  width: 360px;
+height: 365.333px;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
 }
 
 .education__pic-container:hover {
@@ -129,4 +130,67 @@
   .education__popup-img {
     width: 95%;
   }
+}
+
+.education__circles_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.education__circles_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.education__star-1_pink {
+  position: absolute;
+  top: -174%;
+  left: 10%;
+}
+
+.education__star-2_pink {
+  position: absolute;
+  top: -94%;
+  right: 27%;
+}
+
+.education__spiral {
+  display: inline-block;
+  animation: rotate 10s linear infinite;
+  position: absolute;
+  top: -2%;
+  right: 7%;
+}
+
+
+.education__star-1_blue {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__star-2_blue {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__dawn {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__wave {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+}
+
+.education__arrows {
+  position: absolute;
+  top: 35%;
+  right: 25%;
 }

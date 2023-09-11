@@ -10,3 +10,10 @@ $color-white: #FEFEFE;
 $color-bluelight:#D9F0FF;
 $color-blue:#bae2fc;
 $color-green: #a1f2e3;
+
+
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
