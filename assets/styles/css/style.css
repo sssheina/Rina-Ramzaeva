@@ -1048,6 +1048,7 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   margin: 0 auto;
   width: 100%;
+  padding: 302px 0 172px;
 }
 
 @property --gradient-angle {
@@ -1064,25 +1065,22 @@ body._touch .menu__list > li._active .menu__arrow {
   --clr-6: #d8fff7;
 }
 
-.cover__gradient {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+.gradient {
   background: transparent;
 }
 
-.cover__gradient::before,
-.cover__gradient::after {
+.gradient::before,
+.gradient::after {
   content: "";
   position: absolute;
-  inset: -0.5rem;
+  inset: 0rem;
   z-index: -1;
   background: conic-gradient(from var(--gradient-angle), var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
   border-radius: inherit;
   animation: rotation 10s linear infinite;
 }
 
-.cover__gradient::after {
+.gradient::after {
   filter: blur(3.8rem);
 }
 
@@ -1097,7 +1095,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__wrapper {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .cover__left-side {
@@ -1108,7 +1106,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__over-title {
   width: 578px;
-  padding-top: 338px;
   font-weight: 500;
   font-size: 20px;
   line-height: 179.5%;
@@ -1120,7 +1117,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__title {
   width: 796px;
-  padding: 3px 0px 30px 0px;
+  padding: 0 0 30px 0;
   font-weight: 700;
   font-size: 42px;
   line-height: 150%;
@@ -1149,23 +1146,45 @@ body._touch .menu__list > li._active .menu__arrow {
   background-color: #FFDADA;
 }
 
-.cover__right-side {
-  position: relative;
-  width: 50%;
-  height: 100%;
-}
-
 .cover__pic {
   position: absolute;
-  left: -20%;
+  left: 39%;
+  bottom: 0;
   z-index: 2;
   bottom: 0;
 }
+
 .cover__pic img {
-  max-width: 1100px;
+  width: 100vw;
+  height: auto;
   display: block;
 }
 
+@media only screen and (min-width: 1920px) {
+  .cover__pic img {
+    max-width: 1136px;
+  }
+}
+@media only screen and (max-width: 1920px) {
+  .cover__pic img {
+    max-width: 1136px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .cover__pic img {
+    max-width: 717px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cover__pic img {
+    max-width: 430px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .cover__pic img {
+    max-width: 268px;
+  }
+}
 .cover__right-circles {
   position: absolute;
   right: 0;
@@ -1180,33 +1199,33 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .cover__arrows {
   position: absolute;
-  right: 7%;
+  left: 90%;
   top: 16%;
 }
 
 .cover__star_1 {
   position: absolute;
-  left: 0;
-  top: 62%;
+  left: 48.5%;
+  top: 59%;
 }
 
 .cover__star_2 {
   position: absolute;
-  left: 75%;
-  top: 25%;
+  left: 78%;
+  top: 23%;
 }
 
 .cover__star_3 {
   position: absolute;
-  left: 90%;
+  left: 86%;
   top: 55%;
 }
 
 .cover__present {
   position: absolute;
   z-index: 1;
-  right: -1%;
-  top: 25%;
+  left: 82%;
+  top: 28%;
 }
 
 .container {
