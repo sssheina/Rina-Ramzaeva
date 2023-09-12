@@ -780,9 +780,10 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   margin: 0 auto;
   width: 100%;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -1141,6 +1142,10 @@ body._touch .menu__list > li._active .menu__arrow {
   margin-top: 34px;
   background: #FDACAC;
 }
+.cover__button:focus {
+  outline: 3px solid #FDACAC;
+  outline-offset: 7px;
+}
 
 .cover__button:hover {
   background-color: #FFDADA;
@@ -1383,6 +1388,19 @@ body._touch .menu__list > li._active .menu__arrow {
   letter-spacing: 0.1em;
   border: none;
   transition: 0.5s ease;
+}
+
+.button-up {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: #D9F0FF;
+  width: 70px;
+  height: 70px;
+  padding: 1rem;
+}
+.button-up img {
+  max-width: 35px;
 }
 
 .glow-effect {
@@ -1639,6 +1657,10 @@ h3 {
 .help__button:hover {
   background: #D9F0FF;
 }
+.help__button:focus {
+  outline: 3px solid #bae2fc;
+  outline-offset: 7px;
+}
 
 .help__aside {
   position: absolute;
@@ -1758,15 +1780,20 @@ h3 {
   height: 22vh;
 }
 
-.swiper__text-1, .swiper__text-4, .swiper__text-7 {
+.swiper__text-1,
+.swiper__text-4,
+.swiper__text-7 {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
 
-.swiper__text-2, .swiper__text-5, .swiper__text-8 {
+.swiper__text-2,
+.swiper__text-5,
+.swiper__text-8 {
   background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
 }
 
-.swiper__text-3, .swiper__text-6 {
+.swiper__text-3,
+.swiper__text-6 {
   background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
 }
 
@@ -1777,12 +1804,14 @@ h3 {
   padding: 0 70px; /* 70px padding to create room for the arrows */
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
   left: 0; /* Position the button to the left of the lunchbox */
   color: #635D5D;
 }
 
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
   right: 0; /* Position the button to the right of the lunchbox */
   color: #635D5D;
 }
@@ -1981,6 +2010,10 @@ h3 {
   background-color: #FDACAC;
   width: 667px;
 }
+.benefits__button:focus {
+  outline: 3px solid #FDACAC;
+  outline-offset: 7px;
+}
 
 .benefits__button:hover {
   background-color: #FFDADA;
@@ -2048,7 +2081,9 @@ h3 {
   justify-items: center;
 }
 
-.tv__text-block, .tv__body, .tv__fem {
+.tv__text-block,
+.tv__body,
+.tv__fem {
   display: flex;
   position: relative;
 }
@@ -2101,7 +2136,8 @@ h3 {
   border: none;
 }
 
-.tv__body, .tv__fem {
+.tv__body,
+.tv__fem {
   position: relative;
   width: 1262px;
   height: 454px;
@@ -2125,7 +2161,7 @@ h3 {
   height: 100%;
   padding: 40px 30px 30px 30px;
   gap: 30px;
-  background: linear-gradient(180deg, #FFDADA 0%, #D9F0FF 100%);
+  background: linear-gradient(180deg, #ffdada 0%, #d9f0ff 100%);
 }
 
 .tv__video {
@@ -2168,12 +2204,15 @@ h3 {
   margin: 0 auto;
   background-color: #FDACAC;
 }
-
 .tv__button:hover {
   background-color: #FFDADA;
 }
+.tv__button:focus {
+  outline: 3px solid #FDACAC;
+  outline-offset: 7px;
+}
 
-.tv__star-1 {
+.tv__button .tv__star-1 {
   position: absolute;
   top: -85%;
   left: 10%;
@@ -2327,9 +2366,12 @@ h3 {
   background-color: #a1f2e3;
   width: 667px;
 }
-
 .education__button:hover {
   background-color: #D9F0FF;
+}
+.education__button:focus {
+  outline: 3px solid #a1f2e3;
+  outline-offset: 7px;
 }
 
 .education__popup {
@@ -2476,6 +2518,10 @@ h3 {
   width: 100%;
   background: #BFEBE3;
 }
+.steps__button button:focus {
+  outline: 3px solid #BFEBE3;
+  outline-offset: 7px;
+}
 
 .steps__aside {
   position: absolute;
@@ -2605,6 +2651,10 @@ h3 {
   max-width: 800px;
   width: 100%;
   background: #FFDADA;
+}
+.consultations__button button:focus {
+  outline: 3px solid #FFDADA;
+  outline-offset: 7px;
 }
 
 .consultations__aside {
@@ -2748,6 +2798,10 @@ h3 {
   max-width: 387px;
   width: 100%;
   background: #FFDADA;
+}
+.payment__button button:focus {
+  outline: 3px solid #FFDADA;
+  outline-offset: 7px;
 }
 
 .payment__aside {
@@ -2972,9 +3026,12 @@ h3 {
   background-color: #FDACAC;
   align-self: center;
 }
-
 .registration__button:hover {
   background-color: #FFDADA;
+}
+.registration__button:focus {
+  outline: 3px solid #FDACAC;
+  outline-offset: 7px;
 }
 
 #errorsInfo {
@@ -3259,9 +3316,12 @@ details[open] summary ~ * {
   width: 100%;
   background-color: #FDACAC;
 }
-
 .presents__guide-button:hover {
   background-color: #FFDADA;
+}
+.presents__guide-button:focus {
+  outline: 3px solid #FDACAC;
+  outline-offset: 7px;
 }
 
 .presents__webinar-block {
@@ -3274,7 +3334,7 @@ details[open] summary ~ * {
 .presents__webinar-card {
   max-width: 644px;
   width: 100%;
-  background: linear-gradient(180deg, #D9F0FF 0%, #FFDADA 100%);
+  background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 100%);
   padding: 40px 30px 40px 30px;
 }
 

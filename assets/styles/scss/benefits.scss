@@ -69,8 +69,8 @@
   width: 320px;
   height: 267px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 40px 30px 30px 30px; 
-  top: 55%; 
+  padding: 40px 30px 30px 30px;
+  top: 55%;
 }
 
 .card-science,
@@ -80,11 +80,11 @@
 
 .card-feminism {
   background: linear-gradient(180deg, #ffdada 0%, #ffffff 100%);
-  }
+}
 
 .card-lgbt {
   background: linear-gradient(180deg, #d9f0ff 0%, #ffffff 100%);
-  }
+}
 
 .card-benefits {
   display: flex;
@@ -101,12 +101,11 @@
   width: 100%;
 }
 
-
 .benefits__card-title {
   position: relative;
-  &::before, 
+  &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background: $color-black;
     width: 45px;
@@ -119,13 +118,14 @@
   &::after {
     bottom: -10px;
   }
-  }
-
-
+}
 
 .benefits__button {
   background-color: $color-pinkdark;
   width: 667px;
+  &:focus {
+    @include btn-focus($color-pinkdark);
+  }
 }
 .benefits__button:hover {
   background-color: $color-pinklight;
@@ -149,7 +149,7 @@
 .benefits__star_4 {
   position: absolute;
   bottom: 56%;
-    left: 80%;
+  left: 80%;
 }
 .benefits__star_5 {
   position: absolute;

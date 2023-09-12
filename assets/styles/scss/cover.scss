@@ -109,6 +109,9 @@
   width: 452px;
   margin-top: 34px;
   background: $color-pinkdark;
+  &:focus {
+    @include btn-focus($color-pinkdark);
+  }
 }
 
 .cover__button:hover {
@@ -155,11 +158,11 @@
 @media only screen and (max-width: 480px) {
   .cover__pic img {
     max-width: 268px;
+
   }
 }
 
 .cover__right-circles {
-  
   position: absolute;
   right: 0;
   bottom: 0;
@@ -170,7 +173,6 @@
   left: 0;
   top: 10%;
 }
-
 
 .cover__arrows {
   position: absolute;
