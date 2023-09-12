@@ -18,7 +18,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  
 }
 
 .education__title-block {
@@ -60,7 +59,7 @@
 
 .education__pic-container {
   width: 360px;
-height: 365.333px;
+  height: 365.333px;
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
@@ -74,7 +73,7 @@ height: 365.333px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 
 .education__pic:hover {
@@ -88,17 +87,20 @@ height: 365.333px;
 .education__button {
   background-color: $color-green;
   width: 667px;
-}
-.education__button:hover {
-  background-color: $color-bluelight;
+  &:hover {
+    background-color: $color-bluelight;
+  }
+  &:focus {
+    @include btn-focus($color-green);
+  }
 }
 
 .education__popup {
   display: none;
   position: fixed;
-  top:0;
-  left:0;
-  background: rgba(0,0,0,.9);
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
   height: 100%;
   width: 100%;
   z-index: 100;
@@ -113,8 +115,6 @@ height: 365.333px;
   color: $color-pinkdark;
   cursor: pointer;
   z-index: inherit;
-  
-
 }
 
 .education__popup-img {
@@ -163,7 +163,6 @@ height: 365.333px;
   top: -2%;
   right: 7%;
 }
-
 
 .education__star-1_blue {
   position: absolute;

@@ -38,6 +38,9 @@
       max-width: 800px;
       width: 100%;
       background: $color-pinklight;
+      &:focus {
+        @include btn-focus($color-pinklight);
+      }
     }
   }
 }

@@ -66,11 +66,11 @@
 }
 
 .check {
-font-weight: 500;
-font-size: 18px;
-line-height: 150%;
-letter-spacing: 0.1em;
-color: $color-black;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  color: $color-black;
 }
 
 .checkmark {
@@ -149,18 +149,20 @@ color: $color-black;
   width: 400px;
   background-color: $color-pinkdark;
   align-self: center;
+  &:hover {
+    background-color: $color-pinklight;
+  }
+  &:focus {
+    @include btn-focus($color-pinkdark);
+  }
 }
 
-.registration__button:hover {
-  background-color: $color-pinklight;
-}
 #errorsInfo {
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.05em;
 }
-
 
 input[type="checkbox"] {
   accent-color: $color-pinkdark;
