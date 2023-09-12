@@ -1,206 +1,208 @@
 .tv {
-   position: relative;
-   padding: 220px 0 260px;
+  position: relative;
+  padding: 220px 0 260px;
 }
 
 .tv__aside {
-    position: absolute;
-    left: -46px;
- }
+  position: absolute;
+  left: -46px;
+}
 
- .tv__aside-span {
-    position: relative;
- }
+.tv__aside-span {
+  position: relative;
+}
 
- .tv__wrapper {
-    display: grid;
-    justify-items: center;
- }
+.tv__wrapper {
+  display: grid;
+  justify-items: center;
+}
 
- .tv__text-block, .tv__body, .tv__fem  {
-    display: flex;    
-    position: relative;    
- }
+.tv__text-block,
+.tv__body,
+.tv__fem {
+  display: flex;
+  position: relative;
+}
 
- .tv__text-block {
-    margin: 0px 0px 150px 0px;
-    max-width: 1260px;
-    width: 100%;
- }
+.tv__text-block {
+  margin: 0px 0px 150px 0px;
+  max-width: 1260px;
+  width: 100%;
+}
 
- .tv__marker-box {
-    width: 129px;
-    height: 520px;
- }
+.tv__marker-box {
+  width: 129px;
+  height: 520px;
+}
 
- .tv__marker_blue {
-    width: 40px;
-    height: 520px;
-    background-color: $color-bluelight;
- }
+.tv__marker_blue {
+  width: 40px;
+  height: 520px;
+  background-color: $color-bluelight;
+}
 
- .tv__text-wrap {
-    width: 1100px;
-    height: 520px;
-    z-index: 1;
- }
+.tv__text-wrap {
+  width: 1100px;
+  height: 520px;
+  z-index: 1;
+}
 
- .tv__title {
-    width: 530px;
-    
- }
+.tv__title {
+  width: 530px;
+}
 
- .tv__hr-title {
-    @include hr(140px, 40px 0);
- }
+.tv__hr-title {
+  @include hr(140px, 40px 0);
+}
 .tv__text {
-    margin-bottom: 44px;
+  margin-bottom: 44px;
 }
 
 .tv__hr-endnote {
-    width: 100px;
-    margin: 0px 0px 31px 0px;
-    color: $color-black;
-    background-color: $color-black;
-    height: 1px;
-    border: none;
+  width: 100px;
+  margin: 0px 0px 31px 0px;
+  color: $color-black;
+  background-color: $color-black;
+  height: 1px;
+  border: none;
 }
 
-.tv__body, .tv__fem {
-    position: relative;
-    width: 1262px;
-    height: 454px;
-  }
+.tv__body,
+.tv__fem {
+  position: relative;
+  width: 1262px;
+  height: 454px;
+}
 
-  .tv__body {
-     margin-bottom: 75px;
-  }
+.tv__body {
+  margin-bottom: 75px;
+}
 
-  .tv__fem {
-    margin-bottom: 125px;
- }
-  .card-tv {
-   display: flex;
-    flex-direction: column;
-    position: relative;
-    max-width: 644px;
-    width: 100%;
-    max-height: 425px;
-    height: 100%;
-    padding: 40px 30px 30px 30px;
-    gap: 30px;
-    background: linear-gradient(180deg, #FFDADA 0%, #D9F0FF 100%);
-  }
+.tv__fem {
+  margin-bottom: 125px;
+}
+.card-tv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 644px;
+  width: 100%;
+  max-height: 425px;
+  height: 100%;
+  padding: 40px 30px 30px 30px;
+  gap: 30px;
+  background: linear-gradient(180deg, #ffdada 0%, #d9f0ff 100%);
+}
 
-  .tv__video {
+.tv__video {
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  max-width: 669px;
+  z-index: 2;
+}
+
+.tv__video::-webkit-media-controls-panel {
+  background-image: linear-gradient(to bottom, #00000000, #5c53a1);
+}
+
+.tv__card-title {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
-    top: 55px;
-    right: 0px;
-    max-width: 669px;
-    z-index: 2;
+    background: $color-black;
+    width: 45px;
+    height: 2px;
+    left: 0;
   }
-
-  .tv__video::-webkit-media-controls-panel {
-   background-image: linear-gradient(to bottom, #00000000, #5c53a1);
- }
-
-  .tv__card-title {
-   position: relative;
-   &::before, 
-   &::after {
-     content: '';
-     position: absolute;
-     background: $color-black;
-     width: 45px;
-     height: 2px;
-     left: 0;
-   }
-   &::before {
-     top: -10px;
-   }
-   &::after {
-     bottom: -10px;
-   }
-   }
-
-  .tv__card-text {
-    width: 530px;
-    min-height: 260px;
+  &::before {
+    top: -10px;
   }
+  &::after {
+    bottom: -10px;
+  }
+}
 
- .tv__button {
-    width: 665px;
-    margin: 0 auto;
-    background-color: $color-pinkdark;
- }
+.tv__card-text {
+  width: 530px;
+  min-height: 260px;
+}
 
- .tv__button:hover {
-   background-color:$color-pinklight;
- }
+.tv__button {
+  width: 665px;
+  margin: 0 auto;
+  background-color: $color-pinkdark;
+  &:hover {
+    background-color: $color-pinklight;
+  }
+  &:focus {
+    @include btn-focus($color-pinkdark);
+  }
+}
 
-
-.tv__star-1 {
-   position: absolute;
-   top: -85%;
-   left: 10%;
+.tv__button .tv__star-1 {
+  position: absolute;
+  top: -85%;
+  left: 10%;
 }
 
 .tv__star-2 {
-   position: absolute;
-   top: 5%;
-   left: 32%;
+  position: absolute;
+  top: 5%;
+  left: 32%;
 }
 
 .tv__star-3 {
-   position: absolute;
-   top: -40%;
-   left: 60%;
+  position: absolute;
+  top: -40%;
+  left: 60%;
 }
 
 .tv__star-4 {
-   position: absolute;
-   top: -25%;
-   right: 11%;
+  position: absolute;
+  top: -25%;
+  right: 11%;
 }
 
 .tv__star-5 {
-   position: absolute;
-   top: 33%;
-   left: 36%;
+  position: absolute;
+  top: 33%;
+  left: 36%;
 }
 
 .tv__star-6 {
-   position: absolute;
-   top: -1%;
-   left: 10%;
+  position: absolute;
+  top: -1%;
+  left: 10%;
 }
 
 .tv__dawn {
-   display: inline-block;
-   animation: rotate 35s linear infinite;
-   position: absolute;
-   top: 8%;
-   right: 8%;
+  display: inline-block;
+  animation: rotate 35s linear infinite;
+  position: absolute;
+  top: 8%;
+  right: 8%;
 }
 
 .tv__wave {
-   position: absolute;
-   top: 35%;
-   right: 25%;
+  position: absolute;
+  top: 35%;
+  right: 25%;
 }
 
 .tv__spiral {
-   display: inline-block;
-   animation: rotate 20s linear infinite;
-   position: absolute;
-   top: 73%;
-   left: 10%;
-   z-index: -1;
+  display: inline-block;
+  animation: rotate 20s linear infinite;
+  position: absolute;
+  top: 73%;
+  left: 10%;
+  z-index: -1;
 }
 
 .tv__star_big {
-   position: absolute;
-   top: 27%;
-   right: 20%;
+  position: absolute;
+  top: 27%;
+  right: 20%;
 }
-

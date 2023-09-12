@@ -37,6 +37,9 @@
       max-width: 667px;
       width: 100%;
       background: $color-greenlight;
+      &:focus {
+        @include btn-focus($color-greenlight);
+      }
     }
   }
 }

@@ -15,10 +15,10 @@
     font-weight: 500;
     line-height: 150%;
     &:nth-of-type(1) {
-      width: 31,9vw;
+      width: 31, 9vw;
     }
     &:nth-of-type(2) {
-      width:40vw;
+      width: 40vw;
       margin-bottom: 68px;
     }
   }
@@ -30,9 +30,12 @@
     max-width: 667px;
     width: 100%;
     margin: 0 auto;
-  }
-  &__button:hover {
-    background: $color-bluelight;
+    &:hover {
+      background: $color-bluelight;
+    }
+    &:focus {
+      @include btn-focus($color-blue);
+    }
   }
 }
 
@@ -79,7 +82,7 @@
     padding: 25px 30px;
     z-index: 2;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    
+
     & hr {
       @include hr(140px, 0);
     }
@@ -93,7 +96,6 @@
     }
   }
 }
-
 
 .swiper-pagination-bullet {
   cursor: pointer;
@@ -151,17 +153,20 @@
   height: 22vh;
 }
 
-
-.swiper__text-1, .swiper__text-4, .swiper__text-7  {
+.swiper__text-1,
+.swiper__text-4,
+.swiper__text-7 {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
-.swiper__text-2, .swiper__text-5, .swiper__text-8 {
+.swiper__text-2,
+.swiper__text-5,
+.swiper__text-8 {
   background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
 }
-.swiper__text-3, .swiper__text-6 {
+.swiper__text-3,
+.swiper__text-6 {
   background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
 }
-
 
 .lunchbox {
   display: flex;
@@ -170,12 +175,14 @@
   padding: 0 70px; /* 70px padding to create room for the arrows */
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
   left: 0; /* Position the button to the left of the lunchbox */
   color: $color-black;
 }
 
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
   right: 0; /* Position the button to the right of the lunchbox */
   color: $color-black;
 }
@@ -234,16 +241,14 @@
   left: 7%;
 }
 
-
 .help__party-star {
   display: inline-block;
-   animation: rotate 55s linear infinite;
+  animation: rotate 55s linear infinite;
   position: absolute;
   top: 7%;
   left: 57%;
   z-index: -1;
 }
-
 
 .help__arrows {
   position: absolute;

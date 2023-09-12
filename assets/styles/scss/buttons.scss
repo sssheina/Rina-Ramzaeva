@@ -11,7 +11,18 @@
   border: none;
   transition: 0.5s ease;
 }
-
+.button-up {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: $color-bluelight;
+  width: 70px;
+  height: 70px;
+  padding: 1rem;
+  & img {
+    max-width: 35px;
+  }
+}
 // __________________GLOW EFEECT____________________
 
 // ____________________________________BUTTON_______________
