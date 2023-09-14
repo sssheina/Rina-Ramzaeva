@@ -54,16 +54,16 @@ if (!error_get_last()) {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['data']['debug'][] = $str;};
     
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'sssheina'; // Логин на почте
-    $mail->Password   = 'qzozzpgwpbpnezvx'; // Пароль на почте
+    $mail->Host       = ''; // SMTP сервера вашей почты
+    $mail->Username   = ''; // Логин на почте
+    $mail->Password   = ''; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('sssheina@gmail.com', 'Veta'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('', ''); // Адрес самой почты и имя отправителя
     
     // Получатель письма
-    //$mail->addAddress('sssheina@gmail.com');
-    $mail->addAddress('sviatlana@mail.ru'); // Ещё один, если нужен
+    //$mail->addAddress('');
+    $mail->addAddress(''); // Ещё один, если нужен
     
     // Прикрипление файлов к письму
     /*if (!empty($file['name'][0])) {
