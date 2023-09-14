@@ -1391,16 +1391,22 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .button-up {
+  display: none;
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
   background: #D9F0FF;
-  width: 70px;
-  height: 70px;
-  padding: 1rem;
+  width: 60px;
+  height: 60px;
+  padding: 0.5rem;
+  z-index: 998;
+  transition: 0.4s ease;
+}
+.button-up:hover {
+  transform: scale(1.1);
 }
 .button-up img {
-  max-width: 35px;
+  max-width: 30px;
 }
 
 .glow-effect {

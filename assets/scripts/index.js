@@ -1,4 +1,4 @@
-// Privacy Policy
+// ----- Privacy Policy -----
 const privacyPolicyLink = document.querySelector(".privacy-policy__link");
 const privacyPolicy = document.querySelector(".privacy-policy");
 const closePopupBtn = document.querySelector(".privacy-policy__close");
@@ -11,7 +11,7 @@ closePopupBtn.addEventListener("click", (e) => {
   privacyPolicy.style.display = "none";
 });
 
-// // Smooth scrollbar
+// // ----- Smooth scrollbar -----
 // var Scrollbar = window.Scrollbar;
 // const options = {
 //   damping: 0.05,
@@ -20,9 +20,6 @@ closePopupBtn.addEventListener("click", (e) => {
 
 // Parallax
 var rellax = new Rellax(".rellax");
-// var rellax = new Rellax(".rellax", {
-//   wrapper: ".custom-element",
-// });
 
 //________________Защита от двойного клика кнопки сабмита формы (от отправки двух писем)_____________________
 
@@ -43,7 +40,7 @@ document.querySelector(".form").addEventListener("submit", function (e) {
   }, 3000);
 });
 
-// _______________slider HELP______________________
+// ----- SLIDER HELP -----
 
 const swiper = new Swiper(".swiper", {
   grabCursor: true,
@@ -83,10 +80,6 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: true,
-  // },
   speed: 1200,
 });
 
@@ -100,7 +93,7 @@ window.addEventListener("scroll", function () {
   );
 });
 
-//_____________________Education PIC-ZOOM__________________
+// ----- Education PIC-ZOOM -----
 
 document.querySelectorAll(".education__pic").forEach((image) => {
   image.onclick = () => {
@@ -120,7 +113,7 @@ window.onclick = (event) => {
   }
 };
 
-// _____________________ФОРМА____________________
+//  ----- REGISTRATION FORM -----
 
 const form = document.querySelector(".formWithValidation");
 const userName = document.querySelector("#userName");
@@ -210,7 +203,7 @@ checkboxPrivat.forEach((checkbox) => {
   });
 });
 
-// ______________________________Посточные ошибки в инпутах_______________________
+//  ----- Посточные ошибки в инпутах -----
 
 // JavaScript
 // document.getElementById('username').addEventListener('input', function (e) {
@@ -249,68 +242,28 @@ checkboxPrivat.forEach((checkbox) => {
 //   }
 // });
 
-// -------------- КНОПКА ВВЕРХ ------------------
+// ----- BUTTON UP -----
 
-// const btnUp = {
-//   el: document.querySelector(".btn-up"),
-//   scrolling: false,
-//   show() {
-//     if (
-//       this.el.classList.contains("btn-up_hide") &&
-//       !this.el.classList.contains("btn-up_hiding")
-//     ) {
-//       this.el.classList.remove("btn-up_hide");
-//       this.el.classList.add("btn-up_hiding");
-//       window.setTimeout(() => {
-//         this.el.classList.remove("btn-up_hiding");
-//       }, 300);
-//     }
-//   },
-//   hide() {
-//     if (
-//       !this.el.classList.contains("btn-up_hide") &&
-//       !this.el.classList.contains("btn-up_hiding")
-//     ) {
-//       this.el.classList.add("btn-up_hiding");
-//       window.setTimeout(() => {
-//         this.el.classList.add("btn-up_hide");
-//         this.el.classList.remove("btn-up_hiding");
-//       }, 300);
-//     }
-//   },
-//   addEventListener() {
-//     // при прокрутке окна (window)
-//     window.addEventListener("scroll", () => {
-//       const scrollY = window.scrollY || document.documentElement.scrollTop;
-//       if (this.scrolling && scrollY > 0) {
-//         return;
-//       }
-//       this.scrolling = false;
-//       // если пользователь прокрутил страницу более чем на 200px
-//       if (scrollY > 400) {
-//         this.show(); // сделаем кнопку .btn-up видимой
-//       } else {
-//         this.hide(); // иначе скроем кнопку .btn-up
-//       }
-//     });
-//     // при нажатии на кнопку .btn-up
-//     document.querySelector(".btn-up").onclick = () => {
-//       this.scrolling = true;
-//       this.hide();
-//       // переместиться в верхнюю часть страницы
-//       window.scrollTo({
-//         top: 0,
-//         left: 0,
-//         behavior: "smooth",
-//       });
-//     };
-//   },
-// };
+const btnUp = document.querySelector(".button-up");
 
-// btnUp.addEventListener();
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  if (scrollY > 400) {
+    btnUp.style.display = "block";
+  } else {
+    btnUp.style.display = "none";
+  }
+});
 
-// ("use strict");
+btnUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
 
+// ----- к чему относится этот код? -----
 const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -354,7 +307,7 @@ if (isMobile.any()) {
   document.body.classList.add("_pc");
 }
 
-// Меню бургер
+//  ----- BURGER MENU  -----
 const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 if (iconMenu) {
@@ -365,7 +318,7 @@ if (iconMenu) {
   });
 }
 
-// Прокрутка при клике
+// ----- Прокрутка при клике -----
 const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
 if (menuLinks.length > 0) {
   menuLinks.forEach((menuLink) => {
@@ -399,14 +352,14 @@ if (menuLinks.length > 0) {
   }
 }
 
-//   _______________________Header color_____________________
+//  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
 
-// __________________________BUTTON____________________________
+//  ----- BUTTON GLOW EFFECT -----
 
 (function setGlowEffectRx() {
   const glowEffects = document.querySelectorAll(".glow-effect");
