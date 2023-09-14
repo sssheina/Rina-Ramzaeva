@@ -18,6 +18,7 @@
     transition: 0.4s ease;
     &:hover {
       text-decoration: underline;
+      color: $color-blackhover;
     }
   }
   &__concent {

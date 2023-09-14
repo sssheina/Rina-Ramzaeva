@@ -1395,7 +1395,7 @@ body._touch .menu__list > li._active .menu__arrow {
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
-  background: #D9F0FF;
+  background: #bbbaba;
   width: 60px;
   height: 60px;
   padding: 0.5rem;
@@ -1403,10 +1403,16 @@ body._touch .menu__list > li._active .menu__arrow {
   transition: 0.4s ease;
 }
 .button-up:hover {
+  background: #FDACAC;
   transform: scale(1.1);
 }
+.button-up:focus {
+  outline: 3px solid #bbbaba;
+  outline-offset: 7px;
+}
 .button-up img {
-  max-width: 30px;
+  max-width: 35px;
+  margin-bottom: 0.3rem;
 }
 
 .glow-effect {
@@ -3026,6 +3032,9 @@ h3 {
 .registration__terms-group:first-child {
   margin-bottom: 12px;
 }
+.registration__terms-group label {
+  font-size: 14px;
+}
 
 .registration__button {
   width: 400px;
@@ -3075,6 +3084,7 @@ input[type=checkbox] {
 }
 .privacy-policy__link:hover {
   text-decoration: underline;
+  color: #bbbaba;
 }
 .privacy-policy__concent {
   position: absolute;
