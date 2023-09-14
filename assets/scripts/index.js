@@ -1,9 +1,22 @@
+// Privacy Policy
+const privacyPolicyLink = document.querySelector(".privacy-policy__link");
+const privacyPolicy = document.querySelector(".privacy-policy");
+const closePopupBtn = document.querySelector(".privacy-policy__close");
+
+privacyPolicyLink.addEventListener("click", () => {
+  privacyPolicy.style.display = "block";
+});
+closePopupBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  privacyPolicy.style.display = "none";
+});
+
 // // Smooth scrollbar
-var Scrollbar = window.Scrollbar;
-const options = {
-  damping: 0.05,
-};
-Scrollbar.init(document.querySelector("#my-scrollbar"), options);
+// var Scrollbar = window.Scrollbar;
+// const options = {
+//   damping: 0.05,
+// };
+// Scrollbar.init(document.querySelector("#my-scrollbar"), options);
 
 // Parallax
 var rellax = new Rellax(".rellax");
