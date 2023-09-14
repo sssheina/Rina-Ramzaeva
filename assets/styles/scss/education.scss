@@ -77,9 +77,6 @@
 }
 
 .education__pic:hover {
-  // -ms-transform: scale(1.03); /* IE 9 */
-  // -webkit-transform: scale(1.03); /* Safari 3-8 */
-  // transform: scale(1.03);
   filter: none;
   z-index: 1000;
 }
@@ -89,6 +86,7 @@
   width: 667px;
   &:hover {
     background-color: $color-bluelight;
+    @include btn-hover;
   }
   &:focus {
     @include btn-focus($color-green);

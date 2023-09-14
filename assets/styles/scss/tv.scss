@@ -136,6 +136,7 @@
   background-color: $color-pinkdark;
   &:hover {
     background-color: $color-pinklight;
+    @include btn-hover;
   }
   &:focus {
     @include btn-focus($color-pinkdark);

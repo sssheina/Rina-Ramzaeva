@@ -32,6 +32,7 @@
     margin: 0 auto;
     &:hover {
       background: $color-bluelight;
+      @include btn-hover;
     }
     &:focus {
       @include btn-focus($color-blue);

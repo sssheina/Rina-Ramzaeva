@@ -154,6 +154,9 @@
   align-self: center;
   &:hover {
     background-color: $color-pinklight;
+    &:hover {
+      @include btn-hover;
+    }
   }
   &:focus {
     @include btn-focus($color-pinkdark);

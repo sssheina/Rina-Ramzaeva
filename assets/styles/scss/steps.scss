@@ -40,6 +40,9 @@
       &:focus {
         @include btn-focus($color-greenlight);
       }
+      &:hover {
+        @include btn-hover;
+      }
     }
   }
 }

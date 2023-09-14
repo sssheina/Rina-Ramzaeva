@@ -65,11 +65,12 @@
   max-width: 386px;
   width: 100%;
   background-color: $color-pinkdark;
-  &:hover {
-    background-color: $color-pinklight;
-  }
   &:focus {
     @include btn-focus($color-pinkdark);
+  }
+  &:hover {
+    background-color: $color-pinklight;
+    @include btn-hover;
   }
 }
 

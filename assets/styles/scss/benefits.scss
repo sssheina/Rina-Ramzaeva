@@ -126,9 +126,10 @@
   &:focus {
     @include btn-focus($color-pinkdark);
   }
-}
-.benefits__button:hover {
-  background-color: $color-pinklight;
+  &:hover {
+    background-color: $color-pinklight;
+    @include btn-hover;
+  }
 }
 
 .benefits__star_1 {

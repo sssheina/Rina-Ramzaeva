@@ -23,6 +23,9 @@
       &:focus {
         @include btn-focus($color-pinklight);
       }
+      &:hover {
+        @include btn-hover;
+      }
     }
   }
 }

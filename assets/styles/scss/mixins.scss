@@ -34,3 +34,7 @@
   outline: 3px solid $color;
   outline-offset: 7px;
 }
+@mixin btn-hover() {
+  outline: none;
+  outline-offset: 0;
+}
