@@ -48,6 +48,7 @@
   align-items: center;
   gap: 25px;
   margin: 158px 0 135px;
+  z-index: 2;
 }
 
 .gray {
@@ -144,13 +145,13 @@
 
 .education__star-1_pink {
   position: absolute;
-  top: -174%;
+  top: -181%;
   left: 10%;
 }
 
 .education__star-2_pink {
   position: absolute;
-  top: -94%;
+  top: -99%;
   right: 27%;
 }
 
@@ -164,30 +165,33 @@
 
 .education__star-1_blue {
   position: absolute;
-  top: 35%;
-  right: 25%;
+  top: -160%;
+  left: 103%;
+  z-index: 1;
 }
 
 .education__star-2_blue {
   position: absolute;
-  top: 35%;
-  right: 25%;
+  top: 109%;
+  left: 66%;
 }
 
 .education__dawn {
+  display: inline-block;
+   animation: rotate 35s linear infinite;
   position: absolute;
-  top: 35%;
-  right: 25%;
+  top: 65%;
+  left: -6%;
 }
 
 .education__wave {
   position: absolute;
-  top: 35%;
-  right: 25%;
+  top: 109%;
+  left: 19%;
 }
 
 .education__arrows {
   position: absolute;
-  top: 35%;
-  right: 25%;
+  top: -90%;
+  left: 88%;
 }

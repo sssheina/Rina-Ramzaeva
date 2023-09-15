@@ -32,6 +32,8 @@
 
 @mixin btn-focus($color) {
   outline: 3px solid $color;
+  // outline: none;
+  box-shadow: 0 0 4px 3px $color;
   outline-offset: 7px;
 }
 @mixin btn-hover() {
