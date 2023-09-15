@@ -43,20 +43,20 @@
 }
 .menu__link {
   color: $color-black;
-  font-weight: 500;
   font-size: 20px;
   text-decoration: none;
+  font-weight: 700;
 }
 .menu__link:hover {
   color: $color-blackhover;
 }
-.language {
-  font-weight: 900;
-  color: $color-black;
-}
+// .language {
+//   font-weight: 700;
+//   color: $color-black;
+// }
 .menu__sub-list {
   position: absolute;
-  top: 100%;
+  top: 60%;
   right: 0;
   padding: 15px;
   min-width: 33px;
@@ -69,13 +69,14 @@
   margin: 0;
 }
 .menu__sub-link {
-  color: #fff;
+  color: $color-black;
   text-decoration: none;
-  font-size: 800;
-  font-size: 13px;
+  color: $color-black;
+  font-weight: 700;
+  font-size: 20px;
 }
 .menu__sub-link:hover {
-  font-weight: 800;
+  color: $color-blackhover;
 }
 .menu__arrow {
   // display: none;
@@ -137,7 +138,7 @@ body._touch .menu__list > li._active .menu__arrow {
     visibility: hidden;
     pointer-events: none;
     transition: all 0.3s ease 0s;
-    background: #3919af;
+    background: transparent;
     margin: 0px 0px 0px 0px;
     text-align: center;
   }
@@ -148,13 +149,15 @@ body._touch .menu__list > li._active .menu__arrow {
     padding: 0px 0px 0px 0px;
   }
 
-  .menu__sub-link {
-    color: #ffffff;
-  }
+  // .menu__sub-link {
+  //   color: $color-black;
+  //   font-weight: 700;
+  //   font-size: 20px;
+  // }
 
-  .menu__sub-link:hover {
-    font-weight: 800;
-  }
+  // .menu__sub-link:hover {
+  //   color: $color-blackhover;
+  // }
 }
 
 @media (max-width: 743px) {

@@ -5,7 +5,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,900;1,400;1,500&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -837,23 +836,18 @@ body {
 
 .menu__link {
   color: #635D5D;
-  font-weight: 500;
   font-size: 20px;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .menu__link:hover {
   color: #bbbaba;
 }
 
-.language {
-  font-weight: 900;
-  color: #635D5D;
-}
-
 .menu__sub-list {
   position: absolute;
-  top: 100%;
+  top: 60%;
   right: 0;
   padding: 15px;
   min-width: 33px;
@@ -869,14 +863,15 @@ body {
 }
 
 .menu__sub-link {
-  color: #fff;
+  color: #635D5D;
   text-decoration: none;
-  font-size: 800;
-  font-size: 13px;
+  color: #635D5D;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .menu__sub-link:hover {
-  font-weight: 800;
+  color: #bbbaba;
 }
 
 body._pc .menu__list > li:hover .menu__sub-list {
@@ -936,7 +931,7 @@ body._touch .menu__list > li._active .menu__arrow {
     visibility: hidden;
     pointer-events: none;
     transition: all 0.3s ease 0s;
-    background: #3919af;
+    background: transparent;
     margin: 0px 0px 0px 0px;
     text-align: center;
   }
@@ -945,12 +940,6 @@ body._touch .menu__list > li._active .menu__arrow {
     text-align: center;
     margin: 0px 0px 10px 0px;
     padding: 0px 0px 0px 0px;
-  }
-  .menu__sub-link {
-    color: #ffffff;
-  }
-  .menu__sub-link:hover {
-    font-weight: 800;
   }
 }
 @media (max-width: 743px) {
@@ -1118,12 +1107,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__title {
   width: 796px;
   padding: 0 0 30px 0;
-  font-weight: 700;
-  font-size: 42px;
   line-height: 150%;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #635D5D;
 }
 
 .cover__subtitle {
@@ -1487,6 +1472,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 h1 {
   font-size: 42px;
+  font-weight: 700;
   text-transform: uppercase;
   color: #635D5D;
 }
@@ -2617,7 +2603,7 @@ h3 {
 
 .steps__star_blue {
   position: absolute;
-  top: -200px;
+  top: -490%;
   left: 300px;
 }
 
@@ -2634,6 +2620,8 @@ h3 {
 }
 
 .steps__spiral {
+  display: inline-block;
+  animation: rotate 20s linear infinite;
   position: absolute;
   right: -10px;
   bottom: -216px;

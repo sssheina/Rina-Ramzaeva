@@ -107,7 +107,7 @@
 
 .steps__star_blue {
   position: absolute;
-  top: -200px;
+  top: -490%;
   left: 300px;
 }
 .steps__wave {
@@ -122,6 +122,8 @@
   }
 }
 .steps__spiral {
+  display: inline-block;
+  animation: rotate 20s linear infinite;
   position: absolute;
   right: -10px;
   bottom: -216px;
