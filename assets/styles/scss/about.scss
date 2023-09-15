@@ -35,7 +35,7 @@
 
 .about__dawn {
   display: inline-block;
-   animation: rotate 35s linear infinite;
+  animation: rotate 35s linear infinite;
   position: absolute;
   top: 37%;
   right: -27%;
@@ -65,7 +65,6 @@
   );
   padding: 125px 105px 188px 230px;
 }
-
 
 .about__hr_1 {
   @include hr(140px, 0);
@@ -126,4 +125,3 @@
   top: 0;
   right: 0;
 }
-
