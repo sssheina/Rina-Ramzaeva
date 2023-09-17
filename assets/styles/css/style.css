@@ -736,37 +736,55 @@ textarea {
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../../fonts/Montserrat-Regular.ttf);
+  src: url(./../../fonts/Montserrat-Regular.ttf);
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../../fonts/Montserrat-Italic.ttf);
+  src: url(./../../fonts/Montserrat-Italic.ttf);
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../../fonts/Montserrat-Medium.ttf);
+  src: url(./../../fonts/Montserrat-Medium.ttf);
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../../fonts/Montserrat-MediumItalic.ttf);
+  src: url(./../../fonts/Montserrat-MediumItalic.ttf);
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../../fonts/Montserrat-SemiBold.ttf);
+  src: url(./../../fonts/Montserrat-SemiBold.ttf);
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(../../fonts/Montserrat-Black.ttf);
+  src: url(./../../fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./../../fonts/Montserrat-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./../../fonts/Montserrat-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./../../fonts/Montserrat-Black.ttf);
   font-weight: 900;
   font-style: normal;
 }
@@ -786,7 +804,9 @@ body {
 }
 
 .header {
+  display: flex;
   position: fixed;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -803,6 +823,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1520px;
+  width: 100%;
   min-height: 150px;
 }
 
@@ -838,11 +860,15 @@ body {
   color: #635D5D;
   font-size: 20px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .menu__link:hover {
   color: #bbbaba;
+}
+
+.language {
+  font-weight: 700;
 }
 
 .menu__sub-list {
@@ -1037,7 +1063,6 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  padding: 302px 0 172px;
 }
 
 @property --gradient-angle {
@@ -1091,6 +1116,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 50%;
   height: 100%;
   z-index: 3;
+  padding: 302px 0 172px;
 }
 
 .cover__over-title {
@@ -1142,11 +1168,10 @@ body._touch .menu__list > li._active .menu__arrow {
   left: 39%;
   bottom: 0;
   z-index: 2;
-  bottom: 0;
 }
 
 .cover__pic img {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -1518,7 +1543,6 @@ h3 {
 
 .numbers {
   position: relative;
-  width: 100vw;
   height: 455px;
   margin: 0 auto;
   background: linear-gradient(180deg, #D9F0FF 7.29%, #BFEBE3 100%);

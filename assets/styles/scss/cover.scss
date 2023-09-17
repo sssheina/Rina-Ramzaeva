@@ -2,7 +2,7 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
-  padding: 302px 0 172px;
+  // padding: 302px 0 172px;
 }
 
 @property --gradient-angle {
@@ -66,6 +66,7 @@
   width: 50%;
   height: 100%;
   z-index: 3;
+  padding: 302px 0 172px;
 }
 
 .cover__over-title {
@@ -114,11 +115,10 @@
   left: 39%;
   bottom: 0;
   z-index: 2;
-  bottom: 0;
 }
 
 .cover__pic img {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: block;
 }

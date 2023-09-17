@@ -1,5 +1,7 @@
 .header {
+  display: flex;
   position: fixed;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1520px;
+  width: 100%;
   min-height: 150px;
 }
 .header__container.scrolledHeaderContainer {
@@ -45,15 +49,14 @@
   color: $color-black;
   font-size: 20px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
 }
 .menu__link:hover {
   color: $color-blackhover;
 }
-// .language {
-//   font-weight: 700;
-//   color: $color-black;
-// }
+.language {
+  font-weight: 700;
+}
 .menu__sub-list {
   position: absolute;
   top: 60%;
