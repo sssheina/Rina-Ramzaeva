@@ -1290,11 +1290,11 @@
                 <hr class="registration__title-hr">
 
 
-                <form class="form formWithValidation" action="#" novalidate>
+                <form class="form formWithValidation" id="emailform" novalidate>
 
 
                     <div class="registration__row">
-                        <input type="text" id="userName" class="input" placeholder="Имя (как к тебе обращаться)"
+                        <input type="text" id="userName" name="name" class="input" placeholder="Имя (как к тебе обращаться)"
                             spellcheck="false" required>
                         <span class="input-checkmark input-checkmark-name checkmark">*</span>
                         <label class="input-after">Имя (как к тебе обращаться) *</label>
@@ -1310,7 +1310,7 @@
                      -->
 
                     <div class="registration__row">
-                        <input type="text" id="email" class="input" placeholder="Электронный адрес" spellcheck="false"
+                        <input type="text" id="email" name="email" class="input" placeholder="Электронный адрес" spellcheck="false"
                             required>
                         <span class="input-checkmark input-checkmark-email checkmark">*</span>
                         <label class="input-after">Электронный адрес *</label>
@@ -1318,19 +1318,19 @@
                     </div>
 
                     <div class="registration__row">
-                        <input type="text" id="whatsApp" class="input" placeholder="WhatsApp" spellcheck="false">
+                        <input type="text" id="whatsApp" name="whatsApp" class="input" placeholder="WhatsApp" spellcheck="false">
                         <label class="input-after">WhatsApp (+7 (123) ***-**-**)</label>
                     </div>
 
                     <div class="registration__row">
-                        <input type="text" id="telegram" class="input" placeholder="Telegram" spellcheck="false">
+                        <input type="text" id="telegram" name ="telegram" class="input" placeholder="Telegram" spellcheck="false">
                         <label class="input-after">Telegram ("@name") </label>
                     </div>
 
 
                     <div class="registration__message">
                         <label>Опиши свой запрос/проблему</label>
-                        <textarea id="comment"
+                        <textarea id="comment" name="text"
                             placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)"></textarea>
                     </div>
 
@@ -1377,7 +1377,7 @@
                         </div>
                     </div>
 
-                    <button class="registration__button button glow-effect" data-glow-offset="true" type="submit">
+                    <button class="registration__button button glow-effect" data-glow-offset="true" onclick="submitForm()">
                         отправить
                         <svg class="glow-container">
                             <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
