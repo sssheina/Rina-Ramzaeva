@@ -21,34 +21,16 @@ closePopupBtn.addEventListener("click", (e) => {
 // Parallax
 var rellax = new Rellax(".rellax");
 
-//________________Защита от двойного клика кнопки сабмита формы (от отправки двух писем)_____________________
-
-document.querySelector(".form").addEventListener("submit", function (e) {
-  // Prevent form submission
-  e.preventDefault();
-
-  // Disable the submit button
-  var submitBtn = document.querySelector(".registration__button");
-  submitBtn.disabled = true;
-
-  // Submit the form manually
-  this.submit();
-
-  // Re-enable the submit button after 3 seconds
-  setTimeout(function () {
-    submitBtn.disabled = false;
-  }, 3000);
-});
 
 // ____________________________PHPMailer__________________________
 
-async function submitForm(event) {
+async function submitForm() {
   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
  try {
    // Формируем запрос
-   const response = await fetch(event.target.action, {
+   const response = await fetch("send.php", {
      method: "POST",
-     body: new FormData(event.target),
+     body: new FormData(emailform),
    });
    // проверяем, что ответ есть
    if (!response.ok)
@@ -171,6 +153,7 @@ function validateCheckboxes(checkboxes) {
   return [...checkboxes].some((checkbox) => checkbox.checked);
 }
 
+/*
 form.addEventListener("submit", (e) => {
   if (!submitted) {
     submitted = true;
@@ -212,7 +195,7 @@ form.addEventListener("submit", (e) => {
     form.submit();
   }
 });
-
+*/
 userName.addEventListener("input", () => {
   if (submitted) errorsInfo.innerHTML = "";
 });
