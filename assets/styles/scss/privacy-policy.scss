@@ -33,7 +33,8 @@
     gap: 1rem;
     padding: 2rem;
     border: 1px solid $color-black;
-    background: linear-gradient(180deg, #d9f0ff, #fff);
+    background: $color-white;
+    // background: linear-gradient(180deg, #d9f0ff, #fff);
     z-index: 1000;
     border-radius: 4px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.42), 0 19px 60px rgba(0, 0, 0, 0.5);

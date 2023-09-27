@@ -1351,10 +1351,11 @@
                         <div class="registration__terms-group">
                             <input type="checkbox" class="checkboxPrivat" required />
                             <span class="checkmark">*</span>
-                            <label class="check">Ознакомилась (-лся) с <a href="#privacy-policy"
-                                    class="privacy-policy__link">Privacy Policy</a> и
-                                согласна (-ен) на
-                                обработку личных данных</label>
+                            <label class="check">Ознакомилась (-лся) с 
+                                <a href="#privacy-policy"
+                                    class="privacy-policy__link">Privacy Policy</a> 
+                                    <!-- <a href="#thanx-message" class="thanx-message__link">thanx-message</a>  -->
+                                    и согласна (-ен) на обработку личных данных</label>
                         </div>
                     </div>
 
@@ -1381,6 +1382,14 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique blanditiis, laborum
                                 suscipit cumque asperiores veniam, nostrum perferendis saepe deserunt optio adipisci.
                                 Quaerat aspernatur ab exercitationem quae iste voluptates sit fugit!</p>
+                        </div>
+                    </div>
+
+                    <div class="thanx-message" id="thanx-message">
+                        <div class="thanx-message__concent">
+                            <span class="thanx-message__close">×</span>
+                            <h3 class="thanx-message__title">Спасибо за обращение!</h3>
+                            <p>Я свяжусь с тобой как можно быстрее и помогу найти ответ на твой запрос.</p>
                         </div>
                     </div>
 
@@ -1590,7 +1599,7 @@
                             Почитай перед сессией.
                         </div>
                     </div>
-                    <button class="presents__guide-button button glow-effect">скачать гайд
+                    <button class="presents__guide-button button glow-effect" onclick="downloadPDF()">скачать гайд
                         <svg class="glow-container">
                             <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
                             <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>

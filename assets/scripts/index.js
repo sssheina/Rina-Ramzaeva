@@ -1,3 +1,30 @@
+function downloadPDF() {
+  const link = document.createElement('a');
+  link.href = './assets/images/guide.pdf';
+  link.download = 'guide.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+// //----- Thanx-message -----
+// const thanxMessageLink = document.querySelector(".thanx-message__link");
+// const thanxMessage = document.querySelector(".thanx-message");
+// const closePopupBtnThanx = document.querySelector(".thanx-message__close");
+
+// thanxMessageLink.addEventListener("click", () => {
+//   thanxMessage.style.display = "block";
+// });
+// closePopupBtnThanx.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   thanxMessage.style.display = "none";
+
+//// document.addEventListener("click", (e) => {
+////   if (e.target.classList.contains("thanx-message__close")) {
+// //    e.preventDefault();
+////     thanxMessage.style.display = "none";}
+// });
+
 // ----- Privacy Policy -----
 const privacyPolicyLink = document.querySelector(".privacy-policy__link");
 const privacyPolicy = document.querySelector(".privacy-policy");
@@ -44,7 +71,8 @@ async function submitForm() {
    const json = await response.json();
    if (json.result === "success") {
      // в случае успеха
-     alert(json.info);
+     showThankYouMessage(json.info);
+    //  alert(json.info);
    } else {
      // в случае ошибки
      console.log(json);
@@ -54,6 +82,10 @@ async function submitForm() {
    // обработка ошибки
    alert(error);
  }
+}
+
+function showThankYouMessage() {
+  thanxMessage.style.display = "block";
 }
 
 // ----- SLIDER HELP -----
