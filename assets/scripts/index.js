@@ -7,6 +7,10 @@ function downloadPDF() {
   document.body.removeChild(link);
 }
 
+function scrollToRegistration() {
+  const targetBlock = document.getElementById('registration');
+  targetBlock.scrollIntoView({behavior: 'smooth'});
+}
 // //----- Thanx-message -----
 // const thanxMessageLink = document.querySelector(".thanx-message__link");
 // const thanxMessage = document.querySelector(".thanx-message");
