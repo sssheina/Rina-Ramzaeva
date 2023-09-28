@@ -1401,6 +1401,10 @@ body._touch .menu__list > li._active .menu__arrow {
   transition: 0.5s ease;
 }
 
+button:disabled {
+  color: #bbbaba;
+}
+
 .button-up {
   display: none;
   position: fixed;
@@ -3096,6 +3100,9 @@ h3 {
   outline: 3px solid #FDACAC;
   box-shadow: 0 0 4px 3px #FDACAC;
   outline-offset: 7px;
+}
+.registration__button:disabled {
+  background-color: #FFDADA;
 }
 
 #errorsInfo {

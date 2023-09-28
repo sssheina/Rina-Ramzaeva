@@ -161,6 +161,9 @@
   &:focus {
     @include btn-focus($color-pinkdark);
   }
+  &:disabled {
+    background-color: $color-pinklight;
+  }
 }
 
 #errorsInfo {

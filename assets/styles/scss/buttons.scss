@@ -11,6 +11,11 @@
   border: none;
   transition: 0.5s ease;
 }
+
+button:disabled {
+  color: $color-blackhover;
+}
+
 .button-up {
   display: none;
   position: fixed;
