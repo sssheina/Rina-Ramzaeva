@@ -75,7 +75,7 @@ async function submitForm() {
    const json = await response.json();
    if (json.result === "success") {
      // в случае успеха
-     showThankYouMessage(json.info);
+     showThankYouMessage();
     //  alert(json.info);
    } else {
      // в случае ошибки
@@ -232,6 +232,42 @@ form.addEventListener("submit", (e) => {
   }
 });
 */
+
+// input.onblur = function() {
+//   if (!input.value.includes('@')) { // не email
+//     input.classList.add('invalid');
+//     error.innerHTML = 'Пожалуйста, введите правильный email.'
+//   }
+// };
+
+// input.onfocus = function() {
+//   if (this.classList.contains('invalid')) {
+//     // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+//     this.classList.remove('invalid');
+//     error.innerHTML = "";
+//   }
+// };
+
+email.onblur = function() {
+  if (email.value === "") {
+    // Check if the email field is empty
+    email.classList.add('invalid');
+    errorsInfo.innerHTML = 'Email обязателен'
+  }
+  else if (!validateEmail(email.value)) { // не email
+    email.classList.add('invalid');
+    errorsInfo.innerHTMLL = 'Пожалуйста, введи правильный email.'
+  }
+};
+
+email.onfocus = function() {
+  if (this.classList.contains('invalid')) {
+    // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+    this.classList.remove('invalid');
+    errorsInfo.innerHTML = "";
+  }
+};
+
 userName.addEventListener("input", () => {
   if (submitted) errorsInfo.innerHTML = "";
 });
