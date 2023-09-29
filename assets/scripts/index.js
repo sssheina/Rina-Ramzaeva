@@ -1,3 +1,11 @@
+//////////////////////////////////
+// CONSTANTS
+//////////////////////////////////
+
+// REGISTRATION FORM CONSTANTS
+const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
+
+
 function downloadPDF() {
   const link = document.createElement('a');
   link.href = './assets/images/guide.pdf';
@@ -58,6 +66,12 @@ var rellax = new Rellax(".rellax");
 async function submitForm() {
   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
  try {
+	 
+   // Validating the form
+   if(!validateRegForm(false)){
+	   return;
+   }
+   
    // Формируем запрос
    const response = await fetch("send.php", {
      method: "POST",
@@ -178,6 +192,46 @@ const whatsappInput = document.querySelector("#whatsApp");
 let submitted = false;
 
 // const whatsappRegex = /\+[0-9]{1,3}\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
+
+// Registration form validation functions
+//----------------------------------------
+
+//If needShowMessages = true, the validation messages will be displayed beneath the name field
+//Return true if validation is ok, false otherwise
+function validateRegFormName(needShowMessages){
+	
+	//Doing the basic validation - the name field should not be empty
+	let result = true;
+	let el = document.getElementById("userName");
+	let elError = document.getElementById("usernameError");
+	
+	
+	if(el.value === null || el.value === ""){
+		result = false;
+	}
+	
+	if(needShowMessages){
+			elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_NAME;
+	}
+	
+	return result;
+}
+
+function validateRegForm(needShowMessages){
+	let result = true;
+	
+	result = validateRegFormName(needShowMessages);
+	
+	if(result){
+		//validating other controls
+	}
+	
+	return result;
+}
+
+document.getElementById("userName").addEventListener("keyup", (event) => {
+	validateRegFormName(true);
+})
 
 function validateEmail(email) {
   const re =
