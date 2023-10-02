@@ -1,96 +1,12 @@
-function downloadPDF() {
-  const link = document.createElement('a');
-  link.href = './assets/images/guide.pdf';
-  link.download = 'guide.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-function scrollToRegistration() {
-  const targetBlock = document.getElementById('registration');
-  targetBlock.scrollIntoView({behavior: 'smooth'});
-}
-// //----- Thanx-message -----
-// const thanxMessageLink = document.querySelector(".thanx-message__link");
-// const thanxMessage = document.querySelector(".thanx-message");
-// const closePopupBtnThanx = document.querySelector(".thanx-message__close");
-
-// thanxMessageLink.addEventListener("click", () => {
-//   thanxMessage.style.display = "block";
-// });
-// closePopupBtnThanx.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   thanxMessage.style.display = "none";
-
-//// document.addEventListener("click", (e) => {
-////   if (e.target.classList.contains("thanx-message__close")) {
-// //    e.preventDefault();
-////     thanxMessage.style.display = "none";}
-// });
-
-// ----- Privacy Policy -----
-const privacyPolicyLink = document.querySelector(".privacy-policy__link");
-const privacyPolicy = document.querySelector(".privacy-policy");
-const closePopupBtn = document.querySelector(".privacy-policy__close");
-
-privacyPolicyLink.addEventListener("click", () => {
-  privacyPolicy.style.display = "block";
-});
-closePopupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  privacyPolicy.style.display = "none";
-});
-
-// // ----- Smooth scrollbar -----
-// var Scrollbar = window.Scrollbar;
-// const options = {
-//   damping: 0.05,
-// };
-// Scrollbar.init(document.querySelector("#my-scrollbar"), options);
-
 // Parallax
 var rellax = new Rellax(".rellax");
 
+//  ----- HEADER COLOR -----
 
-// ____________________________PHPMailer__________________________
-
-async function submitForm() {
-  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
- try {
-   // Формируем запрос
-   const response = await fetch("send.php", {
-     method: "POST",
-     body: new FormData(emailform),
-   });
-   // проверяем, что ответ есть
-   if (!response.ok)
-     throw `Ошибка при обращении к серверу: ${response.status}`;
-   // проверяем, что ответ действительно JSON
-   const contentType = response.headers.get("content-type");
-   if (!contentType || !contentType.includes("application/json")) {
-     throw "Ошибка обработки. Ответ не JSON";
-   }
-   // обрабатываем запрос
-   const json = await response.json();
-   if (json.result === "success") {
-     // в случае успеха
-     showThankYouMessage();
-    //  alert(json.info);
-   } else {
-     // в случае ошибки
-     console.log(json);
-     throw json.info;
-   }
- } catch (error) {
-   // обработка ошибки
-   alert(error);
- }
-}
-
-function showThankYouMessage() {
-  thanxMessage.style.display = "block";
-}
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  header.classList.toggle("scrolled", window.scrollY > 0);
+});
 
 // ----- SLIDER HELP -----
 
@@ -145,6 +61,132 @@ window.addEventListener("scroll", function () {
   );
 });
 
+
+// ___________________________
+
+function downloadPDF() {
+  const link = document.createElement('a');
+  link.href = './assets/images/guide.pdf';
+  link.download = 'guide.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function scrollToRegistration() {
+  const targetBlock = document.getElementById('registration');
+  targetBlock.scrollIntoView({behavior: 'smooth'});
+}
+// //----- Thanx-message -----
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".thanx-message__link");
+const closeModalBtn = document.querySelector(".btn-close");
+
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+openModalBtn.addEventListener("click", openModal);
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+closeModalBtn.addEventListener("click", closeModal);
+
+overlay.addEventListener("click", closeModal);
+
+
+modal.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    modalClose();
+  }
+});
+
+// const thanxMessageLink = document.querySelector(".thanx-message__link");
+// const thanxMessage = document.querySelector(".thanx-message");
+// const closePopupBtnThanx = document.querySelector(".thanx-message__close");
+
+// thanxMessageLink.addEventListener("click", () => {
+//   thanxMessage.style.display = "block";
+// });
+// closePopupBtnThanx.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   thanxMessage.style.display = "none";
+
+//// document.addEventListener("click", (e) => {
+////   if (e.target.classList.contains("thanx-message__close")) {
+// //    e.preventDefault();
+////     thanxMessage.style.display = "none";}
+// });
+
+// ----- Privacy Policy -----
+const privacyPolicyLink = document.querySelector(".privacy-policy__link");
+const privacyPolicy = document.querySelector(".privacy-policy");
+const closePopupBtn = document.querySelector(".privacy-policy__close");
+
+privacyPolicyLink.addEventListener("click", () => {
+  privacyPolicy.style.display = "block";
+});
+closePopupBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  privacyPolicy.style.display = "none";
+});
+
+// // ----- Smooth scrollbar -----
+// var Scrollbar = window.Scrollbar;
+// const options = {
+//   damping: 0.05,
+// };
+// Scrollbar.init(document.querySelector("#my-scrollbar"), options);
+
+
+
+
+// ____________________________PHPMailer__________________________
+
+async function submitForm() {
+  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+ try {
+   // Формируем запрос
+   const response = await fetch("send.php", {
+     method: "POST",
+     body: new FormData(emailform),
+   });
+   // проверяем, что ответ есть
+   if (!response.ok)
+     throw `Ошибка при обращении к серверу: ${response.status}`;
+   // проверяем, что ответ действительно JSON
+   const contentType = response.headers.get("content-type");
+   if (!contentType || !contentType.includes("application/json")) {
+     throw "Ошибка обработки. Ответ не JSON";
+   }
+   // обрабатываем запрос
+   const json = await response.json();
+   if (json.result === "success") {
+     // в случае успеха
+     showThankYouMessage();
+    //  alert(json.info);
+   } else {
+     // в случае ошибки
+     console.log(json);
+     throw json.info;
+   }
+ } catch (error) {
+   // обработка ошибки
+   alert(error);
+ }
+}
+
+function showThankYouMessage() {
+  thanxMessage.style.display = "block";
+}
+
+
 // ----- Education PIC-ZOOM -----
 
 document.querySelectorAll(".education__pic").forEach((image) => {
@@ -173,6 +215,8 @@ const email = document.querySelector("#email");
 const checkboxAdult = document.querySelectorAll(".checkbox_18");
 const checkboxPrivat = document.querySelectorAll(".checkboxPrivat");
 const errorsInfo = document.querySelector("#errorsInfo");
+const errorUserName = document.querySelector("#errorUserName");
+const errorEmail = document.querySelector("#errorEmail");
 const whatsappInput = document.querySelector("#whatsApp");
 
 let submitted = false;
@@ -441,12 +485,7 @@ if (menuLinks.length > 0) {
   }
 }
 
-//  ----- HEADER COLOR -----
 
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".header");
-  header.classList.toggle("scrolled", window.scrollY > 0);
-});
 
 //  ----- BUTTON GLOW EFFECT -----
 
