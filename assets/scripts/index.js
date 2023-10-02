@@ -64,7 +64,6 @@ window.addEventListener("scroll", function () {
 
 // ___________________________
 
-
 // ----- к чему относится этот код? -----
 const isMobile = {
   Android: function () {
@@ -118,6 +117,7 @@ if (iconMenu) {
 }
 
 // ----- DOWNLOAD FILE -----
+
 
 function downloadPDF() {
   const link = document.createElement("a");
@@ -199,8 +199,6 @@ closePopupBtn.addEventListener("click", (e) => {
 //   damping: 0.05,
 // };
 // Scrollbar.init(document.querySelector("#my-scrollbar"), options);
-
-
 
 // ____________________________PHPMailer__________________________
 
