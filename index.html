@@ -1311,7 +1311,7 @@
                             placeholder="Имя (как к тебе обращаться)" spellcheck="false" required>
                         <span class="input-checkmark input-checkmark-name checkmark">*</span>
                         <label class="input-after">Имя (как к тебе обращаться) *</label>
-                        <div id="usernameError" class="error"></div>
+                        <div id="errorUserName" class="errorUserName"></div>
                     </div>
 
                     <!-- <div class="ui-placeholder ui-leftTop">
@@ -1320,14 +1320,14 @@
                             <span class="input-beforeName"></span>
                             <span class="input-after">Имя&nbsp<span class="checkmark">*</span></span>
                         </div>
-                     -->
+                    -->
 
                     <div class="registration__row">
                         <input type="text" id="email" name="email" class="input" placeholder="Электронный адрес"
                             spellcheck="false" required>
                         <span class="input-checkmark input-checkmark-email checkmark">*</span>
                         <label class="input-after">Электронный адрес *</label>
-
+                        <div id="errorEmail" class="errorEmail"></div>
                     </div>
 
                     <div class="registration__row">
@@ -1359,10 +1359,13 @@
                         <div class="registration__terms-group">
                             <input type="checkbox" class="checkboxPrivat" required />
                             <span class="checkmark">*</span>
-                            <label class="check">Ознакомилась (-лся) с
-                                <a href="#privacy-policy" class="privacy-policy__link">Privacy Policy</a>
-                                <!-- <a href="#thanx-message" class="thanx-message__link">thanx-message</a>  -->
-                                и согласна (-ен) на обработку личных данных</label>
+
+                            <label class="check">Ознакомилась (-лся) с 
+                                <a href="#privacy-policy"
+                                    class="privacy-policy__link">Privacy Policy</a> 
+                                    <a href="#thanx-message" class="thanx-message__link">thanx-message</a> 
+                                    и согласна (-ен) на обработку личных данных</label>
+
                         </div>
                     </div>
 
@@ -1392,13 +1395,30 @@
                         </div>
                     </div>
 
-                    <div class="thanx-message" id="thanx-message">
+                    <!-- <div class="thanx-message" id="thanx-message">
                         <div class="thanx-message__concent">
                             <span class="thanx-message__close">×</span>
                             <h3 class="thanx-message__title">Спасибо за обращение!</h3>
                             <p>Я свяжусь с тобой как можно быстрее и помогу найти ответ на твой запрос.</p>
                         </div>
-                    </div>
+                    </div> -->
+
+                    <section class="modal hidden" id="thanx-message">
+                        <div class="flex">
+                            <img src="user.png" width="50px" height="50px" alt="user" />
+                            <button class="btn-close">⨉</button>
+                        </div>
+                        <div>
+                            <h3>Stay in touch</h3>
+                            <p>
+                              This is a dummy newsletter form so don't bother trying to test it. Not
+                              that I expect you to, anyways. :)
+                            </p>
+                          </div>
+                    </section>
+                    
+                    <div class="overlay hidden"></div>
+                    <!-- <button class="btn btn-open">Open Modal</button> -->
 
                     <button class="registration__button button glow-effect" data-glow-offset="true"
                         onclick="submitForm()">
