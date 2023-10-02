@@ -64,19 +64,75 @@ window.addEventListener("scroll", function () {
 
 // ___________________________
 
+
+// ----- к чему относится этот код? -----
+const isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  },
+};
+
+if (isMobile.any()) {
+  document.body.classList.add("_touch");
+
+  let menuArrow = document.querySelector(".menu__arrow");
+
+  menuArrow.addEventListener("click", function () {
+    menuArrow.parentElement.classList.toggle("_active");
+    console.log(menuArrow.parentElement);
+  });
+} else {
+  document.body.classList.add("_pc");
+}
+
+//  ----- BURGER MENU -----
+const iconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".menu__body");
+if (iconMenu) {
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
+  });
+}
+
+// ----- DOWNLOAD FILE -----
+
 function downloadPDF() {
-  const link = document.createElement('a');
-  link.href = './assets/images/guide.pdf';
-  link.download = 'guide.pdf';
+  const link = document.createElement("a");
+  link.href = "./assets/images/guide.pdf";
+  link.download = "guide.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
 
 function scrollToRegistration() {
-  const targetBlock = document.getElementById('registration');
-  targetBlock.scrollIntoView({behavior: 'smooth'});
+  const targetBlock = document.getElementById("registration");
+  targetBlock.scrollIntoView({ behavior: "smooth" });
 }
+
 // //----- Thanx-message -----
 
 const modal = document.querySelector(".modal");
@@ -146,40 +202,39 @@ closePopupBtn.addEventListener("click", (e) => {
 
 
 
-
 // ____________________________PHPMailer__________________________
 
 async function submitForm() {
   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
- try {
-   // Формируем запрос
-   const response = await fetch("send.php", {
-     method: "POST",
-     body: new FormData(emailform),
-   });
-   // проверяем, что ответ есть
-   if (!response.ok)
-     throw `Ошибка при обращении к серверу: ${response.status}`;
-   // проверяем, что ответ действительно JSON
-   const contentType = response.headers.get("content-type");
-   if (!contentType || !contentType.includes("application/json")) {
-     throw "Ошибка обработки. Ответ не JSON";
-   }
-   // обрабатываем запрос
-   const json = await response.json();
-   if (json.result === "success") {
-     // в случае успеха
-     showThankYouMessage();
-    //  alert(json.info);
-   } else {
-     // в случае ошибки
-     console.log(json);
-     throw json.info;
-   }
- } catch (error) {
-   // обработка ошибки
-   alert(error);
- }
+  try {
+    // Формируем запрос
+    const response = await fetch("send.php", {
+      method: "POST",
+      body: new FormData(emailform),
+    });
+    // проверяем, что ответ есть
+    if (!response.ok)
+      throw `Ошибка при обращении к серверу: ${response.status}`;
+    // проверяем, что ответ действительно JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw "Ошибка обработки. Ответ не JSON";
+    }
+    // обрабатываем запрос
+    const json = await response.json();
+    if (json.result === "success") {
+      // в случае успеха
+      showThankYouMessage();
+      //  alert(json.info);
+    } else {
+      // в случае ошибки
+      console.log(json);
+      throw json.info;
+    }
+  } catch (error) {
+    // обработка ошибки
+    alert(error);
+  }
 }
 
 function showThankYouMessage() {
@@ -292,22 +347,22 @@ form.addEventListener("submit", (e) => {
 //   }
 // };
 
-email.onblur = function() {
+email.onblur = function () {
   if (email.value === "") {
     // Check if the email field is empty
-    email.classList.add('invalid');
-    errorsInfo.innerHTML = 'Email обязателен'
-  }
-  else if (!validateEmail(email.value)) { // не email
-    email.classList.add('invalid');
-    errorsInfo.innerHTMLL = 'Пожалуйста, введи правильный email.'
+    email.classList.add("invalid");
+    errorsInfo.innerHTML = "Email обязателен";
+  } else if (!validateEmail(email.value)) {
+    // не email
+    email.classList.add("invalid");
+    errorsInfo.innerHTMLL = "Пожалуйста, введи правильный email.";
   }
 };
 
-email.onfocus = function() {
-  if (this.classList.contains('invalid')) {
+email.onfocus = function () {
+  if (this.classList.contains("invalid")) {
     // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-    this.classList.remove('invalid');
+    this.classList.remove("invalid");
     errorsInfo.innerHTML = "";
   }
 };
@@ -395,61 +450,6 @@ btnUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
-// ----- к чему относится этот код? -----
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
-
-if (isMobile.any()) {
-  document.body.classList.add("_touch");
-
-  let menuArrows = document.querySelectorAll(".menu__arrow");
-  if (menuArrows.length > 0) {
-    for (let index = 0; index < menuArrows.length; index++) {
-      const menuArrow = menuArrows[index];
-      menuArrow.addEventListener("click", function (e) {
-        menuArrow.parentElement.classList.toggle("_active");
-      });
-    }
-  }
-} else {
-  document.body.classList.add("_pc");
-}
-
-//  ----- BURGER MENU  -----
-const iconMenu = document.querySelector(".menu__icon");
-const menuBody = document.querySelector(".menu__body");
-if (iconMenu) {
-  iconMenu.addEventListener("click", function (e) {
-    document.body.classList.toggle("_lock");
-    iconMenu.classList.toggle("_active");
-    menuBody.classList.toggle("_active");
-  });
-}
 
 // ----- Прокрутка при клике -----
 const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
