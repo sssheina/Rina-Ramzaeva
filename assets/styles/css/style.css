@@ -808,7 +808,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 150px;
+  max-height: 100px;
   height: 100%;
   z-index: 10;
   display: flex;
@@ -819,14 +819,14 @@ body {
 
 .header.scrolled {
   background: white;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .header__container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding-top: 25px;
 }
 
 .header__container.scrolledHeaderContainer {
