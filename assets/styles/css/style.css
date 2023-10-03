@@ -3547,7 +3547,6 @@ details[open] summary ~ * {
     opacity: 1;
   }
 }
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -3605,6 +3604,7 @@ details[open] summary ~ * {
 
 .hidden {
   display: none;
+}
 
 @media (max-width: 743px) {
   .header {
@@ -3690,7 +3690,6 @@ details[open] summary ~ * {
   .menu__sub-link:hover {
     color: #FDACAC;
   }
-
 }
 
 /*# sourceMappingURL=style.css.map */

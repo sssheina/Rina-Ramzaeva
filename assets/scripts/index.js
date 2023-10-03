@@ -1,12 +1,68 @@
-// Parallax
-var rellax = new Rellax(".rellax");
-
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
+
+// ----- к чему относится этот код? -----
+const isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  },
+};
+
+if (isMobile.any()) {
+  document.body.classList.add("_touch");
+
+  let menuArrow = document.querySelector(".menu__arrow");
+
+  menuArrow.addEventListener("click", function () {
+    menuArrow.parentElement.classList.toggle("_active");
+    console.log(menuArrow.parentElement);
+  });
+} else {
+  document.body.classList.add("_pc");
+}
+
+//  ----- BURGER MENU -----
+const iconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".menu__body");
+if (iconMenu) {
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
+  });
+}
+
+// Parallax
+var rellax = new Rellax(".rellax");
+
+
+
+
 
 // ----- SLIDER HELP -----
 
@@ -64,57 +120,7 @@ window.addEventListener("scroll", function () {
 
 // ___________________________
 
-// ----- к чему относится этот код? -----
-const isMobile = {
-  Android: function () {
-    return navigator.userAgent.match(/Android/i);
-  },
-  BlackBerry: function () {
-    return navigator.userAgent.match(/BlackBerry/i);
-  },
-  iOS: function () {
-    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  },
-  Opera: function () {
-    return navigator.userAgent.match(/Opera Mini/i);
-  },
-  Windows: function () {
-    return navigator.userAgent.match(/IEMobile/i);
-  },
-  any: function () {
-    return (
-      isMobile.Android() ||
-      isMobile.BlackBerry() ||
-      isMobile.iOS() ||
-      isMobile.Opera() ||
-      isMobile.Windows()
-    );
-  },
-};
 
-if (isMobile.any()) {
-  document.body.classList.add("_touch");
-
-  let menuArrow = document.querySelector(".menu__arrow");
-
-  menuArrow.addEventListener("click", function () {
-    menuArrow.parentElement.classList.toggle("_active");
-    console.log(menuArrow.parentElement);
-  });
-} else {
-  document.body.classList.add("_pc");
-}
-
-//  ----- BURGER MENU -----
-const iconMenu = document.querySelector(".menu__icon");
-const menuBody = document.querySelector(".menu__body");
-if (iconMenu) {
-  iconMenu.addEventListener("click", function (e) {
-    document.body.classList.toggle("_lock");
-    iconMenu.classList.toggle("_active");
-    menuBody.classList.toggle("_active");
-  });
-}
 
 // ----- DOWNLOAD FILE -----
 
@@ -133,7 +139,7 @@ function scrollToRegistration() {
   targetBlock.scrollIntoView({ behavior: "smooth" });
 }
 
-// //----- Thanx-message -----
+//----- Thanx-message -----
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
