@@ -8,6 +8,7 @@
 .numbers__wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .numbers__numbers {
