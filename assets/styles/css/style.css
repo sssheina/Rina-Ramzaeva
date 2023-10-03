@@ -1118,6 +1118,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .container {
   max-width: 1520px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .about {
@@ -1819,12 +1821,12 @@ h3 {
   display: flex;
   align-items: flex-start;
   z-index: 1;
+  gap: 120px;
 }
 
 .benefits__title-block {
   display: flex;
   flex-direction: column;
-  width: 644px;
 }
 
 .benefits__title-rectangle {
@@ -1835,15 +1837,6 @@ h3 {
 
 .benefits__title {
   padding-bottom: 28px;
-}
-
-.benefits__text-1 {
-  width: 275px;
-  margin-right: 111px;
-}
-
-.benefits__text-2 {
-  width: 490px;
 }
 
 .benefits__cards-block {
