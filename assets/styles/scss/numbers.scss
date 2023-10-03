@@ -1,6 +1,6 @@
 .numbers {
   position: relative;
-  padding: 154px 200px;
+  padding: 154px 0px;
   margin: 0 auto;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #bfebe3 100%);
 }
@@ -8,7 +8,6 @@
 .numbers__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .numbers__numbers {
@@ -18,6 +17,8 @@
   font-size: 74px;
   color: $color-black;
   z-index: 1;
+  flex-grow: 1;
+  padding-left: 80px;
 }
 
 .numbers__span {
@@ -30,7 +31,7 @@
 
 .numbers__star {
   position: absolute;
-  left: 24%;
+  left: 26%;
   top: -207%;
 }
 
