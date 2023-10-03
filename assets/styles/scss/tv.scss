@@ -54,9 +54,11 @@
 .tv__hr-title {
   @include hr(140px, 40px 0);
 }
-.tv__text {
+
+.tv__text > p {
   margin-bottom: 44px;
 }
+
 
 .tv__hr-endnote {
   width: 100px;

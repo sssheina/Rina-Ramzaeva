@@ -74,7 +74,9 @@
   position: relative;
   max-width: 773px;
 }
-
+.about__text > p {
+  margin-bottom: 44px;
+}
 .about__hr_2 {
   color: $color-black;
   background-color: $color-black;

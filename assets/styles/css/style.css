@@ -1201,6 +1201,10 @@ body._touch .menu__list > li._active .menu__arrow {
   max-width: 773px;
 }
 
+.about__text > p {
+  margin-bottom: 44px;
+}
+
 .about__hr_2 {
   color: #635D5D;
   background-color: #635D5D;
@@ -2025,7 +2029,7 @@ h3 {
   border: none;
 }
 
-.tv__text {
+.tv__text > p {
   margin-bottom: 44px;
 }
 
@@ -3249,11 +3253,14 @@ details[open] summary ~ * {
 
 .words {
   position: relative;
-  padding: 118px 0;
+  padding: 118px 600px;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #ffdada 100%);
 }
 
 .words__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
@@ -3378,7 +3385,7 @@ details[open] summary ~ * {
 .presents__video {
   position: absolute;
   top: 57px;
-  right: 0px;
+  left: 600px;
   max-width: 669px;
   height: 425px;
   z-index: 2;
