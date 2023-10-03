@@ -3,8 +3,8 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    padding: 220px 0 286px;
+    justify-content: space-around;
+    padding: 220px 20px 286px;
   }
 
   &__rights {
@@ -24,8 +24,6 @@
 .footer__card {
   max-width: fit-content;
   & hr {
-    margin: 20px 0;
-    max-width: 167px;
     @include hr(167px, 20px 0);
   }
 

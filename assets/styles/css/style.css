@@ -3246,14 +3246,14 @@ details[open] summary ~ * {
 
 .words {
   position: relative;
-  padding: 118px 600px;
+  padding: 118px 0;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #ffdada 100%);
 }
 
 .words__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 44px;
+  gap: 24px;
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
@@ -3406,8 +3406,8 @@ details[open] summary ~ * {
 }
 .footer__wrapper {
   display: flex;
-  justify-content: space-between;
-  padding: 220px 0 286px;
+  justify-content: space-around;
+  padding: 220px 20px 286px;
 }
 .footer__rights {
   display: flex;
@@ -3427,8 +3427,6 @@ details[open] summary ~ * {
   max-width: fit-content;
 }
 .footer__card hr {
-  margin: 20px 0;
-  max-width: 167px;
   max-width: 167px;
   margin: 20px 0;
   background-color: #635D5D;
