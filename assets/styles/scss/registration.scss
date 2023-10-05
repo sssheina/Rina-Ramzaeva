@@ -168,10 +168,11 @@
 }
 
 #errorsInfo, #errorEmail, #errorUserName {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 150%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  color: #fb7070;
 }
 
 input[type="checkbox"] {
