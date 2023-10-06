@@ -268,6 +268,60 @@ modal.addEventListener("keydown", function (e) {
 // };
 // Scrollbar.init(document.querySelector("#my-scrollbar"), options);
 
+//////////////////////////////////
+// CONSTANTS
+//////////////////////////////////
+
+// REGISTRATION FORM CONSTANTS
+const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
+
+// ____________________________PHPMailer__________________________
+
+async function submitForm(event) {
+  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+ try {
+	 
+   // Validating the form
+   if(!validateRegForm(false)){
+	   return;
+   }
+   
+   // Формируем запрос
+   const response = await fetch("send.php", {
+     method: "POST",
+     body: new FormData(emailform),
+   });
+   // проверяем, что ответ есть
+   if (!response.ok)
+     throw `Ошибка при обращении к серверу: ${response.status}`;
+   // проверяем, что ответ действительно JSON
+   const contentType = response.headers.get("content-type");
+   if (!contentType || !contentType.includes("application/json")) {
+     throw "Ошибка обработки. Ответ не JSON";
+   }
+   // обрабатываем запрос
+   const json = await response.json();
+   if (json.result === "success") {
+     // в случае успеха
+     showThankYouMessage();
+    //  alert(json.info);
+   } else {
+     // в случае ошибки
+     console.log(json);
+     throw json.info;
+   }
+ } catch (error) {
+   // обработка ошибки
+   alert(error);
+ }
+}
+
+function showThankYouMessage() {
+  modal.style.display = "block";
+}
+
+
+
 //  ----- REGISTRATION FORM -----
 
 const form = document.querySelector(".formWithValidation");
@@ -555,57 +609,57 @@ form.addEventListener("submit", (e) => {
 // });
 
 
-//////////////////////////////////
-// CONSTANTS
-//////////////////////////////////
+// //////////////////////////////////
+// // CONSTANTS
+// //////////////////////////////////
 
-// REGISTRATION FORM CONSTANTS
-const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
+// // REGISTRATION FORM CONSTANTS
+// const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
 
-// ____________________________PHPMailer__________________________
+// // ____________________________PHPMailer__________________________
 
-async function submitForm(event) {
-  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
- try {
+// async function submitForm(event) {
+//   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+//  try {
 	 
-   // Validating the form
-   if(!validateRegForm(false)){
-	   return;
-   }
+//    // Validating the form
+//    if(!validateRegForm(false)){
+// 	   return;
+//    }
    
-   // Формируем запрос
-   const response = await fetch("send.php", {
-     method: "POST",
-     body: new FormData(emailform),
-   });
-   // проверяем, что ответ есть
-   if (!response.ok)
-     throw `Ошибка при обращении к серверу: ${response.status}`;
-   // проверяем, что ответ действительно JSON
-   const contentType = response.headers.get("content-type");
-   if (!contentType || !contentType.includes("application/json")) {
-     throw "Ошибка обработки. Ответ не JSON";
-   }
-   // обрабатываем запрос
-   const json = await response.json();
-   if (json.result === "success") {
-     // в случае успеха
-     showThankYouMessage();
-    //  alert(json.info);
-   } else {
-     // в случае ошибки
-     console.log(json);
-     throw json.info;
-   }
- } catch (error) {
-   // обработка ошибки
-   alert(error);
- }
-}
+//    // Формируем запрос
+//    const response = await fetch("send.php", {
+//      method: "POST",
+//      body: new FormData(emailform),
+//    });
+//    // проверяем, что ответ есть
+//    if (!response.ok)
+//      throw `Ошибка при обращении к серверу: ${response.status}`;
+//    // проверяем, что ответ действительно JSON
+//    const contentType = response.headers.get("content-type");
+//    if (!contentType || !contentType.includes("application/json")) {
+//      throw "Ошибка обработки. Ответ не JSON";
+//    }
+//    // обрабатываем запрос
+//    const json = await response.json();
+//    if (json.result === "success") {
+//      // в случае успеха
+//      showThankYouMessage();
+//     //  alert(json.info);
+//    } else {
+//      // в случае ошибки
+//      console.log(json);
+//      throw json.info;
+//    }
+//  } catch (error) {
+//    // обработка ошибки
+//    alert(error);
+//  }
+// }
 
-function showThankYouMessage() {
-  modal.style.display = "block";
-}
+// function showThankYouMessage() {
+//   modal.style.display = "block";
+// }
 
 
 // async function submitForm(event) {
