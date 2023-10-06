@@ -3417,6 +3417,7 @@ details[open] summary ~ * {
 }
 .footer__wrapper {
   display: flex;
+  justify-content: space-evenly;
   padding: 220px 20px 286px;
 }
 .footer__rights {

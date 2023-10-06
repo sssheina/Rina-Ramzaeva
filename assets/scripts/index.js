@@ -5,6 +5,26 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
 
+// ----- Education PIC-ZOOM -----
+
+document.querySelectorAll(".education__pic").forEach((image) => {
+  image.onclick = () => {
+    document.querySelector(".education__popup").style.display = "block";
+    document.querySelector(".education__popup-img").src =
+      image.getAttribute("src");
+  };
+});
+document.querySelector(".education__btn-close").onclick = () => {
+  document.querySelector(".education__popup").style.display = "none";
+};
+
+window.onclick = (event) => {
+  let popup = document.querySelector(".education__popup");
+  if (event.target == popup) {
+    popup.style.display = "none";
+  }
+};
+
 // ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
 
 const isMobile = {
@@ -212,117 +232,6 @@ modalPrivacy.addEventListener("keydown", function (e) {
 //   damping: 0.05,
 // };
 // Scrollbar.init(document.querySelector("#my-scrollbar"), options);
-
-
-//////////////////////////////////
-// CONSTANTS
-//////////////////////////////////
-
-// REGISTRATION FORM CONSTANTS
-const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
-
-// ____________________________PHPMailer__________________________
-
-async function submitForm(event) {
-  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
- try {
-	 
-   // Validating the form
-   if(!validateRegForm(false)){
-	   return;
-   }
-   
-   // Формируем запрос
-   const response = await fetch("send.php", {
-     method: "POST",
-     body: new FormData(emailform),
-   });
-   // проверяем, что ответ есть
-   if (!response.ok)
-     throw `Ошибка при обращении к серверу: ${response.status}`;
-   // проверяем, что ответ действительно JSON
-   const contentType = response.headers.get("content-type");
-   if (!contentType || !contentType.includes("application/json")) {
-     throw "Ошибка обработки. Ответ не JSON";
-   }
-   // обрабатываем запрос
-   const json = await response.json();
-   if (json.result === "success") {
-     // в случае успеха
-     showThankYouMessage();
-    //  alert(json.info);
-   } else {
-     // в случае ошибки
-     console.log(json);
-     throw json.info;
-   }
- } catch (error) {
-   // обработка ошибки
-   alert(error);
- }
-}
-
-function showThankYouMessage() {
-  modal.style.display = "block";
-}
-
-
-// async function submitForm(event) {
-//   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
-//   try {
-//     // Формируем запрос
-//     const response = await fetch("send.php", {
-//       method: "POST",
-//       body: new FormData(emailform),
-//     });
-//     // проверяем, что ответ есть
-//     if (!response.ok)
-//       throw `Ошибка при обращении к серверу: ${response.status}`;
-//     // проверяем, что ответ действительно JSON
-//     const contentType = response.headers.get("content-type");
-//     if (!contentType || !contentType.includes("application/json")) {
-//       throw "Ошибка обработки. Ответ не JSON";
-//     }
-//     // обрабатываем запрос
-//     const json = await response.json();
-//     if (json.result === "success") {
-//       // в случае успеха
-//       showThankYouMessage();
-//       //  alert(json.info);
-//     } else {
-//       // в случае ошибки
-//       console.log(json);
-//       throw json.info;
-//     }
-//   } catch (error) {
-//     // обработка ошибки
-//     alert(error);
-//   }
-// }
-
-// function showThankYouMessage() {
-//   modal.style.display = "block";
-// }
-
-// ----- Education PIC-ZOOM -----
-
-document.querySelectorAll(".education__pic").forEach((image) => {
-  image.onclick = () => {
-    document.querySelector(".education__popup").style.display = "block";
-    document.querySelector(".education__popup-img").src =
-      image.getAttribute("src");
-  };
-});
-document.querySelector(".education__btn-close").onclick = () => {
-  document.querySelector(".education__popup").style.display = "none";
-};
-
-window.onclick = (event) => {
-  let popup = document.querySelector(".education__popup");
-  if (event.target == popup) {
-    popup.style.display = "none";
-  }
-};
 
 //  ----- REGISTRATION FORM -----
 
@@ -609,6 +518,101 @@ form.addEventListener("submit", (e) => {
 //     if (submitted) errorsInfo.innerHTML = "";
 //   });
 // });
+
+
+//////////////////////////////////
+// CONSTANTS
+//////////////////////////////////
+
+// REGISTRATION FORM CONSTANTS
+const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
+
+// ____________________________PHPMailer__________________________
+
+async function submitForm(event) {
+  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+ try {
+	 
+   // Validating the form
+   if(!validateRegForm(false)){
+	   return;
+   }
+   
+   // Формируем запрос
+   const response = await fetch("send.php", {
+     method: "POST",
+     body: new FormData(emailform),
+   });
+   // проверяем, что ответ есть
+   if (!response.ok)
+     throw `Ошибка при обращении к серверу: ${response.status}`;
+   // проверяем, что ответ действительно JSON
+   const contentType = response.headers.get("content-type");
+   if (!contentType || !contentType.includes("application/json")) {
+     throw "Ошибка обработки. Ответ не JSON";
+   }
+   // обрабатываем запрос
+   const json = await response.json();
+   if (json.result === "success") {
+     // в случае успеха
+     showThankYouMessage();
+    //  alert(json.info);
+   } else {
+     // в случае ошибки
+     console.log(json);
+     throw json.info;
+   }
+ } catch (error) {
+   // обработка ошибки
+   alert(error);
+ }
+}
+
+function showThankYouMessage() {
+  modal.style.display = "block";
+}
+
+
+// async function submitForm(event) {
+//   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+//   try {
+//     // Формируем запрос
+//     const response = await fetch("send.php", {
+//       method: "POST",
+//       body: new FormData(emailform),
+//     });
+//     // проверяем, что ответ есть
+//     if (!response.ok)
+//       throw `Ошибка при обращении к серверу: ${response.status}`;
+//     // проверяем, что ответ действительно JSON
+//     const contentType = response.headers.get("content-type");
+//     if (!contentType || !contentType.includes("application/json")) {
+//       throw "Ошибка обработки. Ответ не JSON";
+//     }
+//     // обрабатываем запрос
+//     const json = await response.json();
+//     if (json.result === "success") {
+//       // в случае успеха
+//       showThankYouMessage();
+//       //  alert(json.info);
+//     } else {
+//       // в случае ошибки
+//       console.log(json);
+//       throw json.info;
+//     }
+//   } catch (error) {
+//     // обработка ошибки
+//     alert(error);
+//   }
+// }
+
+// function showThankYouMessage() {
+//   modal.style.display = "block";
+// }
+
+
+
+
 
 //  ----- Посточные ошибки в инпутах -----
 
