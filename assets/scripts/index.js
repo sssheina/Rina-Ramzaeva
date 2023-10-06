@@ -5,6 +5,8 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
 
+
+
 // ----- Education PIC-ZOOM -----
 
 document.querySelectorAll(".education__pic").forEach((image) => {
@@ -24,6 +26,9 @@ window.onclick = (event) => {
     popup.style.display = "none";
   }
 };
+
+
+
 
 // ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
 
@@ -66,6 +71,36 @@ if (isMobile.any()) {
 } else {
   document.body.classList.add("_pc");
 }
+
+// ----- Privacy Policy -----
+
+const modalPrivacy = document.querySelector(".privacy-policy__concent");
+const overlayPrivacy = document.querySelector(".privacy-policy");
+const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
+const closeModalBtnPrivacy = document.querySelector(".privacy-policy__btn-close");
+
+const openModalPrivacy = function () {
+  modalPrivacy.classList.remove("hidden");
+  overlayPrivacy.classList.remove("hidden");
+};
+
+openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
+
+const closeModalPrivacy = function () {
+  modalPrivacy.classList.add("hidden");
+  overlayPrivacy.classList.add("hidden");
+};
+
+closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
+
+overlayPrivacy.addEventListener("click", closeModalPrivacy);
+
+modalPrivacy.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
+    closeModalPrivacy ();
+  }
+});
+
 
 //  ----- BURGER MENU -----
 const iconMenu = document.querySelector(".menu__icon");
@@ -182,34 +217,34 @@ modal.addEventListener("keydown", function (e) {
 });
 
 
-// ----- Privacy Policy -----
+// // ----- Privacy Policy -----
 
-const modalPrivacy = document.querySelector(".privacy-policy__concent");
-const overlayPrivacy = document.querySelector(".privacy-policy");
-const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
-const closeModalBtnPrivacy = document.querySelector(".privacy-policy__btn-close");
+// const modalPrivacy = document.querySelector(".privacy-policy__concent");
+// const overlayPrivacy = document.querySelector(".privacy-policy");
+// const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
+// const closeModalBtnPrivacy = document.querySelector(".privacy-policy__btn-close");
 
-const openModalPrivacy = function () {
-  modalPrivacy.classList.remove("hidden");
-  overlayPrivacy.classList.remove("hidden");
-};
+// const openModalPrivacy = function () {
+//   modalPrivacy.classList.remove("hidden");
+//   overlayPrivacy.classList.remove("hidden");
+// };
 
-openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
+// openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
 
-const closeModalPrivacy = function () {
-  modalPrivacy.classList.add("hidden");
-  overlayPrivacy.classList.add("hidden");
-};
+// const closeModalPrivacy = function () {
+//   modalPrivacy.classList.add("hidden");
+//   overlayPrivacy.classList.add("hidden");
+// };
 
-closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
+// closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
 
-overlayPrivacy.addEventListener("click", closeModalPrivacy);
+// overlayPrivacy.addEventListener("click", closeModalPrivacy);
 
-modalPrivacy.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
-    closeModalPrivacy ();
-  }
-});
+// modalPrivacy.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
+//     closeModalPrivacy ();
+//   }
+// });
 
 
 // const privacyPolicyLink = document.querySelector(".privacy-policy__link");

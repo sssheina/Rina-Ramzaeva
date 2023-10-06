@@ -3003,7 +3003,7 @@ input[type=checkbox] {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  z-index: 1;
+  z-index: 5;
 }
 
 .privacy-policy__link {
@@ -3030,7 +3030,7 @@ input[type=checkbox] {
   padding: 4rem;
   border: 1px solid #635D5D;
   background: #FEFEFE;
-  z-index: 2;
+  z-index: 6;
   border-radius: 4px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
   -webkit-animation: fade 0.6s;
