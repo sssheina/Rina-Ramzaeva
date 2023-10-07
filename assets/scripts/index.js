@@ -395,12 +395,13 @@ function validateRegForm(needShowMessages){
 	
 	if(result){
 		//validating other controls
+		result = validateRegFormEmail(needShowMessages);
 	}
 	
 	return result;
 }
 
-document.getElementById("userName").addEventListener("keyup", (event) => {
+document.getElementById("userName").addEventListener("blur", (event) => {
 	validateRegFormName(true);
 })
 document.getElementById("email").addEventListener("blur", (event) => {
