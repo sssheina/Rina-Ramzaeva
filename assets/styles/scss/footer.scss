@@ -1,12 +1,10 @@
 .footer {
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0) 100%);
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 220px 20px 286px;
+  &__content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    padding: 220px 0 286px;
   }
-
   &__rights {
     display: flex;
     flex-direction: column;
@@ -21,13 +19,17 @@
     }
   }
 }
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer__card {
-  flex-grow: 1;
   max-width: fit-content;
   & hr {
-    @include hr(167px, 20px 0);
+    @include hr(167px, 20px 0 40px);
   }
-
   & nav {
     display: flex;
     flex-direction: column;
@@ -43,20 +45,122 @@
       }
     }
   }
-  & div {
-    display: flex;
-    gap: 3rem;
-  }
 }
-.footer__card:last-child {
+
+.footer__wrapper .footer__card:last-child {
   & h3 {
     text-align: right;
   }
   & hr {
     margin-left: auto;
   }
+  & nav a {
+    text-align: right;
+  }
 }
 
-.footer__card:first-child {
-  flex-grow: 2;
+.footer__social-icons {
+  display: flex;
+  gap: 48px;
+}
+
+// Desktop 1440px
+
+@media all and (max-width: 1440px) {
+  .footer {
+    &__content {
+      padding: 175px 0 155px;
+    }
+  }
+
+  .footer__card {
+    & hr {
+      @include hr(125px, 16px 0 31px);
+    }
+    & nav {
+      & a {
+        font-size: 16px;
+      }
+    }
+  }
+  .footer__social-icons {
+    gap: 36px;
+  }
+  .footer__social-icon {
+    max-width: 40px;
+  }
+}
+
+// Tablet 768px
+
+@media all and (max-width: 768px) {
+  .footer {
+    &__content {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 50px;
+      padding: 88px 0 70px;
+    }
+  }
+
+  .footer__wrapper {
+    // flex-direction: row-reverse;
+    gap: 110px;
+  }
+  .footer__card {
+    & hr {
+      @include hr(66px, 15px 0 40px);
+    }
+    & nav {
+      gap: 40px;
+      & a {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .footer__card:first-child {
+    & h3 {
+      text-align: center;
+    }
+    & hr {
+      margin: 15px auto 40px;
+    }
+  }
+
+  .footer__wrapper .footer__card:first-child {
+    & hr {
+      margin-left: 0;
+    }
+  }
+
+  .footer__wrapper .footer__card:last-child {
+    & h3 {
+      text-align: left;
+    }
+    & hr {
+      margin-left: 0;
+    }
+    & nav a {
+      text-align: left;
+    }
+  }
+
+  .footer__social-icons {
+    gap: 40px;
+  }
+}
+
+// Mobile 428px
+
+@media all and (max-width: 428px) {
+  .footer {
+    &__content {
+      padding: 115px 0 51px;
+    }
+  }
+
+  .footer__wrapper {
+    gap: 54px;
+  }
 }
