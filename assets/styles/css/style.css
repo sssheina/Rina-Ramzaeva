@@ -2958,8 +2958,7 @@ h3 {
 .input:not(:placeholder-shown) ~ .input-after {
   visibility: visible;
   opacity: 1;
-  bottom: 90%;
-  scale: 0.9;
+  bottom: 80%;
 }
 
 .input:not(:placeholder-shown) ~ .input-checkmark {
@@ -3035,6 +3034,11 @@ h3 {
   line-height: 150%;
   letter-spacing: 0.1em;
   color: #fb7070;
+}
+
+#errorUserName, #errorEmail {
+  position: absolute;
+  left: 1%;
 }
 
 input[type=checkbox] {

@@ -100,8 +100,8 @@
 .input:not(:placeholder-shown) ~ .input-after {
   visibility: visible;
   opacity: 1;
-  bottom: 90%;
-  scale: 0.9;
+  bottom: 80%;
+  // scale: 0.9;
 }
 .input:not(:placeholder-shown) ~ .input-checkmark {
   visibility: hidden;
@@ -173,6 +173,10 @@
   line-height: 150%;
   letter-spacing: 0.1em;
   color: #fb7070;
+}
+#errorUserName, #errorEmail {
+position: absolute;
+left: 1%;
 }
 
 input[type="checkbox"] {
