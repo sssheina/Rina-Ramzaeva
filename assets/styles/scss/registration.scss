@@ -180,3 +180,65 @@ input[type="checkbox"] {
   width: 30px;
   height: 30px;
 }
+
+.registration__circle-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.registration__circle-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.registration__wave {
+  position: absolute;
+  top: -8%;
+  left: 11%;
+}
+
+.registration__star1 {
+  position: absolute;
+  top: 8%;
+  left: 74%;
+}
+
+.registration__star2 {
+  position: absolute;
+  top: 69%;
+  left: 84%;
+}
+
+.registration__star3 {
+  position: absolute;
+  top: 105%;
+  left: 76%;
+}
+
+.registration__star4 {
+  position: absolute;
+  top: 90%;
+  left: 26%;
+}
+
+.registration__star5 {
+  position: absolute;
+  top: 18%;
+  left: 8%;
+}
+
+.registration__dawn {
+  position: absolute;
+  display: inline-block;
+  animation: rotate 40s linear infinite;
+  top: 50%;
+  left: 0%;
+}
+
+.registration__spiral {
+  position: absolute;
+  top: 8%;
+  left: 90%;
+}
