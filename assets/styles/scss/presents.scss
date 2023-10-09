@@ -93,8 +93,8 @@
   top: 57px;
   left: 600px;
   max-width: 669px;
-  height: 425px;
   z-index: 2;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .presents__webinar-hr {
@@ -107,5 +107,5 @@
 }
 
 .presents__video::-webkit-media-controls-panel {
-  background-image: linear-gradient(to bottom, #00000000, #d1dee7);
+  background-image: linear-gradient(to bottom, #00000000, #e39898);
 }

@@ -2070,6 +2070,7 @@ h3 {
   right: 0px;
   max-width: 669px;
   z-index: 2;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .tv__video::-webkit-media-controls-panel {
@@ -3507,8 +3508,8 @@ details[open] summary ~ * {
   top: 57px;
   left: 600px;
   max-width: 669px;
-  height: 425px;
   z-index: 2;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .presents__webinar-hr {
@@ -3525,7 +3526,7 @@ details[open] summary ~ * {
 }
 
 .presents__video::-webkit-media-controls-panel {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #d1dee7);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #e39898);
 }
 
 .footer {
