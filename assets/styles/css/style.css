@@ -2541,10 +2541,6 @@ h3 {
   right: -55px;
   width: 36px;
   height: 66px;
-  transition: 0.4s ease;
-}
-.steps__arrow:hover {
-  transform: translateX(4px);
 }
 .steps__button {
   display: flex;
