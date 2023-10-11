@@ -17,14 +17,20 @@
     line-height: 150%;
   }
   &__cards {
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 19px;
-    margin: 90px 0 120px;
+    gap: 74px;
+    margin: 90px auto 120px;
   }
   &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -55px;
+    width: 36px;
+    height: 66px;
     transition: 0.4s ease;
     &:hover {
       transform: translateX(4px);
@@ -56,6 +62,7 @@
   position: relative;
 }
 .steps__card {
+  position: relative;
   max-width: 313px;
   min-height: 266px;
   display: flex;
@@ -127,4 +134,211 @@
   position: absolute;
   right: -10px;
   bottom: -216px;
+}
+
+// Desktop 1440px
+
+@media all and (max-width: 1440px) {
+  .steps {
+    padding: 165px 0 195px;
+    & hr {
+      @include hr(214px, 23px auto 30px);
+    }
+    &__subtitle {
+      max-width: 281px;
+      font-size: 16px;
+    }
+    &__cards {
+      gap: 55px;
+      margin: 67px auto 90px;
+    }
+    &__arrow {
+      width: 27px;
+      height: 50px;
+      right: -40px;
+    }
+    &__button {
+      & button {
+        max-width: 500px;
+      }
+    }
+  }
+
+  .steps__aside {
+    left: -50px;
+  }
+
+  .steps__card {
+    max-width: 235px;
+    min-height: 200px;
+    gap: 25px;
+    padding: 25px;
+    & h3 {
+      letter-spacing: 1.8px;
+    }
+    & p {
+      font-size: 15px;
+    }
+  }
+}
+
+// Tablet 768px
+
+@media all and (max-width: 768px) {
+  .steps {
+    padding: 88px 0 100px;
+    & hr {
+      @include hr(114px, 15px auto 17px);
+    }
+    &__subtitle {
+      max-width: 193px;
+      font-size: 11px;
+    }
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+      gap: 30px;
+      margin: 27px auto 50px;
+    }
+    &__arrow {
+      width: 15px;
+      height: 27px;
+      right: -23px;
+    }
+    &__button {
+      & button {
+        max-width: 347px;
+      }
+    }
+  }
+
+  .steps__aside {
+    left: -27px;
+  }
+
+  .steps__card {
+    max-width: 182px;
+    min-height: 125px;
+    gap: 15px;
+    padding: 20px;
+    & h3 {
+      margin-top: 5px;
+      letter-spacing: 1.2px;
+      &::before,
+      &::after {
+        height: 1px;
+      }
+      &::before {
+        top: -5px;
+      }
+      &::after {
+        bottom: -5px;
+      }
+    }
+
+    & p {
+      font-size: 11px;
+    }
+  }
+}
+
+// Mobile 428px
+
+@media all and (max-width: 428px) {
+  .steps {
+    padding: 115px 0 115px;
+    & hr {
+      @include hr(114px, 15px auto 22px);
+    }
+    &__cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      place-items: center;
+      gap: 50px;
+      margin: 40px auto 77px;
+    }
+    &__arrow {
+      width: 27px;
+      height: 15px;
+      right: 50%;
+      rotate: 90deg;
+      top: 105%;
+    }
+  }
+
+  .steps__aside {
+    display: none;
+  }
+
+  .steps__card {
+    max-width: 182px;
+    min-height: 125px;
+    gap: 15px;
+    padding: 20px;
+    & h3 {
+      margin-top: 5px;
+      letter-spacing: 1.2px;
+      &::before,
+      &::after {
+        height: 1px;
+      }
+      &::before {
+        top: -5px;
+      }
+      &::after {
+        bottom: -5px;
+      }
+    }
+
+    & p {
+      font-size: 11px;
+    }
+  }
+}
+
+// Mobile 320px
+
+@media all and (max-width: 320px) {
+  .steps {
+    padding: 85px 0 80px;
+    & hr {
+      @include hr(85px, 10px auto 15px);
+    }
+    &__subtitle {
+      max-width: 160px;
+      font-size: 9px;
+    }
+    &__cards {
+      gap: 40px;
+      margin: 30px auto 50px;
+    }
+    &__arrow {
+      width: 20px;
+      height: 11px;
+    }
+    &__button {
+      & button {
+        max-width: 347px;
+      }
+    }
+  }
+
+  .steps__aside {
+    display: none;
+  }
+
+  .steps__card {
+    max-width: 148px;
+    min-height: 102px;
+    gap: 10px;
+    padding: 15px;
+    & h3 {
+      letter-spacing: 1px;
+    }
+
+    & p {
+      font-size: 9px;
+    }
+  }
 }

@@ -1,26 +1,40 @@
 .aside {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.aside-span {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  color: $color-black;
+  &::before {
+    @include aside-before;
   }
-  
+  &::after {
+    @include aside-after;
+  }
+}
+
+// Desktop 1440px
+
+@media all and (max-width: 1440px) {
   .aside-span {
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 150%;
-    letter-spacing: 0.1em;
-    color: $color-black;
-    &::before {
-        @include aside-before 
-      }
-      &::after {
-        @include aside-after 
-      }
+    font-size: 16px;
+    letter-spacing: 1.6px;
   }
-    
-  .aside-span:hover {
-    transform: scale(1.1);
+}
+
+// Tablet 768px
+
+@media all and (max-width: 768px) {
+  .aside-span {
+    font-size: 8px;
+    letter-spacing: 0.85px;
   }
+}
