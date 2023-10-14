@@ -3718,7 +3718,7 @@ details[open] summary ~ * {
   bottom: 28%;
 }
 .faq__star_blue:nth-child(9) {
-  left: 72%;
+  left: 77%;
   bottom: 5%;
 }
 
@@ -3741,9 +3741,9 @@ details[open] summary ~ * {
 }
 
 .words__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
@@ -3762,6 +3762,28 @@ details[open] summary ~ * {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.words__p {
+  padding-bottom: 24px;
+}
+
+.words__star-blue {
+  position: absolute;
+  top: 65%;
+  left: 10%;
+}
+
+.words__star-pink {
+  position: absolute;
+  top: -30%;
+  right: 15%;
+}
+
+.words__wave-blue {
+  position: absolute;
+  top: 120%;
+  left: 20%;
 }
 
 .presents {
