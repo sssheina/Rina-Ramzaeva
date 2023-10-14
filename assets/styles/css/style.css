@@ -1280,6 +1280,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 button:disabled {
   color: #bbbaba;
+  cursor: not-allowed;
 }
 
 .button-up {
@@ -3213,7 +3214,7 @@ input[type=checkbox] {
 .faq__wrapper {
   position: relative;
   display: flex;
-  gap: 157px;
+  justify-content: space-around;
 }
 .faq__title {
   position: relative;
@@ -3319,24 +3320,24 @@ details[open] summary ~ * {
   position: absolute;
 }
 .faq__wave:nth-child(2) {
-  top: 104px;
-  left: 180px;
+  top: 5%;
+  left: 9%;
 }
 .faq__wave:nth-child(5) {
-  left: 409px;
-  bottom: 122px;
+  left: 15%;
+  bottom: 8%;
 }
 
 .faq__spiral {
   position: absolute;
-  top: 590px;
-  left: 136px;
+  top: 30%;
+  left: 8%;
 }
 
 .faq__shell {
   position: absolute;
-  right: -75px;
-  top: 50%;
+  right: -2%;
+  top: 42%;
   transform: translate(-50%);
 }
 
@@ -3344,32 +3345,32 @@ details[open] summary ~ * {
   position: absolute;
 }
 .faq__star_blue:nth-child(6) {
-  top: 82px;
-  left: 718px;
+  top: 4%;
+  left: 61%;
 }
 .faq__star_blue:nth-child(7) {
-  top: 714px;
-  right: 96px;
+  top: 33%;
+  right: 7%;
 }
 .faq__star_blue:nth-child(8) {
-  left: 138px;
-  bottom: 581px;
+  left: 7%;
+  bottom: 28%;
 }
 .faq__star_blue:nth-child(9) {
-  right: 417px;
-  bottom: 95px;
+  left: 72%;
+  bottom: 5%;
 }
 
 .faq__star_blue-inner {
   position: absolute;
 }
 .faq__star_blue-inner:nth-child(1) {
-  top: 272px;
-  left: 75px;
+  top: 17%;
+  left: 12%;
 }
 .faq__star_blue-inner:nth-child(2) {
-  left: 30px;
-  bottom: 350px;
+  left: 7%;
+  bottom: 30%;
 }
 
 .words {
