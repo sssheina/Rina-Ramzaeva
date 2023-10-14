@@ -24,3 +24,50 @@ h3 {
   line-height: 150%;
   letter-spacing: 0.1em;
 }
+
+// Desktop 1440px
+
+@media all and (max-width: 1440px) {
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
+
+// Tablet 768px
+
+@media all and (max-width: 768px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+}
+
+// Mobile 428px
+
+@media all and (max-width: 428px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+}
+
+// Mobile 320px
+
+@media all and (max-width: 320px) {
+  h2 {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+}

@@ -113,3 +113,37 @@ button:disabled {
   --glow-offset: 10px;
 }
 
+// Desktop 1440px
+
+@media all and (max-width: 1440px) {
+  .button {
+    height: 80px;
+    font-size: 15px;
+  }
+}
+
+// Tablet 768px
+
+@media all and (max-width: 768px) {
+  .button {
+    height: 74px;
+    font-size: 12px;
+  }
+}
+
+// Mobile 428px
+
+@media all and (max-width: 428px) {
+  .button {
+    font-size: 11px;
+  }
+}
+
+// Mobile 320px
+
+@media all and (max-width: 320px) {
+  .button {
+    height: 60px;
+    font-size: 10px;
+  }
+}

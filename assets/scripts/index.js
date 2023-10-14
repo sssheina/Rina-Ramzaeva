@@ -268,14 +268,6 @@ modal.addEventListener("keydown", function (e) {
 // };
 // Scrollbar.init(document.querySelector("#my-scrollbar"), options);
 
-//////////////////////////////////
-// CONSTANTS
-//////////////////////////////////
-
-// REGISTRATION FORM CONSTANTS
-const REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
-const REG_FORM_VALIDATION_MESSAGE_EMAIL = "Электронный адрес должен быть заполнен";
-const REG_FORM_VALIDATION_MESSAGE_EMAIL_SYNTAX = "Некорректный формат электронного адреса";
 
 // ____________________________PHPMailer__________________________
 
