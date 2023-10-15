@@ -271,8 +271,7 @@ modal.addEventListener("keydown", function (e) {
 
 // ____________________________PHPMailer__________________________
 
-async function submitForm(event) {
-  event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+async function submitForm() {
  try {
 	 
    // Validating the form
@@ -339,7 +338,7 @@ function validateRegFormName(needShowMessages){
 	//Doing the basic validation - the name field should not be empty
 	let result = true;
 	let el = document.getElementById("userName");
-	// let elError = document.getElementById("usernameError");
+	let elError = document.getElementById("errorUserName");
 	
 	
 	if(el.value === null || el.value === ""){
@@ -347,7 +346,7 @@ function validateRegFormName(needShowMessages){
 	}
 	
 	if(needShowMessages){
-    errorUserName.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_NAME;
+		elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_NAME;
 	}
 	
 	return result;
@@ -380,14 +379,58 @@ function validateRegFormEmail(needShowMessages){
 	return result;
 }
 
+
+function validateRegFormAge(needShowMessages){
+	
+	let result = true;
+	let el = document.getElementById("checkbox_18");
+	let elError = document.getElementById("errorAge");
+	
+	
+	if(el.value === null || el.value === "" || !el.checked){
+		result = false;
+	}
+	
+	if(needShowMessages){
+		elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_AGE;
+	}
+	
+	return result;
+}
+
+function validateRegFormPrivacy(needShowMessages){
+	
+	let result = true;
+	let el = document.getElementById("checkboxPrivat");
+	let elError = document.getElementById("errorPrivacy");
+	
+	
+	if(el.value === null || el.value === "" || !el.checked){
+		result = false;
+	}
+	
+	if(needShowMessages){
+		elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_PRIVACY;
+	}
+	
+	return result;
+}
+
 function validateRegForm(needShowMessages){
 	let result = true;
 	
 	result = validateRegFormName(needShowMessages);
 	
 	if(result){
-		//validating other controls
 		result = validateRegFormEmail(needShowMessages);
+	}
+	
+	if(result){
+		result = validateRegFormAge(needShowMessages);
+	}
+	
+	if(result){
+		result = validateRegFormPrivacy(needShowMessages);
 	}
 	
 	return result;
@@ -398,6 +441,12 @@ document.getElementById("userName").addEventListener("blur", (event) => {
 })
 document.getElementById("email").addEventListener("blur", (event) => {
 	validateRegFormEmail(true);
+})
+document.getElementById("checkbox_18").addEventListener("click", (event) => {
+	validateRegFormAge(true);
+})
+document.getElementById("checkboxPrivat").addEventListener("click", (event) => {
+	validateRegFormPrivacy(true);
 })
 
 // function validateEmail(email) {
