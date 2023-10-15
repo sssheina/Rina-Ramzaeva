@@ -68,7 +68,6 @@
 
 .check {
   font-weight: 500;
-  font-size: 18px;
   line-height: 150%;
   letter-spacing: 0.1em;
   color: $color-black;
@@ -125,7 +124,7 @@
   }
   & textarea {
     border: none;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 26px;
     color: $color-black;
@@ -150,7 +149,7 @@
     margin-bottom: 12px;
   }
   & label {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -188,7 +187,7 @@ top: 105%;
 #errorAge, #errorPrivacy {
   position: absolute;
   top: 110%;
-  left: 5%;
+  left: 7%;
 }
 
 input[type="checkbox"] {
