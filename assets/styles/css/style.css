@@ -3361,7 +3361,7 @@ h3 {
 .registration__terms {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 27px;
 }
 
 .registration__terms-group {
@@ -3501,7 +3501,7 @@ input[type=checkbox] {
 
 .privacy-policy__link {
   text-decoration: none;
-  color: #fb7070;
+  color: #FDACAC;
   transition: 0.4s ease;
 }
 
