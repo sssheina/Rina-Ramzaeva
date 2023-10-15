@@ -136,8 +136,13 @@
     }
   }
 }
-
+.registration__terms {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 .registration__terms-group {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -167,16 +172,23 @@
   }
 }
 
-#errorsInfo, #errorEmail, #errorUserName {
+.error {
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.1em;
   color: #fb7070;
 }
+
 #errorUserName, #errorEmail {
 position: absolute;
 left: 1%;
+top: 105%;
+}
+#errorAge, #errorPrivacy {
+  position: absolute;
+  top: 110%;
+  left: 5%;
 }
 
 input[type="checkbox"] {
