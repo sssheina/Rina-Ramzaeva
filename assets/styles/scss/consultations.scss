@@ -12,6 +12,7 @@
     @include hr(285px, 30px auto 40px);
   }
   &__subtitle {
+    margin: 0 auto;
     text-align: center;
     color: $color-black;
     font-size: 21px;
@@ -26,6 +27,8 @@
     margin: 100px 0 92px;
   }
   &__arrow {
+    width: 36px;
+    height: 67px;
     transition: 0.4s ease;
     &:hover {
       transform: translateX(4px);
@@ -56,6 +59,7 @@
 .consultations__aside-span {
   position: relative;
 }
+
 .consultations__card {
   display: flex;
   flex-direction: column;
@@ -71,11 +75,19 @@
     max-width: 489px;
     min-height: 549px;
     background: linear-gradient(180deg, #fff 0%, #ffdada 72.4%);
+    & svg {
+      max-width: 48px;
+      height: 30px;
+    }
   }
   &:nth-of-type(2) {
     max-width: 387px;
     min-height: 473px;
     background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
+    & svg {
+      max-width: 59px;
+      height: 31px;
+    }
   }
   & hr {
     @include hr(77px, 0);
@@ -98,7 +110,7 @@
     color: $color-black;
     &:nth-of-type(1) {
       font-size: 18px;
-      font-weight: 500;
+      font-weight: 400;
     }
     &:nth-of-type(2) {
       font-size: 32px;
@@ -150,4 +162,251 @@
   position: absolute;
   right: 50px;
   bottom: 170px;
+}
+
+// Desktop 1440px
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .consultations {
+    padding: 165px 0 195px;
+    & hr {
+      @include hr(214px, 23px auto 30px);
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__cards {
+      gap: 30px;
+      margin: 75px 0 69px;
+    }
+    &__arrow {
+      width: 27px;
+      height: 50px;
+    }
+  }
+
+  .consultations__card {
+    gap: 25px;
+    padding: 25px;
+    &:nth-of-type(1) {
+      max-width: 367px;
+      min-height: 412px;
+      & svg {
+        max-width: 32px;
+        height: 20px;
+      }
+    }
+    &:nth-of-type(2) {
+      max-width: 290px;
+      min-height: 355px;
+      padding: 20px;
+      & svg {
+        max-width: 40px;
+        height: 20px;
+      }
+    }
+    & hr {
+      @include hr(77px, 0);
+    }
+    & ul li {
+      font-size: 14px;
+      background-size: 15px;
+      padding: 0 0 0 25px;
+    }
+    & p {
+      &:nth-of-type(1) {
+        font-size: 14px;
+      }
+      &:nth-of-type(2) {
+        font-size: 24px;
+        letter-spacing: 2.4px;
+      }
+    }
+  }
+}
+
+// Tablet 768px
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .consultations {
+    padding: 88px 0 100px;
+    & hr {
+      @include hr(114px, 15px auto 17px);
+    }
+    &__subtitle {
+      font-size: 11px;
+    }
+    &__cards {
+      gap: 20px;
+      margin: 30px 0 50px;
+    }
+    &__arrow {
+      width: 15px;
+      height: 27px;
+    }
+  }
+
+  .consultations__card {
+    gap: 15px;
+    padding: 20px;
+    &:nth-of-type(1) {
+      max-width: 278px;
+      min-height: 295px;
+      & svg {
+        max-width: 32px;
+        height: 20px;
+      }
+    }
+    &:nth-of-type(2) {
+      max-width: 241px;
+      min-height: 267px;
+      & svg {
+        max-width: 40px;
+        height: 21px;
+      }
+    }
+    & hr {
+      @include hr(77px, 0);
+    }
+    & ul li {
+      font-size: 11px;
+      background-size: 10px;
+      padding: 0 0 0 20px;
+    }
+    & p {
+      &:nth-of-type(1) {
+        font-size: 11px;
+      }
+      &:nth-of-type(2) {
+        font-size: 16px;
+        letter-spacing: 1.6px;
+      }
+    }
+  }
+}
+
+// Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .consultations {
+    padding: 115px 0 115px;
+    & hr {
+      @include hr(114px, 15px auto 22px);
+    }
+    &__subtitle {
+      font-size: 11px;
+      max-width: 287px;
+    }
+    &__cards {
+      flex-direction: column;
+      gap: 20px;
+      margin: 40px 0 77px;
+    }
+    &__arrow {
+      width: 15px;
+      height: 27px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .consultations__card {
+    gap: 15px;
+    padding: 20px;
+    &:nth-of-type(1) {
+      max-width: 278px;
+      min-height: 295px;
+      & svg {
+        max-width: 32px;
+        height: 20px;
+      }
+    }
+    &:nth-of-type(2) {
+      max-width: 241px;
+      min-height: 267px;
+      & svg {
+        max-width: 40px;
+        height: 21px;
+      }
+    }
+    & hr {
+      @include hr(77px, 0);
+    }
+    & ul li {
+      font-size: 11px;
+      background-size: 10px;
+      padding: 0 0 0 20px;
+    }
+    & p {
+      &:nth-of-type(1) {
+        font-size: 11px;
+      }
+      &:nth-of-type(2) {
+        font-size: 16px;
+        letter-spacing: 1.6px;
+      }
+    }
+  }
+}
+
+// Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .consultations {
+    padding: 85px 0 80px;
+    & hr {
+      @include hr(85px, 10px auto 16px);
+    }
+    &__subtitle {
+      font-size: 9px;
+      max-width: 214px;
+    }
+    &__cards {
+      flex-direction: column;
+      gap: 15px;
+      margin: 30px 0 60px;
+    }
+    &__arrow {
+      width: 11px;
+      height: 21px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .consultations__card {
+    gap: 10px;
+    padding: 15px;
+    &:nth-of-type(1) {
+      max-width: 218px;
+      min-height: 240px;
+      & svg {
+        max-width: 32px;
+        height: 20px;
+      }
+    }
+    &:nth-of-type(2) {
+      max-width: 197px;
+      min-height: 222px;
+      & svg {
+        max-width: 40px;
+        height: 21px;
+      }
+    }
+    & hr {
+      @include hr(77px, 0);
+    }
+    & ul li {
+      font-size: 9px;
+      background-size: 10px;
+      padding: 0 0 0 15px;
+    }
+    & p {
+      &:nth-of-type(1) {
+        font-size: 11px;
+      }
+      &:nth-of-type(2) {
+        font-size: 16px;
+        letter-spacing: 1.6px;
+      }
+    }
+  }
 }
