@@ -5,3 +5,34 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+// Desktop 1440px
+
+@media all and (min-width: 1440px) and ( max-width: 1919px ) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+// Tablet 768px
+
+@media all and (min-width: 768px) and ( max-width: 1439px ) {
+  .container {
+    max-width: 594px;
+  }
+}
+
+// Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px){
+  .container {
+    max-width: 348px;
+  }
+}
+// Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .container {
+    max-width: 320px;
+  }
+}

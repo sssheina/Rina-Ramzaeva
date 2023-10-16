@@ -1124,6 +1124,26 @@ body._touch .menu__list > li._active .menu__arrow {
   padding-right: 20px;
 }
 
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    max-width: 594px;
+  }
+}
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .container {
+    max-width: 348px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .container {
+    max-width: 320px;
+  }
+}
 .about {
   position: relative;
   background-color: #FEFEFE;
@@ -1433,7 +1453,7 @@ h3 {
   letter-spacing: 0.1em;
 }
 
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   h2 {
     font-size: 32px;
   }
@@ -1441,7 +1461,7 @@ h3 {
     font-size: 18px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   h2 {
     font-size: 18px;
   }
@@ -1449,7 +1469,7 @@ h3 {
     font-size: 12px;
   }
 }
-@media all and (max-width: 428px) {
+@media all and (min-width: 428px) and (max-width: 767px) {
   h2 {
     font-size: 18px;
   }
@@ -1457,7 +1477,7 @@ h3 {
     font-size: 12px;
   }
 }
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width: 427px) {
   h2 {
     font-size: 14px;
   }
@@ -1541,6 +1561,7 @@ h3 {
 }
 
 .aside {
+  position: absolute;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -2647,7 +2668,7 @@ h3 {
   bottom: -216px;
 }
 
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   .steps {
     padding: 165px 0 195px;
   }
@@ -2659,12 +2680,12 @@ h3 {
     border: none;
   }
 }
-@media (max-width: 1440px) and (max-width: 768px) {
+@media (min-width: 1440px) and (max-width: 1919px) and (max-width: 768px) {
   .steps hr {
     height: 1px;
   }
 }
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   .steps__subtitle {
     max-width: 281px;
     font-size: 16px;
@@ -2697,7 +2718,7 @@ h3 {
     font-size: 15px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .steps {
     padding: 88px 0 100px;
   }
@@ -2709,12 +2730,12 @@ h3 {
     border: none;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1439px) and (max-width: 768px) {
   .steps hr {
     height: 1px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .steps__subtitle {
     max-width: 193px;
     font-size: 11px;
@@ -2760,7 +2781,7 @@ h3 {
     font-size: 11px;
   }
 }
-@media all and (max-width: 428px) {
+@media all and (min-width: 428px) and (max-width: 767px) {
   .steps {
     padding: 115px 0 115px;
   }
@@ -2772,12 +2793,12 @@ h3 {
     border: none;
   }
 }
-@media (max-width: 428px) and (max-width: 768px) {
+@media (min-width: 428px) and (max-width: 767px) and (max-width: 768px) {
   .steps hr {
     height: 1px;
   }
 }
-@media all and (max-width: 428px) {
+@media all and (min-width: 428px) and (max-width: 767px) {
   .steps__cards {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -2791,6 +2812,10 @@ h3 {
     right: 50%;
     rotate: 90deg;
     top: 105%;
+  }
+  .steps__subtitle {
+    max-width: 193px;
+    font-size: 11px;
   }
   .steps__aside {
     display: none;
@@ -2818,7 +2843,7 @@ h3 {
     font-size: 11px;
   }
 }
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width: 427px) {
   .steps {
     padding: 85px 0 80px;
   }
@@ -2830,12 +2855,12 @@ h3 {
     border: none;
   }
 }
-@media (max-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 427px) and (max-width: 768px) {
   .steps hr {
     height: 1px;
   }
 }
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width: 427px) {
   .steps__subtitle {
     max-width: 160px;
     font-size: 9px;
@@ -4117,7 +4142,7 @@ details[open] summary ~ * {
   gap: 48px;
 }
 
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   .footer__content {
     padding: 175px 0 155px;
   }
@@ -4129,12 +4154,12 @@ details[open] summary ~ * {
     border: none;
   }
 }
-@media (max-width: 1440px) and (max-width: 768px) {
+@media (min-width: 1440px) and (max-width: 1919px) and (max-width: 768px) {
   .footer__card hr {
     height: 1px;
   }
 }
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   .footer__card nav a {
     font-size: 16px;
   }
@@ -4145,9 +4170,8 @@ details[open] summary ~ * {
     max-width: 40px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .footer__content {
-    display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 50px;
@@ -4164,12 +4188,12 @@ details[open] summary ~ * {
     border: none;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1439px) and (max-width: 768px) {
   .footer__card hr {
     height: 1px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .footer__card nav {
     gap: 40px;
   }
@@ -4198,16 +4222,20 @@ details[open] summary ~ * {
     gap: 40px;
   }
 }
-@media all and (max-width: 428px) {
+@media all and (min-width: 428px) and (max-width: 767px) {
   .footer__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
     padding: 115px 0 51px;
   }
   .footer__wrapper {
     gap: 54px;
   }
 }
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width: 427px) {
   .footer__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 30px;
     padding: 85px 0 42px;
   }
@@ -4219,14 +4247,17 @@ details[open] summary ~ * {
     border: none;
   }
 }
-@media (max-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 427px) and (max-width: 768px) {
   .footer__card hr {
     height: 1px;
   }
 }
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width: 427px) {
   .footer__card nav {
     gap: 30px;
+  }
+  .footer__card nav a {
+    font-size: 9px;
   }
   .footer__social-icons {
     gap: 30px;

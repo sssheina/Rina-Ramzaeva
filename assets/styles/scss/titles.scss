@@ -27,7 +27,7 @@ h3 {
 
 // Desktop 1440px
 
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   h2 {
     font-size: 32px;
   }
@@ -38,7 +38,7 @@ h3 {
 
 // Tablet 768px
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px)  {
   h2 {
     font-size: 18px;
   }
@@ -50,7 +50,7 @@ h3 {
 
 // Mobile 428px
 
-@media all and (max-width: 428px) {
+@media all and (min-width: 428px) and (max-width: 767px) {
   h2 {
     font-size: 18px;
   }
@@ -62,7 +62,7 @@ h3 {
 
 // Mobile 320px
 
-@media all and (max-width: 320px) {
+@media all and (min-width: 320px) and (max-width: 427px) {
   h2 {
     font-size: 14px;
   }
