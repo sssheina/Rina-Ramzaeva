@@ -6,6 +6,7 @@
     display: flex;
     // gap: 157px;
     justify-content: space-around;
+    z-index: 1;
   }
   &__title {
     position: relative;
@@ -46,25 +47,19 @@
     display: flex;
     max-width: 1004px;
     &:nth-child(3n + 1) summary {
-      background: linear-gradient(
-        180deg,
-        #ffdada 0%,
-        rgba(250, 229, 229, 0) 100%
-      );
+      background: linear-gradient(180deg, #FFDADA 0%, #FFF 100%);
+
+
     }
     &:nth-child(3n + 2) summary {
-      background: linear-gradient(
-        180deg,
-        #d9f0ff 0%,
-        rgba(242, 249, 253, 0) 100%
-      );
+      background: linear-gradient(180deg, #D9F0FF 0%, #FFF 100%);
+
+
     }
     &:nth-child(3n + 3) summary {
-      background: linear-gradient(
-        180deg,
-        #bfebe3 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(180deg, #BFEBE3 0%, #FFF 100%);
+
+
     }
     & summary {
       position: relative;
