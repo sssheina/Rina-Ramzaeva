@@ -62,6 +62,7 @@
 .language {
   font-weight: 700;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 .menu__sub-list {
   width: 50px;
@@ -120,4 +121,77 @@ body._touch .menu__list > li._active .menu__sub-list {
 body._touch .menu__list > li._active .menu__arrow {
   margin: 10px 0px 0px 0px;
   transform: rotate(-180deg);
+}
+
+@media all and (min-width: 1440px) and ( max-width: 1919px ) {
+  .header__container {
+    padding-top: 20px;
+  }
+  .header__logo img {
+    max-width: 72px;
+    width: 100%;
+    max-height: 37px;
+    height: 100%;
+  }
+
+  .menu__link {
+    font-size: 16px;
+  }
+  .menu__list {
+    gap: 18px;
+  }
+  .menu__list li:nth-child(8) {
+    margin-left: 98px;
+  }
+  .menu__button img {
+    max-width: 28px;
+    width: 100%;
+    max-height: 28px;
+    height: 100%;
+  }
+  .language {
+    font-size: 14px;
+  }
+
+  .menu__list li:nth-child(9) {
+    margin-left: 8px;
+}
+}
+
+@media all and (min-width: 768px) and ( max-width: 1439px ) {
+  .header {
+    position: static;
+  }
+  .header__container {
+    padding-top: 20px;
+  }
+  .header__logo img {
+    max-width: 39.38px;
+    width: 100%;
+    max-height: 19.65px;
+    height: 100%;
+  }
+
+  .menu__link {
+    font-size: 10px;
+  }
+  .menu__list {
+    gap: 18px;
+  }
+  .menu__list li:nth-child(8) {
+    margin-left: 8px;
+  }
+  .menu__button img {
+    max-width: 28px;
+    width: 100%;
+    max-height: 28px;
+    height: 100%;
+  }
+  .language {
+    font-size: 10px;
+  }
+
+  .menu__list li:nth-child(9) {
+    margin-left: 8px;
+}
 }
