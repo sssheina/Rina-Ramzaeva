@@ -1712,6 +1712,9 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 178px;
     height: 238px;
   }
+  .about__dawn {
+    top: 24%;
+  }
   .desktop_1920 {
     display: none;
   }
