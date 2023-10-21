@@ -170,21 +170,10 @@
     display: none;
   }
   
-  // .about__star_1 {
-  //   position: absolute;
-  //   top: 128%;
-  //   left: 52%;
-  // }
-  // .about__star_2 {
-  //   position: absolute;
-  //   top: 15%;
-  //   left: 5%;
-  // }
-  
   .about__text-block {
     gap: 30px;
     max-width: 850px;
-    padding: 93px 78px 145px 173px;
+    padding: 93px 65px 145px 163px;
   }
   
   .about__hr_1 {
@@ -192,7 +181,7 @@
   }
   
   .about__text {
-    max-width: 580px;
+    max-width: 585px;
   }
   .about__text > p {
     margin-bottom: 32px;
@@ -212,44 +201,7 @@
   .desktop-br_1440 {
     display: block;
   }
-  .about__waves_1 {
-    position: absolute;
-    top: 76%;
-    left: -7%;
-  }
-  .about__waves_2 {
-    position: absolute;
-    top: 96%;
-    left: 26%;
-  }
-  .about__waves_3 {
-    position: absolute;
-    top: 10%;
-    right: 7%;
-  }
-  .about__star_3 {
-    position: absolute;
-    top: 18%;
-    left: 78%;
-  }
-  .about__star_4 {
-    position: absolute;
-    z-index: 1;
-    top: 2%;
-    right: 56%;
-  }
-  .about__star_5 {
-    position: absolute;
-    bottom: 2%;
-    right: 20%;
-  }
-  
-  .about__circle {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  
+    
 }
 
 // ____Tablet 768px

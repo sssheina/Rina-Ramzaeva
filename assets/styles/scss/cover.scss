@@ -198,6 +198,10 @@
   display: none;
 }
 
+.desktop-svg_1440 {
+  display: none;
+}
+
 
 @media all and (min-width: 1440px) and ( max-width: 1919px ) {
   .cover__left-side {
@@ -225,20 +229,7 @@
     max-height: 800px;
     height: 100%;
   }
-  .cover__left-circles {
-    max-height: 540px;
-    height: 100%;
-    max-width: 110px;
-    width: 100%;
-  }
-
-  .cover__right-circles {
-    max-width: 792px;
-    width: 100%;
-    max-height: 613.5px;
-    height: 100%;
-  }
-
+ 
   .cover__present {
     max-width: 120px;
     width: 100%;
@@ -257,6 +248,13 @@
   }
 
   .mobile-svg_320 {
+    display: none;
+  }
+
+  .desktop-svg_1440 {
+    display: block;
+  }
+  .desktop-svg {
     display: none;
   }
 }

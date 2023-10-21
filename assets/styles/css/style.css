@@ -1184,6 +1184,10 @@ body._touch .menu__list > li._active .menu__arrow {
   display: none;
 }
 
+.desktop-svg_1440 {
+  display: none;
+}
+
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .cover__left-side {
     padding: 217px 0 106px;
@@ -1210,18 +1214,6 @@ body._touch .menu__list > li._active .menu__arrow {
     max-height: 800px;
     height: 100%;
   }
-  .cover__left-circles {
-    max-height: 540px;
-    height: 100%;
-    max-width: 110px;
-    width: 100%;
-  }
-  .cover__right-circles {
-    max-width: 792px;
-    width: 100%;
-    max-height: 613.5px;
-    height: 100%;
-  }
   .cover__present {
     max-width: 120px;
     width: 100%;
@@ -1238,6 +1230,12 @@ body._touch .menu__list > li._active .menu__arrow {
     display: none;
   }
   .mobile-svg_320 {
+    display: none;
+  }
+  .desktop-svg_1440 {
+    display: block;
+  }
+  .desktop-svg {
     display: none;
   }
 }
@@ -1677,7 +1675,7 @@ body._touch .menu__list > li._active .menu__arrow {
   .about__text-block {
     gap: 30px;
     max-width: 850px;
-    padding: 93px 78px 145px 173px;
+    padding: 93px 65px 145px 163px;
   }
   .about__hr_1 {
     max-width: 100px;
@@ -1694,7 +1692,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .about__text {
-    max-width: 580px;
+    max-width: 585px;
   }
   .about__text > p {
     margin-bottom: 32px;
@@ -1710,42 +1708,6 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .desktop-br_1440 {
     display: block;
-  }
-  .about__waves_1 {
-    position: absolute;
-    top: 76%;
-    left: -7%;
-  }
-  .about__waves_2 {
-    position: absolute;
-    top: 96%;
-    left: 26%;
-  }
-  .about__waves_3 {
-    position: absolute;
-    top: 10%;
-    right: 7%;
-  }
-  .about__star_3 {
-    position: absolute;
-    top: 18%;
-    left: 78%;
-  }
-  .about__star_4 {
-    position: absolute;
-    z-index: 1;
-    top: 2%;
-    right: 56%;
-  }
-  .about__star_5 {
-    position: absolute;
-    bottom: 2%;
-    right: 20%;
-  }
-  .about__circle {
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 }
 .button {
