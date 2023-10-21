@@ -1750,6 +1750,9 @@ body._touch .menu__list > li._active .menu__arrow {
     display: none;
   }
   .desktop-br_1440 {
+    display: none;
+  }
+  .mobile_768 {
     display: block;
   }
 }

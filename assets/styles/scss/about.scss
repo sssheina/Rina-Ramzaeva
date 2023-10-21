@@ -252,8 +252,13 @@
   }
 
   .desktop-br_1440 {
+    display: none;
+  }
+
+  .mobile_768 {
     display: block;
   }
+  
 }
 
 // ____Mobile 428px
