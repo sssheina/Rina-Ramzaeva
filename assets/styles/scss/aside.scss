@@ -16,26 +16,63 @@
   color: $color-black;
   &::before {
     @include aside-before;
+    left: -70px;
+    top: -25px;
+    width: 2px;
+    height: 80px;
   }
   &::after {
     @include aside-after;
+    right: -70px;
+    top: -25px;
+    width: 2px;
+    height: 80px;
   }
 }
 
 // Desktop 1440px
 
-@media all and (max-width: 1440px) {
+@media all and (min-width: 1440px) and (max-width: 1919px) {
   .aside-span {
     font-size: 16px;
-    letter-spacing: 1.6px;
+    &::before {
+      @include aside-before;
+      
+    }
+    &::after {
+      @include aside-after;
+      
+    }
   }
 }
 
 // Tablet 768px
 
-@media all and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .aside-span {
     font-size: 8px;
-    letter-spacing: 0.85px;
+    &::before {
+      
+    }
+    &::after {
+      @include aside-after;
+      height: 60px;
+    }
+  }
+}
+
+// ____Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .aside {
+    display: none;
+  }
+}
+
+// ____Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .aside {
+    display: none;
   }
 }

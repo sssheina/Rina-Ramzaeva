@@ -127,3 +127,145 @@
   top: 0;
   right: 0;
 }
+
+.desktop-br_1440 {
+  display: none;
+}
+
+.desktop_1440 {
+  display: none;
+}
+
+
+// ___Desktop 1440px
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .about {
+    padding: 267px 0 200px;
+  }
+    
+  .about__left-side {
+    position: relative;
+    width: 20.21vw;
+  }
+  .about__right-side {
+    display: flex;
+    position: relative;
+  }
+  
+  .about__pic {
+    width: 367px;
+    height: 490px;
+  }
+  
+  .about__dawn {
+    max-width: 248px;
+    width: 100%;
+    top: 30%;
+  }
+
+  .desktop_1440 {
+    display: block;
+  }
+  .desktop_1920 {
+    display: none;
+  }
+  
+  // .about__star_1 {
+  //   position: absolute;
+  //   top: 128%;
+  //   left: 52%;
+  // }
+  // .about__star_2 {
+  //   position: absolute;
+  //   top: 15%;
+  //   left: 5%;
+  // }
+  
+  .about__text-block {
+    gap: 30px;
+    max-width: 850px;
+    padding: 93px 78px 145px 173px;
+  }
+  
+  .about__hr_1 {
+    @include hr(100px, 0);
+  }
+  
+  .about__text {
+    max-width: 580px;
+  }
+  .about__text > p {
+    margin-bottom: 32px;
+  }
+  .about__hr_2 {
+    width: 100px;
+  }
+  
+  .about__endnote {
+    max-width: 580px;
+  }
+  
+  .desktop-br_1920 {
+    display: none;
+  }
+
+  .desktop-br_1440 {
+    display: block;
+  }
+  .about__waves_1 {
+    position: absolute;
+    top: 76%;
+    left: -7%;
+  }
+  .about__waves_2 {
+    position: absolute;
+    top: 96%;
+    left: 26%;
+  }
+  .about__waves_3 {
+    position: absolute;
+    top: 10%;
+    right: 7%;
+  }
+  .about__star_3 {
+    position: absolute;
+    top: 18%;
+    left: 78%;
+  }
+  .about__star_4 {
+    position: absolute;
+    z-index: 1;
+    top: 2%;
+    right: 56%;
+  }
+  .about__star_5 {
+    position: absolute;
+    bottom: 2%;
+    right: 20%;
+  }
+  
+  .about__circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+}
+
+// ____Tablet 768px
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+
+}
+
+// ____Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+
+} 
+
+// ____Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+
+}
