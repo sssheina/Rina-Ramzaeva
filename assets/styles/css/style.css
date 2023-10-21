@@ -1649,6 +1649,18 @@ body._touch .menu__list > li._active .menu__arrow {
   display: none;
 }
 
+.mobile_428 {
+  display: none;
+}
+
+.mobile-br_768 {
+  display: none;
+}
+
+.mobile_320 {
+  display: none;
+}
+
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .about {
     padding: 267px 0 200px;
@@ -1657,13 +1669,19 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 367px;
     height: 490px;
   }
+  .desktop_1920 {
+    display: none;
+  }
   .desktop_1440 {
     display: block;
   }
   .mobile_768 {
     display: none;
   }
-  .desktop_1920 {
+  .mobile_428 {
+    display: none;
+  }
+  .mobile_320 {
     display: none;
   }
   .about__text-block {
@@ -1703,6 +1721,12 @@ body._touch .menu__list > li._active .menu__arrow {
   .desktop-br_1440 {
     display: block;
   }
+  .mobile-br_768 {
+    display: none;
+  }
+  .mobile-br_320 {
+    display: none;
+  }
 }
 @media all and (min-width: 768px) and (max-width: 1439px) {
   .about {
@@ -1723,6 +1747,9 @@ body._touch .menu__list > li._active .menu__arrow {
   }
   .mobile_768 {
     display: block;
+  }
+  .mobile_320 {
+    display: none;
   }
   .about__text-block {
     gap: 30px;
@@ -1755,7 +1782,182 @@ body._touch .menu__list > li._active .menu__arrow {
   .desktop-br_1440 {
     display: none;
   }
+  .mobile-br_320 {
+    display: none;
+  }
+  .mobile-br_768 {
+    display: block;
+  }
+}
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .about {
+    padding: 140px 0 53px;
+  }
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__left-side {
+    height: 170px;
+  }
+  .about__pic {
+    width: 195px;
+    height: 261px;
+    top: -22%;
+    left: 45%;
+  }
+  .about__dawn {
+    left: 235%;
+    top: -50%;
+  }
+  .desktop_1920 {
+    display: none;
+  }
+  .desktop_1440 {
+    display: none;
+  }
   .mobile_768 {
+    display: none;
+  }
+  .mobile_428 {
+    display: block;
+  }
+  .mobile_320 {
+    display: none;
+  }
+  .about__text-block {
+    gap: 20px;
+    max-width: 348px;
+    padding: 97px 26px 90px;
+  }
+  .about__star_1,
+  .about__star_2,
+  .about__star_4,
+  .about__star_5,
+  .about__waves_1,
+  .about__waves_2,
+  .about__waves_3 {
+    display: none;
+  }
+  .about__star_3 {
+    left: 70%;
+    top: 27%;
+  }
+  .about__hr_1 {
+    max-width: 50px;
+    margin: 0;
+    background-color: #635D5D;
+    height: 2px;
+    border: none;
+  }
+}
+@media (min-width: 428px) and (max-width: 767px) and (max-width: 768px) {
+  .about__hr_1 {
+    height: 1px;
+  }
+}
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .about__text > p {
+    margin-bottom: 20px;
+  }
+  .about__hr_2 {
+    width: 50px;
+  }
+  .desktop-br_1920 {
+    display: none;
+  }
+  .desktop-br_1440 {
+    display: none;
+  }
+  .mobile-br_768 {
+    display: none;
+  }
+  .mobile-br_320 {
+    display: none;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .about {
+    padding: 95px 0 53px;
+  }
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__left-side {
+    height: 130px;
+  }
+  .about__pic {
+    width: 146px;
+    height: 195px;
+    top: -22%;
+    left: 45%;
+  }
+  .about__dawn {
+    left: 235%;
+    top: -50%;
+  }
+  .desktop_1920 {
+    display: none;
+  }
+  .desktop_1440 {
+    display: none;
+  }
+  .mobile_768 {
+    display: none;
+  }
+  .mobile_428 {
+    display: none;
+  }
+  .mobile_320 {
+    display: block;
+  }
+  .about__text-block {
+    gap: 15px;
+    max-width: 260px;
+    padding: 72px 20px 60px;
+  }
+  .about__star_1,
+  .about__star_2,
+  .about__star_4,
+  .about__star_5,
+  .about__waves_1,
+  .about__waves_2,
+  .about__waves_3 {
+    display: none;
+  }
+  .about__star_3 {
+    left: 70%;
+    top: 25%;
+  }
+  .about__hr_1 {
+    max-width: 50px;
+    margin: 0;
+    background-color: #635D5D;
+    height: 2px;
+    border: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 427px) and (max-width: 768px) {
+  .about__hr_1 {
+    height: 1px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .about__text > p {
+    margin-bottom: 20px;
+  }
+  .about__hr_2 {
+    width: 50px;
+  }
+  .desktop-br_1920 {
+    display: none;
+  }
+  .desktop-br_1440 {
+    display: none;
+  }
+  .mobile-br_768 {
+    display: none;
+  }
+  .mobile-br_320 {
     display: block;
   }
 }
