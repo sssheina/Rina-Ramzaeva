@@ -187,32 +187,32 @@ function scrollToRegistration() {
   targetBlock.scrollIntoView({ behavior: "smooth" });
 }
 
-//----- Thanx-message -----
+//----- Common modal window -----
 
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".thanx-message__link");
 const closeModalBtn = document.querySelector(".btn-close");
 
-const openModal = function () {
+const openModal = function (content) {
+  let modal = document.getElementById("modal_window");
+  let overlay = document.getElementById("overlay");
+  let modalContent = document.getElementById("modal_window_content");
+  modalContent.innerHTML = content;
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
 
-//openModalBtn.addEventListener("click", openModal);
-
 const closeModal = function () {
+  let modal = document.getElementById("modal_window");
+  let overlay = document.getElementById("overlay");
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
 
-closeModalBtn.addEventListener("click", closeModal);
-
-overlay.addEventListener("click", closeModal);
-
-modal.addEventListener("keydown", function (e) {
+document.getElementById("btn_close_modal").addEventListener("click", closeModal);
+document.getElementById("overlay").addEventListener("click", closeModal);
+document.getElementById("modal_window").addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    modalClose();
+    closeModal();
   }
 });
 
@@ -273,7 +273,10 @@ modal.addEventListener("keydown", function (e) {
 
 async function submitForm() {
  try {
-	 
+   
+   openModal(REG_FORM_THANKS_MODAL_CONTENT);
+   return;
+   
    // Validating the form
    if(!validateRegForm(false)){
 	   return;
