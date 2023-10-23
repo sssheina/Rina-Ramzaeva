@@ -132,21 +132,10 @@
   display: none;
 }
 
-.desktop_1440 {
-  display: none;
-}
-.mobile_768 {
-  display: none;
-}
-.mobile_428 {
-  display: none;
-}
 .mobile-br_768 {
   display: none;
 }
-.mobile_320 {
-  display: none;
-}
+
 
 
 // ___Desktop 1440px
@@ -160,22 +149,7 @@
     height: 490px;
   }
     
-  .desktop_1920 {
-    display: none;
-  }
-  .desktop_1440 {
-    display: block;
-  }
-  .mobile_768 {
-    display: none;
-  }
-  .mobile_428 {
-    display: none;
-  }
-  .mobile_320 {
-    display: none;
-  }
-  
+    
   .about__text-block {
     gap: 30px;
     max-width: 850px;
@@ -231,21 +205,6 @@
     top: 24%;
   }
 
-  .desktop_1920 {
-    display: none;
-  }
-
-  .desktop_1440 {
-    display: none;
-  }
-  .mobile_768 {
-    display: block;
-  }
-
-  .mobile_320 {
-    display: none;
-  }
-  
   .about__text-block {
     gap: 30px;
     max-width: 454px;
@@ -305,25 +264,6 @@
     left: 235%;
     top: -50%;
   }
-
-  .desktop_1920 {
-    display: none;
-  }
-
-  .desktop_1440 {
-    display: none;
-  }
-  .mobile_768 {
-    display: none;
-  }
-  .mobile_428 {
-    display: block;
-  }
-
-  .mobile_320 {
-    display: none;
-  }
-  
   .about__text-block {
     gap: 20px;
     max-width: 348px;
@@ -395,25 +335,6 @@
     left: 235%;
     top: -50%;
   }
-
-  .desktop_1920 {
-    display: none;
-  }
-
-  .desktop_1440 {
-    display: none;
-  }
-  .mobile_768 {
-    display: none;
-  }
-  .mobile_428 {
-    display: none;
-  }
-
-  .mobile_320 {
-    display: block;
-  }
-  
   .about__text-block {
     gap: 15px;
     max-width: 260px;
