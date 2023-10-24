@@ -1609,24 +1609,22 @@
                     <div class="privacy-policy hidden"></div>
 
                     <!-- ____________Thanx-message modal window____________________ -->
-
-                    <section class="modal hidden" id="thanx-message">
-                        <button class="btn-close">⨉</button>
-
-                        <div class="modal__content">
-                            <h3>Спасибо! <br>Заявка отправлена!</h3>
-                            <p class="text">
-                                Я свяжусь с тобой в ближайшее время для уточнения деталей и назначения времени
-                                консультации.
-                            </p>
-                        </div>
-                    </section>
-
-                    <div class="overlay hidden"></div>
+                    
 
                     <!-- __________________ -->
 
-                    <button class="registration__button button glow-effect" data-glow-offset="true"
+                </form>
+				
+				<section class="modal hidden" id="modal_window">
+                        <button class="btn-close" id="btn_close_modal">⨉</button>
+
+                        <div class="modal__content" id="modal_window_content">
+                        </div>
+                    </section>
+
+                    <div class="overlay hidden" id = "overlay"></div>
+				
+				<button class="registration__button button glow-effect" data-glow-offset="true"
                         onclick="submitForm()">
                         отправить
                         <svg class="glow-container">
@@ -1634,8 +1632,7 @@
                             <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
                         </svg>
 
-                    </button>
-                </form>
+				</button>
             </div>
 
         </section>
