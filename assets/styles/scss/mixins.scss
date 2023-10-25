@@ -33,7 +33,7 @@
 }
 
 @mixin hr($width, $margin) {
-  max-width: $width;
+  width: $width;
   margin: $margin;
   background-color: $color-black;
   height: 2px;

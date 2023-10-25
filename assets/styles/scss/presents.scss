@@ -29,8 +29,7 @@
 
 .presents__title-hr {
   @include hr(285px, 30px auto 150px);
-  width: 100%;
-}
+  }
 
 .presents__guide-block {
   position: relative;

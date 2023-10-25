@@ -1560,7 +1560,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .about__hr_1 {
-  max-width: 140px;
+  width: 140px;
   margin: 0;
   background-color: #635D5D;
   height: 2px;
@@ -1659,7 +1659,7 @@ body._touch .menu__list > li._active .menu__arrow {
     padding: 93px 65px 145px 163px;
   }
   .about__hr_1 {
-    max-width: 100px;
+    width: 100px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -1714,7 +1714,7 @@ body._touch .menu__list > li._active .menu__arrow {
     padding: 50px 30px 58px 60px;
   }
   .about__hr_1 {
-    max-width: 90px;
+    width: 90px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -1785,7 +1785,7 @@ body._touch .menu__list > li._active .menu__arrow {
     top: 27%;
   }
   .about__hr_1 {
-    max-width: 50px;
+    width: 50px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -1856,7 +1856,7 @@ body._touch .menu__list > li._active .menu__arrow {
     top: 25%;
   }
   .about__hr_1 {
-    max-width: 50px;
+    width: 50px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -2345,7 +2345,7 @@ h3 {
   text-align: center;
 }
 .help hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
@@ -2437,7 +2437,7 @@ h3 {
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .swiper__text hr {
-  max-width: 140px;
+  width: 140px;
   margin: 0;
   background-color: #635D5D;
   height: 2px;
@@ -2963,7 +2963,7 @@ h3 {
 }
 
 .tv__hr-title {
-  max-width: 140px;
+  width: 140px;
   margin: 40px 0;
   background-color: #635D5D;
   height: 2px;
@@ -3166,7 +3166,7 @@ h3 {
 }
 
 .education__title-hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
@@ -3354,7 +3354,7 @@ h3 {
   text-align: center;
 }
 .steps hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
@@ -3499,7 +3499,7 @@ h3 {
     padding: 165px 0 195px;
   }
   .steps hr {
-    max-width: 214px;
+    width: 214px;
     margin: 23px auto 30px;
     background-color: #635D5D;
     height: 2px;
@@ -3549,7 +3549,7 @@ h3 {
     padding: 88px 0 100px;
   }
   .steps hr {
-    max-width: 114px;
+    width: 114px;
     margin: 15px auto 17px;
     background-color: #635D5D;
     height: 2px;
@@ -3612,7 +3612,7 @@ h3 {
     padding: 115px 0 115px;
   }
   .steps hr {
-    max-width: 114px;
+    width: 114px;
     margin: 15px auto 22px;
     background-color: #635D5D;
     height: 2px;
@@ -3674,7 +3674,7 @@ h3 {
     padding: 85px 0 80px;
   }
   .steps hr {
-    max-width: 85px;
+    width: 85px;
     margin: 10px auto 15px;
     background-color: #635D5D;
     height: 2px;
@@ -3730,7 +3730,7 @@ h3 {
   text-align: center;
 }
 .consultations hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
@@ -3823,7 +3823,7 @@ h3 {
   height: 31px;
 }
 .consultations__card hr {
-  max-width: 77px;
+  width: 77px;
   margin: 0;
   background-color: #635D5D;
   height: 2px;
@@ -3914,7 +3914,7 @@ h3 {
     padding: 165px 0 195px;
   }
   .consultations hr {
-    max-width: 214px;
+    width: 214px;
     margin: 23px auto 30px;
     background-color: #635D5D;
     height: 2px;
@@ -3960,7 +3960,7 @@ h3 {
     height: 20px;
   }
   .consultations__card hr {
-    max-width: 77px;
+    width: 77px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -3991,7 +3991,7 @@ h3 {
     padding: 88px 0 100px;
   }
   .consultations hr {
-    max-width: 114px;
+    width: 114px;
     margin: 15px auto 17px;
     background-color: #635D5D;
     height: 2px;
@@ -4036,7 +4036,7 @@ h3 {
     height: 21px;
   }
   .consultations__card hr {
-    max-width: 77px;
+    width: 77px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -4067,7 +4067,7 @@ h3 {
     padding: 115px 0 115px;
   }
   .consultations hr {
-    max-width: 114px;
+    width: 114px;
     margin: 15px auto 22px;
     background-color: #635D5D;
     height: 2px;
@@ -4115,7 +4115,7 @@ h3 {
     height: 21px;
   }
   .consultations__card hr {
-    max-width: 77px;
+    width: 77px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -4146,7 +4146,7 @@ h3 {
     padding: 85px 0 80px;
   }
   .consultations hr {
-    max-width: 85px;
+    width: 85px;
     margin: 10px auto 16px;
     background-color: #635D5D;
     height: 2px;
@@ -4194,7 +4194,7 @@ h3 {
     height: 21px;
   }
   .consultations__card hr {
-    max-width: 77px;
+    width: 77px;
     margin: 0;
     background-color: #635D5D;
     height: 2px;
@@ -4225,7 +4225,7 @@ h3 {
   padding: 220px 0 260px;
 }
 .payment hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
@@ -4354,7 +4354,7 @@ h3 {
   white-space: nowrap;
 }
 .payment__card hr {
-  max-width: 45px;
+  width: 45px;
   margin: 0;
   background-color: #635D5D;
   height: 2px;
@@ -4397,6 +4397,8 @@ h3 {
 }
 
 .registration__wrapper {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -4405,7 +4407,7 @@ h3 {
 }
 
 .registration__title-hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 40px;
   background-color: #635D5D;
   height: 2px;
@@ -4554,6 +4556,7 @@ h3 {
   width: 400px;
   background-color: #FDACAC;
   align-self: center;
+  margin-top: 32px;
 }
 .registration__button:hover {
   background-color: #FFDADA;
@@ -5003,12 +5006,11 @@ details[open] summary ~ * {
 }
 
 .presents__title-hr {
-  max-width: 285px;
+  width: 285px;
   margin: 30px auto 150px;
   background-color: #635D5D;
   height: 2px;
   border: none;
-  width: 100%;
 }
 @media (max-width: 768px) {
   .presents__title-hr {
@@ -5048,7 +5050,7 @@ details[open] summary ~ * {
 }
 
 .presents__guide-hr {
-  max-width: 130px;
+  width: 130px;
   margin: 30px 0 40px;
   background-color: #635D5D;
   height: 2px;
@@ -5100,7 +5102,7 @@ details[open] summary ~ * {
 }
 
 .presents__webinar-hr {
-  max-width: 90px;
+  width: 90px;
   margin: 30px 0 30px;
   background-color: #635D5D;
   height: 2px;
@@ -5248,7 +5250,7 @@ details[open] summary ~ * {
   max-width: fit-content;
 }
 .footer__card hr {
-  max-width: 167px;
+  width: 167px;
   margin: 20px 0 40px;
   background-color: #635D5D;
   height: 2px;
@@ -5295,7 +5297,7 @@ details[open] summary ~ * {
     padding: 175px 0 155px;
   }
   .footer__card hr {
-    max-width: 125px;
+    width: 125px;
     margin: 16px 0 31px;
     background-color: #635D5D;
     height: 2px;
@@ -5329,7 +5331,7 @@ details[open] summary ~ * {
     gap: 110px;
   }
   .footer__card hr {
-    max-width: 66px;
+    width: 66px;
     margin: 15px 0 40px;
     background-color: #635D5D;
     height: 2px;
@@ -5388,7 +5390,7 @@ details[open] summary ~ * {
     padding: 85px 0 42px;
   }
   .footer__card hr {
-    max-width: 50px;
+    width: 50px;
     margin: 10px 0 30px;
     background-color: #635D5D;
     height: 2px;
@@ -5416,7 +5418,6 @@ details[open] summary ~ * {
 }
 .modal {
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: center;
   gap: 0.4rem;
@@ -5424,8 +5425,8 @@ details[open] summary ~ * {
   padding: 1.3rem;
   min-height: 250px;
   position: absolute;
-  top: 50%;
-  left: 20%;
+  top: 60%;
+  left: 35%;
   background-color: #FEFEFE;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 2;

@@ -14,6 +14,8 @@
 }
 
 .registration__wrapper {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -157,6 +159,7 @@
   width: 400px;
   background-color: $color-pinkdark;
   align-self: center;
+  margin-top: 32px;
   &:hover {
     background-color: $color-pinklight;
     &:hover {

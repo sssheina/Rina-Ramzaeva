@@ -1,6 +1,6 @@
 .modal {
     display: flex;
-    position: relative;
+    // position: relative;
     flex-direction: column;
     justify-content: center;
     gap: 0.4rem;
@@ -8,8 +8,8 @@
     padding: 1.3rem;
     min-height: 250px;
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 60%;
+    left: 35%;
     background-color: $color-white;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
     z-index: 2;
