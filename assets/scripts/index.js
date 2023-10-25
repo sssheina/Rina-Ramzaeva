@@ -5,8 +5,6 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
 
-
-
 // ----- Education PIC-ZOOM -----
 
 document.querySelectorAll(".education__pic").forEach((image) => {
@@ -26,9 +24,6 @@ window.onclick = (event) => {
     popup.style.display = "none";
   }
 };
-
-
-
 
 // ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
 
@@ -77,7 +72,9 @@ if (isMobile.any()) {
 const modalPrivacy = document.querySelector(".privacy-policy__concent");
 const overlayPrivacy = document.querySelector(".privacy-policy");
 const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
-const closeModalBtnPrivacy = document.querySelector(".privacy-policy__btn-close");
+const closeModalBtnPrivacy = document.querySelector(
+  ".privacy-policy__btn-close"
+);
 
 const openModalPrivacy = function () {
   modalPrivacy.classList.remove("hidden");
@@ -97,10 +94,9 @@ overlayPrivacy.addEventListener("click", closeModalPrivacy);
 
 modalPrivacy.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
-    closeModalPrivacy ();
+    closeModalPrivacy();
   }
 });
-
 
 //  ----- BURGER MENU -----
 const iconMenu = document.querySelector(".menu__icon");
@@ -129,17 +125,24 @@ const swiper = new Swiper(".swiper", {
   },
   // slidesPerView: 1, // - по умолчанию значение 1
   slidesPerView: 3,
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1,
-  //   },
-  //   480: {
-  //     slidesPerView: 2,
-  //   },
-  //   992: {
-  //     slidesPerView: 3,
-  //   },
-  // },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    428: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
   loop: true,
   loopedSlides: 3,
   watchOverflow: true,
@@ -208,14 +211,17 @@ const closeModal = function () {
   overlay.classList.add("hidden");
 };
 
-document.getElementById("btn_close_modal").addEventListener("click", closeModal);
+document
+  .getElementById("btn_close_modal")
+  .addEventListener("click", closeModal);
 document.getElementById("overlay").addEventListener("click", closeModal);
-document.getElementById("modal_window").addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
-});
-
+document
+  .getElementById("modal_window")
+  .addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
 
 // // ----- Privacy Policy -----
 
@@ -246,7 +252,6 @@ document.getElementById("modal_window").addEventListener("keydown", function (e)
 //   }
 // });
 
-
 // const privacyPolicyLink = document.querySelector(".privacy-policy__link");
 // const privacyPolicy = document.querySelector(".privacy-policy");
 // const closePopupBtn = document.querySelector(".privacy-policy__btn-close");
@@ -268,55 +273,51 @@ document.getElementById("modal_window").addEventListener("keydown", function (e)
 // };
 // Scrollbar.init(document.querySelector("#my-scrollbar"), options);
 
-
 // ____________________________PHPMailer__________________________
 
 async function submitForm() {
- try {
-   
-   openModal(REG_FORM_THANKS_MODAL_CONTENT);
-   return;
-   
-   // Validating the form
-   if(!validateRegForm(false)){
-	   return;
-   }
-   
-   // Формируем запрос
-   const response = await fetch("send.php", {
-     method: "POST",
-     body: new FormData(emailform),
-   });
-   // проверяем, что ответ есть
-   if (!response.ok)
-     throw `Ошибка при обращении к серверу: ${response.status}`;
-   // проверяем, что ответ действительно JSON
-   const contentType = response.headers.get("content-type");
-   if (!contentType || !contentType.includes("application/json")) {
-     throw "Ошибка обработки. Ответ не JSON";
-   }
-   // обрабатываем запрос
-   const json = await response.json();
-   if (json.result === "success") {
-     // в случае успеха
-     showThankYouMessage();
-    //  alert(json.info);
-   } else {
-     // в случае ошибки
-     console.log(json);
-     throw json.info;
-   }
- } catch (error) {
-   // обработка ошибки
-   alert(error);
- }
+  try {
+    openModal(REG_FORM_THANKS_MODAL_CONTENT);
+    return;
+
+    // Validating the form
+    if (!validateRegForm(false)) {
+      return;
+    }
+
+    // Формируем запрос
+    const response = await fetch("send.php", {
+      method: "POST",
+      body: new FormData(emailform),
+    });
+    // проверяем, что ответ есть
+    if (!response.ok)
+      throw `Ошибка при обращении к серверу: ${response.status}`;
+    // проверяем, что ответ действительно JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw "Ошибка обработки. Ответ не JSON";
+    }
+    // обрабатываем запрос
+    const json = await response.json();
+    if (json.result === "success") {
+      // в случае успеха
+      showThankYouMessage();
+      //  alert(json.info);
+    } else {
+      // в случае ошибки
+      console.log(json);
+      throw json.info;
+    }
+  } catch (error) {
+    // обработка ошибки
+    alert(error);
+  }
 }
 
 function showThankYouMessage() {
   modal.style.display = "block";
 }
-
-
 
 //  ----- REGISTRATION FORM -----
 
@@ -336,126 +337,119 @@ let submitted = false;
 
 //If needShowMessages = true, the validation messages will be displayed beneath the name field
 //Return true if validation is ok, false otherwise
-function validateRegFormName(needShowMessages){
-	
-	//Doing the basic validation - the name field should not be empty
-	let result = true;
-	let el = document.getElementById("userName");
-	let elError = document.getElementById("errorUserName");
-	
-	
-	if(el.value === null || el.value === ""){
-		result = false;
-	}
-	
-	if(needShowMessages){
-		elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_NAME;
-	}
-	
-	return result;
+function validateRegFormName(needShowMessages) {
+  //Doing the basic validation - the name field should not be empty
+  let result = true;
+  let el = document.getElementById("userName");
+  let elError = document.getElementById("errorUserName");
+
+  if (el.value === null || el.value === "") {
+    result = false;
+  }
+
+  if (needShowMessages) {
+    elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_NAME;
+  }
+
+  return result;
 }
 
-function validateRegFormEmail(needShowMessages){
-	const re = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
-	
-	let result = true;
-	let el = document.getElementById("email");
-	let elError = document.getElementById("errorEmail");
-	
-	
-	if(el.value === null || el.value === ""){
-		result = false;
-		
-		if(needShowMessages){
-			elError.innerText = REG_FORM_VALIDATION_MESSAGE_EMAIL;
-		}
-	} else if(!re.test(el.value)){
-		result = false;
-		
-		if(needShowMessages){
-			elError.innerText = REG_FORM_VALIDATION_MESSAGE_EMAIL_SYNTAX;
-		}
-	} else{
-		elError.innerText = "";
-	}
-	
-	return result;
+function validateRegFormEmail(needShowMessages) {
+  const re =
+    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+
+  let result = true;
+  let el = document.getElementById("email");
+  let elError = document.getElementById("errorEmail");
+
+  if (el.value === null || el.value === "") {
+    result = false;
+
+    if (needShowMessages) {
+      elError.innerText = REG_FORM_VALIDATION_MESSAGE_EMAIL;
+    }
+  } else if (!re.test(el.value)) {
+    result = false;
+
+    if (needShowMessages) {
+      elError.innerText = REG_FORM_VALIDATION_MESSAGE_EMAIL_SYNTAX;
+    }
+  } else {
+    elError.innerText = "";
+  }
+
+  return result;
 }
 
+function validateRegFormAge(needShowMessages) {
+  let result = true;
+  let el = document.getElementById("checkbox_18");
+  let elError = document.getElementById("errorAge");
 
-function validateRegFormAge(needShowMessages){
-	
-	let result = true;
-	let el = document.getElementById("checkbox_18");
-	let elError = document.getElementById("errorAge");
-	
-	
-	if(el.value === null || el.value === "" || !el.checked){
-		result = false;
-	}
-	
-	if(needShowMessages){
-		elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_AGE;
-	}
-	
-	return result;
+  if (el.value === null || el.value === "" || !el.checked) {
+    result = false;
+  }
+
+  if (needShowMessages) {
+    elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_AGE;
+  }
+
+  return result;
 }
 
-function validateRegFormPrivacy(needShowMessages){
-	
-	let result = true;
-	let el = document.getElementById("checkboxPrivat");
-	let elError = document.getElementById("errorPrivacy");
-	
-	
-	if(el.value === null || el.value === "" || !el.checked){
-		result = false;
-	}
-	
-	if(needShowMessages){
-		elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_PRIVACY;
-	}
-	
-	return result;
+function validateRegFormPrivacy(needShowMessages) {
+  let result = true;
+  let el = document.getElementById("checkboxPrivat");
+  let elError = document.getElementById("errorPrivacy");
+
+  if (el.value === null || el.value === "" || !el.checked) {
+    result = false;
+  }
+
+  if (needShowMessages) {
+    elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_PRIVACY;
+  }
+
+  return result;
 }
 
-function validateRegForm(needShowMessages){
-	let result = true;
-	
-	result = validateRegFormName(needShowMessages);
-	
-	if(result){
-		result = validateRegFormEmail(needShowMessages);
-	}
-	
-	if(result){
-		result = validateRegFormAge(needShowMessages);
-	}
-	
-	if(result){
-		result = validateRegFormPrivacy(needShowMessages);
-	}
-	
-	return result;
+function validateRegForm(needShowMessages) {
+  let result = true;
+
+  result = validateRegFormName(needShowMessages);
+
+  if (result) {
+    result = validateRegFormEmail(needShowMessages);
+  }
+
+  if (result) {
+    result = validateRegFormAge(needShowMessages);
+  }
+
+  if (result) {
+    result = validateRegFormPrivacy(needShowMessages);
+  }
+
+  return result;
 }
 
 document.getElementById("userName").addEventListener("blur", (event) => {
-	validateRegFormName(true);
-})
+  validateRegFormName(true);
+});
 document.getElementById("email").addEventListener("blur", (event) => {
-	validateRegFormEmail(true);
-})
+  validateRegFormEmail(true);
+});
 document.getElementById("checkbox_18").addEventListener("click", (event) => {
-	validateRegFormAge(true);
-})
+  validateRegFormAge(true);
+});
 document.getElementById("checkboxPrivat").addEventListener("click", (event) => {
-	validateRegFormPrivacy(true);
-})
+  validateRegFormPrivacy(true);
+});
 
 // function validateEmail(email) {
-  // const re =
-    // /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
-  // return re.test(email);
+// const re =
+// /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+// return re.test(email);
 // }
 
 function validateCheckboxes(checkboxes) {
@@ -522,50 +516,48 @@ form.addEventListener("submit", (e) => {
 // };
 
 // email.onblur = function() {
-  // if (email.value === "") {
-    //Check if the email field is empty
-    // email.classList.add('invalid');
-    // errorsInfo.innerHTML = 'Email обязателен'
-  // }
-  // else if (!validateEmail(email.value)) { // не email
-    // email.classList.add('invalid');
-    // errorsInfo.innerHTMLL = 'Пожалуйста, введи правильный email.'
-  // }
+// if (email.value === "") {
+//Check if the email field is empty
+// email.classList.add('invalid');
+// errorsInfo.innerHTML = 'Email обязателен'
+// }
+// else if (!validateEmail(email.value)) { // не email
+// email.classList.add('invalid');
+// errorsInfo.innerHTMLL = 'Пожалуйста, введи правильный email.'
+// }
 // };
 
 // email.onfocus = function() {
-  // if (this.classList.contains('invalid')) {
-    //удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-    // this.classList.remove('invalid');
-    // errorsInfo.innerHTML = "";
-  // }
+// if (this.classList.contains('invalid')) {
+//удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+// this.classList.remove('invalid');
+// errorsInfo.innerHTML = "";
+// }
 // };
 
 // userName.addEventListener("input", () => {
-  // if (submitted) errorsInfo.innerHTML = "";
+// if (submitted) errorsInfo.innerHTML = "";
 // });
 
 // email.addEventListener("input", () => {
-  // if (submitted) errorsInfo.innerHTML = "";
+// if (submitted) errorsInfo.innerHTML = "";
 // });
 
 // whatsappInput.addEventListener("input", () => {
-  // if (submitted) errorsInfo.innerHTML = "";
+// if (submitted) errorsInfo.innerHTML = "";
 // });
 
 // checkboxAdult.forEach((checkbox) => {
-  // checkbox.addEventListener("change", () => {
-    // if (submitted) errorsInfo.innerHTML = "";
-  // });
+// checkbox.addEventListener("change", () => {
+// if (submitted) errorsInfo.innerHTML = "";
+// });
 // });
 
 // checkboxPrivat.forEach((checkbox) => {
-  // checkbox.addEventListener("change", () => {
-    // if (submitted) errorsInfo.innerHTML = "";
-  // });
+// checkbox.addEventListener("change", () => {
+// if (submitted) errorsInfo.innerHTML = "";
 // });
-
-
+// });
 
 // const whatsappRegex = /\+[0-9]{1,3}\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
 
@@ -682,19 +674,17 @@ form.addEventListener("submit", (e) => {
 //   });
 // });
 
-
-
 // // ____________________________PHPMailer__________________________
 
 // async function submitForm(event) {
 //   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
 //  try {
-	 
+
 //    // Validating the form
 //    if(!validateRegForm(false)){
 // 	   return;
 //    }
-   
+
 //    // Формируем запрос
 //    const response = await fetch("send.php", {
 //      method: "POST",
@@ -728,7 +718,6 @@ form.addEventListener("submit", (e) => {
 // function showThankYouMessage() {
 //   modal.style.display = "block";
 // }
-
 
 // async function submitForm(event) {
 //   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
@@ -766,10 +755,6 @@ form.addEventListener("submit", (e) => {
 // function showThankYouMessage() {
 //   modal.style.display = "block";
 // }
-
-
-
-
 
 //  ----- Посточные ошибки в инпутах -----
 
