@@ -4,7 +4,6 @@
   &__wrapper {
     position: relative;
     display: flex;
-    // gap: 157px;
     justify-content: space-around;
     z-index: 1;
   }
@@ -46,20 +45,18 @@
   & details {
     display: flex;
     max-width: 1004px;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      transform: translateY(-2px);
+    }
     &:nth-child(3n + 1) summary {
-      background: linear-gradient(180deg, #FFDADA 0%, #FFF 100%);
-
-
+      background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
     }
     &:nth-child(3n + 2) summary {
-      background: linear-gradient(180deg, #D9F0FF 0%, #FFF 100%);
-
-
+      background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
     }
     &:nth-child(3n + 3) summary {
-      background: linear-gradient(180deg, #BFEBE3 0%, #FFF 100%);
-
-
+      background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
     }
     & summary {
       position: relative;
@@ -77,11 +74,11 @@
       &::after {
         content: "";
         position: absolute;
-        width: 32px;
-        background: $color-black;
-        height: 3px;
         right: 37px;
         top: 50%;
+        width: 32px;
+        height: 3px;
+        background: $color-black;
         transform: translateY(-50%);
         transition: 0.4s;
       }
@@ -165,5 +162,180 @@ details[open] summary ~ * {
   &:nth-child(2) {
     left: 7%;
     bottom: 30%;
+  }
+}
+
+// Desktop 1440px
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .faq {
+    padding: 165px 0 195px;
+    &__title {
+      margin-top: 35px;
+      &::before,
+      &::after {
+        width: 76px;
+      }
+    }
+  }
+
+  .faq__questions {
+    gap: 25px;
+    & details {
+      max-width: 753px;
+      & summary {
+        min-height: 80px;
+        font-size: 18px;
+        padding: 0 40px 0 20px;
+        &::before,
+        &::after {
+          right: 27px;
+        }
+      }
+      & p {
+        margin: 25px auto 0;
+        max-width: 600px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Tablet 768px
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .faq {
+    padding: 78px 0 100px;
+    &__title {
+      margin-top: 15px;
+      &::before,
+      &::after {
+        width: 40px;
+      }
+      &::before {
+        top: -15px;
+      }
+      &::after {
+        bottom: -15px;
+      }
+    }
+  }
+
+  .faq__questions {
+    gap: 15px;
+    & details {
+      max-width: 348px;
+      & summary {
+        min-height: 80px;
+        font-size: 12px;
+        padding: 0 40px 0 20px;
+        &::before,
+        &::after {
+          right: 18px;
+          width: 15px;
+          height: 1px;
+        }
+      }
+      & p {
+        margin: 20px auto 0;
+        max-width: 308px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+// Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .faq {
+    padding: 115px 0;
+    &__wrapper {
+      flex-direction: column;
+      gap: 70px;
+    }
+    &__title {
+      margin-top: 15px;
+      &::before,
+      &::after {
+        width: 40px;
+      }
+      &::before {
+        top: -15px;
+      }
+      &::after {
+        bottom: -15px;
+      }
+    }
+  }
+
+  .faq__questions {
+    gap: 15px;
+    & details {
+      max-width: 348px;
+      & summary {
+        min-height: 80px;
+        font-size: 12px;
+        padding: 0 40px 0 20px;
+        &::before,
+        &::after {
+          right: 18px;
+          width: 15px;
+          height: 1px;
+        }
+      }
+      & p {
+        margin: 20px auto 0;
+        max-width: 308px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+// Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .faq {
+    padding: 85px 0;
+    &__wrapper {
+      flex-direction: column;
+      gap: 50px;
+    }
+    &__title {
+      margin-top: 12px;
+      &::before,
+      &::after {
+        width: 30px;
+      }
+      &::before {
+        top: -12px;
+      }
+      &::after {
+        bottom: -12px;
+      }
+    }
+  }
+
+  .faq__questions {
+    gap: 12px;
+    & details {
+      max-width: 260px;
+      & summary {
+        min-height: 60px;
+        font-size: 9px;
+        padding: 0 30px 0 15px;
+        &::before,
+        &::after {
+          right: 12px;
+          width: 11px;
+          height: 1px;
+        }
+      }
+      & p {
+        margin: 17px auto 0;
+        max-width: 230px;
+        font-size: 8px;
+      }
+    }
   }
 }
