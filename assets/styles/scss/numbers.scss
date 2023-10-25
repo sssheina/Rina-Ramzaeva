@@ -1,14 +1,12 @@
 .numbers {
   position: relative;
   padding: 154px 0px;
-  margin: 0 auto;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #bfebe3 100%);
 }
 
 .numbers__wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .numbers__numbers {
@@ -18,16 +16,12 @@
   font-size: 74px;
   color: $color-black;
   z-index: 1;
-  flex-grow: 1;
-  padding-left: 80px;
 }
 
 .numbers__span {
   font-weight: 500;
   font-size: 24px;
   line-height: 150%;
-  letter-spacing: 0.1em;
-  color: $color-black;
 }
 
 .numbers__star {
@@ -52,4 +46,69 @@
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+// Desktop 1440px
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .numbers {
+    padding: 150px 0px;
+  }
+
+  .numbers__numbers {
+    font-size: 64px;
+  }
+
+  .numbers__span {
+    font-size: 22px;
+  }
+}
+
+// Tablet 768px
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .numbers {
+    padding: 100px 0px;
+  }
+
+  .numbers__numbers {
+    font-size: 32px;
+  }
+
+  .numbers__span {
+    font-size: 12px;
+  }
+}
+
+// Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .numbers {
+    padding: 80px 0px;
+  }
+
+  .numbers__numbers {
+    gap: 12px;
+    font-size: 22px;
+  }
+
+  .numbers__span {
+    font-size: 10px;
+  }
+}
+
+// Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .numbers {
+    padding: 50px 0px;
+  }
+  .numbers__numbers {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  .numbers__span {
+    font-size: 8px;
+  }
 }

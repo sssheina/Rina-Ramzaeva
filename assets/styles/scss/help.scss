@@ -15,10 +15,10 @@
     font-weight: 500;
     line-height: 150%;
     &:nth-of-type(1) {
-      width: 31, 9vw;
+      max-width: 613px;
     }
     &:nth-of-type(2) {
-      width: 40vw;
+      max-width: 800px;
       margin-bottom: 68px;
     }
   }
@@ -60,9 +60,9 @@
     align-items: center;
   }
   &__picture {
-    max-height: 500px;
     max-width: 413px;
     width: 100%;
+    max-height: 500px;
     & img {
       width: 100%;
       height: 100%;
@@ -83,19 +83,23 @@
     padding: 25px 30px;
     z-index: 2;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
     & hr {
       @include hr(140px, 0);
     }
     & .inside {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       color: $color-black;
       font-size: 20px;
       font-weight: 500;
       line-height: 150%;
-      display: flex;
-      flex-direction: column;
     }
   }
+}
+
+.swiper-pagination {
+  position: absolute;
 }
 
 .swiper-pagination-bullet {
@@ -105,10 +109,6 @@
   background: $color-blackhover;
   width: 20px;
   height: 20px;
-}
-
-.swiper-pagination {
-  position: absolute;
 }
 
 .swiper-pagination-bullet-active {
@@ -173,18 +173,30 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 0 70px; /* 70px padding to create room for the arrows */
+  padding: 0 70px;
 }
 
-.swiper-button-prev,
-.swiper-rtl .swiper-button-next {
-  left: 0; /* Position the button to the left of the lunchbox */
+// .swiper-button-prev,
+// .swiper-button-next {
+//   max-width: 36px;
+//   max-height: 66px;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// .swiper-button-prev::after,
+// .swiper-button-next::after {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.swiper-button-prev {
+  left: 0;
   color: $color-black;
 }
 
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  right: 0; /* Position the button to the right of the lunchbox */
+.swiper-button-next {
+  right: 0;
   color: $color-black;
 }
 
@@ -255,4 +267,209 @@
   position: absolute;
   top: 14%;
   left: 75%;
+}
+
+// Desktop 1440px
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+  .help {
+    padding: 165px 0 195px;
+    & hr {
+      @include hr(214px, 23px auto 30px);
+    }
+    &__subtitle {
+      font-size: 16px;
+      &:nth-of-type(1) {
+        max-width: 460px;
+      }
+      &:nth-of-type(2) {
+        max-width: 600px;
+        margin-bottom: 51px;
+      }
+    }
+    &__button {
+      max-width: 500px;
+    }
+  }
+
+  .swiper {
+    margin: 59px 0 74px;
+    max-height: 650px;
+    &__picture {
+      max-width: 310px;
+      max-height: 375px;
+    }
+    &__text {
+      bottom: 0;
+      max-height: 340px;
+      gap: 20px;
+      padding: 20px;
+      & .inside {
+        font-size: 15px;
+      }
+    }
+    & hr {
+      @include hr(140px, 0);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+// Tablet 768px
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .help {
+    padding: 84px 0 101px;
+    & hr {
+      @include hr(114px, 15px auto 16px);
+    }
+    &__subtitle {
+      font-size: 11px;
+      &:nth-of-type(1) {
+        max-width: 327px;
+      }
+      &:nth-of-type(2) {
+        max-width: 342px;
+        margin-bottom: 50px;
+      }
+    }
+    &__button {
+      max-width: 347px;
+    }
+  }
+
+  .swiper {
+    margin: 27px 0 67px;
+    max-height: 550px;
+
+    &__picture {
+      max-width: 232px;
+      max-height: 281px;
+    }
+    &__text {
+      bottom: 0;
+      max-width: 206px;
+      max-height: 280px;
+      gap: 15px;
+      padding: 20px;
+      & .inside {
+        font-size: 11px;
+      }
+    }
+    & hr {
+      @include hr(140px, 0);
+    }
+  }
+  .lunchbox {
+    padding: 0 35px;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+// Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .help {
+    padding: 62px 0 115px;
+    & hr {
+      @include hr(114px, 15px auto 21px);
+    }
+    &__subtitle {
+      font-size: 11px;
+      &:nth-of-type(1) {
+        max-width: 100%;
+      }
+      &:nth-of-type(2) {
+        max-width: 100%;
+        margin-bottom: 77px;
+      }
+    }
+    &__button {
+      max-width: 100%;
+    }
+  }
+
+  .swiper {
+    margin: 27px 0 67px;
+    max-height: 550px;
+
+    &__picture {
+      max-width: 232px;
+      max-height: 281px;
+    }
+    &__text {
+      bottom: 0;
+      max-width: 206px;
+      max-height: 280px;
+      gap: 15px;
+      padding: 20px;
+      & .inside {
+        font-size: 11px;
+      }
+    }
+    & hr {
+      @include hr(140px, 0);
+    }
+  }
+  .lunchbox {
+    padding: 0 35px;
+  }
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+// Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .help {
+    padding: 46px 0 81px;
+    & hr {
+      @include hr(85px, 10px auto 15px);
+    }
+    &__subtitle {
+      font-size: 9px;
+      &:nth-of-type(2) {
+        margin-bottom: 53px;
+      }
+    }
+  }
+
+  .swiper {
+    margin: 33px 0 23px;
+    max-height: 410px;
+
+    &__picture {
+      max-width: 174px;
+      max-height: 210px;
+    }
+    &__text {
+      bottom: -7px;
+      max-width: 161px;
+      max-height: 215px;
+      gap: 10px;
+      padding: 15px;
+      & .inside {
+        font-size: 9px;
+      }
+    }
+    & hr {
+      @include hr(140px, 0);
+    }
+  }
+  .lunchbox {
+    padding: 0 30px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
 }
