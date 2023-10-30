@@ -25,6 +25,11 @@ window.onclick = (event) => {
   }
 };
 
+//We don't need the default submit event handling for the registration form
+document.getElementById("emailform").addEventListener("submit", function(event){
+	event.preventDefault();
+	return false;
+})
 // ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
 
 const isMobile = {
@@ -68,7 +73,7 @@ if (isMobile.any()) {
 }
 
 // ----- Privacy Policy -----
-
+/*
 const modalPrivacy = document.querySelector(".privacy-policy__concent");
 const overlayPrivacy = document.querySelector(".privacy-policy");
 const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
@@ -97,6 +102,8 @@ modalPrivacy.addEventListener("keydown", function (e) {
     closeModalPrivacy();
   }
 });
+*/
+
 
 //  ----- BURGER MENU -----
 const iconMenu = document.querySelector(".menu__icon");
@@ -222,6 +229,11 @@ document
       closeModal();
     }
   });
+  
+  
+document.getElementById("privacy_policy").addEventListener("click", function(){
+	openModal(REG_FORM_PRIVACY_MODAL_CONTENT);
+});
 
 // // ----- Privacy Policy -----
 
