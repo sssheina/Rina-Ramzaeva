@@ -182,12 +182,14 @@
   color: #fb7070;
 }
 
-#errorUserName, #errorEmail {
-position: absolute;
-left: 1%;
-top: 105%;
+#errorUserName,
+#errorEmail {
+  position: absolute;
+  left: 1%;
+  top: 105%;
 }
-#errorAge, #errorPrivacy {
+#errorAge,
+#errorPrivacy {
   position: absolute;
   top: 110%;
   left: 7%;
@@ -259,4 +261,30 @@ input[type="checkbox"] {
   position: absolute;
   top: 8%;
   left: 90%;
+}
+
+// Desktop 1440px
+
+@media all and (min-width: 1440px) and (max-width: 1919px) {
+}
+
+// Tablet 768px
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+}
+
+// Mobile 428px
+
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .registration__circle-right {
+    display: none;
+  }
+}
+
+// Mobile 320px
+
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .registration__circle-right {
+    display: none;
+  }
 }

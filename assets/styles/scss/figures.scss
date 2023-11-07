@@ -1,331 +1,217 @@
-.waves {
-    max-width: 361px;
-    width: 100%;
-    max-height: 29px;
-    height: 100%;
+.svg_1920 {
+  display: block;
 }
 
-.waves > path {
-    stroke-width: 4;
+.svg_1440 {
+  display: none;
+}
+
+.svg_768 {
+  display: none;
+}
+
+.svg_428 {
+  display: none;
+}
+
+.svg_320 {
+  display: none;
 }
 
 .star {
-    max-width: 67px;
-    width: 100%;
-    max-height: 67px;
-    height: 100%;
-}
-.dawn {
-    max-width: 332px;
-    width: 100%;
-    max-height: 332px;
-    height: 100%;
+  max-width: 67px;
+  width: 100%;
+  max-height: 67px;
+  height: 100%;
 }
 
-.dawn > path {
-    stroke-width: 4;
-}
-.arrows {
-    max-width: 135px;
-    width: 100%;
-    max-height: 267px;
-    height: 100%;
-}
-
-.spiral_1 {
-    max-width: 226px;
-    width: 100%;
-    max-height: 223px;
-    height: 100%;
-}
-
-.spiral_1 > path {
-    stroke-width: 4;
+.big-star {
+  max-width: 90px;
+  width: 100%;
+  max-height: 90px;
+  height: 100%;
 }
 
 .party-star {
-    max-width: 360px;
-    width: 100%;
-    max-height: 360px;
-    height: 100%;
-}
-
-.spiral_2 {
-    max-width: 239px;
-    width: 100%;
-    max-height: 297px;
-    height: 100%;
-}
-
-.spiral_2 > path {
-    stroke-width: 4;
-}
-
-.spiral_3 {
-    max-width: 163px;
-    width: 100%;
-    max-height: 343px;
-    height: 100%;
-}
-
-.spiral_3 > path {
-    stroke-width: 4;
+  max-width: 360px;
+  width: 100%;
+  max-height: 360px;
+  height: 100%;
 }
 
 // Desktop 1440px
 
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-    .waves {
-        max-width: 271px;
-        width: 100%;
-        max-height: 22px;
-        width: 100%;
-    }
-    .waves > path {
-        stroke-width: 3;
-    }
-    .dawn {
-        max-width: 248px;
-        width: 100%;
-        max-height: 248px;
-        height: 100%;
-    }
-    
-    .dawn > path {
-        stroke-width: 3;
-    }
-    .star {
-        max-width: 40px;
-        width: 100%;
-        max-height: 40px;
-        height: 100%;
-    }
-    .arrows {
-        max-width: 101px;
-        width: 100%;
-        max-height: 200px;
-        height: 100%;
-    }
-    .spiral_1 {
-        max-width: 170px;
-        width: 100%;
-        max-height: 167px;
-        height: 100%;
-    }
-    
-    .spiral_1 > path {
-        stroke-width: 3;
-    }
-    .party-star {
-        max-width: 270px;
-        width: 100%;
-        max-height: 270px;
-        height: 100%;
-    }
-    .spiral_2 {
-        max-width: 179px;
-        width: 100%;
-        max-height: 223px;
-        height: 100%;
-    }
-    
-    .spiral_2 > path {
-        stroke-width: 3;
-    }
-    .spiral_3 {
-        max-width: 123px;
-        width: 100%;
-        max-height: 258px;
-        height: 100%;
-    }
-    
-    .spiral_3 > path {
-        stroke-width: 3;
-    }
+  .svg_1920 {
+    display: none;
+  }
+
+  .svg_1440 {
+    display: block;
+  }
+
+  .svg_768 {
+    display: none;
+  }
+
+  .svg_428 {
+    display: none;
+  }
+
+  .svg_320 {
+    display: none;
+  }
+
+  .star {
+    max-width: 40px;
+    width: 100%;
+    max-height: 40px;
+    height: 100%;
+  }
+
+  .big-star {
+    max-width: 68px;
+    width: 100%;
+    max-height: 68px;
+    height: 100%;
+  }
+
+  .party-star {
+    max-width: 270px;
+    width: 100%;
+    max-height: 270px;
+    height: 100%;
+  }
 }
 
 // Tablet 768px
 
 @media all and (min-width: 768px) and (max-width: 1439px) {
-    .waves {
-        max-width: 145px;
-        max-height: 12px;
-    }
-    .waves > path {
-        stroke-width: 2;
-    }
-    .dawn {
-        max-width: 133px;
-        width: 100%;
-        max-height: 133px;
-        height: 100%;
-    }
-    
-    .dawn > path {
-        stroke-width: 2;
-    }
-    .star {
-        max-width: 26.6px;
-        width: 100%;
-        max-height: 26.6px;
-        height: 100%;
-    }
-    .arrows {
-        max-width: 54px;
-        width: 100%;
-        max-height: 107px;
-        height: 100%;
-    }
-    .spiral_1 {
-        max-width: 92px;
-        width: 100%;
-        max-height: 90px;
-        height: 100%;
-    }
-    
-    .spiral_1 > path {
-        stroke-width: 2;
-    }
-    .party-star {
-        max-width: 144px;
-        width: 100%;
-        max-height: 144px;
-        height: 100%;
-    }
-    .spiral_2 {
-        max-width: 96px;
-        width: 100%;
-        max-height: 120px;
-        height: 100%;
-    }
-    
-    .spiral_2 > path {
-        stroke-width: 2;
-    }
-    .spiral_3 {
-        max-width: 66px;
-        width: 100%;
-        max-height: 132px;
-        height: 100%;
-    }
-    
-    .spiral_3 > path {
-        stroke-width: 2;
-    }
+  .svg_1920 {
+    display: none;
+  }
+
+  .svg_1440 {
+    display: none;
+  }
+
+  .svg_768 {
+    display: block;
+  }
+
+  .svg_428 {
+    display: none;
+  }
+
+  .svg_320 {
+    display: none;
+  }
+
+  .star {
+    max-width: 26.6px;
+    width: 100%;
+    max-height: 26.6px;
+    height: 100%;
+  }
+  .big-star {
+    max-width: 36px;
+    width: 100%;
+    max-height: 36px;
+    height: 100%;
+  }
+
+  .party-star {
+    max-width: 144px;
+    width: 100%;
+    max-height: 144px;
+    height: 100%;
+  }
 }
 
 // Mobile 428px
 
 @media all and (min-width: 428px) and (max-width: 767px) {
-    .waves {
-        max-width: 145px;
-        width: 100%;
-        max-height: 12px;
-        height: 100%;
-    }
-    .waves > path {
-        stroke-width: 2;
-    }
-    .dawn {
-        max-width: 133px;
-        width: 100%;
-        max-height: 133px;
-        height: 100%;
-    }
-    
-    .dawn > path {
-        stroke-width: 2;
-    }
-    .star {
-        max-width: 21.28px;
-        width: 100%;
-        max-height: 21.28px;
-        height: 100%;
-    }
-    .arrows {
-        max-width: 54px;
-        width: 100%;
-        max-height: 107px;
-        height: 100%;
-    }
-    .spiral_1 {
-        display: none;
-    }
-    .party-star {
-        max-width: 144px;
-        width: 100%;
-        max-height: 144px;
-        height: 100%;
-    }
-    .spiral_2 {
-        display: none;
-    }
-    .spiral_3 {
-        max-width: 43px;
-        width: 100%;
-        max-height: 89px;
-        height: 100%;
-    }
-    
-    .spiral_3 > path {
-        stroke-width: 2;
-    }
+  .svg_1920 {
+    display: none;
+  }
+
+  .svg_1440 {
+    display: none;
+  }
+
+  .svg_768 {
+    display: none;
+  }
+
+  .svg_428 {
+    display: block;
+  }
+
+  .svg_320 {
+    display: none;
+  }
+
+  .star {
+    max-width: 26px;
+    width: 100%;
+    max-height: 26px;
+    height: 100%;
+  }
+
+  .big-star {
+    max-width: 36px;
+    width: 100%;
+    max-height: 36px;
+    height: 100%;
+  }
+
+  .party-star {
+    max-width: 144px;
+    width: 100%;
+    max-height: 144px;
+    height: 100%;
+  }
 }
 
 // Mobile 320px
 
 @media all and (min-width: 320px) and (max-width: 427px) {
-    .waves {
-        max-width: 110px;
-        width: 100%;
-        max-height: 10px;
-        height: 100%;
-    }
-    .waves > path {
-        stroke-width: 2;
-    }
-    .dawn {
-        max-width: 98px;
-        width: 100%;
-        max-height: 98px;
-        height: 100%;
-    }
-    
-    .dawn > path {
-        stroke-width: 2;
-    }
-    .star {
-        max-width: 15.89px;
-        width: 100%;
-        max-height: 15.89px;
-        height: 100%;
-    }
-    .arrows {
-        max-width: 41px;
-        width: 100%;
-        max-height: 81px;
-        height: 100%;
-    }
-    .spiral_1 {
-        display: none;
-    }
-    .party-star {
-        max-width: 108px;
-        width: 100%;
-        max-height: 108px;
-        height: 100%;
-    }
-    .spiral_2 {
-        display: none;
-    }
-    .spiral_3 {
-        max-width: 33px;
-        width: 100%;
-        max-height: 68px;
-        height: 100%;
-    }
-    
-    .spiral_3 > path {
-        stroke-width: 2;
-    }
+  .svg_1920 {
+    display: none;
+  }
+
+  .svg_1440 {
+    display: none;
+  }
+
+  .svg_768 {
+    display: none;
+  }
+
+  .svg_428 {
+    display: none;
+  }
+
+  .svg_320 {
+    display: block;
+  }
+
+  .star {
+    max-width: 19px;
+    width: 100%;
+    max-height: 19px;
+    height: 100%;
+  }
+  .big-star {
+    max-width: 27px;
+    width: 100%;
+    max-height: 27px;
+    height: 100%;
+  }
+  .party-star {
+    max-width: 108px;
+    width: 100%;
+    max-height: 108px;
+    height: 100%;
+  }
 }

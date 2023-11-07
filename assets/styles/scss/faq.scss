@@ -113,17 +113,18 @@ details[open] summary ~ * {
   }
 }
 
-.faq__wave {
+.faq__wave_1 {
   position: absolute;
-  &:nth-child(2) {
-    top: 5%;
-    left: 9%;
-  }
-  &:nth-child(5) {
-    left: 15%;
-    bottom: 8%;
-  }
+  top: 5%;
+  left: 9%;
 }
+
+.faq__wave_2 {
+  position: absolute;
+  left: 15%;
+  bottom: 8%;
+}
+
 .faq__spiral {
   position: absolute;
   top: 30%;
@@ -291,6 +292,10 @@ details[open] summary ~ * {
       }
     }
   }
+  
+  .faq__wave_2 {
+    display: none;
+  }
 }
 // Mobile 320px
 
@@ -337,5 +342,9 @@ details[open] summary ~ * {
         font-size: 8px;
       }
     }
+  }
+
+  .faq__wave_2 {
+    display: none;
   }
 }

@@ -176,20 +176,6 @@
   padding: 0 70px;
 }
 
-// .swiper-button-prev,
-// .swiper-button-next {
-//   max-width: 36px;
-//   max-height: 66px;
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .swiper-button-prev::after,
-// .swiper-button-next::after {
-//   width: 100%;
-//   height: 100%;
-// }
-
 .swiper-button-prev {
   left: 0;
   color: $color-black;
@@ -425,6 +411,10 @@
     width: 12px;
     height: 12px;
   }
+
+  .help__spiral {
+    display: none;
+  }
 }
 
 // Mobile 320px
@@ -471,5 +461,9 @@
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
+  }
+
+  .help__spiral {
+    display: none;
   }
 }

@@ -57,6 +57,11 @@
 .steps__aside-span {
   position: relative;
 }
+
+.steps__wrapper {
+  position: relative;
+}
+
 .steps__card {
   position: relative;
   max-width: 313px;
@@ -113,17 +118,19 @@
   top: -490%;
   left: 300px;
 }
-.steps__wave {
+
+.steps__wave_1 {
   position: absolute;
-  &:nth-child(2) {
-    top: -60px;
-    right: 300px;
-  }
-  &:nth-child(3) {
-    left: 40px;
-    bottom: -110px;
-  }
+  top: 28%;
+  left: 58%;
 }
+
+.steps__wave_2 {
+  position: absolute;
+  left: 2%;
+  top: 81%;
+}
+
 .steps__spiral {
   display: inline-block;
   animation: rotate 20s linear infinite;
@@ -180,7 +187,7 @@
 
 // Tablet 768px
 
-@media all and (min-width: 768px) and (max-width: 1439px)  {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .steps {
     padding: 88px 0 100px;
     & hr {
@@ -265,7 +272,6 @@
       max-width: 193px;
       font-size: 11px;
     }
-
   }
 
   .steps__aside {

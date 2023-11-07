@@ -2866,6 +2866,9 @@ h3 {
     width: 12px;
     height: 12px;
   }
+  .help__spiral {
+    display: none;
+  }
 }
 @media all and (min-width: 320px) and (max-width: 427px) {
   .help {
@@ -2929,6 +2932,9 @@ h3 {
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
+  }
+  .help__spiral {
+    display: none;
   }
 }
 .benefits {
@@ -3730,6 +3736,10 @@ h3 {
   position: relative;
 }
 
+.steps__wrapper {
+  position: relative;
+}
+
 .steps__card {
   position: relative;
   max-width: 313px;
@@ -3786,16 +3796,16 @@ h3 {
   left: 300px;
 }
 
-.steps__wave {
+.steps__wave_1 {
   position: absolute;
+  top: 28%;
+  left: 58%;
 }
-.steps__wave:nth-child(2) {
-  top: -60px;
-  right: 300px;
-}
-.steps__wave:nth-child(3) {
-  left: 40px;
-  bottom: -110px;
+
+.steps__wave_2 {
+  position: absolute;
+  left: 2%;
+  top: 81%;
 }
 
 .steps__spiral {
@@ -4121,7 +4131,7 @@ h3 {
   min-height: 549px;
   background: linear-gradient(180deg, #fff 0%, #ffdada 72.4%);
 }
-.consultations__card:nth-of-type(1) svg {
+.consultations__card:nth-of-type(1) object {
   max-width: 48px;
   height: 30px;
 }
@@ -4130,7 +4140,7 @@ h3 {
   min-height: 473px;
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
 }
-.consultations__card:nth-of-type(2) svg {
+.consultations__card:nth-of-type(2) object {
   max-width: 59px;
   height: 31px;
 }
@@ -4173,26 +4183,26 @@ h3 {
   letter-spacing: 3.2px;
 }
 
-.consultations__circle-lines {
+.consultations__circle_right {
   position: absolute;
-}
-.consultations__circle-lines:nth-of-type(1) {
-  top: 380px;
-  left: -54px;
-}
-.consultations__circle-lines:nth-of-type(2) {
   top: 0;
   right: 0;
 }
 
-.consultations__star_green {
+.consultations__circle_left {
   position: absolute;
+  bottom: 0;
+  left: 0;
 }
-.consultations__star_green:nth-child(4) {
+
+.consultations__star-1 {
+  position: absolute;
   top: 83px;
   left: 155px;
 }
-.consultations__star_green:nth-child(5) {
+
+.consultations__star-2 {
+  position: absolute;
   top: 335px;
   right: 393px;
 }
@@ -4203,14 +4213,14 @@ h3 {
   left: 204px;
 }
 
-.consultations__star_pink {
+.consultations__star-1_pink {
   position: absolute;
-}
-.consultations__star_pink:nth-child(7) {
   left: 261px;
   bottom: 180px;
 }
-.consultations__star_pink:nth-child(8) {
+
+.consultations__star-2_pink {
+  position: absolute;
   right: 358px;
   bottom: 297px;
 }
@@ -4258,7 +4268,7 @@ h3 {
     max-width: 367px;
     min-height: 412px;
   }
-  .consultations__card:nth-of-type(1) svg {
+  .consultations__card:nth-of-type(1) object {
     max-width: 32px;
     height: 20px;
   }
@@ -4267,7 +4277,7 @@ h3 {
     min-height: 355px;
     padding: 20px;
   }
-  .consultations__card:nth-of-type(2) svg {
+  .consultations__card:nth-of-type(2) object {
     max-width: 40px;
     height: 20px;
   }
@@ -4335,7 +4345,7 @@ h3 {
     max-width: 278px;
     min-height: 295px;
   }
-  .consultations__card:nth-of-type(1) svg {
+  .consultations__card:nth-of-type(1) object {
     max-width: 32px;
     height: 20px;
   }
@@ -4343,7 +4353,7 @@ h3 {
     max-width: 241px;
     min-height: 267px;
   }
-  .consultations__card:nth-of-type(2) svg {
+  .consultations__card:nth-of-type(2) object {
     max-width: 40px;
     height: 21px;
   }
@@ -4414,7 +4424,7 @@ h3 {
     max-width: 278px;
     min-height: 295px;
   }
-  .consultations__card:nth-of-type(1) svg {
+  .consultations__card:nth-of-type(1) object {
     max-width: 32px;
     height: 20px;
   }
@@ -4422,7 +4432,7 @@ h3 {
     max-width: 241px;
     min-height: 267px;
   }
-  .consultations__card:nth-of-type(2) svg {
+  .consultations__card:nth-of-type(2) object {
     max-width: 40px;
     height: 21px;
   }
@@ -4451,6 +4461,9 @@ h3 {
   .consultations__card p:nth-of-type(2) {
     font-size: 16px;
     letter-spacing: 1.6px;
+  }
+  .consultations__card .consultations__circle_left {
+    display: none;
   }
 }
 @media all and (min-width: 320px) and (max-width: 427px) {
@@ -4493,7 +4506,7 @@ h3 {
     max-width: 218px;
     min-height: 240px;
   }
-  .consultations__card:nth-of-type(1) svg {
+  .consultations__card:nth-of-type(1) object {
     max-width: 32px;
     height: 20px;
   }
@@ -4501,7 +4514,7 @@ h3 {
     max-width: 197px;
     min-height: 222px;
   }
-  .consultations__card:nth-of-type(2) svg {
+  .consultations__card:nth-of-type(2) object {
     max-width: 40px;
     height: 21px;
   }
@@ -4530,6 +4543,9 @@ h3 {
   .consultations__card p:nth-of-type(2) {
     font-size: 16px;
     letter-spacing: 1.6px;
+  }
+  .consultations__card .consultations__circle_left {
+    display: none;
   }
 }
 .payment {
@@ -4657,6 +4673,10 @@ h3 {
 }
 .payment__card:nth-child(3) {
   background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
+}
+.payment__card object {
+  width: 53.83px;
+  height: 42.5px;
 }
 .payment__card h3 {
   font-size: 24px;
@@ -4894,13 +4914,15 @@ h3 {
   color: #fb7070;
 }
 
-#errorUserName, #errorEmail {
+#errorUserName,
+#errorEmail {
   position: absolute;
   left: 1%;
   top: 105%;
 }
 
-#errorAge, #errorPrivacy {
+#errorAge,
+#errorPrivacy {
   position: absolute;
   top: 110%;
   left: 7%;
@@ -4974,6 +4996,16 @@ input[type=checkbox] {
   left: 90%;
 }
 
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .registration__circle-right {
+    display: none;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .registration__circle-right {
+    display: none;
+  }
+}
 .privacy-policy {
   position: fixed;
   top: 0;
@@ -5184,14 +5216,14 @@ details[open] summary ~ * {
     opacity: 1;
   }
 }
-.faq__wave {
+.faq__wave_1 {
   position: absolute;
-}
-.faq__wave:nth-child(2) {
   top: 5%;
   left: 9%;
 }
-.faq__wave:nth-child(5) {
+
+.faq__wave_2 {
+  position: absolute;
   left: 15%;
   bottom: 8%;
 }
@@ -5349,6 +5381,9 @@ details[open] summary ~ * {
     max-width: 308px;
     font-size: 11px;
   }
+  .faq__wave_2 {
+    display: none;
+  }
 }
 @media all and (min-width: 320px) and (max-width: 427px) {
   .faq {
@@ -5390,6 +5425,9 @@ details[open] summary ~ * {
     margin: 17px auto 0;
     max-width: 230px;
     font-size: 8px;
+  }
+  .faq__wave_2 {
+    display: none;
   }
 }
 .words {
@@ -5610,7 +5648,7 @@ details[open] summary ~ * {
 .presents__webinar-card {
   max-width: 644px;
   width: 100%;
-  background: linear-gradient(180deg, #BFEBE3 0%, #D9F0FF 100%);
+  background: linear-gradient(180deg, #bfebe3 0%, #d9f0ff 100%);
   padding: 40px 30px 50px 30px;
 }
 
@@ -5741,6 +5779,16 @@ details[open] summary ~ * {
   right: 0;
 }
 
+@media all and (min-width: 428px) and (max-width: 767px) {
+  .presents__dawn {
+    display: none;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 427px) {
+  .presents__dawn {
+    display: none;
+  }
+}
 .footer {
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0) 100%);
 }
@@ -5948,10 +5996,10 @@ details[open] summary ~ * {
   min-height: 250px;
   position: absolute;
   top: 60%;
-  left: 35%;
+  left: 19%;
   background-color: #FEFEFE;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  z-index: 2;
+  z-index: 2000;
 }
 
 .modal__content {
@@ -6084,15 +6132,24 @@ details[open] summary ~ * {
     color: #FDACAC;
   }
 }
-.waves {
-  max-width: 361px;
-  width: 100%;
-  max-height: 29px;
-  height: 100%;
+.svg_1920 {
+  display: block;
 }
 
-.waves > path {
-  stroke-width: 4;
+.svg_1440 {
+  display: none;
+}
+
+.svg_768 {
+  display: none;
+}
+
+.svg_428 {
+  display: none;
+}
+
+.svg_320 {
+  display: none;
 }
 
 .star {
@@ -6102,33 +6159,11 @@ details[open] summary ~ * {
   height: 100%;
 }
 
-.dawn {
-  max-width: 332px;
+.big-star {
+  max-width: 90px;
   width: 100%;
-  max-height: 332px;
+  max-height: 90px;
   height: 100%;
-}
-
-.dawn > path {
-  stroke-width: 4;
-}
-
-.arrows {
-  max-width: 135px;
-  width: 100%;
-  max-height: 267px;
-  height: 100%;
-}
-
-.spiral_1 {
-  max-width: 226px;
-  width: 100%;
-  max-height: 223px;
-  height: 100%;
-}
-
-.spiral_1 > path {
-  stroke-width: 4;
 }
 
 .party-star {
@@ -6138,46 +6173,21 @@ details[open] summary ~ * {
   height: 100%;
 }
 
-.spiral_2 {
-  max-width: 239px;
-  width: 100%;
-  max-height: 297px;
-  height: 100%;
-}
-
-.spiral_2 > path {
-  stroke-width: 4;
-}
-
-.spiral_3 {
-  max-width: 163px;
-  width: 100%;
-  max-height: 343px;
-  height: 100%;
-}
-
-.spiral_3 > path {
-  stroke-width: 4;
-}
-
 @media all and (min-width: 1440px) and (max-width: 1919px) {
-  .waves {
-    max-width: 271px;
-    width: 100%;
-    max-height: 22px;
-    width: 100%;
+  .svg_1920 {
+    display: none;
   }
-  .waves > path {
-    stroke-width: 3;
+  .svg_1440 {
+    display: block;
   }
-  .dawn {
-    max-width: 248px;
-    width: 100%;
-    max-height: 248px;
-    height: 100%;
+  .svg_768 {
+    display: none;
   }
-  .dawn > path {
-    stroke-width: 3;
+  .svg_428 {
+    display: none;
+  }
+  .svg_320 {
+    display: none;
   }
   .star {
     max-width: 40px;
@@ -6185,20 +6195,11 @@ details[open] summary ~ * {
     max-height: 40px;
     height: 100%;
   }
-  .arrows {
-    max-width: 101px;
+  .big-star {
+    max-width: 68px;
     width: 100%;
-    max-height: 200px;
+    max-height: 68px;
     height: 100%;
-  }
-  .spiral_1 {
-    max-width: 170px;
-    width: 100%;
-    max-height: 167px;
-    height: 100%;
-  }
-  .spiral_1 > path {
-    stroke-width: 3;
   }
   .party-star {
     max-width: 270px;
@@ -6206,41 +6207,22 @@ details[open] summary ~ * {
     max-height: 270px;
     height: 100%;
   }
-  .spiral_2 {
-    max-width: 179px;
-    width: 100%;
-    max-height: 223px;
-    height: 100%;
-  }
-  .spiral_2 > path {
-    stroke-width: 3;
-  }
-  .spiral_3 {
-    max-width: 123px;
-    width: 100%;
-    max-height: 258px;
-    height: 100%;
-  }
-  .spiral_3 > path {
-    stroke-width: 3;
-  }
 }
 @media all and (min-width: 768px) and (max-width: 1439px) {
-  .waves {
-    max-width: 145px;
-    max-height: 12px;
+  .svg_1920 {
+    display: none;
   }
-  .waves > path {
-    stroke-width: 2;
+  .svg_1440 {
+    display: none;
   }
-  .dawn {
-    max-width: 133px;
-    width: 100%;
-    max-height: 133px;
-    height: 100%;
+  .svg_768 {
+    display: block;
   }
-  .dawn > path {
-    stroke-width: 2;
+  .svg_428 {
+    display: none;
+  }
+  .svg_320 {
+    display: none;
   }
   .star {
     max-width: 26.6px;
@@ -6248,79 +6230,46 @@ details[open] summary ~ * {
     max-height: 26.6px;
     height: 100%;
   }
-  .arrows {
-    max-width: 54px;
+  .big-star {
+    max-width: 36px;
     width: 100%;
-    max-height: 107px;
+    max-height: 36px;
     height: 100%;
-  }
-  .spiral_1 {
-    max-width: 92px;
-    width: 100%;
-    max-height: 90px;
-    height: 100%;
-  }
-  .spiral_1 > path {
-    stroke-width: 2;
   }
   .party-star {
     max-width: 144px;
     width: 100%;
     max-height: 144px;
     height: 100%;
-  }
-  .spiral_2 {
-    max-width: 96px;
-    width: 100%;
-    max-height: 120px;
-    height: 100%;
-  }
-  .spiral_2 > path {
-    stroke-width: 2;
-  }
-  .spiral_3 {
-    max-width: 66px;
-    width: 100%;
-    max-height: 132px;
-    height: 100%;
-  }
-  .spiral_3 > path {
-    stroke-width: 2;
   }
 }
 @media all and (min-width: 428px) and (max-width: 767px) {
-  .waves {
-    max-width: 145px;
-    width: 100%;
-    max-height: 12px;
-    height: 100%;
+  .svg_1920 {
+    display: none;
   }
-  .waves > path {
-    stroke-width: 2;
+  .svg_1440 {
+    display: none;
   }
-  .dawn {
-    max-width: 133px;
-    width: 100%;
-    max-height: 133px;
-    height: 100%;
+  .svg_768 {
+    display: none;
   }
-  .dawn > path {
-    stroke-width: 2;
+  .svg_428 {
+    display: block;
+  }
+  .svg_320 {
+    display: none;
   }
   .star {
-    max-width: 21.28px;
+    max-width: 26px;
     width: 100%;
-    max-height: 21.28px;
+    max-height: 26px;
     height: 100%;
   }
-  .arrows {
-    max-width: 54px;
+  .big-star {
+    max-width: 36px;
     width: 100%;
-    max-height: 107px;
+    max-height: 36px;
     height: 100%;
-  }
-  .spiral_1 {
-    display: none;
   }
   .party-star {
     max-width: 144px;
@@ -6328,70 +6277,40 @@ details[open] summary ~ * {
     max-height: 144px;
     height: 100%;
   }
-  .spiral_2 {
-    display: none;
-  }
-  .spiral_3 {
-    max-width: 43px;
-    width: 100%;
-    max-height: 89px;
-    height: 100%;
-  }
-  .spiral_3 > path {
-    stroke-width: 2;
-  }
 }
 @media all and (min-width: 320px) and (max-width: 427px) {
-  .waves {
-    max-width: 110px;
-    width: 100%;
-    max-height: 10px;
-    height: 100%;
+  .svg_1920 {
+    display: none;
   }
-  .waves > path {
-    stroke-width: 2;
+  .svg_1440 {
+    display: none;
   }
-  .dawn {
-    max-width: 98px;
-    width: 100%;
-    max-height: 98px;
-    height: 100%;
+  .svg_768 {
+    display: none;
   }
-  .dawn > path {
-    stroke-width: 2;
+  .svg_428 {
+    display: none;
+  }
+  .svg_320 {
+    display: block;
   }
   .star {
-    max-width: 15.89px;
+    max-width: 19px;
     width: 100%;
-    max-height: 15.89px;
+    max-height: 19px;
     height: 100%;
   }
-  .arrows {
-    max-width: 41px;
+  .big-star {
+    max-width: 27px;
     width: 100%;
-    max-height: 81px;
+    max-height: 27px;
     height: 100%;
-  }
-  .spiral_1 {
-    display: none;
   }
   .party-star {
     max-width: 108px;
     width: 100%;
     max-height: 108px;
     height: 100%;
-  }
-  .spiral_2 {
-    display: none;
-  }
-  .spiral_3 {
-    max-width: 33px;
-    width: 100%;
-    max-height: 68px;
-    height: 100%;
-  }
-  .spiral_3 > path {
-    stroke-width: 2;
   }
 }
 

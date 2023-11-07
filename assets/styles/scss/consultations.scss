@@ -75,7 +75,7 @@
     max-width: 489px;
     min-height: 549px;
     background: linear-gradient(180deg, #fff 0%, #ffdada 72.4%);
-    & svg {
+    & object {
       max-width: 48px;
       height: 30px;
     }
@@ -84,7 +84,7 @@
     max-width: 387px;
     min-height: 473px;
     background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
-    & svg {
+    & object {
       max-width: 59px;
       height: 31px;
     }
@@ -120,44 +120,48 @@
   }
 }
 
-.consultations__circle-lines {
+.consultations__circle_right {
   position: absolute;
-  &:nth-of-type(1) {
-    top: 380px;
-    left: -54px;
-  }
-  &:nth-of-type(2) {
-    top: 0;
-    right: 0;
-  }
+  top: 0;
+  right: 0;
 }
-.consultations__star_green {
+
+.consultations__circle_left {
   position: absolute;
-  &:nth-child(4) {
-    top: 83px;
-    left: 155px;
-  }
-  &:nth-child(5) {
-    top: 335px;
-    right: 393px;
-  }
+  bottom: 0;
+  left: 0;
 }
+
+.consultations__star-1 {
+  position: absolute;
+  top: 83px;
+  left: 155px;
+}
+
+.consultations__star-2 {
+  position: absolute;
+  top: 335px;
+  right: 393px;
+}
+
 .consultations__wave_green {
   position: absolute;
   top: 277px;
   left: 204px;
 }
-.consultations__star_pink {
+
+.consultations__star-1_pink {
   position: absolute;
-  &:nth-child(7) {
-    left: 261px;
-    bottom: 180px;
-  }
-  &:nth-child(8) {
-    right: 358px;
-    bottom: 297px;
-  }
+  left: 261px;
+  bottom: 180px;
 }
+
+.consultations__star-2_pink {
+  position: absolute;
+  right: 358px;
+  bottom: 297px;
+}
+
 .consultations__circle-lines-small {
   position: absolute;
   right: 50px;
@@ -191,7 +195,7 @@
     &:nth-of-type(1) {
       max-width: 367px;
       min-height: 412px;
-      & svg {
+      & object {
         max-width: 32px;
         height: 20px;
       }
@@ -200,7 +204,7 @@
       max-width: 290px;
       min-height: 355px;
       padding: 20px;
-      & svg {
+      & object {
         max-width: 40px;
         height: 20px;
       }
@@ -252,7 +256,7 @@
     &:nth-of-type(1) {
       max-width: 278px;
       min-height: 295px;
-      & svg {
+      & object {
         max-width: 32px;
         height: 20px;
       }
@@ -260,7 +264,7 @@
     &:nth-of-type(2) {
       max-width: 241px;
       min-height: 267px;
-      & svg {
+      & object {
         max-width: 40px;
         height: 21px;
       }
@@ -315,7 +319,7 @@
     &:nth-of-type(1) {
       max-width: 278px;
       min-height: 295px;
-      & svg {
+      & object {
         max-width: 32px;
         height: 20px;
       }
@@ -323,7 +327,7 @@
     &:nth-of-type(2) {
       max-width: 241px;
       min-height: 267px;
-      & svg {
+      & object {
         max-width: 40px;
         height: 21px;
       }
@@ -344,6 +348,10 @@
         font-size: 16px;
         letter-spacing: 1.6px;
       }
+    }
+
+    .consultations__circle_left {
+      display: none;
     }
   }
 }
@@ -378,7 +386,7 @@
     &:nth-of-type(1) {
       max-width: 218px;
       min-height: 240px;
-      & svg {
+      & object {
         max-width: 32px;
         height: 20px;
       }
@@ -386,7 +394,7 @@
     &:nth-of-type(2) {
       max-width: 197px;
       min-height: 222px;
-      & svg {
+      & object {
         max-width: 40px;
         height: 21px;
       }
@@ -407,6 +415,9 @@
         font-size: 16px;
         letter-spacing: 1.6px;
       }
+    }
+    .consultations__circle_left {
+      display: none;
     }
   }
 }
