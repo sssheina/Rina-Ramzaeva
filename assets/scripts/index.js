@@ -73,7 +73,7 @@ if (isMobile.any()) {
 }
 
 // ----- Privacy Policy -----
-/*
+
 const modalPrivacy = document.querySelector(".privacy-policy__concent");
 const overlayPrivacy = document.querySelector(".privacy-policy");
 const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
@@ -102,7 +102,7 @@ modalPrivacy.addEventListener("keydown", function (e) {
     closeModalPrivacy();
   }
 });
-*/
+
 
 
 //  ----- BURGER MENU -----
@@ -230,10 +230,6 @@ document
     }
   });
   
-  
-document.getElementById("privacy_policy").addEventListener("click", function(){
-	openModal(REG_FORM_PRIVACY_MODAL_CONTENT);
-});
 
 // // ----- Privacy Policy -----
 
@@ -289,12 +285,11 @@ document.getElementById("privacy_policy").addEventListener("click", function(){
 
 async function submitForm() {
   try {
-    openModal(REG_FORM_THANKS_MODAL_CONTENT);
-    return;
 
     // Validating the form
-    if (!validateRegForm(false)) {
-      return;
+    if (!validateRegForm(true)) {
+      openModal(REG_FORM_VALIDATION_MESSAGE_GENERAL);
+	  return;
     }
 
     // Формируем запрос
@@ -304,26 +299,25 @@ async function submitForm() {
     });
     // проверяем, что ответ есть
     if (!response.ok)
-      throw `Ошибка при обращении к серверу: ${response.status}`;
+		throw REG_FORM_RESPONSE_MESSAGE_SERVER_ERROR + `${response.status}` + REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV;
     // проверяем, что ответ действительно JSON
     const contentType = response.headers.get("content-type");
     if (!contentType || !contentType.includes("application/json")) {
-      throw "Ошибка обработки. Ответ не JSON";
+      throw REG_FORM_RESPONSE_MESSAGE_WRONG_DATA_TYPE + REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV;
     }
     // обрабатываем запрос
     const json = await response.json();
     if (json.result === "success") {
       // в случае успеха
-      showThankYouMessage();
-      //  alert(json.info);
+      openModal(REG_FORM_THANKS_MODAL_CONTENT);
     } else {
       // в случае ошибки
       console.log(json);
-      throw json.info;
+      throw REG_FORM_RESPONSE_MESSAGE_SERVER_INTERNAL_ERROR + json.info + REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV;
     }
   } catch (error) {
     // обработка ошибки
-    alert(error);
+	openModal(error);
   }
 }
 
