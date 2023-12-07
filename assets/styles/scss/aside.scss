@@ -50,12 +50,14 @@
 
 @media all and (min-width: 768px) and (max-width: 1439px) {
   .aside-span {
-    font-size: 8px;
+    font-size: 13px;
     &::before {
-      
+      @include aside-before;
+      width: 1px;
     }
     &::after {
       @include aside-after;
+      width: 1px;
       height: 60px;
     }
   }
