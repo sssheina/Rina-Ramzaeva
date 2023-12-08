@@ -1,3 +1,86 @@
+// @use "sass:math";
+
+// width
+@mixin r($width) {
+  @media only screen and (max-width: ($width + "px")) {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: ($width + "px")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @include r(1440) {
+    @content;
+  }
+}
+
+@mixin xl-up {
+  @include rmin(1440.1) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @include r(1280) {
+    @content;
+  }
+}
+
+@mixin lg-up {
+  @include rmin(1280.1) {
+    @content;
+  }
+}
+
+@mixin md {
+  @include r(1068) {
+    @content;
+  }
+}
+
+@mixin md-up {
+  @include rmin(1068.1) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @include r(734) {
+    @content;
+  }
+}
+
+@mixin sm-up {
+  @include rmin(734.1) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @include r(431) {
+    @content;
+  }
+}
+
+@mixin xs-up {
+  @include rmin(431.1) {
+    @content;
+  }
+}
+
+// @mixin any-hover() {
+//   @media (any-hover: hover) {
+//     &:hover {
+//       @content;
+//     }
+//   }
+// }
+
 @mixin aside-before {
   position: absolute;
   content: "";
@@ -8,7 +91,7 @@
     top: -24px;
     height: 70px;
   }
-  @media all and (min-width: 768px) and (max-width: 1439px)  {
+  @media all and (min-width: 768px) and (max-width: 1439px) {
     width: 1px;
     top: -24px;
     height: 60px;
