@@ -26,10 +26,12 @@ window.onclick = (event) => {
 };
 
 //We don't need the default submit event handling for the registration form
-document.getElementById("emailform").addEventListener("submit", function(event){
-	event.preventDefault();
-	return false;
-})
+document
+  .getElementById("emailform")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    return false;
+  });
 // ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
 
 const isMobile = {
@@ -102,8 +104,6 @@ modalPrivacy.addEventListener("keydown", function (e) {
     closeModalPrivacy();
   }
 });
-
-
 
 //  ----- BURGER MENU -----
 const iconMenu = document.querySelector(".menu__icon");
@@ -185,7 +185,7 @@ window.addEventListener("scroll", function () {
 
 function downloadPDF() {
   const link = document.createElement("a");
-  link.href = "./assets/images/guide.pdf";
+  link.href = "./assets/docs/guide.pdf";
   link.download = "guide.pdf";
   document.body.appendChild(link);
   link.click();
@@ -229,7 +229,6 @@ document
       closeModal();
     }
   });
-  
 
 // // ----- Privacy Policy -----
 
@@ -285,11 +284,10 @@ document
 
 async function submitForm() {
   try {
-
     // Validating the form
     if (!validateRegForm(true)) {
       openModal(REG_FORM_VALIDATION_MESSAGE_GENERAL);
-	  return;
+      return;
     }
 
     // Формируем запрос
@@ -299,11 +297,18 @@ async function submitForm() {
     });
     // проверяем, что ответ есть
     if (!response.ok)
-		throw REG_FORM_RESPONSE_MESSAGE_SERVER_ERROR + `${response.status}` + REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV;
+      throw (
+        REG_FORM_RESPONSE_MESSAGE_SERVER_ERROR +
+        `${response.status}` +
+        REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV
+      );
     // проверяем, что ответ действительно JSON
     const contentType = response.headers.get("content-type");
     if (!contentType || !contentType.includes("application/json")) {
-      throw REG_FORM_RESPONSE_MESSAGE_WRONG_DATA_TYPE + REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV;
+      throw (
+        REG_FORM_RESPONSE_MESSAGE_WRONG_DATA_TYPE +
+        REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV
+      );
     }
     // обрабатываем запрос
     const json = await response.json();
@@ -313,11 +318,15 @@ async function submitForm() {
     } else {
       // в случае ошибки
       console.log(json);
-      throw REG_FORM_RESPONSE_MESSAGE_SERVER_INTERNAL_ERROR + json.info + REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV;
+      throw (
+        REG_FORM_RESPONSE_MESSAGE_SERVER_INTERNAL_ERROR +
+        json.info +
+        REG_FORM_RESPONSE_MESSAGE_CONTACT_DEV
+      );
     }
   } catch (error) {
     // обработка ошибки
-	openModal(error);
+    openModal(error);
   }
 }
 

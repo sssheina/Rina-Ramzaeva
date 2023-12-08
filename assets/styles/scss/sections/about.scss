@@ -136,30 +136,27 @@
   display: none;
 }
 
-
-
 // ___Desktop 1440px
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .about {
     padding: 267px 0 200px;
   }
-    
+
   .about__pic {
     width: 367px;
     height: 490px;
   }
-    
-    
+
   .about__text-block {
     gap: 30px;
     max-width: 850px;
     padding: 93px 65px 145px 163px;
   }
-  
+
   .about__hr_1 {
     @include hr(100px, 0);
   }
-  
+
   .about__text {
     max-width: 585px;
   }
@@ -169,11 +166,11 @@
   .about__hr_2 {
     width: 100px;
   }
-  
+
   .about__endnote {
     max-width: 580px;
   }
-  
+
   .desktop-br_1920 {
     display: none;
   }
@@ -195,12 +192,12 @@
   .about {
     padding: 142px 0 60px;
   }
-  
+
   .about__pic {
     width: 178px;
     height: 238px;
   }
-  
+
   .about__dawn {
     top: 24%;
   }
@@ -210,18 +207,18 @@
     max-width: 454px;
     padding: 50px 30px 58px 60px;
   }
-  
+
   .about__hr_1 {
     @include hr(90px, 0);
   }
-  
+
   .about__text > p {
     margin-bottom: 25px;
   }
   .about__hr_2 {
     width: 90px;
   }
-  
+
   .desktop-br_1920 {
     display: none;
   }
@@ -236,13 +233,11 @@
   .mobile-br_768 {
     display: block;
   }
-
 }
 
 // ____Mobile 428px
 
 @media all and (min-width: 428px) and (max-width: 767px) {
-  
   .about {
     padding: 140px 0 53px;
   }
@@ -259,7 +254,7 @@
     top: -22%;
     left: 45%;
   }
-  
+
   .about__dawn {
     left: 235%;
     top: -50%;
@@ -269,10 +264,10 @@
     max-width: 348px;
     padding: 97px 26px 90px;
   }
-  .about__star_1, 
-  .about__star_2, 
+  .about__star_1,
+  .about__star_2,
   .about__star_4,
-  .about__star_5, 
+  .about__star_5,
   .about__waves_1,
   .about__waves_2,
   .about__waves_3 {
@@ -286,14 +281,14 @@
   .about__hr_1 {
     @include hr(50px, 0);
   }
-  
+
   .about__text > p {
     margin-bottom: 20px;
   }
   .about__hr_2 {
     width: 50px;
   }
-  
+
   .desktop-br_1920 {
     display: none;
   }
@@ -307,13 +302,11 @@
   .mobile-br_320 {
     display: none;
   }
-
-} 
+}
 
 // ____Mobile 320px
 
 @media all and (min-width: 320px) and (max-width: 427px) {
-
   .about {
     padding: 95px 0 53px;
   }
@@ -330,7 +323,7 @@
     top: -22%;
     left: 45%;
   }
-  
+
   .about__dawn {
     left: 235%;
     top: -50%;
@@ -340,10 +333,10 @@
     max-width: 260px;
     padding: 72px 20px 60px;
   }
-  .about__star_1, 
-  .about__star_2, 
+  .about__star_1,
+  .about__star_2,
   .about__star_4,
-  .about__star_5, 
+  .about__star_5,
   .about__waves_1,
   .about__waves_2,
   .about__waves_3 {
@@ -357,14 +350,14 @@
   .about__hr_1 {
     @include hr(50px, 0);
   }
-  
+
   .about__text > p {
     margin-bottom: 20px;
   }
   .about__hr_2 {
     width: 50px;
   }
-  
+
   .desktop-br_1920 {
     display: none;
   }
@@ -379,5 +372,4 @@
   .mobile-br_320 {
     display: block;
   }
-
 }
