@@ -813,6 +813,18 @@ textarea {
   color: #635d5d;
 }
 
+.main-subtitle {
+  font-family: var(--font-main);
+  font-size: var(--main-subtitle-font-size);
+  font-weight: var(--main-subtitle-font-weight, 500);
+  font-style: var(--main-subtitle-font-style);
+  line-height: var(--main-subtitle-line-height);
+  letter-spacing: var(--main-subtitle-letter-spacing);
+  text-transform: var(--main-subtitle-text-transform);
+  text-decoration: var(--main-subtitle-text-decoration);
+  color: #635d5d;
+}
+
 .banner-large {
   font-family: var(--font-main);
   font-size: var(--banner-large-font-size);
@@ -953,7 +965,14 @@ textarea {
   --paragraph-small-letter-spacing: 0;
   --paragraph-small-text-transform: none;
   --paragraph-small-text-decoration: none;
-  /* banner - large*/
+  /* main - subtitle */
+  --main-subtitle-font-size: 20px;
+  --main-subtitle-font-weight: 500;
+  --main-subtitle-line-height: 1.5;
+  --main-subtitle-letter-spacing: 2px;
+  --main-subtitle-text-transform: none;
+  --main-subtitle-text-decoration: none;
+  /* banner - large */
   --banner-large-font-size: 24px;
   --banner-large-font-weight: 500;
   --banner-large-line-height: 1.5;
@@ -1076,9 +1095,27 @@ textarea {
     --paragraph-small-font-size: 13px;
   }
 }
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 767px) {
   :root {
     --paragraph-small-font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1919px) {
+  :root {
+    --main-subtitle-font-size: 18px;
+    --main-subtitle-letter-spacing: 1.8px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  :root {
+    --main-subtitle-font-size: 16px;
+    --main-subtitle-letter-spacing: 1.6px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  :root {
+    --main-subtitle-font-size: 13px;
+    --main-subtitle-letter-spacing: 1.3px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -1242,12 +1279,6 @@ body {
   margin-left: 13px;
 }
 
-.menu__link {
-  color: #635d5d;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
 .menu__link:hover {
   color: #bbbaba;
 }
@@ -2256,13 +2287,6 @@ button:disabled {
     max-width: 260px;
     margin: 0 0 17px 0;
   }
-}
-.cover__subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: 0.1em;
-  color: #635d5d;
 }
 .cover__button {
   z-index: 1;

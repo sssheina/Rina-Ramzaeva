@@ -92,6 +92,18 @@ $color-green: #a1f2e3;
   color: $color-black;
 }
 
+%main-subtitle {
+  font-family: var(--font-main);
+  font-size: var(--main-subtitle-font-size);
+  font-weight: var(--main-subtitle-font-weight, 500);
+  font-style: var(--main-subtitle-font-style);
+  line-height: var(--main-subtitle-line-height);
+  letter-spacing: var(--main-subtitle-letter-spacing);
+  text-transform: var(--main-subtitle-text-transform);
+  text-decoration: var(--main-subtitle-text-decoration);
+  color: $color-black;
+}
+
 %banner-large {
   font-family: var(--font-main);
   font-size: var(--banner-large-font-size);

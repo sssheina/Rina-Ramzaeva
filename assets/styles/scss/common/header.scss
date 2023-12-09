@@ -36,24 +36,24 @@
 .menu__icon {
   display: none;
 }
+
 .menu__list {
   display: flex;
   align-items: center;
   gap: 20px;
-  & li:nth-child(8) {
+  
+  li:nth-child(8) {
     margin-left: 170px;
     cursor: pointer;
   }
-  & li:nth-child(9) {
+
+  li:nth-child(9) {
     position: relative;
     margin-left: 13px;
   }
 }
+
 .menu__link {
-  color: $color-black;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 500;
   &:hover {
     color: $color-blackhover;
   }
@@ -63,7 +63,8 @@
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 18px;
-}
+} 
+
 .menu__sub-list {
   width: 50px;
   position: absolute;
