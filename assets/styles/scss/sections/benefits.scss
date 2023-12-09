@@ -4,65 +4,65 @@
   align-items: center;
   position: relative;
   padding: 95px 0 165px;
-}
 
-.benefits__aside {
-  position: absolute;
-  left: -53px;
-}
+  &__aside {
+    position: absolute;
+    left: -53px;
+  }
 
-.benefits__aside-span {
-  position: relative;
-}
+  &__aside-span {
+    position: relative;
+  }
 
-.benefits__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  gap: 120px;
-}
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 120px;
+  }
 
-.benefits__text-block {
-  display: flex;
-  align-items: flex-start;
-  z-index: 1;
-  gap: 120px;
-}
+  &__text-block {
+    display: flex;
+    align-items: flex-start;
+    z-index: 1;
+    gap: 120px;
+  }
 
-.benefits__title-block {
-  display: flex;
-  flex-direction: column;
-}
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+  }
 
-.benefits__title-rectangle {
-  width: 490px;
-  height: 40px;
-  background-color: $color-pinklight;
-}
+  &__title-rectangle {
+    width: 490px;
+    height: 40px;
+    background-color: $color-pinklight;
+  }
 
-.benefits__title {
-  padding-bottom: 28px;
-}
+  &__title {
+    padding-bottom: 28px;
+  }
 
-.benefits__cards-block {
-  display: flex;
-  gap: 25px;
-  z-index: 1;
-  padding-bottom: 225px;
-}
+  &__cards-block {
+    display: flex;
+    gap: 25px;
+    z-index: 1;
+    padding-bottom: 225px;
+  }
 
-.benefits__card-text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: absolute;
-  z-index: 1;
-  width: 320px;
-  height: 267px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
-  padding: 40px 30px 30px 30px;
-  bottom: -60%;
+  &__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    z-index: 1;
+    width: 320px;
+    height: 267px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 40px 30px 30px 30px;
+    bottom: -60%;
+  }
 }
 
 .card-science,
@@ -93,6 +93,7 @@
 
 .benefits__card-title {
   position: relative;
+
   &::before,
   &::after {
     content: "";
@@ -102,9 +103,11 @@
     height: 2px;
     left: 0;
   }
+
   &::before {
     top: -10px;
   }
+
   &::after {
     bottom: -10px;
   }
@@ -113,9 +116,11 @@
 .benefits__button {
   background-color: $color-pinkdark;
   width: 667px;
+
   &:focus {
     @include btn-focus($color-pinkdark);
   }
+
   &:hover {
     background-color: $color-pinklight;
     @include btn-hover;
@@ -165,29 +170,29 @@
   .benefits {
     padding: 85px 0 155px;
   }
-    
+
   .benefits__wrapper {
     gap: 90px;
   }
-  
+
   .benefits__text-block {
     gap: 82px;
   }
-    
+
   .benefits__title-rectangle {
     width: 373px;
     height: 30px;
   }
-  
+
   .benefits__title {
     padding-bottom: 15px;
   }
-  
+
   .benefits__cards-block {
     gap: 20px;
     padding-bottom: 174px;
   }
-  
+
   .benefits__card-text {
     gap: 20px;
     width: 240px;
@@ -195,12 +200,12 @@
     padding: 30px 20px 20px;
     bottom: -65%;
   }
-    
+
   .benefits__card-pic {
     max-width: 270px;
     width: 100%;
   }
-  
+
   .benefits__card-title {
     &::before,
     &::after {
@@ -213,7 +218,7 @@
       bottom: -8px;
     }
   }
-  
+
   .benefits__button {
     width: 500px;
   }
@@ -238,28 +243,28 @@
 
 // Tablet 768px
 
-@media all and (min-width: 768px) and (max-width: 1439px)  {
+@media all and (min-width: 768px) and (max-width: 1439px) {
   .benefits {
     padding: 66px 0 58px;
   }
-    
+
   .benefits__wrapper {
     gap: 50px;
   }
-  
+
   .benefits__text-block {
     gap: 30px;
   }
-    
+
   .benefits__title-rectangle {
     width: 206px;
     height: 16px;
   }
-  
+
   .benefits__title {
     padding-bottom: 8px;
   }
-  
+
   .benefits__cards-block {
     justify-content: center;
     flex-wrap: wrap;
@@ -267,19 +272,18 @@
     padding-bottom: 174px;
   }
 
-    
   .benefits__card-text {
     gap: 15px;
     width: 185px;
     height: 135px;
     padding: 20px 15px 15px;
   }
-    
+
   .benefits__card-pic {
     max-width: 202px;
     width: 100%;
   }
-  
+
   .benefits__card-title {
     &::before,
     &::after {
@@ -292,7 +296,7 @@
       bottom: -8px;
     }
   }
-  
+
   .benefits__button {
     width: 500px;
   }
@@ -318,11 +322,9 @@
 // Mobile 428px
 
 @media all and (min-width: 428px) and (max-width: 767px) {
-  
 }
 
 // Mobile 320px
 
 @media all and (min-width: 320px) and (max-width: 427px) {
-  
 }

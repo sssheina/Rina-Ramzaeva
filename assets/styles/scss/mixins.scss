@@ -1,5 +1,3 @@
-// @use "sass:math";
-
 // width
 @mixin r($width) {
   @media only screen and (max-width: ($width + "px")) {
@@ -13,66 +11,55 @@
   }
 }
 
-@mixin xl {
-  @include r(1440) {
-    @content;
-  }
-}
-
-@mixin xl-up {
-  @include rmin(1440.1) {
-    @content;
-  }
-}
-
 @mixin lg {
-  @include r(1280) {
+  @include r(1919) {
     @content;
   }
 }
 
 @mixin lg-up {
-  @include rmin(1280.1) {
+  @include rmin(1919.1) {
     @content;
   }
 }
 
 @mixin md {
-  @include r(1068) {
+  @include r(1439) {
     @content;
   }
 }
 
 @mixin md-up {
-  @include rmin(1068.1) {
+  @include rmin(1439.1) {
     @content;
   }
 }
 
 @mixin sm {
-  @include r(734) {
+  @include r(767) {
     @content;
   }
 }
 
 @mixin sm-up {
-  @include rmin(734.1) {
+  @include rmin(767.1) {
     @content;
   }
 }
 
 @mixin xs {
-  @include r(431) {
+  @include r(427) {
     @content;
   }
 }
 
 @mixin xs-up {
-  @include rmin(431.1) {
+  @include rmin(427.1) {
     @content;
   }
 }
 
+// hover
 // @mixin any-hover() {
 //   @media (any-hover: hover) {
 //     &:hover {
@@ -81,17 +68,19 @@
 //   }
 // }
 
+// aside
 @mixin aside-before {
   position: absolute;
   content: "";
   background-color: $color-black;
   transform: translateX(-50%) rotate(-90deg);
 
-  @media all and (min-width: 1440px) and (max-width: 1919px) {
+  @include lg {
     top: -24px;
     height: 70px;
   }
-  @media all and (min-width: 768px) and (max-width: 1439px) {
+
+  @include md {
     width: 1px;
     top: -24px;
     height: 60px;
@@ -104,17 +93,19 @@
   background-color: $color-black;
   transform: translateX(-50%) rotate(-90deg);
 
-  @media (max-width: 1440px) {
+  @include lg {
     top: -24px;
     height: 70px;
   }
-  @media (max-width: 768px) {
+
+  @include md {
     width: 1px;
     top: -24px;
     height: 60px;
   }
 }
 
+// hr
 @mixin hr($width, $margin) {
   width: $width;
   margin: $margin;
@@ -122,16 +113,19 @@
   height: 2px;
   border: none;
 
-  @media (max-width: 768px) {
+  @include sm {
     height: 1px;
   }
 }
 
+// button focus
 @mixin btn-focus($color) {
   outline: 3px solid $color;
   box-shadow: 0 0 4px 3px $color;
   outline-offset: 7px;
 }
+
+// button hover
 @mixin btn-hover() {
   outline: none;
   outline-offset: 0;

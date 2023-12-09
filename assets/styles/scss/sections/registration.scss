@@ -2,31 +2,32 @@
   position: relative;
   padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #bfebe3 50.52%);
+
+  &__aside {
+    position: absolute;
+    left: 2px;
+  }
+
+  &__aside-span {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__title-hr {
+    @include hr(285px, 30px auto 40px);
+  }
 }
 
-.registration__aside {
-  position: absolute;
-  left: 2px;
-}
-
-.registration__aside-span {
-  position: relative;
-}
-
-.registration__wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.registration__title {
-  text-align: center;
-}
-.registration__title-hr {
-  @include hr(285px, 30px auto 40px);
-}
-
-//  ______________________FORM_____________
+//  FORM
 .form {
   display: flex;
   flex-direction: column;
@@ -54,16 +55,18 @@
 }
 
 .input::placeholder {
-  color: $color-black;
+  @extend %paragraph-large;
 }
 
 .input-checkmark {
   position: absolute;
   top: 22px;
 }
+
 .input-checkmark-name {
   left: 325px;
 }
+
 .input-checkmark-email {
   left: 232px;
 }
@@ -80,6 +83,7 @@
   font-weight: 900;
   font-size: 16px;
 }
+
 .input-after {
   visibility: hidden;
   position: absolute;
@@ -104,6 +108,7 @@
   bottom: 80%;
   // scale: 0.9;
 }
+
 .input:not(:placeholder-shown) ~ .input-checkmark {
   visibility: hidden;
 }
@@ -118,39 +123,47 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  & label {
+
+  label {
     color: $color-black;
     font-size: 21px;
     font-weight: 500;
     line-height: 26px;
   }
-  & textarea {
+
+  textarea {
     border: none;
     font-size: 18px;
     font-weight: 600;
     line-height: 26px;
     color: $color-black;
     padding: 20px;
+
     &::placeholder {
       color: $color-blackhover;
-      font-weight: 400;
+
+      @extend %paragraph-large;
     }
   }
 }
+
 .registration__terms {
   display: flex;
   flex-direction: column;
   gap: 27px;
 }
+
 .registration__terms-group {
   position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
+
   &:first-child {
     margin-bottom: 12px;
   }
-  & label {
+
+  label {
     font-size: 18px;
   }
 }

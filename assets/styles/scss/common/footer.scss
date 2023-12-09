@@ -1,10 +1,12 @@
 .footer {
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0) 100%);
+
   &__content {
     display: grid;
     grid-template-columns: 45% 55%;
     padding: 220px 0 286px;
   }
+
   &__rights {
     display: flex;
     flex-direction: column;
@@ -13,6 +15,7 @@
     color: #fff;
     background: $color-black;
     padding: 52px 0 60px;
+
     p:last-child {
       display: flex;
       align-items: center;
@@ -27,19 +30,20 @@
 
 .footer__card {
   max-width: fit-content;
-  & hr {
+
+  hr {
     @include hr(167px, 20px 0 40px);
   }
-  & nav {
+
+  nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    & a {
+
+    a {
       text-decoration: none;
-      color: $color-black;
-      font-size: 20px;
-      font-weight: 500;
       transition: 0.3s ease;
+
       &:hover {
         color: $color-blackhover;
       }
@@ -48,13 +52,15 @@
 }
 
 .footer__wrapper .footer__card:last-child {
-  & h3 {
+  h3 {
     text-align: right;
   }
-  & hr {
+
+  hr {
     margin-left: auto;
   }
-  & nav a {
+
+  nav a {
     text-align: right;
   }
 }
@@ -74,18 +80,15 @@
   }
 
   .footer__card {
-    & hr {
+    hr {
       @include hr(125px, 16px 0 31px);
     }
-    & nav {
-      & a {
-        font-size: 16px;
-      }
-    }
   }
+
   .footer__social-icons {
     gap: 36px;
   }
+
   .footer__social-icon {
     max-width: 40px;
   }
@@ -106,41 +109,43 @@
   .footer__wrapper {
     gap: 110px;
   }
+
   .footer__card {
-    & hr {
+    hr {
       @include hr(66px, 15px 0 40px);
     }
-    & nav {
+
+    nav {
       gap: 40px;
-      & a {
-        font-size: 11px;
-      }
     }
   }
 
   .footer__card:first-child {
-    & h3 {
+    h3 {
       text-align: center;
     }
-    & hr {
+
+    hr {
       margin: 15px auto 40px;
     }
   }
 
   .footer__wrapper .footer__card:first-child {
-    & hr {
+    hr {
       margin-left: 0;
     }
   }
 
   .footer__wrapper .footer__card:last-child {
-    & h3 {
+    h3 {
       text-align: left;
     }
-    & hr {
+
+    hr {
       margin-left: 0;
     }
-    & nav a {
+
+    nav a {
       text-align: left;
     }
   }
@@ -164,7 +169,6 @@
   .footer__wrapper {
     gap: 54px;
   }
-
 }
 
 // Mobile 320px
@@ -180,15 +184,12 @@
   }
 
   .footer__card {
-    & hr {
+    hr {
       @include hr(50px, 10px 0 30px);
     }
-    & nav {
+
+    nav {
       gap: 30px;
-    
-      & a {
-        font-size: 9px;
-      }
     }
   }
 
