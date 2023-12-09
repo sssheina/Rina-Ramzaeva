@@ -2,50 +2,44 @@
   position: relative;
   padding: 154px 0px;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #bfebe3 100%);
-}
 
-.numbers__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.numbers__numbers {
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-  font-size: 74px;
-  color: $color-black;
-  z-index: 1;
-}
+  &__numbers {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 74px;
+    color: $color-black;
+    z-index: 1;
+  }
 
-.numbers__span {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 150%;
-}
+  &__star {
+    position: absolute;
+    left: 26%;
+    top: -207%;
+  }
 
-.numbers__star {
-  position: absolute;
-  left: 26%;
-  top: -207%;
-}
+  &__waves {
+    position: absolute;
+    right: 25%;
+    top: 18%;
+  }
 
-.numbers__waves {
-  position: absolute;
-  right: 25%;
-  top: 18%;
-}
+  &__circle_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
-.numbers__circle_left {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.numbers__circle_right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  &__circle_right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 // Desktop 1440px
@@ -58,10 +52,6 @@
   .numbers__numbers {
     font-size: 64px;
   }
-
-  .numbers__span {
-    font-size: 22px;
-  }
 }
 
 // Tablet 768px
@@ -73,10 +63,6 @@
 
   .numbers__numbers {
     font-size: 32px;
-  }
-
-  .numbers__span {
-    font-size: 12px;
   }
 }
 
@@ -91,10 +77,6 @@
     gap: 12px;
     font-size: 22px;
   }
-
-  .numbers__span {
-    font-size: 10px;
-  }
 }
 
 // Mobile 320px
@@ -106,9 +88,5 @@
   .numbers__numbers {
     gap: 8px;
     font-size: 18px;
-  }
-
-  .numbers__span {
-    font-size: 8px;
   }
 }

@@ -1,13 +1,7 @@
 .button {
   height: 107px;
-  font-size: 20px;
-  font-weight: 600;
   border-radius: 53px;
-  text-transform: uppercase;
-  color: $color-black;
   text-align: center;
-  line-height: 24px;
-  letter-spacing: 0.1em;
   border: none;
   transition: 0.5s ease;
 }
@@ -28,13 +22,16 @@ button:disabled {
   padding: 0.5rem;
   z-index: 998;
   transition: 0.4s ease;
+
   &:hover {
     background: $color-pinkdark;
     transform: scale(1.1);
   }
+
   &:focus {
     @include btn-focus($color-blackhover);
   }
+
   & img {
     max-width: 35px;
     margin-bottom: 0.3rem;
@@ -118,7 +115,6 @@ button:disabled {
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .button {
     height: 80px;
-    font-size: 15px;
   }
 }
 
@@ -127,7 +123,6 @@ button:disabled {
 @media all and (min-width: 768px) and (max-width: 1439px) {
   .button {
     height: 74px;
-    font-size: 14px;
   }
 }
 
@@ -135,7 +130,6 @@ button:disabled {
 
 @media all and (min-width: 428px) and (max-width: 767px) {
   .button {
-    font-size: 14px;
     height: 74px;
     width: 347px;
   }
@@ -146,7 +140,6 @@ button:disabled {
 @media all and (min-width: 320px) and (max-width: 427px) {
   .button {
     height: 60px;
-    font-size: 11px;
     width: 260px;
   }
 }

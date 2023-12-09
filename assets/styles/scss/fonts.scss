@@ -60,3 +60,260 @@
   font-weight: 900;
   font-style: normal;
 }
+
+:root {
+  --font-main: "Montserrat", sans-serif;
+
+  /* h1 - title */
+  --h1-title-font-size: 42px;
+  --h1-title-font-weight: 700;
+  --h1-title-line-height: 1.5;
+  --h1-title-letter-spacing: 4.2px;
+  --h1-title-text-transform: uppercase;
+  --h1-title-text-decoration: none;
+
+  @include lg {
+    --h1-title-font-size: 33px;
+    --h1-title-letter-spacing: 3.3px;
+  }
+
+  @include md {
+    --h1-title-font-size: 30px;
+    --h1-title-letter-spacing: 3px;
+  }
+
+  @include sm {
+    --h1-title-font-size: 28px;
+    --h1-title-letter-spacing: 2.8px;
+  }
+
+  @include xs {
+    --h1-title-font-size: 20px;
+    --h1-title-letter-spacing: 2px;
+  }
+
+  /* h2 - title */
+  --h2-title-font-size: 40px;
+  --h2-title-font-weight: 500;
+  --h2-title-line-height: 1.33;
+  --h2-title-letter-spacing: 4px;
+  --h2-title-text-transform: uppercase;
+  --h2-title-text-decoration: none;
+
+  @include lg {
+    --h2-title-font-size: 32px;
+    --h2-title-letter-spacing: 3.2px;
+  }
+
+  @include md {
+    --h2-title-font-size: 20px;
+    --h2-title-letter-spacing: 2px;
+  }
+
+  @include xs {
+    --h2-title-font-size: 16px;
+    --h2-title-letter-spacing: 1.6px;
+  }
+
+  /* h3 - title */
+  --h3-title-font-size: 24px;
+  --h3-title-font-weight: 500;
+  --h3-title-line-height: 1.33;
+  --h3-title-letter-spacing: 2.4px;
+  --h3-title-text-transform: uppercase;
+  --h3-title-text-decoration: none;
+
+  @include lg {
+    --h3-title-font-size: 18px;
+    --h3-title-letter-spacing: 1.8px;
+  }
+
+  @include md {
+    --h3-title-font-size: 14px;
+    --h3-title-letter-spacing: 1.4px;
+  }
+
+  /* paragraph - large */
+  --paragraph-large-font-size: 21px;
+  --paragraph-large-font-weight: 500;
+  --paragraph-large-line-height: 1.5;
+  --paragraph-large-letter-spacing: 0;
+  --paragraph-large-text-transform: none;
+
+  @include lg {
+    --paragraph-large-font-size: 16px;
+  }
+
+  @include md {
+    --paragraph-large-font-size: 14px;
+  }
+
+  @include sm {
+    --paragraph-large-font-size: 13px;
+  }
+
+  /* paragraph - medium */
+  --paragraph-medium-font-size: 20px;
+  --paragraph-medium-font-weight: 500;
+  --paragraph-medium-line-height: 1.5;
+  --paragraph-medium-letter-spacing: 0;
+  --paragraph-medium-text-transform: none;
+  --paragraph-medium-text-decoration: none;
+
+  @include lg {
+    --paragraph-medium-font-size: 15px;
+  }
+
+  @include md {
+    --paragraph-medium-font-size: 13px;
+  }
+
+  /* paragraph - standart (list-500) */
+  --paragraph-standard-font-size: 18px;
+  --paragraph-standard-font-weight: 500;
+  --paragraph-standard-line-height: 1.5;
+  --paragraph-standard-letter-spacing: 0;
+  --paragraph-standard-text-transform: none;
+  --paragraph-standard-text-decoration: none;
+
+  @include lg {
+    --paragraph-standard-font-size: 14px;
+  }
+
+  @include md {
+    --paragraph-standard-font-size: 13px;
+  }
+
+  /* paragraph - small (400) */
+  --paragraph-small-font-size: 18px;
+  --paragraph-small-font-weight: 400;
+  --paragraph-small-line-height: 1.5;
+  --paragraph-small-letter-spacing: 0;
+  --paragraph-small-text-transform: none;
+  --paragraph-small-text-decoration: none;
+
+  @include lg {
+    --paragraph-small-font-size: 14px;
+  }
+
+  @include md {
+    --paragraph-small-font-size: 13px;
+  }
+
+  @include md {
+    --paragraph-small-font-size: 12px;
+  }
+
+  /* banner - large*/
+  --banner-large-font-size: 24px;
+  --banner-large-font-weight: 500;
+  --banner-large-line-height: 1.5;
+  --banner-large-letter-spacing: 0;
+  --banner-large-text-transform: none;
+  --banner-large-text-decoration: none;
+
+  @include lg {
+    --banner-large-font-size: 18px;
+  }
+
+  @include md {
+    --banner-large-font-size: 12px;
+  }
+
+  @include sm {
+    --banner-large-font-size: 13px;
+  }
+
+  /* button - text */
+  --button-text-font-size: 20px;
+  --button-text-font-weight: 600;
+  --button-text-font-style: normal;
+  --button-text-line-height: 1.5;
+  --button-text-letter-spacing: 2px;
+  --button-text-text-transform: uppercase;
+  --button-text-text-decoration: none;
+
+  @include lg {
+    --button-text-font-size: 15px;
+    --button-text-letter-spacing: 1.5px;
+  }
+
+  @include md {
+    --button-text-font-size: 14px;
+    --button-text-letter-spacing: 1.4px;
+  }
+
+  @include xs {
+    --button-text-font-size: 11px;
+    --button-text-letter-spacing: 1.1px;
+  }
+
+  /* footnote - large */
+  --footnote-large-font-size: 20px;
+  --footnote-large-font-weight: 500;
+  --footnote-large-font-style: italic;
+  --footnote-large-line-height: 1.5;
+  --footnote-large-letter-spacing: 2px;
+  --footnote-large-text-transform: none;
+  --footnote-large-text-decoration: none;
+
+  @include lg {
+    --footnote-large-font-size: 14px;
+    --footnote-large-line-height: 1.4;
+  }
+
+  @include md {
+    --footnote-large-font-size: 13px;
+    --footnote-large-line-height: 1.3;
+  }
+
+  @include sm {
+    --footnote-large-font-size: 12px;
+    --footnote-large-line-height: 1.2;
+  }
+
+  @include xs {
+    --footnote-large-font-size: 11px;
+    --footnote-large-line-height: 1.1;
+  }
+}
+
+.h1-title {
+  @extend %h1-title;
+}
+
+.h2-title {
+  @extend %h2-title;
+}
+
+.h3-title {
+  @extend %h3-title;
+}
+
+.paragraph-large {
+  @extend %paragraph-large;
+}
+
+.paragraph-medium {
+  @extend %paragraph-medium;
+}
+
+.paragraph-standard {
+  @extend %paragraph-standard;
+}
+
+.paragraph-small {
+  @extend %paragraph-small;
+}
+
+.banner-large {
+  @extend %banner-large;
+}
+
+.button-text {
+  @extend %button-text;
+}
+
+.footnote-large {
+  @extend %footnote-large;
+}

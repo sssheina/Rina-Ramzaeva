@@ -1,71 +1,73 @@
 .tv {
   position: relative;
   padding: 220px 0 260px;
-}
 
-.tv__aside {
-  position: absolute;
-  left: -46px;
-}
+  &__aside {
+    position: absolute;
+    left: -46px;
+  }
 
-.tv__aside-span {
-  position: relative;
-}
+  &__aside-span {
+    position: relative;
+  }
 
-.tv__wrapper {
-  display: grid;
-  justify-items: center;
-}
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+  }
 
-.tv__text-block,
-.tv__body,
-.tv__fem {
-  display: flex;
-  position: relative;
-}
+  &__text-block,
+  &__body,
+  &__fem {
+    display: flex;
+    position: relative;
+  }
 
-.tv__text-block {
-  margin: 0px 0px 150px 0px;
-  max-width: 1260px;
-  width: 100%;
-}
+  &__text-block {
+    margin: 0px 0px 150px 0px;
+    max-width: 1260px;
+    width: 100%;
+  }
 
-.tv__marker-box {
-  width: 129px;
-  height: 520px;
-}
+  &__marker-box {
+    width: 129px;
+    height: 520px;
+  }
 
-.tv__marker_blue {
-  width: 40px;
-  height: 520px;
-  background-color: $color-bluelight;
-}
+  &__marker_blue {
+    width: 40px;
+    height: 520px;
+    background-color: $color-bluelight;
+  }
 
-.tv__text-wrap {
-  width: 1100px;
-  height: 520px;
-  z-index: 1;
-}
+  &__text-wrap {
+    width: 1100px;
+    height: 520px;
+    z-index: 1;
+  }
 
-.tv__title {
-  width: 530px;
-}
+  &__title {
+    width: 530px;
+  }
 
-.tv__hr-title {
-  @include hr(140px, 40px 0);
-}
+  &__hr-title {
+    @include hr(140px, 40px 0);
+  }
 
-.tv__text > p {
-  margin-bottom: 44px;
-}
+  &__text {
+    p {
+      margin-bottom: 44px;
+    }
+  }
 
-.tv__hr-endnote {
-  width: 100px;
-  margin: 0px 0px 31px 0px;
-  color: $color-black;
-  background-color: $color-black;
-  height: 1px;
-  border: none;
+  &__hr-endnote {
+    width: 100px;
+    margin: 0px 0px 31px 0px;
+    color: $color-black;
+    background-color: $color-black;
+    height: 1px;
+    border: none;
+  }
 }
 
 .tv__body,

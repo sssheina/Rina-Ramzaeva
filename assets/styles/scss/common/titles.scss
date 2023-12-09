@@ -1,85 +1,85 @@
-h1 {
-  font-size: 42px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $color-black;
-}
+// h1 {
+//   font-size: 42px;
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   color: $color-black;
+// }
 
-h2 {
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 133%;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $color-black;
-}
+// h2 {
+//   font-size: 40px;
+//   font-style: normal;
+//   font-weight: 500;
+//   line-height: 133%;
+//   letter-spacing: 0.1em;
+//   text-transform: uppercase;
+//   color: $color-black;
+// }
 
-h3 {
-  font-size: 24px;
-  font-style: normal;
-  color: $color-black;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: 150%;
-  letter-spacing: 0.1em;
-}
+// h3 {
+//   font-size: 24px;
+//   font-style: normal;
+//   color: $color-black;
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   line-height: 150%;
+//   letter-spacing: 0.1em;
+// }
 
-// Desktop 1440px
+// // Desktop 1440px
 
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  h1 {
-    font-size: 33px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-}
+// @media all and (min-width: 1440px) and (max-width: 1919px) {
+//   h1 {
+//     font-size: 33px;
+//   }
+//   h2 {
+//     font-size: 32px;
+//   }
+//   h3 {
+//     font-size: 18px;
+//   }
+// }
 
-// Tablet 768px
+// // Tablet 768px
 
-@media all and (min-width: 768px) and (max-width: 1439px)  {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 20px;
-  }
+// @media all and (min-width: 768px) and (max-width: 1439px)  {
+//   h1 {
+//     font-size: 30px;
+//   }
+//   h2 {
+//     font-size: 20px;
+//   }
 
-  h3 {
-    font-size: 14px;
-  }
-}
+//   h3 {
+//     font-size: 14px;
+//   }
+// }
 
-// Mobile 428px
+// // Mobile 428px
 
-@media all and (min-width: 428px) and (max-width: 767px) {
-  h1 {
-    font-size: 28px;
-  }
-  h2 {
-    font-size: 20px;
-  }
+// @media all and (min-width: 428px) and (max-width: 767px) {
+//   h1 {
+//     font-size: 28px;
+//   }
+//   h2 {
+//     font-size: 20px;
+//   }
 
-  h3 {
-    font-size: 14px;
-  }
-}
+//   h3 {
+//     font-size: 14px;
+//   }
+// }
 
-// Mobile 320px
+// // Mobile 320px
 
-@media all and (min-width: 320px) and (max-width: 427px) {
-  h1 {
-    font-size: 20px;
-  }
-  h2 {
-    font-size: 16px;
-  }
+// @media all and (min-width: 320px) and (max-width: 427px) {
+//   h1 {
+//     font-size: 20px;
+//   }
+//   h2 {
+//     font-size: 16px;
+//   }
 
-  h3 {
-    font-size: 14px;
-  }
-}
+//   h3 {
+//     font-size: 14px;
+//   }
+// }

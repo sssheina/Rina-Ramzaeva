@@ -8,6 +8,12 @@ body {
   margin: 0 auto;
   width: 100%;
   height: 100vh;
-  font-family: $font-main;
+  font-family: var(--font-main);
   // overflow: auto;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }

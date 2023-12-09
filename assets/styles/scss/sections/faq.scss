@@ -1,16 +1,19 @@
 .faq {
   position: relative;
   padding: 220px 0 260px;
+
   &__wrapper {
     position: relative;
     display: flex;
     justify-content: space-around;
     z-index: 1;
   }
+
   &__title {
     position: relative;
     height: fit-content;
     margin-top: 35px;
+
     &::before,
     &::after {
       position: absolute;
@@ -20,9 +23,11 @@
       height: 2px;
       background: $color-black;
     }
+
     &::before {
       top: -35px;
     }
+
     &::after {
       bottom: -35px;
     }
@@ -42,34 +47,37 @@
   display: flex;
   flex-direction: column;
   gap: 33px;
-  & details {
+
+  details {
     display: flex;
     max-width: 1004px;
     transition: 0.2s ease-in-out;
+
     &:hover {
       transform: translateY(-2px);
     }
+
     &:nth-child(3n + 1) summary {
       background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
     }
+
     &:nth-child(3n + 2) summary {
       background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
     }
+
     &:nth-child(3n + 3) summary {
       background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
     }
+
     & summary {
       position: relative;
       cursor: pointer;
       display: flex;
       align-items: center;
       min-height: 106px;
-      color: $color-black;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 150%;
       padding: 0 50px 0 25px;
       box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
       &::before,
       &::after {
         content: "";
@@ -82,17 +90,15 @@
         transform: translateY(-50%);
         transition: 0.4s;
       }
+
       &::after {
         transform: rotate(90deg);
       }
     }
-    & p {
+
+    p {
       margin: 33px auto 0;
       max-width: 800px;
-      color: $color-black;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 150%;
     }
   }
 }
@@ -130,36 +136,45 @@ details[open] summary ~ * {
   top: 30%;
   left: 8%;
 }
+
 .faq__shell {
   position: absolute;
   right: 0;
   top: 42%;
 }
+
 .faq__star_blue {
   position: absolute;
+
   &:nth-child(6) {
     top: 4%;
     left: 61%;
   }
+
   &:nth-child(7) {
     top: 33%;
     right: 7%;
   }
+
   &:nth-child(8) {
     left: 7%;
     bottom: 28%;
   }
+
   &:nth-child(9) {
     left: 77%;
     bottom: 5%;
   }
 }
+
 .faq__star_blue-inner {
   position: absolute;
+
   &:nth-child(1) {
     top: 17%;
     left: 12%;
   }
+
   &:nth-child(2) {
     left: 7%;
     bottom: 30%;
@@ -171,8 +186,10 @@ details[open] summary ~ * {
 @media all and (min-width: 1440px) and (max-width: 1919px) {
   .faq {
     padding: 165px 0 195px;
+
     &__title {
       margin-top: 35px;
+
       &::before,
       &::after {
         width: 76px;
@@ -182,21 +199,23 @@ details[open] summary ~ * {
 
   .faq__questions {
     gap: 25px;
-    & details {
+
+    details {
       max-width: 753px;
-      & summary {
+
+      summary {
         min-height: 80px;
-        font-size: 18px;
         padding: 0 40px 0 20px;
+
         &::before,
         &::after {
           right: 27px;
         }
       }
-      & p {
+
+      p {
         margin: 25px auto 0;
         max-width: 600px;
-        font-size: 14px;
       }
     }
   }
@@ -207,15 +226,19 @@ details[open] summary ~ * {
 @media all and (min-width: 768px) and (max-width: 1439px) {
   .faq {
     padding: 78px 0 100px;
+
     &__title {
       margin-top: 15px;
+
       &::before,
       &::after {
         width: 40px;
       }
+
       &::before {
         top: -15px;
       }
+
       &::after {
         bottom: -15px;
       }
@@ -224,12 +247,14 @@ details[open] summary ~ * {
 
   .faq__questions {
     gap: 15px;
-    & details {
+
+    details {
       max-width: 348px;
-      & summary {
+
+      summary {
         min-height: 80px;
-        font-size: 12px;
         padding: 0 40px 0 20px;
+
         &::before,
         &::after {
           right: 18px;
@@ -237,10 +262,10 @@ details[open] summary ~ * {
           height: 1px;
         }
       }
-      & p {
+
+      p {
         margin: 20px auto 0;
         max-width: 308px;
-        font-size: 11px;
       }
     }
   }
@@ -251,19 +276,24 @@ details[open] summary ~ * {
 @media all and (min-width: 428px) and (max-width: 767px) {
   .faq {
     padding: 115px 0;
+
     &__wrapper {
       flex-direction: column;
       gap: 70px;
     }
+
     &__title {
       margin-top: 15px;
+
       &::before,
       &::after {
         width: 40px;
       }
+
       &::before {
         top: -15px;
       }
+
       &::after {
         bottom: -15px;
       }
@@ -272,12 +302,14 @@ details[open] summary ~ * {
 
   .faq__questions {
     gap: 15px;
-    & details {
+
+    details {
       max-width: 348px;
-      & summary {
+
+      summary {
         min-height: 80px;
-        font-size: 12px;
         padding: 0 40px 0 20px;
+
         &::before,
         &::after {
           right: 18px;
@@ -285,36 +317,42 @@ details[open] summary ~ * {
           height: 1px;
         }
       }
-      & p {
+
+      p {
         margin: 20px auto 0;
         max-width: 308px;
-        font-size: 11px;
       }
     }
   }
-  
+
   .faq__wave_2 {
     display: none;
   }
 }
+
 // Mobile 320px
 
 @media all and (min-width: 320px) and (max-width: 427px) {
   .faq {
     padding: 85px 0;
+
     &__wrapper {
       flex-direction: column;
       gap: 50px;
     }
+
     &__title {
       margin-top: 12px;
+
       &::before,
       &::after {
         width: 30px;
       }
+
       &::before {
         top: -12px;
       }
+
       &::after {
         bottom: -12px;
       }
@@ -323,12 +361,14 @@ details[open] summary ~ * {
 
   .faq__questions {
     gap: 12px;
-    & details {
+
+    details {
       max-width: 260px;
-      & summary {
+
+      summary {
         min-height: 60px;
-        font-size: 9px;
         padding: 0 30px 0 15px;
+
         &::before,
         &::after {
           right: 12px;
@@ -336,10 +376,10 @@ details[open] summary ~ * {
           height: 1px;
         }
       }
-      & p {
+
+      p {
         margin: 17px auto 0;
         max-width: 230px;
-        font-size: 8px;
       }
     }
   }
