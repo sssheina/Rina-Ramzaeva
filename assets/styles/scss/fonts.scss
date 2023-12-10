@@ -99,6 +99,7 @@
   --h2-title-letter-spacing: 4px;
   --h2-title-text-transform: uppercase;
   --h2-title-text-decoration: none;
+  --h2-title-text-align: center;
 
   @include lg {
     --h2-title-font-size: 32px;
