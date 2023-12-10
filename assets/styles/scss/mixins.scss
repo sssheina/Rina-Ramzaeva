@@ -105,6 +105,28 @@
   }
 }
 
+@mixin title-line {
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -30px;
+    width: 100px;
+    height: 2px;
+    background: $color-black;
+
+    @include lg {
+      bottom: -23px;
+      height: 1px;
+    }
+
+    @include md {
+      bottom: -13px;
+    }
+  }
+}
+
 // hr
 @mixin hr($width, $margin) {
   width: $width;
@@ -113,9 +135,9 @@
   height: 2px;
   border: none;
 
-  @include sm {
-    height: 1px;
-  }
+  //   @include sm {
+  //     height: 1px;
+  //   }
 }
 
 // button focus
