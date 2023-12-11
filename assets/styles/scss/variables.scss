@@ -21,6 +21,7 @@ $color-green: #a1f2e3;
 }
 
 %h2-title {
+  position: relative;
   font-family: var(--font-main);
   font-size: var(--h2-title-font-size);
   font-weight: var(--h2-title-font-weight, 500);
@@ -29,6 +30,7 @@ $color-green: #a1f2e3;
   letter-spacing: var(--h2-title-letter-spacing);
   text-transform: var(--h2-title-text-transform);
   text-decoration: var(--h2-title-text-decoration);
+  text-align: var(--h2-title-text-align);
   color: $color-black;
 }
 
