@@ -2512,6 +2512,12 @@ button:disabled {
 .about .mobile-br_768 {
   display: none;
 }
+.about .mobile-br_468 {
+  display: none;
+}
+.about .mobile-br_320 {
+  display: none;
+}
 
 .benefits {
   display: flex;
