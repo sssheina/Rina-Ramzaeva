@@ -2,11 +2,12 @@
   position: relative;
   padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 54.17%);
-}
 
-.education__aside {
+
+  &__aside {
   position: absolute;
   left: -43px;
+  }
 }
 
 .education__aside-span {
@@ -28,11 +29,13 @@
 
 .education__title {
   text-align: center;
+  margin-bottom: 70px;
+  @include title-line;
 }
 
-.education__title-hr {
-  @include hr(285px, 30px auto 40px);
-}
+// .education__title-hr {
+//   @include hr(285px, 30px auto 40px);
+// }
 
 .education__subtitle {
   text-align: center;

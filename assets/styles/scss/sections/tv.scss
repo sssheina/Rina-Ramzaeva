@@ -48,10 +48,11 @@
 
   &__title {
     width: 530px;
+    text-align: start;
   }
 
   &__hr-title {
-    @include hr(140px, 40px 0);
+    @include hr(285px, 40px 0);
   }
 
   &__text {

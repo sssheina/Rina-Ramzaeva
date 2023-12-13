@@ -112,7 +112,7 @@
     left: 50%;
     transform: translate(-50%);
     bottom: -30px;
-    width: 100px;
+    width: 285px;
     height: 2px;
     background: $color-black;
 
@@ -126,6 +126,28 @@
     }
   }
 }
+
+// @mixin h3-after-line {
+//   &::before {
+//     position: absolute;
+//     content: "";
+//     left: 50%;
+//     transform: translate(-50%);
+//     bottom: -30px;
+//     width: 77px;
+//     height: 2px;
+//     background: $color-black;
+
+//     @include lg {
+//       bottom: -23px;
+//       height: 1px;
+//     }
+
+//     @include md {
+//       bottom: -13px;
+//     }
+//   }
+// }
 
 // hr
 @mixin hr($width, $margin) {

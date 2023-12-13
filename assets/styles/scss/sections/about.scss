@@ -26,6 +26,10 @@
     position: relative;
   }
 
+  &__title {
+    text-align: start;
+  }
+
   &__pic {
     position: absolute;
     top: -5%;
@@ -69,8 +73,8 @@
     padding: 125px 105px 188px 230px;
   }
 
-  &__hr_1 {
-    @include hr(140px, 0);
+  &__hr-title {
+    @include hr(285px, 0);
   }
 
   &__text {
