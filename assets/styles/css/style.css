@@ -2412,6 +2412,9 @@ button:disabled {
   display: flex;
   position: relative;
 }
+.about__title {
+  text-align: start;
+}
 .about__pic {
   position: absolute;
   top: -5%;
@@ -2446,8 +2449,8 @@ button:disabled {
   background: linear-gradient(180deg, #d9f0ff 0%, rgba(217, 240, 255, 0.4) 100%);
   padding: 125px 105px 188px 230px;
 }
-.about__hr_1 {
-  width: 140px;
+.about__hr-title {
+  width: 285px;
   margin: 0;
   background-color: #635d5d;
   height: 2px;
@@ -2558,6 +2561,7 @@ button:disabled {
 }
 .benefits__title {
   padding-bottom: 28px;
+  text-align: start;
 }
 .benefits__cards-block {
   display: flex;
@@ -2807,13 +2811,28 @@ button:disabled {
 }
 .help__title {
   text-align: center;
+  margin-bottom: 70px;
 }
-.help hr {
+.help__title::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -30px;
   width: 285px;
-  margin: 30px auto 40px;
-  background-color: #635d5d;
   height: 2px;
-  border: none;
+  background: #635d5d;
+}
+@media only screen and (max-width: 1919px) {
+  .help__title::before {
+    bottom: -23px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .help__title::before {
+    bottom: -13px;
+  }
 }
 .help__subtitle {
   margin: 0 auto;
@@ -3375,9 +3394,10 @@ button:disabled {
 }
 .tv__title {
   width: 530px;
+  text-align: start;
 }
 .tv__hr-title {
-  width: 140px;
+  width: 285px;
   margin: 40px 0;
   background-color: #635d5d;
   height: 2px;
@@ -3545,7 +3565,6 @@ button:disabled {
   padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #ffdada 54.17%);
 }
-
 .education__aside {
   position: absolute;
   left: -43px;
@@ -3570,14 +3589,28 @@ button:disabled {
 
 .education__title {
   text-align: center;
+  margin-bottom: 70px;
 }
-
-.education__title-hr {
+.education__title::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -30px;
   width: 285px;
-  margin: 30px auto 40px;
-  background-color: #635d5d;
   height: 2px;
-  border: none;
+  background: #635d5d;
+}
+@media only screen and (max-width: 1919px) {
+  .education__title::before {
+    bottom: -23px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .education__title::before {
+    bottom: -13px;
+  }
 }
 
 .education__subtitle {
@@ -3802,7 +3835,7 @@ button:disabled {
   left: 50%;
   transform: translate(-50%);
   bottom: -30px;
-  width: 100px;
+  width: 285px;
   height: 2px;
   background: #635d5d;
 }
@@ -4095,7 +4128,7 @@ button:disabled {
   left: 50%;
   transform: translate(-50%);
   bottom: -30px;
-  width: 100px;
+  width: 285px;
   height: 2px;
   background: #635d5d;
 }
@@ -4430,6 +4463,28 @@ button:disabled {
 }
 .payment__title {
   text-align: center;
+  margin-bottom: 70px;
+}
+.payment__title::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -30px;
+  width: 285px;
+  height: 2px;
+  background: #635d5d;
+}
+@media only screen and (max-width: 1919px) {
+  .payment__title::before {
+    bottom: -23px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .payment__title::before {
+    bottom: -13px;
+  }
 }
 .payment__cards {
   margin: 125px 0 125px;
