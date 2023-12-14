@@ -33,10 +33,6 @@
   @include title-line;
 }
 
-// .education__title-hr {
-//   @include hr(285px, 30px auto 40px);
-// }
-
 .education__subtitle {
   text-align: center;
 }
@@ -161,7 +157,6 @@
 }
 
 .education__spiral {
-  display: inline-block;
   animation: rotate 10s linear infinite;
   position: absolute;
   top: -2%;
@@ -182,7 +177,6 @@
 }
 
 .education__dawn {
-  display: inline-block;
   animation: rotate 35s linear infinite;
   position: absolute;
   top: 65%;
