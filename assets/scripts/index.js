@@ -192,6 +192,29 @@ function downloadPDF() {
   document.body.removeChild(link);
 }
 
+function downloadPdfEn() {
+  const linkEn = document.createElement("a");
+  linkEn.href = "./assets/docs/guide_en.pdf";
+  linkEn.download = "guide_en.pdf";
+  document.body.appendChild(linkEn);
+  linkEn.click();
+  document.body.removeChild(linkEn);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const downloadBtn = document.getElementById('downloadBtn');
+  downloadBtn.addEventListener('click', function() {
+      const language = navigator.language || navigator.userLanguage;
+      if (language.startsWith('en')) {
+          downloadPdfEn();
+      } else {
+          downloadPDF();
+      }
+  });
+});
+
+// _______________________________________________________
+
 function scrollToRegistration() {
   const targetBlock = document.getElementById("registration");
   targetBlock.scrollIntoView({ behavior: "smooth" });
