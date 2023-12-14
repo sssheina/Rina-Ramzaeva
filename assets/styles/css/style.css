@@ -2424,7 +2424,6 @@ button:disabled {
   z-index: 1;
 }
 .about__dawn {
-  display: inline-block;
   animation: rotate 35s linear infinite;
   position: absolute;
   top: 37%;
@@ -3532,7 +3531,6 @@ button:disabled {
 }
 
 .tv__dawn {
-  display: inline-block;
   animation: rotate 35s linear infinite;
   position: absolute;
   top: 8%;
@@ -3546,7 +3544,6 @@ button:disabled {
 }
 
 .tv__spiral {
-  display: inline-block;
   animation: rotate 20s linear infinite;
   position: absolute;
   top: 73%;
@@ -3737,7 +3734,6 @@ button:disabled {
 }
 
 .education__spiral {
-  display: inline-block;
   animation: rotate 10s linear infinite;
   position: absolute;
   top: -2%;
@@ -3758,7 +3754,6 @@ button:disabled {
 }
 
 .education__dawn {
-  display: inline-block;
   animation: rotate 35s linear infinite;
   position: absolute;
   top: 65%;
@@ -4080,7 +4075,6 @@ button:disabled {
 }
 
 .steps__spiral {
-  display: inline-block;
   animation: rotate 20s linear infinite;
   position: absolute;
   right: -10px;
@@ -4541,7 +4535,6 @@ button:disabled {
 
 .payment__spiral {
   position: absolute;
-  display: inline-block;
   animation: rotate 20s linear infinite;
   top: 10%;
   left: 80%;
@@ -4555,7 +4548,6 @@ button:disabled {
 
 .payment__dawn {
   position: absolute;
-  display: inline-block;
   animation: rotate 20s linear infinite;
   top: 48%;
   left: 0%;
@@ -4868,7 +4860,6 @@ input[type=checkbox] {
 
 .registration__dawn {
   position: absolute;
-  display: inline-block;
   animation: rotate 40s linear infinite;
   top: 50%;
   left: 0%;
