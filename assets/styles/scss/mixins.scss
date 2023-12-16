@@ -1,9 +1,11 @@
-// width
+// width Миксин max-width 
 @mixin r($width) {
   @media only screen and (max-width: ($width + "px")) {
     @content;
   }
 }
+
+//------Миксин min-width 
 
 @mixin rmin($width) {
   @media only screen and (min-width: ($width + "px")) {
@@ -11,11 +13,15 @@
   }
 }
 
+//------Адаптив для max-width 1919px_______(по макету на 1440px)
+
 @mixin lg {
   @include r(1919) {
     @content;
   }
 }
+
+//------Адаптив для min-width 1919.1px
 
 @mixin lg-up {
   @include rmin(1919.1) {
@@ -23,11 +29,15 @@
   }
 }
 
+//------Адаптив для max-width 1439px_______(по макету на 768px)
+
 @mixin md {
   @include r(1439) {
     @content;
   }
 }
+
+//------Адаптив для min-width 1439.1px (по макету на 1440px)
 
 @mixin md-up {
   @include rmin(1439.1) {
@@ -35,11 +45,15 @@
   }
 }
 
+//------Адаптив для max-width 767px_______(по макету на 428px)
+
 @mixin sm {
   @include r(767) {
     @content;
   }
 }
+
+//------Адаптив для min-width 767.1px (по макету на 768px)
 
 @mixin sm-up {
   @include rmin(767.1) {
@@ -47,11 +61,15 @@
   }
 }
 
+// ------Адаптив для max-width 427px_______(по макету на 320px)
+
 @mixin xs {
   @include r(427) {
     @content;
   }
 }
+
+//------Адаптив для min-width 427.1px (по макету на 428px)
 
 @mixin xs-up {
   @include rmin(427.1) {
