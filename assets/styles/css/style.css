@@ -2214,7 +2214,7 @@ button:disabled {
 }
 @media only screen and (max-width: 1439px) {
   .cover__left-side {
-    padding: 94px 0 44px;
+    padding: 117px 0 60px;
     max-width: 608px;
     width: 100%;
   }
@@ -2242,25 +2242,23 @@ button:disabled {
 }
 @media only screen and (max-width: 1919px) {
   .cover__over-title {
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .cover__over-title {
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 9px;
   }
 }
 @media only screen and (max-width: 767px) {
   .cover__over-title {
-    font-size: 14px;
     margin-bottom: 23px;
   }
 }
 @media only screen and (max-width: 427px) {
   .cover__over-title {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 13px;
   }
 }
@@ -2465,7 +2463,7 @@ button:disabled {
 @media only screen and (max-width: 1439px) {
   .cover__star_2 {
     left: 72%;
-    top: 30%;
+    top: 25%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -2484,10 +2482,22 @@ button:disabled {
   left: 87%;
   top: 55%;
 }
+@media only screen and (max-width: 1919px) {
+  .cover__star_3 {
+    left: 85%;
+    top: 54%;
+  }
+}
 @media only screen and (max-width: 1439px) {
   .cover__star_3 {
     left: 91%;
-    top: 44%;
+    top: 39%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cover__star_3 {
+    left: 89%;
+    top: 45%;
   }
 }
 .cover__present {
@@ -2518,7 +2528,7 @@ button:disabled {
     max-width: 106px;
     max-height: 106px;
     left: 65%;
-    top: 25%;
+    top: 29%;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -2526,7 +2536,6 @@ button:disabled {
     max-width: 81px;
     max-height: 81px;
     left: 68%;
-    top: 25%;
   }
 }
 .cover .mobile-br {
@@ -2545,6 +2554,29 @@ button:disabled {
 @media only screen and (max-width: 427px) {
   .cover .mobile-br {
     display: block;
+  }
+}
+.cover .tablet-br {
+  display: none;
+}
+@media only screen and (max-width: 1919px) {
+  .cover .tablet-br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .cover .tablet-br {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cover .tablet-br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .cover .tablet-br {
+    display: none;
   }
 }
 .cover .desktop-br {
