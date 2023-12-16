@@ -146,10 +146,6 @@
   }
 
   @include md {
-    --paragraph-large-font-size: 14px;
-  }
-
-  @include sm {
     --paragraph-large-font-size: 13px;
   }
 
