@@ -96,6 +96,26 @@
     text-transform: uppercase;
     color: $color-black;
     margin-bottom: 1rem;
+
+    @include lg {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    @include md {
+      font-size: 12px;
+      margin-bottom: 9px;
+    }
+
+    @include sm {
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+
+    @include xs {
+      font-size: 12px;
+      margin-bottom: 13px;
+    }
   }
 
   &__title {
@@ -112,13 +132,30 @@
     }
 
     @include sm {
-      max-width: 320px;
+      max-width: 340px;
       margin: 0 0 23px 0;
     }
 
     @include xs {
-      max-width: 260px;
       margin: 0 0 17px 0;
+    }
+  }
+
+  &__subtitle {
+    @include lg {
+      max-width: 348px;
+    }
+
+    @include md {
+      max-width: 581px;
+    }
+
+    @include sm {
+      max-width: 312px;
+    }
+
+    @include xs {
+      max-width: 257px;
     }
   }
 
@@ -136,6 +173,25 @@
       background-color: $color-pinklight;
       @include btn-hover;
     }
+
+    @include lg {
+      width: 387px;
+      margin-top: 30px;
+    }
+
+    @include md {
+      width: 347px;
+      margin-top: 19px;
+    }
+
+    @include sm {
+      margin-top: 74px;
+    }
+
+    @include xs {
+      width: 260px;
+      margin-top: 49px;
+    }
   }
 
   &__pic {
@@ -148,6 +204,25 @@
       width: 100%;
       height: auto;
       display: block;
+
+      @include lg {
+        max-width: 825px;
+        width: 100%;
+        max-height: 800px;
+        height: 100%;
+      }
+
+      @include md {
+        display: none;
+      }
+
+      @include sm {
+        display: none;
+      }
+
+      @include xs {
+        display: none;
+      }
     }
   }
 
@@ -160,367 +235,253 @@
   &__left-circles {
     position: absolute;
     left: 0;
-    top: 10%;
+    top: 4%;
   }
 
   &__arrows {
     position: absolute;
     left: 90%;
     top: 16%;
+
+    @include lg {
+      max-width: 55.2px;
+      width: 100%;
+      max-height: 110px;
+      height: 100%;
+    }
+
+    @include md {
+      max-width: 29.44px;
+      max-height: 58.59px;
+      left: 91%;
+      top: 13%;
+
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+      display: none;
+    }
   }
 
   &__star_1 {
     position: absolute;
     left: 49%;
     top: 59%;
+
+    @include lg {
+      left: 50%;
+    }
+
+    @include md {
+      left: 68%;
+      top: 74%;
+    }
+
+    @include sm {
+      left: 54%;
+      top: 38%;
+    }
+
+    @include xs {
+      left: 59%;
+      top: 36%;
+    }
   }
 
   &__star_2 {
     position: absolute;
     left: 78%;
     top: 20%;
+
+    @include lg {
+      top: 23%;
+    }
+
+    @include md {
+      left: 72%;
+      top: 30%;
+    }
+
+    @include sm {
+      left: 84%;
+      top: 19%;
+    }
+
+    @include xs {
+      left: 85%;
+    }
   }
 
   &__star_3 {
     position: absolute;
     left: 87%;
     top: 55%;
+
+    @include lg {
+      
+    }
+
+    @include md {
+      left: 91%;
+    top: 44%;
+    }
+
+    @include sm {
+      
+    }
+
+    @include xs {
+      
+    }
   }
 
   &__present {
     position: absolute;
+    max-width: 113px;
+    max-height: 113px;
+    width: 100%;
     z-index: 1;
     left: 82%;
     top: 28%;
+
+    @include lg {
+      max-width: 84px;
+      max-height: 84px;
+    }
+
+    @include md {
+      max-width: 102px;
+      max-height: 102px;
+      left: 77%;
+      top: 18%;
+    }
+
+    @include sm {
+      max-width: 106px;
+      max-height: 106px;
+      left: 65%;
+      top: 25%;
+    }
+
+    @include xs {
+      max-width: 81px;
+      max-height: 81px;
+      left: 68%;
+      top: 25%;
+    }
   }
 
   .mobile-br {
     display: none;
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: block;
+    }
+
+    @include xs {
+      display: block;
+    }
   }
 
   .desktop-br {
     display: inline;
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+      display: none;
+    }
   }
 
-  .mobile-svg_428 {
-    display: none;
-  }
-
-  .mobile-svg_320 {
-    display: none;
-  }
-
-  .desktop-svg_1440 {
-    display: none;
-  }
-}
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  // .cover__left-side {
-  //   padding: 217px 0 106px;
-  // }
-
-  .cover__over-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  // .cover__title {
-  //   padding: 0 0 11px 0;
-  // }
-
-  .cover__subtitle {
-    font-size: 18px;
-    max-width: 348px;
-  }
-
-  .cover__button {
-    width: 387px;
-    margin-top: 30px;
-  }
-
-  .cover__pic img {
-    max-width: 825px;
-    width: 100%;
-    max-height: 800px;
-    height: 100%;
-  }
-
-  .cover__present {
-    max-width: 120px;
-    width: 100%;
-    max-height: 120px;
-    height: 100%;
-  }
-
-  .cover__arrows {
-    max-width: 55.2px;
-    width: 100%;
-    max-height: 110px;
-    height: 100%;
-  }
-  .mobile-svg_428 {
-    display: none;
-  }
-
-  .mobile-svg_320 {
-    display: none;
-  }
-
-  .desktop-svg_1440 {
-    display: block;
-  }
   .desktop-svg {
+    @include lg {
+      display: none;
+    }
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  .mobile-svg_428 {
     display: none;
+
+    @include lg {
+      display: none;
+    }
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: block;
+    }
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  .mobile-svg_320 {
+    display: none;
+
+    @include lg {
+      display: none;
+    }
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+      display: block;
+    }
+  }
+
+  .desktop-svg_1440 {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+      display: none;
+    }
   }
 }
-
-// @media all and (min-width: 768px) and (max-width: 1439px) {
-//   .cover__left-side {
-//     padding: 94px 0 44px;
-//     max-width: 608px;
-//     width: 100%;
-//   }
-//   .cover__over-title {
-//     font-size: 12px;
-//     margin-bottom: 2px;
-//   }
-//   .cover__title {
-//     padding: 0 0 7px 0;
-//   }
-//   .cover__subtitle {
-//     font-size: 14px;
-//     max-width: 608px;
-//   }
-//   .cover__button {
-//     width: 347px;
-//     margin-top: 19px;
-//   }
-//   .cover__pic img {
-//     display: none;
-//   }
-//   .cover__left-circles {
-//     max-height: 290px;
-//     height: 100%;
-//     max-width: 59px;
-//     width: 100%;
-//   }
-
-//   .cover__right-circles {
-//     max-width: 423px;
-//     width: 100%;
-//     max-height: 327px;
-//     height: 100%;
-//   }
-
-//   .cover__star_1 {
-//     left: 70%;
-//     top: 79%;
-//   }
-//   .cover__star_2 {
-//     left: 70%;
-//     top: 33%;
-//   }
-
-//   .cover__star_3 {
-//     left: 91%;
-//   }
-//   .cover__present {
-//     max-width: 86px;
-//     left: 78%;
-//   }
-
-//   .cover__arrows {
-//     max-width: 29.44px;
-//     width: 100%;
-//     max-height: 58.59px;
-//     height: 100%;
-//   }
-//   .desktop-br {
-//     display: none;
-//   }
-
-//   .mobile-svg_428 {
-//     display: none;
-//   }
-
-//   .mobile-svg_320 {
-//     display: none;
-//   }
-// }
-
-// @media all and (min-width: 428px) and (max-width: 767px) {
-//   .cover__left-side {
-//     padding: 168px 0 88px;
-//     max-width: 387px;
-//     width: 100%;
-//   }
-//   .cover__over-title {
-//     font-size: 14px;
-//     margin-bottom: 23px;
-//   }
-//   .cover__title {
-//     font-size: 26px;
-//     padding: 0 0 23px 0;
-//     max-width: 320px;
-//   }
-//   .cover__subtitle {
-//     font-size: 16px;
-//     max-width: 312px;
-//   }
-//   .cover__button {
-//     margin-top: 74px;
-//   }
-//   .cover__pic img {
-//     display: none;
-//   }
-//   .cover__left-circles {
-//     display: none;
-//   }
-
-//   .cover__right-circles {
-//     display: none;
-//   }
-
-//   .cover__star_1 {
-//     left: 57%;
-//     top: 36%;
-//   }
-//   .cover__star_2 {
-//     left: 84%;
-//     top: 19%;
-//   }
-
-//   .cover__star_3 {
-//     top: 44%;
-//     left: 88%;
-//   }
-//   .cover__present {
-//     max-width: 110px;
-//     left: 68%;
-//     top: 25%;
-//   }
-
-//   .cover__arrows {
-//     display: none;
-//   }
-
-//   .mobile-br {
-//     display: inline;
-//   }
-
-//   .desktop-svg {
-//     display: none;
-//   }
-
-//   .mobile-svg_320 {
-//     display: none;
-//   }
-//   .mobile-svg_428 {
-//     display: block;
-//   }
-//   .cover__left-circles_mobile,
-//   .cover__right-circles_mobile {
-//     position: absolute;
-//   }
-//   .cover__left-circles_mobile {
-//     left: 0;
-//     top: 4%;
-//   }
-
-//   .cover__right-circles_mobile {
-//     right: 0;
-//     bottom: 0;
-//   }
-//   .desktop-br {
-//     display: none;
-//   }
-// }
-
-// @media all and (min-width: 320px) and (max-width: 427px) {
-//   .cover__left-side {
-//     padding: 128px 0 60px;
-//     max-width: 260px;
-//     width: 100%;
-//   }
-//   .cover__over-title {
-//     font-size: 12px;
-//     margin-bottom: 13px;
-//   }
-//   .cover__title {
-//     padding: 0 0 17px 0;
-//     max-width: 260px;
-//   }
-//   .cover__subtitle {
-//     font-size: 12px;
-//     max-width: 260px;
-//   }
-//   .cover__button {
-//     margin-top: 49px;
-//   }
-//   .cover__pic img {
-//     display: none;
-//   }
-//   .cover__left-circles {
-//     display: none;
-//   }
-
-//   .cover__right-circles {
-//     display: none;
-//   }
-
-//   .cover__star_1 {
-//     left: 57%;
-//     top: 36%;
-//   }
-//   .cover__star_2 {
-//     left: 84%;
-//     top: 19%;
-//   }
-
-//   .cover__star_3 {
-//     top: 44%;
-//     left: 88%;
-//   }
-//   .cover__present {
-//     max-width: 82px;
-//     left: 68%;
-//     top: 25%;
-//   }
-
-//   .cover__arrows {
-//     display: none;
-//   }
-
-//   .desktop-br {
-//     display: none;
-//   }
-
-//   .mobile-br {
-//     display: inline;
-//   }
-
-//   .desktop-svg {
-//     display: none;
-//   }
-//   .mobile-svg_428 {
-//     display: none;
-//   }
-
-//   .mobile-svg_320 {
-//     display: block;
-//   }
-//   .cover__left-circles_mobile,
-//   .cover__right-circles_mobile {
-//     position: absolute;
-//   }
-//   .cover__left-circles_mobile {
-//     left: 0;
-//     top: 4%;
-//   }
-
-//   .cover__right-circles_mobile {
-//     right: 0;
-//     bottom: 0;
-//   }
-// }
