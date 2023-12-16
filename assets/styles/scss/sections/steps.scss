@@ -45,6 +45,15 @@
 
   &__title {
     margin-bottom: 70px;
+
+    @include lg {
+      margin-bottom: 53px;
+    }
+
+    @include md {
+      margin-bottom: 35px;
+    }
+
     @include title-line;
   }
 
@@ -58,11 +67,11 @@
     }
 
     @include md {
-      max-width: 193px;
+      max-width: 229px;
     }
 
     @include xs {
-      max-width: 160px;
+      max-width: 233px;
     }
   }
 
@@ -126,7 +135,7 @@
       height: 15px;
       right: 50%;
       rotate: 90deg;
-      top: 105%;
+      top: 113%;
     }
 
     @include xs {
@@ -183,17 +192,15 @@
   }
 
   @include md {
-    max-width: 182px;
-    min-height: 125px;
+    max-width: 188px;
+    min-height: 148px;
     gap: 15px;
-    padding: 20px;
+    padding: 15px;
   }
 
-  @include xs {
-    max-width: 148px;
-    min-height: 102px;
-    gap: 10px;
-    padding: 15px;
+  @include sm {
+    max-width: 211px;
+    min-height: 136px;
   }
 
   &:hover {
