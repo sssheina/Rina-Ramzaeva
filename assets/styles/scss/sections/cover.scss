@@ -53,7 +53,6 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
-  // padding: 302px 0 172px;
 
   &__wrapper {
     display: flex;
@@ -72,7 +71,7 @@
     }
 
     @include md {
-      padding: 94px 0 44px;
+      padding: 117px 0 60px;
       max-width: 608px;
       width: 100%;
     }
@@ -98,22 +97,20 @@
     margin-bottom: 1rem;
 
     @include lg {
-      font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     @include md {
-      font-size: 12px;
+      font-size: 16px;
       margin-bottom: 9px;
     }
 
     @include sm {
-      font-size: 14px;
       margin-bottom: 23px;
     }
 
     @include xs {
-      font-size: 12px;
+      font-size: 13px;
       margin-bottom: 13px;
     }
   }
@@ -303,7 +300,7 @@
 
     @include md {
       left: 72%;
-      top: 30%;
+      top: 25%;
     }
 
     @include sm {
@@ -322,21 +319,20 @@
     top: 55%;
 
     @include lg {
-      
+      left: 85%;
+      top: 54%;
     }
 
     @include md {
       left: 91%;
-    top: 44%;
+      top: 39%;
     }
 
     @include sm {
-      
+      left: 89%;
+    top: 45%;
     }
 
-    @include xs {
-      
-    }
   }
 
   &__present {
@@ -364,14 +360,13 @@
       max-width: 106px;
       max-height: 106px;
       left: 65%;
-      top: 25%;
+      top: 29%;
     }
 
     @include xs {
       max-width: 81px;
       max-height: 81px;
       left: 68%;
-      top: 25%;
     }
   }
 
@@ -390,6 +385,26 @@
       display: block;
     }
   }
+
+.tablet-br {
+  display: none;
+
+  @include lg {
+    display: none;
+  }
+
+    @include md {
+      display: block;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+      display: none;
+    }
+}
 
   .desktop-br {
     display: inline;
