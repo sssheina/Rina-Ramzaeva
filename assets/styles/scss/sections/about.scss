@@ -3,6 +3,22 @@
   background-color: $color-white;
   padding: 356px 0 260px;
 
+  @include lg {
+    padding: 267px 0 200px;
+  }
+
+  @include md {
+    padding: 142px 0 60px;
+  }
+
+  @include sm {
+    padding: 140px 0 53px;
+  }
+
+  @include xs {
+    padding: 95px 0 53px;
+  }
+
   &__aside {
     position: absolute;
     left: -2px;
@@ -14,11 +30,23 @@
 
   &__wrapper {
     display: flex;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &__left-side {
     position: relative;
     width: 20.21vw;
+
+    @include sm {
+      height: 170px;
+    }
+
+    @include xs {
+      height: 130px;
+    }
   }
 
   &__right-side {
@@ -28,6 +56,7 @@
 
   &__title {
     text-align: start;
+    z-index: 1;
   }
 
   &__pic {
@@ -37,6 +66,30 @@
     width: 490px;
     height: 655px;
     z-index: 1;
+
+    @include lg {
+      width: 367px;
+      height: 490px;
+    }
+
+    @include md {
+      width: 178px;
+      height: 238px;
+    }
+
+    @include sm {
+      width: 195px;
+      height: 261px;
+      top: -22%;
+      left: 45%;
+    }
+
+    @include xs {
+      width: 146px;
+      height: 195px;
+      top: -22%;
+      left: 45%;
+    }
   }
 
   &__dawn {
@@ -45,18 +98,45 @@
     top: 37%;
     right: -27%;
     z-index: 1;
+
+    @include md {
+      top: 17%;
+    }
+
+    @include sm {
+      left: 235%;
+      top: -50%;
+    }
+
+    @include xs {
+      left: 235%;
+      top: -43%;
+    }
   }
 
   &__star_1 {
     position: absolute;
     top: 128%;
     left: 52%;
+
+    @include sm {
+      display: none;
+    }
+    
   }
 
   &__star_2 {
     position: absolute;
     top: 15%;
     left: 5%;
+
+    @include md {
+      top: 10%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__text-block {
@@ -70,10 +150,43 @@
       rgba(217, 240, 255, 0.4) 100%
     );
     padding: 125px 105px 188px 230px;
+
+    @include lg {
+      gap: 30px;
+      max-width: 850px;
+      padding: 93px 65px 145px 163px;
+    }
+
+    @include md {
+      gap: 30px;
+      max-width: 454px;
+      padding: 50px 30px 58px 60px;
+    }
+
+    @include sm {
+      gap: 20px;
+      max-width: 348px;
+      padding: 97px 26px 90px;
+    }
+
+    @include xs {
+      gap: 15px;
+      max-width: 260px;
+      padding: 72px 20px 60px;
+    }
   }
 
   &__hr-title {
     @include hr(285px, 0);
+    z-index: 1;
+
+    @include md {
+      @include hr(214px, 0);
+    }
+
+    @include xs {
+      @include hr(117px, 0);
+    }
   }
 
   &__text {
@@ -82,6 +195,19 @@
 
     p {
       margin-bottom: 44px;
+      z-index: 1;
+
+      @include lg {
+        margin-bottom: 32px;
+      }
+
+      @include md {
+        margin-bottom: 25px;
+      }
+
+      @include sm {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -92,47 +218,130 @@
     width: 140px;
     height: 1px;
     border: none;
+
+    @include lg {
+      width: 100px;
+    }
+
+    @include md {
+      width: 90px;
+    }
+
+    @include sm {
+      width: 50px;
+    }
   }
 
   &__endnote {
     max-width: 800px;
+
+    @include lg {
+      max-width: 580px;
+    }
+
+    @include md {
+      max-width: 351px;
+    }
+
+    @include sm {
+      max-width: 321px;
+    }
+
+    @include xs {
+      max-width: 220px;
+    }
   }
 
   &__waves_1 {
     position: absolute;
     top: 76%;
     left: -7%;
+
+    @include md {
+      top: 73%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__waves_2 {
     position: absolute;
     top: 96%;
     left: 26%;
+
+    @include md {
+      top: 99%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__waves_3 {
     position: absolute;
     top: 10%;
     right: 7%;
+
+    @include md {
+      top: 8%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__star_3 {
     position: absolute;
-    top: 18%;
-    left: 78%;
+    top: 19%;
+    left: 77%;
+
+    @include md {
+      top: 13.5%;
+      left: 77.5%;
+    }
+
+    @include sm {
+      left: 70%;
+      top: 26%;
+    }
+    
+    @include xs {
+      top: 17%;
+    }
   }
 
   &__star_4 {
     position: absolute;
     z-index: 1;
-    top: 2%;
+    top: 10%;
     right: 56%;
+
+    @include md {
+      top: 7%;
+      right: 54%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__star_5 {
     position: absolute;
     bottom: 2%;
     right: 20%;
+
+    @include md {
+      bottom: 1%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__circle {
@@ -141,259 +350,59 @@
     right: 0;
   }
 
+  .desktop-br_1920 {
+    display: block;
+
+    @include lg {
+      display: none;
+    }
+  }
+
   .desktop-br_1440 {
     display: none;
+
+    @include lg {
+      display: block;
+    }
+
+    @include md {
+      display: none;
+    }
   }
 
   .mobile-br_768 {
     display: none;
+
+    @include md {
+      display: block;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
   .mobile-br_468 {
     display: none;
+
+    @include sm {
+      display: block;
+    }
+
+    @include xs {
+      display: none;
+    }
   }
 
   .mobile-br_320 {
     display: none;
+
+    @include xs {
+      display: block;
+    }
   }
 }
 
-// ___Desktop 1440px
-// @media all and (min-width: 1440px) and (max-width: 1919px) {
-//   .about {
-//     padding: 267px 0 200px;
-//   }
-
-//   .about__pic {
-//     width: 367px;
-//     height: 490px;
-//   }
-
-//   .about__text-block {
-//     gap: 30px;
-//     max-width: 850px;
-//     padding: 93px 65px 145px 163px;
-//   }
-
-//   .about__hr_1 {
-//     @include hr(100px, 0);
-//   }
-
-//   .about__text {
-//     max-width: 585px;
-//   }
-//   .about__text > p {
-//     margin-bottom: 32px;
-//   }
-//   .about__hr_2 {
-//     width: 100px;
-//   }
-
-//   .about__endnote {
-//     max-width: 580px;
-//   }
-
-//   .desktop-br_1920 {
-//     display: none;
-//   }
-
-//   .desktop-br_1440 {
-//     display: block;
-//   }
-//   .mobile-br_768 {
-//     display: none;
-//   }
-//   .mobile-br_320 {
-//     display: none;
-//   }
-// }
-
-// // ____Tablet 768px
-
-// @media all and (min-width: 768px) and (max-width: 1439px) {
-//   .about {
-//     padding: 142px 0 60px;
-//   }
-
-//   .about__pic {
-//     width: 178px;
-//     height: 238px;
-//   }
-
-//   .about__dawn {
-//     top: 24%;
-//   }
-
-//   .about__text-block {
-//     gap: 30px;
-//     max-width: 454px;
-//     padding: 50px 30px 58px 60px;
-//   }
-
-//   .about__hr_1 {
-//     @include hr(90px, 0);
-//   }
-
-//   .about__text > p {
-//     margin-bottom: 25px;
-//   }
-//   .about__hr_2 {
-//     width: 90px;
-//   }
-
-//   .desktop-br_1920 {
-//     display: none;
-//   }
-
-//   .desktop-br_1440 {
-//     display: none;
-//   }
-
-//   .mobile-br_320 {
-//     display: none;
-//   }
-//   .mobile-br_768 {
-//     display: block;
-//   }
-// }
-
-// // ____Mobile 428px
-
-// @media all and (min-width: 428px) and (max-width: 767px) {
-//   .about {
-//     padding: 140px 0 53px;
-//   }
-//   .about__wrapper {
-//     flex-direction: column;
-//   }
-
-//   .about__left-side {
-//     height: 170px;
-//   }
-//   .about__pic {
-//     width: 195px;
-//     height: 261px;
-//     top: -22%;
-//     left: 45%;
-//   }
-
-//   .about__dawn {
-//     left: 235%;
-//     top: -50%;
-//   }
-//   .about__text-block {
-//     gap: 20px;
-//     max-width: 348px;
-//     padding: 97px 26px 90px;
-//   }
-//   .about__star_1,
-//   .about__star_2,
-//   .about__star_4,
-//   .about__star_5,
-//   .about__waves_1,
-//   .about__waves_2,
-//   .about__waves_3 {
-//     display: none;
-//   }
-
-//   .about__star_3 {
-//     left: 70%;
-//     top: 27%;
-//   }
-//   .about__hr_1 {
-//     @include hr(50px, 0);
-//   }
-
-//   .about__text > p {
-//     margin-bottom: 20px;
-//   }
-//   .about__hr_2 {
-//     width: 50px;
-//   }
-
-//   .desktop-br_1920 {
-//     display: none;
-//   }
-
-//   .desktop-br_1440 {
-//     display: none;
-//   }
-//   .mobile-br_768 {
-//     display: none;
-//   }
-//   .mobile-br_320 {
-//     display: none;
-//   }
-// }
-
-// // ____Mobile 320px
-
-// @media all and (min-width: 320px) and (max-width: 427px) {
-//   .about {
-//     padding: 95px 0 53px;
-//   }
-//   .about__wrapper {
-//     flex-direction: column;
-//   }
-
-//   .about__left-side {
-//     height: 130px;
-//   }
-//   .about__pic {
-//     width: 146px;
-//     height: 195px;
-//     top: -22%;
-//     left: 45%;
-//   }
-
-//   .about__dawn {
-//     left: 235%;
-//     top: -50%;
-//   }
-//   .about__text-block {
-//     gap: 15px;
-//     max-width: 260px;
-//     padding: 72px 20px 60px;
-//   }
-//   .about__star_1,
-//   .about__star_2,
-//   .about__star_4,
-//   .about__star_5,
-//   .about__waves_1,
-//   .about__waves_2,
-//   .about__waves_3 {
-//     display: none;
-//   }
-
-//   .about__star_3 {
-//     left: 70%;
-//     top: 25%;
-//   }
-//   .about__hr_1 {
-//     @include hr(50px, 0);
-//   }
-
-//   .about__text > p {
-//     margin-bottom: 20px;
-//   }
-//   .about__hr_2 {
-//     width: 50px;
-//   }
-
-//   .desktop-br_1920 {
-//     display: none;
-//   }
-
-//   .desktop-br_1440 {
-//     display: none;
-//   }
-
-//   .mobile-br_768 {
-//     display: none;
-//   }
-//   .mobile-br_320 {
-//     display: block;
-//   }
 
 // @include lg {
 
@@ -408,7 +417,7 @@
 // }
 
 // @include xs {
-  
-// }
 
 // }
+
+

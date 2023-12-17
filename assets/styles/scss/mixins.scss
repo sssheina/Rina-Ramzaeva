@@ -175,9 +175,9 @@
   height: 2px;
   border: none;
 
-  //   @include sm {
-  //     height: 1px;
-  //   }
+    @include sm {
+      height: 1px;
+    }
 }
 
 // button focus
