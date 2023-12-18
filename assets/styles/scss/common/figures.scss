@@ -1,21 +1,60 @@
 .svg_1920 {
   display: block;
+
+  @include lg {
+    display: none;
+  }
+  
 }
 
 .svg_1440 {
   display: none;
+
+  @include lg {
+    display: block;
+  }
+  
+  @include md {
+    display: none;
+  }
+  
 }
 
 .svg_768 {
   display: none;
+
+  @include lg {
+    display: none;
+  }
+  
+  @include md {
+    display: block;
+  }
+  
+  @include sm {
+    display: none;
+  }
+  
 }
 
 .svg_428 {
   display: none;
+
+  @include sm {
+    display: block;
+  }
+  
+  @include xs {
+    display: none;
+  }
 }
 
 .svg_320 {
   display: none;
+
+  @include xs {
+    display: block;
+  }
 }
 
 .star {
@@ -23,6 +62,26 @@
   width: 100%;
   max-height: 67px;
   height: 100%;
+
+  @include lg {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  
+  @include md {
+    max-width: 26.6px;
+    max-height: 26.6px;
+  }
+  
+  @include sm {
+    max-width: 26px;
+    max-height: 26px;
+  }
+  
+  @include xs {
+    max-width: 19px;
+    max-height: 19px;
+  }
 }
 
 .big-star {
@@ -30,6 +89,26 @@
   width: 100%;
   max-height: 90px;
   height: 100%;
+
+  @include lg {
+    max-width: 68px;
+    max-height: 68px;
+  }
+  
+  @include md {
+    max-width: 36px;
+    max-height: 36px;
+  }
+  
+  @include sm {
+    max-width: 36px;
+    max-height: 36px;
+  }
+  
+  @include xs {
+    max-width: 27px;
+    max-height: 27px;
+  }
 }
 
 .party-star {
@@ -37,181 +116,50 @@
   width: 100%;
   max-height: 360px;
   height: 100%;
-}
 
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .svg_1920 {
-    display: none;
-  }
-
-  .svg_1440 {
-    display: block;
-  }
-
-  .svg_768 {
-    display: none;
-  }
-
-  .svg_428 {
-    display: none;
-  }
-
-  .svg_320 {
-    display: none;
-  }
-
-  .star {
-    max-width: 40px;
-    width: 100%;
-    max-height: 40px;
-    height: 100%;
-  }
-
-  .big-star {
-    max-width: 68px;
-    width: 100%;
-    max-height: 68px;
-    height: 100%;
-  }
-
-  .party-star {
+  @include lg {
     max-width: 270px;
-    width: 100%;
     max-height: 270px;
-    height: 100%;
   }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .svg_1920 {
-    display: none;
-  }
-
-  .svg_1440 {
-    display: none;
-  }
-
-  .svg_768 {
-    display: block;
-  }
-
-  .svg_428 {
-    display: none;
-  }
-
-  .svg_320 {
-    display: none;
-  }
-
-  .star {
-    max-width: 26.6px;
-    width: 100%;
-    max-height: 26.6px;
-    height: 100%;
-  }
-  .big-star {
-    max-width: 36px;
-    width: 100%;
-    max-height: 36px;
-    height: 100%;
-  }
-
-  .party-star {
+  
+  @include md {
     max-width: 144px;
-    width: 100%;
     max-height: 144px;
-    height: 100%;
   }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .svg_1920 {
-    display: none;
-  }
-
-  .svg_1440 {
-    display: none;
-  }
-
-  .svg_768 {
-    display: none;
-  }
-
-  .svg_428 {
-    display: block;
-  }
-
-  .svg_320 {
-    display: none;
-  }
-
-  .star {
-    max-width: 26px;
-    width: 100%;
-    max-height: 26px;
-    height: 100%;
-  }
-
-  .big-star {
-    max-width: 36px;
-    width: 100%;
-    max-height: 36px;
-    height: 100%;
-  }
-
-  .party-star {
+  
+  @include sm {
     max-width: 144px;
-    width: 100%;
     max-height: 144px;
-    height: 100%;
   }
-}
-
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .svg_1920 {
-    display: none;
-  }
-
-  .svg_1440 {
-    display: none;
-  }
-
-  .svg_768 {
-    display: none;
-  }
-
-  .svg_428 {
-    display: none;
-  }
-
-  .svg_320 {
-    display: block;
-  }
-
-  .star {
-    max-width: 19px;
-    width: 100%;
-    max-height: 19px;
-    height: 100%;
-  }
-  .big-star {
-    max-width: 27px;
-    width: 100%;
-    max-height: 27px;
-    height: 100%;
-  }
-  .party-star {
+  
+  @include xs {
     max-width: 108px;
-    width: 100%;
     max-height: 108px;
-    height: 100%;
+  }
+
+}
+
+.arrows {
+  max-height: 266px;
+  width: 100%;
+  max-width: 134px;
+  height: 100%;
+
+  @include lg {
+    max-width: 100px;
+    max-height: 200px;
+  }
+  
+  @include md {
+    max-width: 53.3px;
+    max-height: 106.5px;
+  }
+    
+  @include xs {
+    max-width: 40px;
+    max-height: 80px;
   }
 }
+
+
+

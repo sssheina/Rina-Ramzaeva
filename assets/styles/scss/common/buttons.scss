@@ -4,6 +4,24 @@
   text-align: center;
   border: none;
   transition: 0.5s ease;
+
+  @include lg {
+    height: 80px;
+  }
+  
+  @include md {
+    height: 74px;
+  }
+  
+  @include sm {
+    height: 74px;
+    width: 347px;
+  }
+  
+  @include xs {
+    height: 60px;
+    width: 260px;
+  }
 }
 
 button:disabled {
@@ -110,36 +128,3 @@ button:disabled {
   --glow-offset: 10px;
 }
 
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .button {
-    height: 80px;
-  }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .button {
-    height: 74px;
-  }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .button {
-    height: 74px;
-    width: 347px;
-  }
-}
-
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .button {
-    height: 60px;
-    width: 260px;
-  }
-}
