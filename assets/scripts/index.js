@@ -468,20 +468,29 @@ function validateRegForm(needShowMessages) {
     result = validateRegFormPrivacy(needShowMessages);
   }
 
+  let button_element = document.getElementById("registration_button");
+  button_element.disabled = !result
+  
   return result;
 }
 
 document.getElementById("userName").addEventListener("blur", (event) => {
   validateRegFormName(true);
 });
+document.getElementById("userName").addEventListener("keyup", (event) => {
+  validateRegForm(true);
+});
 document.getElementById("email").addEventListener("blur", (event) => {
   validateRegFormEmail(true);
 });
+document.getElementById("email").addEventListener("keyup", (event) => {
+  validateRegForm(true);
+});
 document.getElementById("checkbox_18").addEventListener("click", (event) => {
-  validateRegFormAge(true);
+  validateRegForm(true);
 });
 document.getElementById("checkboxPrivat").addEventListener("click", (event) => {
-  validateRegFormPrivacy(true);
+  validateRegForm(true);
 });
 
 // function validateEmail(email) {
