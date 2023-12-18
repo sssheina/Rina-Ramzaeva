@@ -201,15 +201,15 @@ function downloadPdfEn() {
   document.body.removeChild(linkEn);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const downloadBtn = document.getElementById('downloadBtn');
-  downloadBtn.addEventListener('click', function() {
-      const language = navigator.language || navigator.userLanguage;
-      if (language.startsWith('en')) {
-          downloadPdfEn();
-      } else {
-          downloadPDF();
-      }
+document.addEventListener("DOMContentLoaded", function () {
+  const downloadBtn = document.getElementById("downloadBtn");
+  downloadBtn.addEventListener("click", function () {
+    const language = navigator.language || navigator.userLanguage;
+    if (language.startsWith("en")) {
+      downloadPdfEn();
+    } else {
+      downloadPDF();
+    }
   });
 });
 
@@ -469,8 +469,8 @@ function validateRegForm(needShowMessages) {
   }
 
   let button_element = document.getElementById("registration_button");
-  button_element.disabled = !result
-  
+  button_element.disabled = !result;
+
   return result;
 }
 
