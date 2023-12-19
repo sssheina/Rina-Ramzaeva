@@ -24,7 +24,6 @@
   }
 
   &__aside {
-    position: absolute;
     left: -53px;
 
     @include lg {
@@ -41,9 +40,6 @@
     }
   }
 
-  &__aside-span {
-    position: relative;
-  }
 
   &__wrapper {
     display: flex;
@@ -91,7 +87,7 @@
     }
 
     @include xs {
-      width: 348px;
+      width: 260px;
     }
   }
 
@@ -166,6 +162,8 @@
     }
 
     @include xs {
+      width: 260px;
+      margin: 0 0 13px 0;
     }
   }
 
@@ -186,6 +184,7 @@
     }
 
     @include xs {
+      width: 260px;
     }
   }
 
@@ -358,6 +357,10 @@
 
     @include md {
       width: 347px;
+    }
+
+    @include xs {
+      width: 260px;
     }
   }
 

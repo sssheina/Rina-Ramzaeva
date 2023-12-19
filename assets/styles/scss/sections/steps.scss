@@ -19,7 +19,6 @@
   }
 
   &__aside {
-    position: absolute;
     left: -49px;
 
     @include lg {
@@ -33,10 +32,6 @@
     @include sm {
       display: none;
     }
-  }
-
-  &__aside-span {
-    position: relative;
   }
 
   &__wrapper {

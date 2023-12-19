@@ -4,13 +4,9 @@
   background: linear-gradient(180deg, #d9f0ff 0%, #bfebe3 50.52%);
 
   &__aside {
-    position: absolute;
     left: 2px;
   }
 
-  &__aside-span {
-    position: relative;
-  }
 
   &__wrapper {
     display: flex;

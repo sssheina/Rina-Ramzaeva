@@ -2,13 +2,40 @@
   position: relative;
   padding: 220px 0 260px;
 
-  &__aside {
-    position: absolute;
-    left: -46px;
+  @include lg {
+    padding: 165px 0 195px;
+  }
+  
+  @include md {
+    padding: 85px 0 100px;
+  }
+  
+  @include sm {
+    padding: 115px 0 115px;
+  }
+  
+  @include xs {
+    padding: 85px 0 80px;
   }
 
-  &__aside-span {
-    position: relative;
+  &__aside {
+    left: -46px;
+
+    @include lg {
+
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+    
+    }
+    
+    @include xs {
+    
+    }
   }
 
   &__wrapper {
