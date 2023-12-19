@@ -4,35 +4,21 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
 
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and ( max-width: 1919px ) {
-  .container {
+  @include lg {
     max-width: 1140px;
   }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and ( max-width: 1439px ) {
-  .container {
+  
+  @include md {
     max-width: 648px;
   }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px){
-  .container {
+  
+  @include sm {
     max-width: 387px;
   }
-}
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .container {
+  
+  @include xs {
     max-width: 300px;
   }
 }
+

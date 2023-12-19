@@ -22,12 +22,14 @@
     height: 60px;
     width: 260px;
   }
+  
+  &:disabled {
+    color: $color-blackhover;
+    cursor: not-allowed;
+  }
 }
 
-button:disabled {
-  color: $color-blackhover;
-  cursor: not-allowed;
-}
+
 
 .button-up {
   display: none;
@@ -55,6 +57,7 @@ button:disabled {
     margin-bottom: 0.3rem;
   }
 }
+
 // __________________GLOW EFEECT BUTTON____________________
 
 .glow-effect {

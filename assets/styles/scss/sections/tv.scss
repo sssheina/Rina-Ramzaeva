@@ -50,6 +50,7 @@
     position: relative;
   }
 
+
   &__text-block {
     margin: 0px 0px 150px 0px;
     max-width: 1260px;
@@ -96,23 +97,24 @@
     height: 1px;
     border: none;
   }
-}
 
-.tv__body,
-.tv__fem {
+  &__body,
+  &__fem {
   position: relative;
   width: 1262px;
   height: 454px;
 }
 
-.tv__body {
+&__body {
   margin-bottom: 75px;
 }
 
-.tv__fem {
+&__fem {
   margin-bottom: 125px;
 }
-.card-tv {
+
+
+&__card-body {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -125,7 +127,7 @@
   background: linear-gradient(180deg, #ffdada 0%, #d9f0ff 100%);
 }
 
-.tv__video {
+&__video {
   position: absolute;
   top: 55px;
   right: 0px;
@@ -134,11 +136,11 @@
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.tv__video::-webkit-media-controls-panel {
+&__video::-webkit-media-controls-panel {
   background-image: linear-gradient(to bottom, #00000000, #5c53a1);
 }
 
-.tv__card-title {
+&__card-title {
   position: relative;
   &::before,
   &::after {
@@ -157,12 +159,12 @@
   }
 }
 
-.tv__card-text {
+&__card-text {
   width: 530px;
   min-height: 260px;
 }
 
-.tv__button {
+&__button {
   width: 665px;
   margin: 0 auto;
   background-color: $color-pinkdark;
@@ -175,7 +177,7 @@
   }
 }
 
-.tv__star-1 {
+&__star-1 {
   position: absolute;
   top: -90%;
   left: 11%;
@@ -185,50 +187,50 @@
   }
 }
 
-.tv__star-2 {
+&__star-2 {
   position: absolute;
   top: 5%;
   left: 32%;
 }
 
-.tv__star-3 {
+&__star-3 {
   position: absolute;
   top: -45%;
   left: 60%;
 }
 
-.tv__star-4 {
+&__star-4 {
   position: absolute;
   top: -25%;
   right: 11%;
 }
 
-.tv__star-5 {
+&__star-5 {
   position: absolute;
   top: 33%;
   left: 36%;
 }
 
-.tv__star-6 {
+&__star-6 {
   position: absolute;
   top: -3%;
   left: 10%;
 }
 
-.tv__dawn {
+&__dawn {
   animation: rotate 35s linear infinite;
   position: absolute;
   top: 8%;
   right: 8%;
 }
 
-.tv__wave {
+&__wave {
   position: absolute;
   top: 35%;
   right: 25%;
 }
 
-.tv__spiral {
+&__spiral {
   animation: rotate 20s linear infinite;
   position: absolute;
   top: 73%;
@@ -236,8 +238,9 @@
   z-index: -1;
 }
 
-.tv__star_big {
+&__star_big {
   position: absolute;
   top: 55%;
   right: 20%;
+}
 }

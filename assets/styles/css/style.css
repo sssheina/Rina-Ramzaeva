@@ -1201,27 +1201,27 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
+@media only screen and (max-width: 1919px) {
   .container {
     max-width: 1140px;
   }
 }
-@media all and (min-width: 768px) and (max-width: 1439px) {
+@media only screen and (max-width: 1439px) {
   .container {
     max-width: 648px;
   }
 }
-@media all and (min-width: 428px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .container {
     max-width: 387px;
   }
 }
-@media all and (min-width: 320px) and (max-width: 427px) {
+@media only screen and (max-width: 427px) {
   .container {
     max-width: 300px;
   }
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -1651,8 +1651,7 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 260px;
   }
 }
-
-button:disabled {
+.button:disabled {
   color: #bbbaba;
   cursor: not-allowed;
 }
@@ -4292,23 +4291,18 @@ button:disabled {
   height: 1px;
   border: none;
 }
-
-.tv__body,
-.tv__fem {
+.tv__body, .tv__fem {
   position: relative;
   width: 1262px;
   height: 454px;
 }
-
 .tv__body {
   margin-bottom: 75px;
 }
-
 .tv__fem {
   margin-bottom: 125px;
 }
-
-.card-tv {
+.tv__card-body {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -4320,7 +4314,6 @@ button:disabled {
   gap: 30px;
   background: linear-gradient(180deg, #ffdada 0%, #d9f0ff 100%);
 }
-
 .tv__video {
   position: absolute;
   top: 55px;
@@ -4329,11 +4322,9 @@ button:disabled {
   z-index: 2;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
 .tv__video::-webkit-media-controls-panel {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #5c53a1);
 }
-
 .tv__card-title {
   position: relative;
 }
@@ -4351,12 +4342,10 @@ button:disabled {
 .tv__card-title::after {
   bottom: -10px;
 }
-
 .tv__card-text {
   width: 530px;
   min-height: 260px;
 }
-
 .tv__button {
   width: 665px;
   margin: 0 auto;
@@ -4372,7 +4361,6 @@ button:disabled {
   box-shadow: 0 0 4px 3px #fdacac;
   outline-offset: 7px;
 }
-
 .tv__star-1 {
   position: absolute;
   top: -90%;
@@ -4383,50 +4371,42 @@ button:disabled {
     top: -29%;
   }
 }
-
 .tv__star-2 {
   position: absolute;
   top: 5%;
   left: 32%;
 }
-
 .tv__star-3 {
   position: absolute;
   top: -45%;
   left: 60%;
 }
-
 .tv__star-4 {
   position: absolute;
   top: -25%;
   right: 11%;
 }
-
 .tv__star-5 {
   position: absolute;
   top: 33%;
   left: 36%;
 }
-
 .tv__star-6 {
   position: absolute;
   top: -3%;
   left: 10%;
 }
-
 .tv__dawn {
   animation: rotate 35s linear infinite;
   position: absolute;
   top: 8%;
   right: 8%;
 }
-
 .tv__wave {
   position: absolute;
   top: 35%;
   right: 25%;
 }
-
 .tv__spiral {
   animation: rotate 20s linear infinite;
   position: absolute;
@@ -4434,7 +4414,6 @@ button:disabled {
   left: 10%;
   z-index: -1;
 }
-
 .tv__star_big {
   position: absolute;
   top: 55%;
