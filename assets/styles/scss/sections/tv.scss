@@ -5,15 +5,15 @@
   @include lg {
     padding: 165px 0 195px;
   }
-  
+
   @include md {
     padding: 85px 0 100px;
   }
-  
+
   @include sm {
     padding: 115px 0 115px;
   }
-  
+
   @include xs {
     padding: 85px 0 80px;
   }
@@ -22,19 +22,15 @@
     left: -46px;
 
     @include lg {
+    }
 
-    }
-    
     @include md {
-    
     }
-    
+
     @include sm {
-    
     }
-    
+
     @include xs {
-    
     }
   }
 
@@ -45,202 +41,595 @@
 
   &__text-block,
   &__body,
-  &__fem {
+  &__fem  {
     display: flex;
     position: relative;
   }
-
 
   &__text-block {
     margin: 0px 0px 150px 0px;
     max-width: 1260px;
     width: 100%;
+
+    @include lg {
+      max-width: 945px;
+      margin: 0px 0px 112px 0px;
+    }
+
+    @include md {
+      max-width: 566px;
+      margin: 0px 0px 52px 0px;
+    }
+
+    @include sm {
+      max-width: 348px;
+      margin: 0px 0px 54px 0px;
+    }
+
+    @include xs {
+      max-width: 260px;
+      max-height: 478px;
+      margin: 0px 0px 30px 0px;
+    }
   }
 
   &__marker-box {
     width: 129px;
     height: 520px;
+
+    @include lg {
+      width: 96px;
+      height: 390px;
+    }
+
+    @include md {
+      width: 52px;
+      height: 322px;
+    }
+
+    @include sm {
+      width: 43px;
+      height: 389px;
+    }
+
+    @include xs {
+      width: 32px;
+      height: 445px;
+    }
   }
 
   &__marker_blue {
-    width: 40px;
+    width: 39px;
     height: 520px;
     background-color: $color-bluelight;
+
+    @include lg {
+      width: 29px;
+      height: 390px;
+    }
+
+    @include md {
+      width: 15px;
+      height: 322px;
+    }
+
+    @include sm {
+      height: 389px;
+    }
+
+    @include xs {
+      width: 11px;
+      height: 476px;
+    }
   }
 
   &__text-wrap {
     width: 1100px;
     height: 520px;
     z-index: 1;
+
+    @include lg {
+      width: 840px;
+      height: 390px;
+    }
+
+    @include md {
+      width: 515px;
+      height: 322px;
+    }
+
+    @include sm {
+      width: 303px;
+      height: 389px;
+    }
+
+    @include xs {
+      width: 226px;
+      height: 478px;
+    }
   }
 
   &__title {
     width: 530px;
     text-align: start;
+
+    @include lg {
+      width: 435px;
+    }
+
+    @include md {
+      width: 270px;
+    }
+
+    @include xs {
+      width: 228px;
+    }
   }
 
   &__hr-title {
     @include hr(285px, 40px 0);
+
+    @include lg {
+      @include hr(214px, 23px 0);
+    }
+
+    @include md {
+      @include hr(114px, 13px 0);
+    }
+
+    @include xs {
+      @include hr(85px, 7px 0);
+    }
   }
 
-  &__text {
-    p {
-      margin-bottom: 44px;
+  &__paragraph {
+    margin-bottom: 44px;
+
+    @include lg {
+      margin-bottom: 33px;
+    }
+
+    @include md {
+      margin-bottom: 20px;
+    }
+
+    @include xs {
+      margin: 17px 0;
     }
   }
 
   &__hr-endnote {
-    width: 100px;
     margin: 0px 0px 31px 0px;
-    color: $color-black;
-    background-color: $color-black;
-    height: 1px;
-    border: none;
+
+    @include lg {
+      margin: 0px 0px 23px 0px;
+    }
+
+    @include md {
+      margin: 0px 0px 16px 0px;
+    }
+
+    @include xs {
+      margin: 0px 0px 13px 0px;
+    }
   }
 
   &__body,
   &__fem {
-  position: relative;
-  width: 1262px;
-  height: 454px;
-}
+    position: relative;
+    width: 1262px;
+    height: 454px;
 
-&__body {
-  margin-bottom: 75px;
-}
+    @include lg {
+      width: 966px;
+      height: 345px;
+    }
 
-&__fem {
-  margin-bottom: 125px;
-}
+    @include md {
+      width: 566px;
+      height: 300px;
+    }
 
+    @include sm {
+      width: 348px;
+      height: 462px;
+      flex-direction: column;
+    }
 
-&__card-body {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  max-width: 644px;
-  width: 100%;
-  max-height: 425px;
-  height: 100%;
-  padding: 40px 30px 30px 30px;
-  gap: 30px;
-  background: linear-gradient(180deg, #ffdada 0%, #d9f0ff 100%);
-}
+    @include xs {
+      width: 260px;
+      height: 450px;
+    }
+  }
 
-&__video {
-  position: absolute;
-  top: 55px;
-  right: 0px;
-  max-width: 669px;
-  z-index: 2;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
+  &__body,
+  &__fem {
+    margin-bottom: 95px;
 
-&__video::-webkit-media-controls-panel {
-  background-image: linear-gradient(to bottom, #00000000, #5c53a1);
-}
+    @include lg {
+      margin-bottom: 73px;
+    }
+    
+    @include md {
+      margin-bottom: 52px;
+    }
+    
+    @include sm {
+      margin-bottom: 55px;
+    }
+    
+    @include xs {
+      // margin-bottom: 54px;
+    }
+  }
 
-&__card-title {
-  position: relative;
-  &::before,
-  &::after {
-    content: "";
+  &__card-body,
+  &__card-fem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 644px;
+    width: 100%;
+    max-height: 430px;
+    height: 100%;
+    padding: 60px 35px 40px 40px;
+    gap: 40px;
+    background: linear-gradient(180deg, #ffdada 0%, #d9f0ff 100%);
+
+    @include lg {
+      max-width: 483px;
+      max-height: 320px;
+      padding: 45px 25px 25px 25px;
+      gap: 30px;
+    }
+
+    @include md {
+      max-width: 288px;
+      max-height: 300px;
+      padding: 35px 20px 20px 20px;
+      gap: 15px;
+    }
+
+    @include sm {
+      max-width: 348px;
+      max-height: 266px;
+      padding: 33px 20px 20px 20px;
+    }
+
+    @include xs {
+      max-width: 260px;
+      // max-height: 280px;
+      max-height: 301px;
+      padding: 30px 15px 15px 15px;
+      gap: 12px;
+    }
+  }
+
+  &__video {
+    position: absolute; 
+    top: 72px;
+    right: 0;   
+    max-width: 669px;
+    max-height: 382px;
+    z-index: 2;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    @include lg {
+      max-width: 522px;
+      max-height: 298.06px;
+      top: 48px;
+    }
+
+    @include md {
+      max-width: 300px;
+      max-height: 171.3px;
+      top: 72px;
+    }
+
+    @include sm {
+      max-width: 348px;
+      max-height: 197.3px;
+      top: 265px;
+    }
+
+    @include xs {
+      max-width: 260px;
+      max-height: 174.5px;
+      top: 279px;
+    }
+  }
+
+  &__video::-webkit-media-controls-panel {
+    background-image: linear-gradient(to bottom, #00000000, #5c53a1);
+  }
+
+  &__card-title {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: $color-black;
+      width: 45px;
+      height: 2px;
+      left: 0;
+
+      @include md {
+        width: 40px;
+        height: 1px;
+      }
+
+      @include sm {
+        width: 35px;
+      }
+
+      @include xs {
+        width: 30px;
+      }
+    }
+    &::before {
+      top: -10px;
+    }
+    &::after {
+      bottom: -10px;
+    }
+  }
+
+  &__card-text {
+    width: 566px;
+    min-height: 260px;
+
+    @include lg {
+      width: 410px;
+      min-height: 192px;
+    }
+
+    @include md {
+      width: 230px;
+      min-height: 220px;
+    }
+
+    @include sm {
+      width: 309px;
+      min-height: 180px;
+    }
+
+    @include xs {
+      width: 233px;
+      min-height: 220px;
+    }
+  }
+
+  &__button {
+    width: 667px;
+    margin: 0 auto;
+    background-color: $color-pinkdark;
+
+    @include lg {
+      width: 500px;
+    }
+
+    @include md {
+      width: 347px;
+    }
+
+    @include xs {
+      width: 260px;
+    }
+
+    &:hover {
+      background-color: $color-pinklight;
+      @include btn-hover;
+    }
+    &:focus {
+      @include btn-focus($color-pinkdark);
+    }
+  }
+
+  &__star-1 {
     position: absolute;
-    background: $color-black;
-    width: 45px;
-    height: 2px;
-    left: 0;
+    top: -90%;
+    left: 11%;
+
+    @include md {
+      top: -14%;
+      left: 89%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
-  &::before {
-    top: -10px;
+
+  &__star-2 {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: 3%;
+      left: 27.5%;
+    }
+    
+    @include sm {
+      left: 14%;
+    }
+    
   }
-  &::after {
-    bottom: -10px;
+
+  &__star-3 {
+    position: absolute;
+    top: -45%;
+    left: 60%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: -23%;
+      left: 60%;
+    }
+    
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__star-4 {
+    position: absolute;
+    top: -25%;
+    right: 11%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: -7%;
+      right: 8%;
+    }
+    
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__star-5 {
+    position: absolute;
+    top: 33%;
+    left: 36%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: 31%;
+      left: 36%;
+    }
+    
+    @include sm {
+      top: 22.5%;
+      left: 81%;
+    }
+    
+    @include xs {
+      top: 22%;
+      left: 84%;
+    }
+  }
+
+  &__star-6 {
+    position: absolute;
+    top: -3%;
+    left: 10%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: -15%;
+      left: 7%;
+    }
+    
+    @include sm {
+      display: none;
+    }
+    
+  }
+
+  &__dawn {
+    animation: rotate 35s linear infinite;
+    position: absolute;
+    top: 8%;
+    right: 8%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: 5%;
+      right: 15%;
+    }
+    
+    @include sm {
+      top: 4.5%;
+      right: 3%;
+    }
+    
+    @include xs {
+      top: 4%;
+      right: 3%;
+    }
+  }
+
+  &__wave {
+    position: absolute;
+    top: 35%;
+    right: 25%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: 34%;
+      right: 5%;
+    }
+    
+    @include sm {
+    display: none;
+    }
+    
+  }
+
+  &__spiral {
+    animation: rotate 20s linear infinite;
+    position: absolute;
+    top: 73%;
+    left: 10%;
+    z-index: -1;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: 79%;
+      left: 7%;
+    }
+    
+    @include sm {
+    display: none;
+    }
+    
+  }
+
+  &__star_big {
+    position: absolute;
+    top: 55%;
+    right: 20%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+      top: 71%;
+      right: 18%;
+    }
+    
+    @include sm {
+    display: none;
+    }
+    
   }
 }
 
-&__card-text {
-  width: 530px;
-  min-height: 260px;
-}
-
-&__button {
-  width: 665px;
-  margin: 0 auto;
-  background-color: $color-pinkdark;
-  &:hover {
-    background-color: $color-pinklight;
-    @include btn-hover;
-  }
-  &:focus {
-    @include btn-focus($color-pinkdark);
-  }
-}
-
-&__star-1 {
-  position: absolute;
-  top: -90%;
-  left: 11%;
-
-  @include md {
-    top: -29%
-  }
-}
-
-&__star-2 {
-  position: absolute;
-  top: 5%;
-  left: 32%;
-}
-
-&__star-3 {
-  position: absolute;
-  top: -45%;
-  left: 60%;
-}
-
-&__star-4 {
-  position: absolute;
-  top: -25%;
-  right: 11%;
-}
-
-&__star-5 {
-  position: absolute;
-  top: 33%;
-  left: 36%;
-}
-
-&__star-6 {
-  position: absolute;
-  top: -3%;
-  left: 10%;
-}
-
-&__dawn {
-  animation: rotate 35s linear infinite;
-  position: absolute;
-  top: 8%;
-  right: 8%;
-}
-
-&__wave {
-  position: absolute;
-  top: 35%;
-  right: 25%;
-}
-
-&__spiral {
-  animation: rotate 20s linear infinite;
-  position: absolute;
-  top: 73%;
-  left: 10%;
-  z-index: -1;
-}
-
-&__star_big {
-  position: absolute;
-  top: 55%;
-  right: 20%;
-}
-}
