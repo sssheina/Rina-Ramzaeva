@@ -3,6 +3,22 @@
   padding: 154px 0px;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #bfebe3 100%);
 
+  @include lg {
+    padding: 110px 0px;
+  }
+  
+  @include md {
+    padding: 66px 0px;
+  }
+  
+  @include sm {
+    padding: 66px 0px;
+  }
+  
+  @include xs {
+    padding: 50px 0px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -15,18 +31,62 @@
     font-size: 74px;
     color: $color-black;
     z-index: 1;
+
+    @include lg {
+      font-size: 64px;
+    }
+    
+    @include md {
+      font-size: 32px;
+    }
+    
+    @include sm {
+      gap: 12px;
+      font-size: 22px;
+    }
+    
+    @include xs {
+      gap: 8px;
+      font-size: 18px;
+    }
   }
 
   &__star {
     position: absolute;
-    left: 26%;
-    top: -207%;
+    left: 23%;
+    top: -193%;
+
+    // @include lg {
+    //   top: -160%;
+    // }
+    
+    @include md {
+      top: -125%;
+    }
+    
+    @include sm {
+      display: none;
+    }
+    
   }
 
   &__waves {
     position: absolute;
-    right: 25%;
+    right: 20%;
     top: 18%;
+
+    // @include lg {
+    //   top: 25%;
+    // }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+      display: none;
+    }
+    
   }
 
   &__circle_left {
@@ -39,54 +99,5 @@
     position: absolute;
     right: 0;
     bottom: 0;
-  }
-}
-
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .numbers {
-    padding: 150px 0px;
-  }
-
-  .numbers__numbers {
-    font-size: 64px;
-  }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .numbers {
-    padding: 100px 0px;
-  }
-
-  .numbers__numbers {
-    font-size: 32px;
-  }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .numbers {
-    padding: 80px 0px;
-  }
-
-  .numbers__numbers {
-    gap: 12px;
-    font-size: 22px;
-  }
-}
-
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .numbers {
-    padding: 50px 0px;
-  }
-  .numbers__numbers {
-    gap: 8px;
-    font-size: 18px;
   }
 }

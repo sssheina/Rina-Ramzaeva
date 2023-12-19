@@ -118,6 +118,30 @@ $color-green: #a1f2e3;
   color: $color-black;
 }
 
+%banner-large {
+  font-family: var(--font-main);
+  font-size: var(--banner-large-font-size);
+  font-weight: var(--banner-large-font-weight, 500);
+  font-style: var(--banner-large-font-style);
+  line-height: var(--banner-large-line-height);
+  letter-spacing: var(--banner-large-letter-spacing);
+  text-transform: var(--banner-large-text-transform);
+  text-decoration: var(--banner-large-text-decoration);
+  color: $color-black;
+}
+
+%banner-medium{
+  font-family: var(--font-main);
+  font-size: var(--banner-medium-font-size);
+  font-weight: var(--banner-medium-font-weight, 500);
+  font-style: var(--banner-medium-font-style);
+  line-height: var(--banner-medium-line-height);
+  letter-spacing: var(--banner-medium-letter-spacing);
+  text-transform: var(--banner-medium-text-transform);
+  text-decoration: var(--banner-medium-text-decoration);
+  color: $color-black;
+}
+
 %button-text {
   font-family: var(--font-main);
   font-size: var(--button-text-font-size);

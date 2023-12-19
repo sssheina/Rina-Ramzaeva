@@ -839,6 +839,30 @@ textarea {
   color: #635d5d;
 }
 
+.banner-large {
+  font-family: var(--font-main);
+  font-size: var(--banner-large-font-size);
+  font-weight: var(--banner-large-font-weight, 500);
+  font-style: var(--banner-large-font-style);
+  line-height: var(--banner-large-line-height);
+  letter-spacing: var(--banner-large-letter-spacing);
+  text-transform: var(--banner-large-text-transform);
+  text-decoration: var(--banner-large-text-decoration);
+  color: #635d5d;
+}
+
+.banner-medium {
+  font-family: var(--font-main);
+  font-size: var(--banner-medium-font-size);
+  font-weight: var(--banner-medium-font-weight, 500);
+  font-style: var(--banner-medium-font-style);
+  line-height: var(--banner-medium-line-height);
+  letter-spacing: var(--banner-medium-letter-spacing);
+  text-transform: var(--banner-medium-text-transform);
+  text-decoration: var(--banner-medium-text-decoration);
+  color: #635d5d;
+}
+
 .button-text {
   font-family: var(--font-main);
   font-size: var(--button-text-font-size);
@@ -982,6 +1006,14 @@ textarea {
   --banner-large-letter-spacing: 0;
   --banner-large-text-transform: none;
   --banner-large-text-decoration: none;
+  /* banner - medium */
+  --banner-medium-font-size: 24px;
+  --banner-medium-font-weight: 500;
+  --banner-medium-line-height: 1.5;
+  --banner-medium-letter-spacing: 0;
+  --banner-medium-text-transform: none;
+  --banner-medium-text-decoration: none;
+  --banner-medium-letter-spacing: 150%;
   /* button - text */
   --button-text-font-size: 20px;
   --button-text-font-weight: 600;
@@ -1129,6 +1161,26 @@ textarea {
 @media only screen and (max-width: 767px) {
   :root {
     --banner-large-font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1919px) {
+  :root {
+    --banner-medium-font-size: 22px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  :root {
+    --banner-medium-font-size: 13px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    --banner-medium-font-size: 11px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  :root {
+    --banner-medium-font-size: 9px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -4144,6 +4196,26 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 154px 0px;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #bfebe3 100%);
 }
+@media only screen and (max-width: 1919px) {
+  .numbers {
+    padding: 110px 0px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .numbers {
+    padding: 66px 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .numbers {
+    padding: 66px 0px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .numbers {
+    padding: 50px 0px;
+  }
+}
 .numbers__wrapper {
   display: flex;
   justify-content: space-between;
@@ -4156,15 +4228,52 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #635d5d;
   z-index: 1;
 }
+@media only screen and (max-width: 1919px) {
+  .numbers__numbers {
+    font-size: 64px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .numbers__numbers {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .numbers__numbers {
+    gap: 12px;
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .numbers__numbers {
+    gap: 8px;
+    font-size: 18px;
+  }
+}
 .numbers__star {
   position: absolute;
-  left: 26%;
-  top: -207%;
+  left: 23%;
+  top: -193%;
+}
+@media only screen and (max-width: 1439px) {
+  .numbers__star {
+    top: -125%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .numbers__star {
+    display: none;
+  }
 }
 .numbers__waves {
   position: absolute;
-  right: 25%;
+  right: 20%;
   top: 18%;
+}
+@media only screen and (max-width: 767px) {
+  .numbers__waves {
+    display: none;
+  }
 }
 .numbers__circle_left {
   position: absolute;
@@ -4177,40 +4286,6 @@ body._touch .menu__list > li._active .menu__arrow {
   bottom: 0;
 }
 
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .numbers {
-    padding: 150px 0px;
-  }
-  .numbers__numbers {
-    font-size: 64px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .numbers {
-    padding: 100px 0px;
-  }
-  .numbers__numbers {
-    font-size: 32px;
-  }
-}
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .numbers {
-    padding: 80px 0px;
-  }
-  .numbers__numbers {
-    gap: 12px;
-    font-size: 22px;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .numbers {
-    padding: 50px 0px;
-  }
-  .numbers__numbers {
-    gap: 8px;
-    font-size: 18px;
-  }
-}
 .tv {
   position: relative;
   padding: 220px 0 260px;
@@ -4694,7 +4769,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .tv__star-1 {
   position: absolute;
-  top: -90%;
+  top: -80%;
   left: 11%;
 }
 @media only screen and (max-width: 1439px) {
