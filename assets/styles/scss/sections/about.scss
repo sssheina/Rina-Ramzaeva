@@ -211,26 +211,6 @@
     }
   }
 
-  &__hr_2 {
-    color: $color-black;
-    background-color: $color-black;
-    margin: 0;
-    width: 140px;
-    height: 1px;
-    border: none;
-
-    @include lg {
-      width: 100px;
-    }
-
-    @include md {
-      width: 90px;
-    }
-
-    @include sm {
-      width: 50px;
-    }
-  }
 
   &__endnote {
     max-width: 800px;
