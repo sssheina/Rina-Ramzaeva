@@ -244,6 +244,31 @@
     --banner-large-font-size: 13px;
   }
 
+  /* banner - medium */
+  --banner-medium-font-size: 24px;
+  --banner-medium-font-weight: 500;
+  --banner-medium-line-height: 1.5;
+  --banner-medium-letter-spacing: 0;
+  --banner-medium-text-transform: none;
+  --banner-medium-text-decoration: none;
+  --banner-medium-letter-spacing: 150%;
+
+  @include lg {
+    --banner-medium-font-size: 22px;
+  }
+
+  @include md {
+    --banner-medium-font-size: 13px;
+  }
+
+  @include sm {
+    --banner-medium-font-size: 11px;
+  }
+
+  @include xs {
+    --banner-medium-font-size: 9px;
+  }
+
   /* button - text */
   --button-text-font-size: 20px;
   --button-text-font-weight: 600;
@@ -332,6 +357,10 @@
 
 .banner-large {
   @extend %banner-large;
+}
+
+.banner-medium {
+  @extend %banner-medium;
 }
 
 .button-text {
