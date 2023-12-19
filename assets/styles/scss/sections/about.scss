@@ -119,6 +119,10 @@
     top: 128%;
     left: 52%;
 
+    @include md {
+      top: 92%;
+    }
+
     @include sm {
       display: none;
     }

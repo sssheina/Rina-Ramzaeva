@@ -152,6 +152,10 @@
   position: absolute;
   top: -90%;
   left: 11%;
+
+  @include md {
+    top: -29%
+  }
 }
 
 .tv__star-2 {

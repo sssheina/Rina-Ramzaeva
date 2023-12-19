@@ -2835,6 +2835,11 @@ button:disabled {
   top: 128%;
   left: 52%;
 }
+@media only screen and (max-width: 1439px) {
+  .about__star_1 {
+    top: 92%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .about__star_1 {
     display: none;
@@ -3518,6 +3523,12 @@ button:disabled {
   top: -27%;
   left: 58%;
 }
+@media only screen and (max-width: 1439px) {
+  .benefits__star_1 {
+    top: -7%;
+    left: 59%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .benefits__star_1 {
     display: none;
@@ -3527,6 +3538,12 @@ button:disabled {
   position: absolute;
   top: 95%;
   left: 37%;
+}
+@media only screen and (max-width: 1439px) {
+  .benefits__star_2 {
+    top: 28%;
+    left: 36%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .benefits__star_2 {
@@ -3538,6 +3555,12 @@ button:disabled {
   bottom: 124%;
   left: -6%;
 }
+@media only screen and (max-width: 1439px) {
+  .benefits__star_3 {
+    bottom: 100%;
+    left: 3%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .benefits__star_3 {
     display: none;
@@ -3547,6 +3570,11 @@ button:disabled {
   position: absolute;
   bottom: 56%;
   left: 80%;
+}
+@media only screen and (max-width: 1439px) {
+  .benefits__star_4 {
+    left: 90%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .benefits__star_4 {
@@ -3595,6 +3623,12 @@ button:disabled {
   top: -38%;
   right: 5%;
   z-index: 0;
+}
+@media only screen and (max-width: 1439px) {
+  .benefits__arrows-1 {
+    top: -7%;
+    right: 7%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .benefits__arrows-1 {
@@ -4393,6 +4427,11 @@ button:disabled {
   position: absolute;
   top: -90%;
   left: 11%;
+}
+@media only screen and (max-width: 1439px) {
+  .tv__star-1 {
+    top: -29%;
+  }
 }
 
 .tv__star-2 {
