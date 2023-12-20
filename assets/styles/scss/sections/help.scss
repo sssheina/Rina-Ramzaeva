@@ -226,6 +226,22 @@
   position: absolute;
   top: 5%;
   left: 68%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+  
+  }
 }
 
 .help__waves_2 {

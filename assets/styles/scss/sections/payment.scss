@@ -17,6 +17,23 @@
     display: flex;
     justify-content: center;
     gap: 86px;
+
+    @include lg {
+
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+      flex-direction: column;
+    }
+    
+    @include xs {
+    
+    }
+    
   }
 
   &__button {

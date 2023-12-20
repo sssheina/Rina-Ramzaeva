@@ -3910,7 +3910,11 @@ body._touch .menu__list > li._active .menu__arrow {
   top: 5%;
   left: 68%;
 }
-
+@media only screen and (max-width: 767px) {
+  .help__waves_1 {
+    display: none;
+  }
+}
 .help__waves_2 {
   position: absolute;
   top: 92%;
@@ -5185,12 +5189,12 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .education__popup-img {
-    width: 200px;
+    width: 537px;
   }
 }
 @media only screen and (max-width: 427px) {
   .education__popup-img {
-    width: 900px;
+    width: 537px;
   }
 }
 .education__circles_right {
@@ -5579,6 +5583,18 @@ body._touch .menu__list > li._active .menu__arrow {
   position: absolute;
   top: -490%;
   left: 300px;
+}
+@media only screen and (max-width: 767px) {
+  .steps__star_blue {
+    top: -490%;
+    left: 275px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .steps__star_blue {
+    top: -490%;
+    left: 300px;
+  }
 }
 
 .steps__wave_1 {
@@ -6006,6 +6022,11 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: center;
   gap: 86px;
 }
+@media only screen and (max-width: 767px) {
+  .payment__cards {
+    flex-direction: column;
+  }
+}
 .payment__button {
   display: flex;
   justify-content: center;
@@ -6161,6 +6182,24 @@ body._touch .menu__list > li._active .menu__arrow {
   margin: 0 auto;
   position: relative;
 }
+@media only screen and (max-width: 1919px) {
+  .form {
+    gap: 35px;
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .form {
+    gap: 35px;
+    max-width: 320px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .form {
+    gap: 35px;
+    max-width: 257px;
+  }
+}
 
 .registration__row {
   position: relative;
@@ -6168,15 +6207,33 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .input {
   width: 100%;
-  height: 73px;
+  height: 90px;
   background: none;
   color: #635d5d;
   border: none;
   outline: none;
   font-size: 21px;
   font-weight: 500;
-  border-bottom: 2px solid #635d5d;
+  border-bottom: 1px solid #635d5d;
   transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1919px) {
+  .input {
+    font-size: 68px;
+    height: 73px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input {
+    font-size: 14px;
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input {
+    font-size: 13px;
+    height: 43px;
+  }
 }
 
 .input-checkmark {
@@ -6290,10 +6347,28 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .registration__button {
-  width: 400px;
+  width: 386px;
   background-color: #fdacac;
   align-self: center;
-  margin-top: 32px;
+  margin-top: 72px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__button {
+    width: 290px;
+    margin-top: 54px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__button {
+    width: 348px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__button {
+    width: 260px;
+    margin-top: 38.5px;
+  }
 }
 .registration__button:hover {
   background-color: #ffdada;
@@ -6350,13 +6425,21 @@ input[type=checkbox] {
   bottom: 0;
   right: 0;
 }
-
+@media only screen and (max-width: 767px) {
+  .registration__circle-right {
+    display: none;
+  }
+}
 .registration__wave {
   position: absolute;
   top: -8%;
   left: 11%;
 }
-
+@media only screen and (max-width: 767px) {
+  .registration__wave {
+    display: none;
+  }
+}
 .registration__star1 {
   position: absolute;
   top: 8%;
@@ -6368,11 +6451,21 @@ input[type=checkbox] {
   top: 69%;
   left: 84%;
 }
+@media only screen and (max-width: 767px) {
+  .registration__star2 {
+    display: none;
+  }
+}
 
 .registration__star3 {
   position: absolute;
   top: 105%;
   left: 76%;
+}
+@media only screen and (max-width: 767px) {
+  .registration__star3 {
+    display: none;
+  }
 }
 
 .registration__star4 {
@@ -6380,11 +6473,21 @@ input[type=checkbox] {
   top: 90%;
   left: 26%;
 }
+@media only screen and (max-width: 767px) {
+  .registration__star4 {
+    display: none;
+  }
+}
 
 .registration__star5 {
   position: absolute;
   top: 18%;
   left: 8%;
+}
+@media only screen and (max-width: 767px) {
+  .registration__star5 {
+    display: none;
+  }
 }
 
 .registration__dawn {
@@ -6393,11 +6496,21 @@ input[type=checkbox] {
   top: 50%;
   left: 0%;
 }
+@media only screen and (max-width: 767px) {
+  .registration__dawn {
+    display: none;
+  }
+}
 
 .registration__spiral {
   position: absolute;
   top: 8%;
   left: 90%;
+}
+@media only screen and (max-width: 767px) {
+  .registration__spiral {
+    display: none;
+  }
 }
 
 @media all and (min-width: 428px) and (max-width: 767px) {
@@ -7132,40 +7245,80 @@ details[open] summary ~ * {
   top: 20%;
   left: 110%;
 }
+@media only screen and (max-width: 767px) {
+  .presents__star-3_pink {
+    display: none;
+  }
+}
 .presents__star-4_pink {
   position: absolute;
   top: 132%;
   left: 84%;
+}
+@media only screen and (max-width: 767px) {
+  .presents__star-4_pink {
+    display: none;
+  }
 }
 .presents__star-5_pink {
   position: absolute;
   top: 120%;
   left: 22%;
 }
+@media only screen and (max-width: 767px) {
+  .presents__star-5_pink {
+    display: none;
+  }
+}
 .presents__star-1_blue {
   position: absolute;
   top: 25%;
   left: -8%;
+}
+@media only screen and (max-width: 767px) {
+  .presents__star-1_blue {
+    display: none;
+  }
 }
 .presents__star-6_pink {
   position: absolute;
   top: 110%;
   left: 40%;
 }
+@media only screen and (max-width: 767px) {
+  .presents__star-6_pink {
+    display: none;
+  }
+}
 .presents__star-2_blue {
   position: absolute;
   top: 22%;
   left: -15%;
+}
+@media only screen and (max-width: 767px) {
+  .presents__star-2_blue {
+    display: none;
+  }
 }
 .presents__star-3_blue {
   position: absolute;
   top: 82%;
   left: 105%;
 }
+@media only screen and (max-width: 767px) {
+  .presents__star-3_blue {
+    display: none;
+  }
+}
 .presents__star-4_blue {
   position: absolute;
   top: 135%;
   left: 85%;
+}
+@media only screen and (max-width: 767px) {
+  .presents__star-4_blue {
+    display: none;
+  }
 }
 .presents__arrows {
   position: absolute;
@@ -7177,6 +7330,11 @@ details[open] summary ~ * {
   top: -7%;
   right: 0;
 }
+@media only screen and (max-width: 767px) {
+  .presents__spiral_blue {
+    display: none;
+  }
+}
 .presents__wave_pink {
   position: absolute;
   top: 115%;
@@ -7187,6 +7345,11 @@ details[open] summary ~ * {
   top: 111%;
   left: 10%;
 }
+@media only screen and (max-width: 767px) {
+  .presents__wave_blue {
+    display: none;
+  }
+}
 .presents__spiral_pink {
   position: absolute;
   left: 0;
@@ -7196,6 +7359,11 @@ details[open] summary ~ * {
   position: absolute;
   top: 46%;
   right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .presents__dawn {
+    display: none;
+  }
 }
 
 .privacy-policy {

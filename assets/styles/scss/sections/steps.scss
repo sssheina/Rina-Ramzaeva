@@ -258,6 +258,24 @@
   position: absolute;
   top: -490%;
   left: 300px;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+    top: -490%;
+    left: 275px;
+  }
+  
+  @include xs {
+    top: -490%;
+    left: 300px;
+  }
 }
 
 .steps__wave_1 {

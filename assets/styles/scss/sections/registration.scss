@@ -31,6 +31,22 @@
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+
+  @include lg {
+    gap: 35px;
+    max-width: 600px;
+  }
+  
+  @include md {
+    gap: 35px;
+    max-width: 320px;
+  }
+ 
+  
+  @include xs {
+    gap: 35px;
+    max-width: 257px;
+  }
 }
 
 .registration__row {
@@ -39,15 +55,31 @@
 
 .input {
   width: 100%;
-  height: 73px;
+  height: 90px;
   background: none;
   color: $color-black;
   border: none;
   outline: none;
   font-size: 21px;
   font-weight: 500;
-  border-bottom: 2px solid $color-black;
+  border-bottom: 1px solid $color-black;
   transition: all 0.5s ease;
+
+  @include lg {
+    font-size: 68px;
+    height: 73px;
+  }
+  
+  @include md {
+    font-size: 14px;
+    height: 50px;
+  
+  }
+  
+  @include xs {
+    font-size: 13px;
+    height: 43px;
+  }
 }
 
 .input::placeholder {
@@ -173,10 +205,26 @@
 }
 
 .registration__button {
-  width: 400px;
+  width: 386px;
   background-color: $color-pinkdark;
   align-self: center;
-  margin-top: 32px;
+  margin-top: 72px;
+
+  @include lg {
+    width: 290px;
+    margin-top: 54px;
+  }
+  
+  @include md {
+    width: 348px;
+    margin-top: 50px;
+  }
+  
+  @include xs {
+    width: 260px;
+    margin-top: 38.5px;
+  }
+
   &:hover {
     background-color: $color-pinklight;
     &:hover {
@@ -228,12 +276,44 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 0;
   right: 0;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+  
+  }
 }
 
 .registration__wave {
   position: absolute;
   top: -8%;
   left: 11%;
+  
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+  
+  }
 }
 
 .registration__star1 {
@@ -246,37 +326,108 @@ input[type="checkbox"] {
   position: absolute;
   top: 69%;
   left: 84%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
 }
 
 .registration__star3 {
   position: absolute;
   top: 105%;
   left: 76%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
 }
 
 .registration__star4 {
   position: absolute;
   top: 90%;
   left: 26%;
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
 }
 
 .registration__star5 {
   position: absolute;
   top: 18%;
   left: 8%;
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
 }
 
 .registration__dawn {
   position: absolute;
   animation: rotate 40s linear infinite;
   top: 50%;
+
   left: 0%;
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
 }
 
 .registration__spiral {
   position: absolute;
   top: 8%;
   left: 90%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
 }
 
 // Desktop 1440px
