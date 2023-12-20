@@ -5,6 +5,35 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
 
+// ----------Firefox
+
+
+// window.addEventListener('DOMContentLoaded', (event) => {
+//   // Проверяем, является ли браузер Firefox
+//   const isFirefox = typeof InstallTrigger !== 'undefined';
+ 
+//   // Если браузер Firefox, то добавляем линейный градиент
+//   if (isFirefox) {
+//     // Создаем новые элементы div
+//     const gradientBefore = document.createElement('div');
+//     const gradientAfter = document.createElement('div');
+ 
+//     // Добавляем классы и стили
+//     gradientBefore.className = 'gradient-before';
+//     gradientAfter.className = 'gradient-after';
+//     gradientBefore.style.backgroundImage = 'linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6))';
+//     gradientAfter.style.backgroundImage = 'linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6))';
+ 
+//     // Добавляем новые элементы в DOM
+//     const gradientElement = document.querySelector('.gradient');
+//     gradientElement.appendChild(gradientBefore);
+//     gradientElement.appendChild(gradientAfter);
+//   }
+//  });
+
+
+
+
 // ----- Education PIC-ZOOM -----
 
 document.querySelectorAll(".education__pic").forEach((image) => {

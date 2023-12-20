@@ -15,6 +15,9 @@
 
 .gradient {
   background: transparent;
+  // background: url('../../../images/photos/gradient.png') no-repeat center center;
+  // background-size: cover;
+  // border-radius: inherit;
 }
 
 .gradient::before,
@@ -33,8 +36,15 @@
     var(--clr-6)
   );
   border-radius: inherit;
-  animation: rotation 10s linear infinite;
+  // animation: rotation 10s linear infinite;
+
+  -webkit-animation: rotation 10s linear infinite;
+   -moz-animation: rotation 10s linear infinite;
+   animation: rotation 10s linear infinite;
 }
+
+
+ 
 
 .gradient::after {
   filter: blur(3.8rem);
@@ -53,6 +63,9 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
+  // background: url('../../../images/photos/gradient.png') no-repeat center center;
+  // background-size: cover;
+  // border-radius: inherit;
 
   &__wrapper {
     display: flex;
@@ -82,7 +95,7 @@
     }
 
     @include xs {
-      padding: 128px 0 60px;
+      padding: 128px 0 80px;
       max-width: 260px;
     }
   }
@@ -500,3 +513,41 @@
     }
   }
 }
+
+// @media screen and (-moz-images-in-menus), screen and (-moz-windows-compositor) {
+//   .gradient::before, .gradient::after {
+//   content: "";
+//   position: absolute;
+//   inset: 0rem;
+//   z-index: -1;
+//   background-image: linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
+//   border-radius: inherit;
+//   }
+//  }
+ 
+//  @media screen and (-moz-appearance: none) {
+//   .gradient::before, .gradient::after {
+//   content: "";
+//   position: absolute;
+//   inset: 0rem;
+//   z-index: -1;
+//   background-image: linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
+//   border-radius: inherit;
+//   }
+//  }
+
+// @media screen and (-moz-images-in-menus), screen and (-moz-windows-compositor)
+// @media screen and (-moz-appearance: none)
+
+// @media screen and (-moz-images-in-menus), screen and (-moz-windows-compositor) {
+//   .gradient::before, .gradient::after {
+//     content: "";
+//     position: absolute;
+//     inset: 0rem;
+//     z-index: -1;
+//     background: url('../../../images/photos/gradient.png') no-repeat center center;
+//     background-size: cover;
+//     border-radius: inherit;
+//   }
+//  }
+ 
