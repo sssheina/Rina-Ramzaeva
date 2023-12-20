@@ -93,6 +93,14 @@
 
 .input-checkmark-name {
   left: 325px;
+
+  @include sm {
+    left: 300px;
+  }
+  
+  @include xs {
+    left: 200px;
+  }
 }
 
 .input-checkmark-enName {
@@ -118,6 +126,14 @@
   color: #fb7070;
   font-weight: 900;
   font-size: 16px;
+
+  @include sm {
+    font-size: 13px;
+  }
+  
+  @include xs {
+    font-size: 11px;
+  }
 }
 
 .input-after {

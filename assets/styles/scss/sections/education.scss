@@ -61,6 +61,26 @@
     }
   }
     
+  &__title {
+    @include title-line;
+    
+
+    @include lg {
+      margin-bottom: 53px;
+    }
+    
+    @include md {
+      margin-bottom: 30px;
+    }
+    
+    @include sm {
+      margin-bottom: 35px;
+    }
+    
+    @include xs {
+    margin-bottom: 24px;
+    }
+  }
   &__subtitle {
     text-align: center;
   }
@@ -100,51 +120,13 @@
   // _______________________________для увеличения
 
 &__pic-container {
-  width: 360px;
-  height: 365.333px;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
+  width: 100%;
+  height: auto;
 
-  @include lg {
-    width: 270px;
-    height: 274px;
-  }
-  
-  @include md {
-    width: 144px;
-    height: 146.13px;
-  }
-  
-  @include sm {
-    width: 300px;
-    height: 304.44px;
-  }
-  
-  @include xs {
-    width: 224.3px;
-    height: 227.62px;
-  }
 }
 
 &__pic-container:hover {
   transform: scale(1.02);
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  
-  }
-  
-  @include xs {
-  
-  }
 }
 
 &__pic {
@@ -198,34 +180,15 @@
 
 &__btn-close {
   position: absolute;
-  transform: translate(10px, -20px);
-  padding: 0.5rem 0.75rem;
   top: 10%;
-  left: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 0.75rem;
   background: $color-pinklight;
   border-radius: 50%;
   border: none;
   z-index: 11;
 
-  @include lg {
-    top: 15%;
-    left: 70%;
-  }
-  
-  @include md {
-    top: 20%;
-    left: 70%;
-  }
-  
-  @include sm {
-    top: 10%;
-    left: 70%;
-  }
-  
-  @include xs {
-    top: 10%;
-    left: 70%;
-  }
 }
 
 &__btn-close:hover {
@@ -237,25 +200,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  object-fit: cover;
+  max-width: 120%; /* Ensure the image does not exceed the width of the viewport */
+  max-height: 100%; /* Ensure the image does not exceed the height of the viewport */
+  width: auto;
+  height: auto;
 
-  @include lg {
-    width: 800px;
-  }
-  
-  @include md {
-    width: 600px;
-  }
   
   @include sm {
-    width: 537px;
+    max-width: 135%;
   }
-  
   @include xs {
-    width: 537px;
+    max-width: 120%;
   }
 }
+
 
 &__circles_right {
   position: absolute;
@@ -277,18 +235,57 @@
 
 &__star-1_pink {
   position: absolute;
-  top: -181%;
+  top: -191%;
   left: 10%;
+
+
+@include md {
+// top: -230%;
+//   left: 10%;
+}
+
+@include sm {
+  display: none;
+}
 }
 
 &__star-2_pink {
   position: absolute;
   top: -99%;
   right: 27%;
-
+  
+  @include md {
+    top: -129%;
+    right: 27%;
+  }
+  
   @include sm {
     display: none;
     }
+
+}
+
+&__star-3_pink {
+  position: absolute;
+display: none;
+@include lg {
+
+}
+
+@include md {
+
+}
+
+@include sm {
+  top: 0%;
+    right: 0%;
+}
+
+@include xs {
+  top: -129%;
+    right: 27%;
+}
+  
 }
 
 &__spiral {
@@ -296,6 +293,22 @@
   position: absolute;
   top: -2%;
   right: 7%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  
+  }
+  
+  @include xs {
+  
+  }
 }
 
 &__star-1_blue {
@@ -304,8 +317,21 @@
   left: 103%;
   z-index: 1;
 
-  @include sm {
-    display: none;
+
+    @include lg {
+
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+      display: none;
+      }
+    
+    @include xs {
+    
     }
 }
 
@@ -313,6 +339,15 @@
   position: absolute;
   top: 109%;
   left: 66%;
+
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
 
   @include sm {
     display: none;
@@ -325,6 +360,14 @@
   top: 65%;
   left: -6%;
 
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+
   @include sm {
     display: none;
     }
@@ -335,6 +378,14 @@
   top: 109%;
   left: 19%;
 
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+
   @include sm {
     display: none;
     }
@@ -344,6 +395,14 @@
   position: absolute;
   top: -90%;
   left: 88%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
 
   @include sm {
     display: none;

@@ -1297,7 +1297,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 .header__logo {
   max-height: fit-content;
@@ -1310,8 +1311,9 @@ body {
 .header.scrolled {
   background: white;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin: 0;
 }
-
 .menu__icon {
   display: none;
 }
@@ -1720,6 +1722,12 @@ body._touch .menu__list > li._active .menu__arrow {
   z-index: 998;
   transition: 0.4s ease;
 }
+@media only screen and (max-width: 427px) {
+  .button-up {
+    width: 37px;
+    height: 37px;
+  }
+}
 .button-up:hover {
   background: #fdacac;
   transform: scale(1.1);
@@ -1732,6 +1740,11 @@ body._touch .menu__list > li._active .menu__arrow {
 .button-up img {
   max-width: 35px;
   margin-bottom: 0.3rem;
+}
+@media only screen and (max-width: 427px) {
+  .button-up img {
+    max-width: 23.02px;
+  }
 }
 
 .glow-effect {
@@ -3680,13 +3693,21 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .help__title::before {
+    width: 285px;
     bottom: -23px;
-    height: 1px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .help__title::before {
+    width: 214px;
     bottom: -13px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .help__title::before {
+    width: 85px;
+    bottom: -7px;
   }
 }
 .help__subtitle {
@@ -5010,6 +5031,55 @@ body._touch .menu__list > li._active .menu__arrow {
     max-width: 260px;
   }
 }
+.education__title::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -30px;
+  width: 285px;
+  height: 2px;
+  background: #635d5d;
+}
+@media only screen and (max-width: 1919px) {
+  .education__title::before {
+    width: 285px;
+    bottom: -23px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .education__title::before {
+    width: 214px;
+    bottom: -13px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .education__title::before {
+    width: 85px;
+    bottom: -7px;
+  }
+}
+@media only screen and (max-width: 1919px) {
+  .education__title {
+    margin-bottom: 53px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .education__title {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .education__title {
+    margin-bottom: 35px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .education__title {
+    margin-bottom: 24px;
+  }
+}
 .education__subtitle {
   text-align: center;
 }
@@ -5048,35 +5118,8 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 .education__pic-container {
-  width: 360px;
-  height: 365.333px;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-}
-@media only screen and (max-width: 1919px) {
-  .education__pic-container {
-    width: 270px;
-    height: 274px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .education__pic-container {
-    width: 144px;
-    height: 146.13px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .education__pic-container {
-    width: 300px;
-    height: 304.44px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .education__pic-container {
-    width: 224.3px;
-    height: 227.62px;
-  }
+  width: 100%;
+  height: auto;
 }
 .education__pic-container:hover {
   transform: scale(1.02);
@@ -5133,38 +5176,14 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .education__btn-close {
   position: absolute;
-  transform: translate(10px, -20px);
-  padding: 0.5rem 0.75rem;
   top: 10%;
-  left: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 0.75rem;
   background: #ffdada;
   border-radius: 50%;
   border: none;
   z-index: 11;
-}
-@media only screen and (max-width: 1919px) {
-  .education__btn-close {
-    top: 15%;
-    left: 70%;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .education__btn-close {
-    top: 20%;
-    left: 70%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .education__btn-close {
-    top: 10%;
-    left: 70%;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .education__btn-close {
-    top: 10%;
-    left: 70%;
-  }
 }
 .education__btn-close:hover {
   background: #fdacac;
@@ -5174,27 +5193,19 @@ body._touch .menu__list > li._active .menu__arrow {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  object-fit: cover;
-}
-@media only screen and (max-width: 1919px) {
-  .education__popup-img {
-    width: 800px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .education__popup-img {
-    width: 600px;
-  }
+  max-width: 120%; /* Ensure the image does not exceed the width of the viewport */
+  max-height: 100%; /* Ensure the image does not exceed the height of the viewport */
+  width: auto;
+  height: auto;
 }
 @media only screen and (max-width: 767px) {
   .education__popup-img {
-    width: 537px;
+    max-width: 135%;
   }
 }
 @media only screen and (max-width: 427px) {
   .education__popup-img {
-    width: 537px;
+    max-width: 120%;
   }
 }
 .education__circles_right {
@@ -5214,17 +5225,44 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .education__star-1_pink {
   position: absolute;
-  top: -181%;
+  top: -191%;
   left: 10%;
+}
+@media only screen and (max-width: 767px) {
+  .education__star-1_pink {
+    display: none;
+  }
 }
 .education__star-2_pink {
   position: absolute;
   top: -99%;
   right: 27%;
 }
+@media only screen and (max-width: 1439px) {
+  .education__star-2_pink {
+    top: -129%;
+    right: 27%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .education__star-2_pink {
     display: none;
+  }
+}
+.education__star-3_pink {
+  position: absolute;
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .education__star-3_pink {
+    top: 0%;
+    right: 0%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .education__star-3_pink {
+    top: -129%;
+    right: 27%;
   }
 }
 .education__spiral {
@@ -5361,13 +5399,21 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .steps__title::before {
+    width: 285px;
     bottom: -23px;
-    height: 1px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .steps__title::before {
+    width: 214px;
     bottom: -13px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .steps__title::before {
+    width: 85px;
+    bottom: -7px;
   }
 }
 .steps__subtitle {
@@ -5586,14 +5632,12 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .steps__star_blue {
-    top: -490%;
-    left: 275px;
+    display: none;
   }
 }
 @media only screen and (max-width: 427px) {
   .steps__star_blue {
-    top: -490%;
-    left: 300px;
+    display: none;
   }
 }
 
@@ -5659,13 +5703,21 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .consultations__title::before {
+    width: 285px;
     bottom: -23px;
-    height: 1px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .consultations__title::before {
+    width: 214px;
     bottom: -13px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .consultations__title::before {
+    width: 85px;
+    bottom: -7px;
   }
 }
 .consultations__subtitle {
@@ -6007,13 +6059,21 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .payment__title::before {
+    width: 285px;
     bottom: -23px;
-    height: 1px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .payment__title::before {
+    width: 214px;
     bottom: -13px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .payment__title::before {
+    width: 85px;
+    bottom: -7px;
   }
 }
 .payment__cards {
@@ -6244,6 +6304,16 @@ body._touch .menu__list > li._active .menu__arrow {
 .input-checkmark-name {
   left: 325px;
 }
+@media only screen and (max-width: 767px) {
+  .input-checkmark-name {
+    left: 300px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input-checkmark-name {
+    left: 200px;
+  }
+}
 
 .input-checkmark-enName {
   left: 264px;
@@ -6268,6 +6338,16 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #fb7070;
   font-weight: 900;
   font-size: 16px;
+}
+@media only screen and (max-width: 767px) {
+  .checkmark {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .checkmark {
+    font-size: 11px;
+  }
 }
 
 .input-after {

@@ -268,13 +268,15 @@
   }
   
   @include sm {
-    top: -490%;
-    left: 275px;
+    display: none;
+    // top: -490%;
+    // left: 275px;
   }
   
   @include xs {
-    top: -490%;
-    left: 300px;
+    display: none;
+    // top: -490%;
+    // left: 300px;
   }
 }
 

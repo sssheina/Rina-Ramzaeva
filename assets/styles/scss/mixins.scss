@@ -135,12 +135,20 @@
     background: $color-black;
 
     @include lg {
+      width: 285px;
       bottom: -23px;
-      height: 1px;
+      
     }
 
     @include md {
+      width: 214px;
       bottom: -13px;
+      height: 1px;
+    }
+
+    @include xs {
+      width: 85px;
+      bottom: -7px;
     }
   }
 }

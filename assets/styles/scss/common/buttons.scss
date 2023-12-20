@@ -43,6 +43,23 @@
   z-index: 998;
   transition: 0.4s ease;
 
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  
+  }
+  
+  @include xs {
+    width: 37px;
+    height: 37px;
+  }
+
   &:hover {
     background: $color-pinkdark;
     transform: scale(1.1);
@@ -55,6 +72,22 @@
   & img {
     max-width: 35px;
     margin-bottom: 0.3rem;
+
+    @include lg {
+
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+    
+    }
+    
+    @include xs {
+      max-width: 23.02px;
+    }
   }
 }
 
