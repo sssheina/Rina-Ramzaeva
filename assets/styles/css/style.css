@@ -5278,8 +5278,8 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 427px) {
   .education__star-3_pink {
-    top: -129%;
-    right: 27%;
+    top: -4%;
+    right: 25%;
   }
 }
 .education__spiral {
@@ -5304,6 +5304,11 @@ body._touch .menu__list > li._active .menu__arrow {
   .education__spiral {
     top: 6%;
     right: 1%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .education__spiral {
+    top: 7.5%;
   }
 }
 .education__star-1_blue {
