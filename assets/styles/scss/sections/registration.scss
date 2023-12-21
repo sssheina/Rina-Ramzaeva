@@ -3,10 +3,31 @@
   padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #bfebe3 50.52%);
 
-  &__aside {
-    left: 2px;
+  @include lg {
+    padding: 165px 0 195px;
   }
 
+  @include md {
+    padding: 84px 0 100px;
+  }
+
+  @include sm {
+    padding: 115px 0 115px;
+  }
+
+  @include xs {
+    padding: 85px 0 80px;
+  }
+
+  &__aside {
+    left: 2px;
+
+    @include lg {
+    }
+
+    @include md {
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -15,43 +36,374 @@
   }
 
   &__title {
-    text-align: center;
+    // text-align: center;
+    @include title-line;
+    margin-bottom: 100px;
+
+    @include lg {
+      margin-bottom: 80px;
+    }
+
+    @include md {
+      margin-bottom: 60px;
+    }
+
+    @include sm {
+      margin-bottom: 55px;
+    }
+
+    @include xs {
+      margin-bottom: 69px;
+    }
   }
 
-  &__title-hr {
-    @include hr(285px, 30px auto 40px);
+  &__row {
+    position: relative;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include lg {
+      gap: 8px;
+    }
+
+    @include md {
+      gap: 5px;
+    }
+
+    @include xs {
+      gap: 2px;
+    }
+
+    label {
+      color: $color-black;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 26px;
+
+      @include lg {
+        font-size: 18px;
+      }
+
+      @include md {
+        font-size: 14px;
+      }
+
+      @include xs {
+        font-size: 13px;
+      }
+    }
+
+    textarea {
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 26px;
+      color: $color-black;
+      padding: 20px;
+
+      @include lg {
+        font-size: 14px;
+        padding: 18px;
+      }
+
+      @include md {
+        font-size: 13px;
+        padding: 15px;
+      }
+
+      @include xs {
+        font-size: 13px;
+        padding: 12px;
+      }
+
+      &::placeholder {
+        color: $color-blackhover;
+
+        @extend %paragraph-large;
+      }
+    }
+  }
+
+  &__terms {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    @include lg {
+      gap: 22px;
+    }
+
+    @include md {
+      gap: 18px;
+    }
+
+    @include xs {
+      gap: 15px;
+    }
+  }
+
+  &__terms-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include lg {
+
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+    
+    }
+    
+    @include xs {
+    
+    }
+
+    &:first-child {
+      margin-bottom: 12px;
+      @include lg {
+
+      }
+      
+      @include md {
+      
+      }
+      
+      @include sm {
+      
+      }
+      
+      @include xs {
+      
+      }
+    }
+
+    label {
+      font-size: 18px;
+
+      @include lg {
+        font-size: 15px;
+      }
+      
+      @include md {
+        font-size: 12px; 
+      }
+      
+      @include xs {
+        font-size: 11px;
+      }
+    }
+  }
+
+  &__button {
+    width: 386px;
+    background-color: $color-pinkdark;
+    align-self: center;
+    margin-top: 72px;
+
+    @include lg {
+      width: 290px;
+      margin-top: 54px;
+    }
+
+    @include md {
+      width: 348px;
+      margin-top: 50px;
+    }
+
+    @include xs {
+      width: 260px;
+      margin-top: 32.5px;
+    }
+
+    &:hover {
+      background-color: $color-pinklight;
+      &:hover {
+        @include btn-hover;
+      }
+    }
+    &:focus {
+      @include btn-focus($color-pinkdark);
+    }
+    &:disabled {
+      background-color: $color-pinklight;
+    }
+  }
+
+  &__circle-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__circle-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__wave {
+    position: absolute;
+    top: -8%;
+    left: 11%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: -5%;
+    left: 11%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+  }
+
+  &__star1 {
+    position: absolute;
+    top: 8%;
+    left: 74%;
+
+    @include lg {
+
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+      top: 9%;
+      left: 84%;
+    }
+    
+    @include xs {
+      top: 8%;
+      left: 84%;
+    }
+    
+  }
+
+  &__star2 {
+    position: absolute;
+    top: 69%;
+    left: 84%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 62%;
+      left: 80%;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__star3 {
+    position: absolute;
+    top: 105%;
+    left: 76%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 103%;
+      left: 76%;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__star4 {
+    position: absolute;
+    top: 90%;
+    left: 26%;
+    @include lg {
+    }
+
+    @include md {
+      top: 60%;
+    left: 16%;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__star5 {
+    position: absolute;
+    top: 18%;
+    left: 8%;
+    @include lg {
+    }
+
+    @include md {
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__dawn {
+    position: absolute;
+    animation: rotate 40s linear infinite;
+    top: 50%;
+    left: 0%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 30%;
+    left: 4%;
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__spiral {
+    position: absolute;
+    top: 8%;
+    left: 90%;
+
+    @include lg {
+    }
+
+    @include md {
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 }
 
 //  FORM
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-
-  @include lg {
-    gap: 35px;
-    max-width: 600px;
-  }
-  
-  @include md {
-    gap: 35px;
-    max-width: 320px;
-  }
- 
-  
-  @include xs {
-    gap: 35px;
-    max-width: 257px;
-  }
-}
-
-.registration__row {
-  position: relative;
-}
 
 .input {
   width: 100%;
@@ -66,16 +418,16 @@
   transition: all 0.5s ease;
 
   @include lg {
-    font-size: 68px;
-    height: 73px;
+    height: 68px;
+    font-size: 18px;
+    // height: 73px;
   }
-  
+
   @include md {
-    font-size: 14px;
     height: 50px;
-  
+    font-size: 14px;
   }
-  
+
   @include xs {
     font-size: 13px;
     height: 43px;
@@ -83,23 +435,64 @@
 }
 
 .input::placeholder {
-  @extend %paragraph-large;
+  font-size: 21px;
+
+  @include lg {
+    font-size: 18px;
+  }
+
+  @include md {
+    font-size: 14px;
+  }
+
+  @include xs {
+    font-size: 13px;
+    
+  }
 }
 
 .input-checkmark {
   position: absolute;
   top: 22px;
+
+  @include lg {
+    top: 22px;
+  }
+  
+  @include md {
+    top: 22px;
+  }
+  
+  @include sm {
+    top: 22px;
+  }
+  
+  @include xs {
+    top: 22px;
+  }
 }
 
 .input-checkmark-name {
   left: 325px;
 
-  @include sm {
-    left: 300px;
+  @include lg {
+    left: 68%;
+    top: 30%;
   }
   
+  @include md {
+    left: 68%;
+    top: 30%;
+  }
+
+  @include sm {
+    left: 68%;
+    top: 30%;
+  }
+
   @include xs {
-    left: 200px;
+    left: 80%;
+    top: 30%;
   }
 }
 
@@ -109,9 +502,30 @@
 
 .input-checkmark-email {
   left: 232px;
+
+  @include lg {
+    left: 49%;
+    top: 30%;
+  }
+  
+  @include md {
+    left: 49%;
+    top: 30%;
+  }
+  
+  @include sm {
+    left: 49%;
+    top: 30%;
+  }
+  
+  @include xs {
+    left: 57%;
+    top: 30%;
+  }
+  
 }
 
-.input-checkmark-enEmail{
+.input-checkmark-enEmail {
   left: 169px;
 }
 
@@ -130,7 +544,7 @@
   @include sm {
     font-size: 13px;
   }
-  
+
   @include xs {
     font-size: 11px;
   }
@@ -146,6 +560,18 @@
   font-size: 21px;
   font-weight: 500;
   color: $color-blackhover;
+
+  @include lg {
+    font-size: 18px;
+  }
+
+  @include md {
+    font-size: 14px;
+  }
+
+  @include xs {
+    font-size: 13px;
+  }
 }
 
 /* slide effects */
@@ -165,95 +591,11 @@
   visibility: hidden;
 }
 
-.terms {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.registration__message {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  label {
-    color: $color-black;
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 26px;
-  }
-
-  textarea {
-    border: none;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 26px;
-    color: $color-black;
-    padding: 20px;
-
-    &::placeholder {
-      color: $color-blackhover;
-
-      @extend %paragraph-large;
-    }
-  }
-}
-
-.registration__terms {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-}
-
-.registration__terms-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  &:first-child {
-    margin-bottom: 12px;
-  }
-
-  label {
-    font-size: 18px;
-  }
-}
-
-.registration__button {
-  width: 386px;
-  background-color: $color-pinkdark;
-  align-self: center;
-  margin-top: 72px;
-
-  @include lg {
-    width: 290px;
-    margin-top: 54px;
-  }
-  
-  @include md {
-    width: 348px;
-    margin-top: 50px;
-  }
-  
-  @include xs {
-    width: 260px;
-    margin-top: 38.5px;
-  }
-
-  &:hover {
-    background-color: $color-pinklight;
-    &:hover {
-      @include btn-hover;
-    }
-  }
-  &:focus {
-    @include btn-focus($color-pinkdark);
-  }
-  &:disabled {
-    background-color: $color-pinklight;
-  }
-}
+// .terms {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 15px;
+// }
 
 .error {
   font-size: 16px;
@@ -261,6 +603,18 @@
   line-height: 150%;
   letter-spacing: 0.1em;
   color: #fb7070;
+
+  @include lg {
+    font-size: 15px;
+  }
+  
+  @include md {
+    font-size: 13px;
+  }
+    
+  @include xs {
+    font-size: 11px;
+  }
 }
 
 #errorUserName,
@@ -274,200 +628,57 @@
   position: absolute;
   top: 110%;
   left: 7%;
+
+  @include lg {
+    left: 9%;
+  }
+  
+  @include md {
+    left: 16%;
+  }
+  
+  @include sm {
+    left: 16%;
+  }
+  
+  @include xs {
+    left: 19%;
+  }
 }
 
 input[type="checkbox"] {
   accent-color: $color-pinkdark;
   width: 30px;
   height: 30px;
-}
-
-.registration__circle-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.registration__circle-right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
 
   @include lg {
+    width: 25px;
+    height: 25px;
+  }
+ 
+}
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @include lg {
+    gap: 35px;
+    max-width: 600px;
   }
-  
+
   @include md {
-  
+    gap: 32px;
+    max-width: 320px;
   }
-  
-  @include sm {
-  display: none;
-  }
-  
+
   @include xs {
-  
-  }
-}
-
-.registration__wave {
-  position: absolute;
-  top: -8%;
-  left: 11%;
-  
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-  
-  @include xs {
-  
-  }
-}
-
-.registration__star1 {
-  position: absolute;
-  top: 8%;
-  left: 74%;
-}
-
-.registration__star2 {
-  position: absolute;
-  top: 69%;
-  left: 84%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-  
-}
-
-.registration__star3 {
-  position: absolute;
-  top: 105%;
-  left: 76%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-}
-
-.registration__star4 {
-  position: absolute;
-  top: 90%;
-  left: 26%;
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-}
-
-.registration__star5 {
-  position: absolute;
-  top: 18%;
-  left: 8%;
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-}
-
-.registration__dawn {
-  position: absolute;
-  animation: rotate 40s linear infinite;
-  top: 50%;
-
-  left: 0%;
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-}
-
-.registration__spiral {
-  position: absolute;
-  top: 8%;
-  left: 90%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-}
-
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .registration__circle-right {
-    display: none;
-  }
-}
-
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .registration__circle-right {
-    display: none;
+    gap: 35px;
+    max-width: 257px;
   }
 }

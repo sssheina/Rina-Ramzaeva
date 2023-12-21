@@ -42,10 +42,10 @@ if(langCode === "en"){
 else{
 	//by default using russian version
 	REG_FORM_VALIDATION_MESSAGE_NAME = "Имя должно быть заполнено";
-	REG_FORM_VALIDATION_MESSAGE_EMAIL = "Электронный адрес должен быть заполнен";
-	REG_FORM_VALIDATION_MESSAGE_EMAIL_SYNTAX = "Некорректный формат электронного адреса";
-	REG_FORM_VALIDATION_MESSAGE_AGE = "Тебе должно быть больше восемнадцати лет";
-	REG_FORM_VALIDATION_MESSAGE_PRIVACY = "Нужно согласиться с условиями использования";
+	REG_FORM_VALIDATION_MESSAGE_EMAIL = "Адрес должен быть заполнен";
+	REG_FORM_VALIDATION_MESSAGE_EMAIL_SYNTAX = "Некорректный формат адреса";
+	REG_FORM_VALIDATION_MESSAGE_AGE = "Отметь, если тебе есть 18 лет";
+	REG_FORM_VALIDATION_MESSAGE_PRIVACY = "Прочти и подтверди согласие";
 	REG_FORM_VALIDATION_MESSAGE_GENERAL = "В отправляемых данных есть ошибки. Проверь сообщения под полями ввода.";
 	REG_FORM_THANKS_MODAL_CONTENT = `<h3>Спасибо! <br>Заявка отправлена!</h3>
                             <p class="text">

@@ -13,6 +13,26 @@
     background-color: $color-white;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
     z-index: 2000;
+    
+    @include lg {
+      left: 12.5%;
+    }
+    
+    @include md {
+      left: -20%;
+    }
+    
+    @include sm {
+      width: 348px;
+      left: -4%;
+    }
+    
+    @include xs {
+      width: 260px;
+      left: -1%;
+      padding: 0.1rem;
+    }
+    
   }
   
   .modal__content {
@@ -54,7 +74,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
-    z-index: 1;
+    z-index: 5;
   }
 
   .hidden {

@@ -767,7 +767,7 @@ textarea {
   color: #635d5d;
 }
 
-.registration__message textarea::placeholder, .input::placeholder, .paragraph-large {
+.registration__message textarea::placeholder, .paragraph-large {
   font-family: var(--font-main);
   font-size: var(--paragraph-large-font-size);
   font-weight: var(--paragraph-large-font-weight, 500);
@@ -3724,7 +3724,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .help__title::before {
     width: 85px;
-    bottom: -7px;
+    bottom: -11px;
   }
 }
 .help__subtitle {
@@ -5082,7 +5082,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .education__title::before {
     width: 85px;
-    bottom: -7px;
+    bottom: -11px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -5475,7 +5475,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .steps__title::before {
     width: 85px;
-    bottom: -7px;
+    bottom: -11px;
   }
 }
 .steps__subtitle {
@@ -5784,7 +5784,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .consultations__title::before {
     width: 85px;
-    bottom: -7px;
+    bottom: -11px;
   }
 }
 .consultations__subtitle {
@@ -6145,7 +6145,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .payment__title::before {
     width: 85px;
-    bottom: -7px;
+    bottom: -11px;
   }
 }
 .payment__cards {
@@ -6282,6 +6282,26 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 220px 0 260px;
   background: linear-gradient(180deg, #d9f0ff 0%, #bfebe3 50.52%);
 }
+@media only screen and (max-width: 1919px) {
+  .registration {
+    padding: 165px 0 195px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration {
+    padding: 84px 0 100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration {
+    padding: 115px 0 115px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration {
+    padding: 85px 0 80px;
+  }
+}
 .registration__aside {
   left: 2px;
 }
@@ -6291,50 +6311,353 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
 }
 .registration__title {
-  text-align: center;
+  margin-bottom: 100px;
 }
-.registration__title-hr {
+.registration__title::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -30px;
   width: 285px;
-  margin: 30px auto 40px;
-  background-color: #635d5d;
   height: 2px;
-  border: none;
-}
-@media only screen and (max-width: 767px) {
-  .registration__title-hr {
-    height: 1px;
-  }
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
+  background: #635d5d;
 }
 @media only screen and (max-width: 1919px) {
-  .form {
-    gap: 35px;
-    max-width: 600px;
+  .registration__title::before {
+    width: 285px;
+    bottom: -23px;
   }
 }
 @media only screen and (max-width: 1439px) {
-  .form {
-    gap: 35px;
-    max-width: 320px;
+  .registration__title::before {
+    width: 214px;
+    bottom: -13px;
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__title::before {
+    width: 114px;
   }
 }
 @media only screen and (max-width: 427px) {
-  .form {
-    gap: 35px;
-    max-width: 257px;
+  .registration__title::before {
+    width: 85px;
+    bottom: -11px;
   }
 }
-
+@media only screen and (max-width: 1919px) {
+  .registration__title {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__title {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__title {
+    margin-bottom: 55px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__title {
+    margin-bottom: 69px;
+  }
+}
 .registration__row {
   position: relative;
+}
+.registration__message {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__message {
+    gap: 8px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__message {
+    gap: 5px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__message {
+    gap: 2px;
+  }
+}
+.registration__message label {
+  color: #635d5d;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 26px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__message label {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__message label {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__message label {
+    font-size: 13px;
+  }
+}
+.registration__message textarea {
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #635d5d;
+  padding: 20px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__message textarea {
+    font-size: 14px;
+    padding: 18px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__message textarea {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__message textarea {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+.registration__message textarea::placeholder {
+  color: #bbbaba;
+}
+.registration__terms {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__terms {
+    gap: 22px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__terms {
+    gap: 18px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__terms {
+    gap: 15px;
+  }
+}
+.registration__terms-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.registration__terms-group:first-child {
+  margin-bottom: 12px;
+}
+.registration__terms-group label {
+  font-size: 18px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__terms-group label {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__terms-group label {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__terms-group label {
+    font-size: 11px;
+  }
+}
+.registration__button {
+  width: 386px;
+  background-color: #fdacac;
+  align-self: center;
+  margin-top: 72px;
+}
+@media only screen and (max-width: 1919px) {
+  .registration__button {
+    width: 290px;
+    margin-top: 54px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .registration__button {
+    width: 348px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__button {
+    width: 260px;
+    margin-top: 32.5px;
+  }
+}
+.registration__button:hover {
+  background-color: #ffdada;
+}
+.registration__button:hover:hover {
+  outline: none;
+  outline-offset: 0;
+}
+.registration__button:focus {
+  outline: 3px solid #fdacac;
+  box-shadow: 0 0 4px 3px #fdacac;
+  outline-offset: 7px;
+}
+.registration__button:disabled {
+  background-color: #ffdada;
+}
+.registration__circle-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.registration__circle-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .registration__circle-right {
+    display: none;
+  }
+}
+.registration__wave {
+  position: absolute;
+  top: -8%;
+  left: 11%;
+}
+@media only screen and (max-width: 1439px) {
+  .registration__wave {
+    top: -5%;
+    left: 11%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__wave {
+    display: none;
+  }
+}
+.registration__star1 {
+  position: absolute;
+  top: 8%;
+  left: 74%;
+}
+@media only screen and (max-width: 767px) {
+  .registration__star1 {
+    top: 9%;
+    left: 84%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .registration__star1 {
+    top: 8%;
+    left: 84%;
+  }
+}
+.registration__star2 {
+  position: absolute;
+  top: 69%;
+  left: 84%;
+}
+@media only screen and (max-width: 1439px) {
+  .registration__star2 {
+    top: 62%;
+    left: 80%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__star2 {
+    display: none;
+  }
+}
+.registration__star3 {
+  position: absolute;
+  top: 105%;
+  left: 76%;
+}
+@media only screen and (max-width: 1439px) {
+  .registration__star3 {
+    top: 103%;
+    left: 76%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__star3 {
+    display: none;
+  }
+}
+.registration__star4 {
+  position: absolute;
+  top: 90%;
+  left: 26%;
+}
+@media only screen and (max-width: 1439px) {
+  .registration__star4 {
+    top: 60%;
+    left: 16%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__star4 {
+    display: none;
+  }
+}
+.registration__star5 {
+  position: absolute;
+  top: 18%;
+  left: 8%;
+}
+@media only screen and (max-width: 767px) {
+  .registration__star5 {
+    display: none;
+  }
+}
+.registration__dawn {
+  position: absolute;
+  animation: rotate 40s linear infinite;
+  top: 50%;
+  left: 0%;
+}
+@media only screen and (max-width: 1439px) {
+  .registration__dawn {
+    top: 30%;
+    left: 4%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .registration__dawn {
+    display: none;
+  }
+}
+.registration__spiral {
+  position: absolute;
+  top: 8%;
+  left: 90%;
+}
+@media only screen and (max-width: 767px) {
+  .registration__spiral {
+    display: none;
+  }
 }
 
 .input {
@@ -6351,14 +6674,14 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .input {
-    font-size: 68px;
-    height: 73px;
+    height: 68px;
+    font-size: 18px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .input {
-    font-size: 14px;
     height: 50px;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -6368,22 +6691,75 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 
+.input::placeholder {
+  font-size: 21px;
+}
+@media only screen and (max-width: 1919px) {
+  .input::placeholder {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input::placeholder {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input::placeholder {
+    font-size: 13px;
+  }
+}
+
 .input-checkmark {
   position: absolute;
   top: 22px;
+}
+@media only screen and (max-width: 1919px) {
+  .input-checkmark {
+    top: 22px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input-checkmark {
+    top: 22px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input-checkmark {
+    top: 22px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input-checkmark {
+    top: 22px;
+  }
 }
 
 .input-checkmark-name {
   left: 325px;
 }
+@media only screen and (max-width: 1919px) {
+  .input-checkmark-name {
+    left: 68%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input-checkmark-name {
+    left: 68%;
+    top: 30%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .input-checkmark-name {
-    left: 300px;
+    left: 68%;
+    top: 30%;
   }
 }
 @media only screen and (max-width: 427px) {
   .input-checkmark-name {
-    left: 200px;
+    left: 80%;
+    top: 30%;
   }
 }
 
@@ -6393,6 +6769,30 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .input-checkmark-email {
   left: 232px;
+}
+@media only screen and (max-width: 1919px) {
+  .input-checkmark-email {
+    left: 49%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input-checkmark-email {
+    left: 49%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input-checkmark-email {
+    left: 49%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input-checkmark-email {
+    left: 57%;
+    top: 30%;
+  }
 }
 
 .input-checkmark-enEmail {
@@ -6433,6 +6833,21 @@ body._touch .menu__list > li._active .menu__arrow {
   font-weight: 500;
   color: #bbbaba;
 }
+@media only screen and (max-width: 1919px) {
+  .input-after {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input-after {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input-after {
+    font-size: 13px;
+  }
+}
 
 /* slide effects */
 .input ~ .input-after {
@@ -6450,100 +6865,27 @@ body._touch .menu__list > li._active .menu__arrow {
   visibility: hidden;
 }
 
-.terms {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.registration__message {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.registration__message label {
-  color: #635d5d;
-  font-size: 21px;
-  font-weight: 500;
-  line-height: 26px;
-}
-.registration__message textarea {
-  border: none;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 26px;
-  color: #635d5d;
-  padding: 20px;
-}
-.registration__message textarea::placeholder {
-  color: #bbbaba;
-}
-
-.registration__terms {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-}
-
-.registration__terms-group {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.registration__terms-group:first-child {
-  margin-bottom: 12px;
-}
-.registration__terms-group label {
-  font-size: 18px;
-}
-
-.registration__button {
-  width: 386px;
-  background-color: #fdacac;
-  align-self: center;
-  margin-top: 72px;
-}
-@media only screen and (max-width: 1919px) {
-  .registration__button {
-    width: 290px;
-    margin-top: 54px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .registration__button {
-    width: 348px;
-    margin-top: 50px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .registration__button {
-    width: 260px;
-    margin-top: 38.5px;
-  }
-}
-.registration__button:hover {
-  background-color: #ffdada;
-}
-.registration__button:hover:hover {
-  outline: none;
-  outline-offset: 0;
-}
-.registration__button:focus {
-  outline: 3px solid #fdacac;
-  box-shadow: 0 0 4px 3px #fdacac;
-  outline-offset: 7px;
-}
-.registration__button:disabled {
-  background-color: #ffdada;
-}
-
 .error {
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.1em;
   color: #fb7070;
+}
+@media only screen and (max-width: 1919px) {
+  .error {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .error {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .error {
+    font-size: 11px;
+  }
 }
 
 #errorUserName,
@@ -6559,122 +6901,71 @@ body._touch .menu__list > li._active .menu__arrow {
   top: 110%;
   left: 7%;
 }
+@media only screen and (max-width: 1919px) {
+  #errorAge,
+  #errorPrivacy {
+    left: 9%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  #errorAge,
+  #errorPrivacy {
+    left: 16%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #errorAge,
+  #errorPrivacy {
+    left: 16%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  #errorAge,
+  #errorPrivacy {
+    left: 19%;
+  }
+}
 
 input[type=checkbox] {
   accent-color: #fdacac;
   width: 30px;
   height: 30px;
 }
-
-.registration__circle-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.registration__circle-right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .registration__circle-right {
-    display: none;
-  }
-}
-.registration__wave {
-  position: absolute;
-  top: -8%;
-  left: 11%;
-}
-@media only screen and (max-width: 767px) {
-  .registration__wave {
-    display: none;
-  }
-}
-.registration__star1 {
-  position: absolute;
-  top: 8%;
-  left: 74%;
-}
-
-.registration__star2 {
-  position: absolute;
-  top: 69%;
-  left: 84%;
-}
-@media only screen and (max-width: 767px) {
-  .registration__star2 {
-    display: none;
+@media only screen and (max-width: 1919px) {
+  input[type=checkbox] {
+    width: 25px;
+    height: 25px;
   }
 }
 
-.registration__star3 {
-  position: absolute;
-  top: 105%;
-  left: 76%;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
-@media only screen and (max-width: 767px) {
-  .registration__star3 {
-    display: none;
+@media only screen and (max-width: 1919px) {
+  .form {
+    gap: 35px;
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .form {
+    gap: 32px;
+    max-width: 320px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .form {
+    gap: 35px;
+    max-width: 257px;
   }
 }
 
-.registration__star4 {
-  position: absolute;
-  top: 90%;
-  left: 26%;
-}
-@media only screen and (max-width: 767px) {
-  .registration__star4 {
-    display: none;
-  }
-}
-
-.registration__star5 {
-  position: absolute;
-  top: 18%;
-  left: 8%;
-}
-@media only screen and (max-width: 767px) {
-  .registration__star5 {
-    display: none;
-  }
-}
-
-.registration__dawn {
-  position: absolute;
-  animation: rotate 40s linear infinite;
-  top: 50%;
-  left: 0%;
-}
-@media only screen and (max-width: 767px) {
-  .registration__dawn {
-    display: none;
-  }
-}
-
-.registration__spiral {
-  position: absolute;
-  top: 8%;
-  left: 90%;
-}
-@media only screen and (max-width: 767px) {
-  .registration__spiral {
-    display: none;
-  }
-}
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .registration__circle-right {
-    display: none;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .registration__circle-right {
-    display: none;
-  }
-}
 .faq {
   position: relative;
   padding: 220px 0 260px;
@@ -7629,6 +7920,29 @@ details[open] summary ~ * {
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 2000;
 }
+@media only screen and (max-width: 1919px) {
+  .modal {
+    left: 12.5%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .modal {
+    left: -20%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .modal {
+    width: 348px;
+    left: -4%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .modal {
+    width: 260px;
+    left: -1%;
+    padding: 0.1rem;
+  }
+}
 
 .modal__content {
   display: flex;
@@ -7668,7 +7982,7 @@ details[open] summary ~ * {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  z-index: 1;
+  z-index: 5;
 }
 
 .hidden {
