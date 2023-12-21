@@ -243,11 +243,6 @@
   left: 10%;
 
 
-@include md {
-// top: -230%;
-//   left: 10%;
-}
-
 @include sm {
   display: none;
 }
@@ -319,37 +314,16 @@ display: none;
   left: 103%;
   z-index: 1;
 
-
-    @include lg {
-
-    }
-    
-    @include md {
-    
-    }
-    
     @include sm {
       display: none;
       }
-    
-    @include xs {
-    
-    }
+
 }
 
 &__star-2_blue {
   position: absolute;
   top: 109%;
   left: 66%;
-
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
 
   @include sm {
     display: none;
@@ -362,14 +336,6 @@ display: none;
   top: 65%;
   left: -6%;
 
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-
   @include sm {
     display: none;
     }
@@ -379,14 +345,6 @@ display: none;
   position: absolute;
   top: 109%;
   left: 19%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
 
   @include sm {
     display: none;
@@ -400,10 +358,6 @@ display: none;
 
   @include lg {
     top: -99%;
-  }
-  
-  @include md {
-  
   }
 
   @include sm {
