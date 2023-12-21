@@ -3621,8 +3621,19 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .benefits__waves_1 {
   position: absolute;
-  bottom: -18%;
-  left: 28%;
+  bottom: -14%;
+  left: 31%;
+}
+@media only screen and (max-width: 1439px) {
+  .benefits__waves_1 {
+    bottom: -6%;
+    left: 31%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .benefits__waves_1 {
+    display: none;
+  }
 }
 .benefits__arrows-1 {
   position: absolute;
@@ -3653,6 +3664,7 @@ body._touch .menu__list > li._active .menu__arrow {
     right: 11%;
   }
 }
+
 .card-science,
 .card-security {
   background: linear-gradient(180deg, #bfebe3 0%, #ffffff 100%);
