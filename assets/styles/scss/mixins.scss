@@ -146,6 +146,10 @@
       height: 1px;
     }
 
+    @include sm {
+      width: 114px;
+    }
+    
     @include xs {
       width: 85px;
       bottom: -7px;

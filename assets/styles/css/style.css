@@ -3704,6 +3704,11 @@ body._touch .menu__list > li._active .menu__arrow {
     height: 1px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .help__title::before {
+    width: 114px;
+  }
+}
 @media only screen and (max-width: 427px) {
   .help__title::before {
     width: 85px;
@@ -5031,6 +5036,9 @@ body._touch .menu__list > li._active .menu__arrow {
     max-width: 260px;
   }
 }
+.education__title {
+  margin-bottom: 71px;
+}
 .education__title::before {
   position: absolute;
   content: "";
@@ -5052,6 +5060,11 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 214px;
     bottom: -13px;
     height: 1px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .education__title::before {
+    width: 114px;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -5082,6 +5095,9 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .education__subtitle {
   text-align: center;
+  z-index: 1000;
+  transform: translateZ(0);
+  opacity: 0.99;
 }
 .education__pic-block {
   display: grid;
@@ -5176,7 +5192,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .education__btn-close {
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.5rem 0.75rem;
@@ -5225,7 +5241,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .education__star-1_pink {
   position: absolute;
-  top: -191%;
+  top: -188%;
   left: 10%;
 }
 @media only screen and (max-width: 767px) {
@@ -5255,8 +5271,9 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .education__star-3_pink {
-    top: 0%;
-    right: 0%;
+    display: block;
+    top: -4%;
+    right: 25%;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -5270,6 +5287,24 @@ body._touch .menu__list > li._active .menu__arrow {
   position: absolute;
   top: -2%;
   right: 7%;
+  z-index: 0;
+}
+@media only screen and (max-width: 1919px) {
+  .education__spiral {
+    top: -5%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .education__spiral {
+    top: -10%;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .education__spiral {
+    top: 6%;
+    right: 1%;
+  }
 }
 .education__star-1_blue {
   position: absolute;
@@ -5317,6 +5352,11 @@ body._touch .menu__list > li._active .menu__arrow {
   position: absolute;
   top: -90%;
   left: 88%;
+}
+@media only screen and (max-width: 1919px) {
+  .education__arrows {
+    top: -99%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .education__arrows {
@@ -5408,6 +5448,11 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 214px;
     bottom: -13px;
     height: 1px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .steps__title::before {
+    width: 114px;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -5712,6 +5757,11 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 214px;
     bottom: -13px;
     height: 1px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .consultations__title::before {
+    width: 114px;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -6068,6 +6118,11 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 214px;
     bottom: -13px;
     height: 1px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .payment__title::before {
+    width: 114px;
   }
 }
 @media only screen and (max-width: 427px) {
