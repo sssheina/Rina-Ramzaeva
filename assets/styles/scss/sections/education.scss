@@ -63,6 +63,7 @@
     
   &__title {
     @include title-line;
+    margin-bottom: 71px;
     
 
     @include lg {
@@ -83,6 +84,9 @@
   }
   &__subtitle {
     text-align: center;
+    z-index: 1000;
+    transform: translateZ(0);
+    opacity: 0.99;
   }
   
   &__pic-block {
@@ -180,7 +184,7 @@
 
 &__btn-close {
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0.5rem 0.75rem;
@@ -235,7 +239,7 @@
 
 &__star-1_pink {
   position: absolute;
-  top: -191%;
+  top: -188%;
   left: 10%;
 
 
@@ -268,17 +272,12 @@
 &__star-3_pink {
   position: absolute;
 display: none;
-@include lg {
 
-}
-
-@include md {
-
-}
 
 @include sm {
-  top: 0%;
-    right: 0%;
+  display: block;
+  top: -4%;
+    right: 25%;
 }
 
 @include xs {
@@ -293,17 +292,20 @@ display: none;
   position: absolute;
   top: -2%;
   right: 7%;
+  z-index: 0;
 
   @include lg {
-
+    top: -5%;
   }
   
   @include md {
-  
+    top: -10%;
+    right: 0;
   }
   
   @include sm {
-  
+    top: 6%;
+    right: 1%;
   }
   
   @include xs {
@@ -397,7 +399,7 @@ display: none;
   left: 88%;
 
   @include lg {
-
+    top: -99%;
   }
   
   @include md {
