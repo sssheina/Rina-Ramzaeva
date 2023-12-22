@@ -154,10 +154,15 @@
     max-width: 53.3px;
     max-height: 106.5px;
   }
+
+  @include sm {
+    max-width: 43.48px;
+    max-height: 86.64px;
+  }
     
   @include xs {
-    max-width: 40px;
-    max-height: 80px;
+    max-width: 32.51px;
+    max-height: 64.77px;
   }
 }
 
