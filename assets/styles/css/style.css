@@ -6746,7 +6746,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .input-checkmark-name {
-    left: 68%;
+    left: 47%;
     top: 30%;
   }
 }
@@ -6778,7 +6778,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .input-checkmark-email {
-    left: 49%;
+    left: 33%;
     top: 30%;
   }
 }
