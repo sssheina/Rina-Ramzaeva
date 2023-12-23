@@ -6095,6 +6095,16 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
   background: #ffdada;
 }
+@media only screen and (max-width: 1919px) {
+  .consultations__button button {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .consultations__button button {
+    max-width: 347px;
+  }
+}
 .consultations__button button:focus {
   outline: 3px solid #ffdada;
   box-shadow: 0 0 4px 3px #ffdada;
