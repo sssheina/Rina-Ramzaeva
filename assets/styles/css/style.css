@@ -5910,6 +5910,10 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 
+.steps__star-2_blue {
+  display: none;
+}
+
 .steps__wave_1 {
   position: absolute;
   top: 28%;
