@@ -141,7 +141,7 @@
     }
 
     @include md {
-      width: 214px;
+      width: 114px;
       bottom: -13px;
       height: 1px;
     }
@@ -187,9 +187,10 @@
   height: 2px;
   border: none;
 
-    @include sm {
-      height: 1px;
-    }
+  @include sm {
+    height: 1px;
+  }
+
 }
 
 // button focus

@@ -56,12 +56,23 @@
     left: 23%;
     top: -193%;
 
-    // @include lg {
-    //   top: -160%;
-    // }
     
     @include md {
-      top: -125%;
+      display: none;
+    }
+
+    
+  }
+
+  &__star-2 {
+    display: none;
+    position: absolute;
+    left: 20%;
+    top: 72%;
+
+    
+    @include md {
+      display: block;
     }
     
     @include sm {
@@ -74,14 +85,6 @@
     position: absolute;
     right: 20%;
     top: 18%;
-
-    // @include lg {
-    //   top: 25%;
-    // }
-    
-    @include md {
-    
-    }
     
     @include sm {
       display: none;
