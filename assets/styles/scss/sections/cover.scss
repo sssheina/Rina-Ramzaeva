@@ -39,12 +39,9 @@
   // animation: rotation 10s linear infinite;
 
   -webkit-animation: rotation 10s linear infinite;
-   -moz-animation: rotation 10s linear infinite;
-   animation: rotation 10s linear infinite;
+  -moz-animation: rotation 10s linear infinite;
+  animation: rotation 10s linear infinite;
 }
-
-
- 
 
 .gradient::after {
   filter: blur(3.8rem);
@@ -225,14 +222,6 @@
       @include md {
         display: none;
       }
-
-      @include sm {
-        display: none;
-      }
-
-      @include xs {
-        display: none;
-      }
     }
   }
 
@@ -265,14 +254,9 @@
       max-height: 58.59px;
       left: 91%;
       top: 13%;
-
     }
 
     @include sm {
-      display: none;
-    }
-
-    @include xs {
       display: none;
     }
   }
@@ -343,9 +327,8 @@
 
     @include sm {
       left: 89%;
-    top: 45%;
+      top: 45%;
     }
-
   }
 
   &__present {
@@ -386,10 +369,6 @@
   .mobile-br {
     display: none;
 
-    @include md {
-      display: none;
-    }
-
     @include sm {
       display: block;
     }
@@ -399,12 +378,8 @@
     }
   }
 
-.tablet-br {
-  display: none;
-
-  @include lg {
+  .tablet-br {
     display: none;
-  }
 
     @include md {
       display: block;
@@ -413,11 +388,7 @@
     @include sm {
       display: none;
     }
-
-    @include xs {
-      display: none;
-    }
-}
+  }
 
   .desktop-br {
     display: inline;
@@ -425,44 +396,18 @@
     @include md {
       display: none;
     }
-
-    @include sm {
-      display: none;
-    }
-
-    @include xs {
-      display: none;
-    }
   }
 
   .desktop-svg {
+    display: block;
+
     @include lg {
-      display: none;
-    }
-
-    @include md {
-      display: none;
-    }
-
-    @include sm {
-      display: none;
-    }
-
-    @include xs {
       display: none;
     }
   }
 
   .mobile-svg_428 {
     display: none;
-
-    @include lg {
-      display: none;
-    }
-
-    @include md {
-      display: none;
-    }
 
     @include sm {
       display: block;
@@ -475,18 +420,6 @@
 
   .mobile-svg_320 {
     display: none;
-
-    @include lg {
-      display: none;
-    }
-
-    @include md {
-      display: none;
-    }
-
-    @include sm {
-      display: none;
-    }
 
     @include xs {
       display: block;
@@ -503,14 +436,6 @@
     @include md {
       display: none;
     }
-
-    @include sm {
-      display: none;
-    }
-
-    @include xs {
-      display: none;
-    }
   }
 }
 
@@ -524,7 +449,7 @@
 //   border-radius: inherit;
 //   }
 //  }
- 
+
 //  @media screen and (-moz-appearance: none) {
 //   .gradient::before, .gradient::after {
 //   content: "";
@@ -550,4 +475,3 @@
 //     border-radius: inherit;
 //   }
 //  }
- 

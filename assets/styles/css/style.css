@@ -2418,16 +2418,6 @@ body._touch .menu__list > li._active .menu__arrow {
     display: none;
   }
 }
-@media only screen and (max-width: 767px) {
-  .cover__pic img {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .cover__pic img {
-    display: none;
-  }
-}
 .cover__right-circles {
   position: absolute;
   right: 0;
@@ -2460,11 +2450,6 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 @media only screen and (max-width: 767px) {
-  .cover__arrows {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
   .cover__arrows {
     display: none;
   }
@@ -2588,11 +2573,6 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover .mobile-br {
   display: none;
 }
-@media only screen and (max-width: 1439px) {
-  .cover .mobile-br {
-    display: none;
-  }
-}
 @media only screen and (max-width: 767px) {
   .cover .mobile-br {
     display: block;
@@ -2606,22 +2586,12 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover .tablet-br {
   display: none;
 }
-@media only screen and (max-width: 1919px) {
-  .cover .tablet-br {
-    display: none;
-  }
-}
 @media only screen and (max-width: 1439px) {
   .cover .tablet-br {
     display: block;
   }
 }
 @media only screen and (max-width: 767px) {
-  .cover .tablet-br {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
   .cover .tablet-br {
     display: none;
   }
@@ -2634,48 +2604,16 @@ body._touch .menu__list > li._active .menu__arrow {
     display: none;
   }
 }
-@media only screen and (max-width: 767px) {
-  .cover .desktop-br {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .cover .desktop-br {
-    display: none;
-  }
+.cover .desktop-svg {
+  display: block;
 }
 @media only screen and (max-width: 1919px) {
-  .cover .desktop-svg {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .cover .desktop-svg {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .cover .desktop-svg {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
   .cover .desktop-svg {
     display: none;
   }
 }
 .cover .mobile-svg_428 {
   display: none;
-}
-@media only screen and (max-width: 1919px) {
-  .cover .mobile-svg_428 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .cover .mobile-svg_428 {
-    display: none;
-  }
 }
 @media only screen and (max-width: 767px) {
   .cover .mobile-svg_428 {
@@ -2689,21 +2627,6 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .cover .mobile-svg_320 {
   display: none;
-}
-@media only screen and (max-width: 1919px) {
-  .cover .mobile-svg_320 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .cover .mobile-svg_320 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .cover .mobile-svg_320 {
-    display: none;
-  }
 }
 @media only screen and (max-width: 427px) {
   .cover .mobile-svg_320 {
@@ -2719,16 +2642,6 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 @media only screen and (max-width: 1439px) {
-  .cover .desktop-svg_1440 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .cover .desktop-svg_1440 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
   .cover .desktop-svg_1440 {
     display: none;
   }
@@ -2859,11 +2772,6 @@ body._touch .menu__list > li._active .menu__arrow {
   left: 52%;
 }
 @media only screen and (max-width: 1439px) {
-  .about__star_1 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
   .about__star_1 {
     display: none;
   }
@@ -5354,7 +5262,7 @@ body._touch .menu__list > li._active .menu__arrow {
   backdrop-filter: blur(3px);
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 12;
 }
 .education__btn-close {
   position: absolute;
