@@ -115,18 +115,9 @@
     top: 128%;
     left: 52%;
 
-    // @include md {
-    //   top: 92%;
-    // }
-
     @include md {
       display: none;
     }
-
-    @include sm {
-      display: none;
-    }
-    
   }
 
   &__star_6 {
@@ -230,7 +221,6 @@
     }
   }
 
-
   &__endnote {
     max-width: 800px;
 
@@ -307,7 +297,7 @@
       left: 70%;
       top: 26%;
     }
-    
+
     @include xs {
       top: 17%;
     }
@@ -348,25 +338,16 @@
     top: 0;
     right: 0;
   }
-
-
 }
 
-
 @include lg {
-
 }
 
 @include md {
-
 }
 
 @include sm {
-
 }
 
 @include xs {
-
 }
-
-
