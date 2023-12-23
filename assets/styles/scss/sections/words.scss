@@ -2,118 +2,71 @@
   position: relative;
   padding: 118px 0;
   background: linear-gradient(180deg, #d9f0ff 7.29%, #ffdada 100%);
-}
 
-.words__wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 34px;
-}
-
-.words__p {
-  max-width: 800px;
-  text-align: center;
-}
-
-.words__circle_left {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.words__circle_right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.words__star-blue {
-  position: absolute;
-  top: 65%;
-  left: 10%;
-}
-
-.words__star-pink {
-  position: absolute;
-  top: -30%;
-  right: 15%;
-}
-
-.words__wave-blue {
-  position: absolute;
-  top: 120%;
-  left: 20%;
-}
-
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .words {
+  @include lg {
     padding: 90px 0;
   }
 
-  .words__wrapper {
-    gap: 28px;
-  }
-
-  .words__p {
-    max-width: 600px;
-    font-size: 18px;
-    letter-spacing: 1.8px;
-  }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .words {
+  @include md {
     padding: 70px 0;
   }
 
-  .words__wrapper {
-    gap: 20px;
-  }
-
-  .words__p {
-    max-width: 360px;
-    font-size: 11px;
-    letter-spacing: 1.1px;
-  }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .words {
+  @include sm {
     padding: 70px 0;
   }
 
-  .words__wrapper {
-    gap: 20px;
-  }
-
-  .words__p {
-    max-width: 320px;
-    font-size: 11px;
-    letter-spacing: 1.1px;
-  }
-}
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .words {
+  @include xs {
     padding: 35px 0;
   }
 
-  .words__wrapper {
-    gap: 20px;
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+
+    @include lg {
+      gap: 28px;
+    }
+
+    @include md {
+      gap: 20px;
+    }
   }
 
-  .words__p {
-    max-width: 239px;
-    font-size: 9px;
-    letter-spacing: 0.9px;
+  &__p {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  &__circle_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__circle_right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__star-blue {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+  }
+
+  &__star-pink {
+    position: absolute;
+    top: -30%;
+    right: 15%;
+  }
+
+  &__wave-blue {
+    position: absolute;
+    top: 110%;
+    left: 20%;
   }
 }

@@ -120,6 +120,14 @@
       width: 100%;
       background: $color-pinklight;
 
+      @include lg {
+        max-width: 600px;
+      }
+      
+      @include md {
+        max-width: 347px;
+      }
+
       &:focus {
         @include btn-focus($color-pinklight);
       }

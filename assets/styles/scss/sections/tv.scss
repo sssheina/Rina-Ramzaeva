@@ -41,7 +41,7 @@
 
   &__text-block,
   &__body,
-  &__fem  {
+  &__fem {
     display: flex;
     position: relative;
   }
@@ -249,15 +249,15 @@
     @include lg {
       margin-bottom: 73px;
     }
-    
+
     @include md {
       margin-bottom: 52px;
     }
-    
+
     @include sm {
       margin-bottom: 55px;
     }
-    
+
     @include xs {
       // margin-bottom: 54px;
     }
@@ -306,9 +306,9 @@
   }
 
   &__video {
-    position: absolute; 
+    position: absolute;
     top: 72px;
-    right: 0;   
+    right: 0;
     max-width: 669px;
     max-height: 382px;
     z-index: 2;
@@ -432,8 +432,18 @@
     left: 11%;
 
     @include md {
-      top: -14%;
-      left: 89%;
+      display: none;
+    }
+  }
+
+  &__star-7 {
+    display: none;
+    position: absolute;
+    top: 6%;
+    left: 5%;
+
+    @include md {
+      display: block;
     }
 
     @include sm {
@@ -447,18 +457,16 @@
     left: 32%;
 
     @include lg {
-
     }
-    
+
     @include md {
       top: 3%;
       left: 27.5%;
     }
-    
+
     @include sm {
       left: 14%;
     }
-    
   }
 
   &__star-3 {
@@ -466,15 +474,22 @@
     top: -45%;
     left: 60%;
 
-    @include lg {
-
-    }
-    
     @include md {
-      top: -23%;
-      left: 60%;
+      display: none;
     }
-    
+
+  }
+
+  &__star-8 {
+    display: none;
+    position: absolute;
+    top: 7.5%;
+    left: 57%;
+
+    @include md {
+      display: block;
+    }
+
     @include sm {
       display: none;
     }
@@ -485,15 +500,22 @@
     top: -25%;
     right: 11%;
 
-    @include lg {
-
-    }
-    
     @include md {
-      top: -7%;
-      right: 8%;
+      display: none;
     }
-    
+
+  }
+
+  &__star-9 {
+    display: none;
+    position: absolute;
+    top: 21%;
+    left: 76%;
+
+    @include md {
+      display: block;
+    }
+
     @include sm {
       display: none;
     }
@@ -504,20 +526,17 @@
     top: 33%;
     left: 36%;
 
-    @include lg {
 
-    }
-    
     @include md {
-      top: 31%;
+      top: 30%;
       left: 36%;
     }
-    
+
     @include sm {
       top: 22.5%;
       left: 81%;
     }
-    
+
     @include xs {
       top: 22%;
       left: 84%;
@@ -529,19 +548,25 @@
     top: -3%;
     left: 10%;
 
-    @include lg {
-
-    }
-    
     @include md {
-      top: -15%;
-      left: 7%;
+      display: none;
     }
-    
+
+  }
+
+  &__star-10 {
+    display: none;
+    position: absolute;
+    top: 42%;
+    left: 7%;
+
+    @include md {
+      display: block;
+    }
+
     @include sm {
       display: none;
     }
-    
   }
 
   &__dawn {
@@ -551,19 +576,18 @@
     right: 8%;
 
     @include lg {
-
     }
-    
+
     @include md {
       top: 5%;
       right: 15%;
     }
-    
+
     @include sm {
       top: 4.5%;
       right: 3%;
     }
-    
+
     @include xs {
       top: 4%;
       right: 3%;
@@ -576,18 +600,16 @@
     right: 25%;
 
     @include lg {
-
     }
-    
+
     @include md {
       top: 34%;
       right: 5%;
     }
-    
+
     @include sm {
-    display: none;
+      display: none;
     }
-    
   }
 
   &__spiral {
@@ -598,18 +620,16 @@
     z-index: -1;
 
     @include lg {
-
     }
-    
+
     @include md {
       top: 79%;
       left: 7%;
     }
-    
+
     @include sm {
-    display: none;
+      display: none;
     }
-    
   }
 
   &__star_big {
@@ -617,19 +637,23 @@
     top: 55%;
     right: 20%;
 
-    @include lg {
-
-    }
-    
     @include md {
-      top: 71%;
-      right: 18%;
+      display: none;
     }
-    
-    @include sm {
+  }
+
+  &__star_big-1 {
     display: none;
+    position: absolute;
+    top: 93%;
+    right: 15%;
+
+    @include md {
+      display: block;
     }
-    
+
+    @include sm {
+      display: none;
+    }
   }
 }
-
