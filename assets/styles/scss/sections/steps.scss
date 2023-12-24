@@ -48,8 +48,6 @@
     @include md {
       margin-bottom: 35px;
     }
-
-    @include title-line;
   }
 
   &__subtitle {
@@ -87,8 +85,6 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       place-items: center;
-      // gap: 30px;
-      // gap: 25px;
       margin: 50px auto 70px;
     }
 
@@ -139,7 +135,6 @@
       height: 25px;
       top: 105%;
     }
-
   }
 
   &__button {
@@ -173,16 +168,12 @@
     position: absolute;
     top: -490%;
     left: 20%;
-    
+
     @include sm {
       display: none;
     }
-    
-    @include xs {
-      display: none;
-    }
   }
-  
+
   &__star-2_blue {
     position: absolute;
     display: none;
@@ -197,62 +188,56 @@
       left: -30%;
       top: -25%;
     }
-    
+
     @include xs {
       left: -10%;
       top: -22%;
     }
   }
-  
+
   &__wave_1 {
     position: absolute;
     top: 28%;
     left: 58%;
-    
+
     @include md {
       top: 19%;
       left: 70%;
     }
-    
+
     @include sm {
       display: none;
     }
-    
   }
-  
+
   &__wave_2 {
     position: absolute;
     left: 2%;
     top: 81%;
 
     @include md {
-    top: 85%;
+      top: 85%;
     }
 
     @include sm {
       display: none;
     }
   }
-  
+
   &__spiral {
     animation: rotate 20s linear infinite;
     position: absolute;
     right: -6%;
-      bottom: -80%;
-      
+    bottom: -80%;
+
     @include md {
       bottom: -21%;
     }
-    
+
     @include sm {
-    
-    }
-    
-    @include xs {
-      
+      display: none;
     }
   }
-  
 }
 
 .steps-card {
@@ -341,4 +326,3 @@
     }
   }
 }
-

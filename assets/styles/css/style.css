@@ -5726,40 +5726,6 @@ body._touch .menu__list > li._active .menu__arrow {
     margin-bottom: 35px;
   }
 }
-.steps__title::before {
-  position: absolute;
-  content: "";
-  left: 50%;
-  transform: translate(-50%);
-  bottom: -30px;
-  width: 285px;
-  height: 2px;
-  background: #635d5d;
-}
-@media only screen and (max-width: 1919px) {
-  .steps__title::before {
-    width: 285px;
-    bottom: -23px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .steps__title::before {
-    width: 114px;
-    bottom: -13px;
-    height: 1px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .steps__title::before {
-    width: 114px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .steps__title::before {
-    width: 85px;
-    bottom: -11px;
-  }
-}
 .steps__subtitle {
   margin: 0 auto;
   max-width: 375px;
@@ -5893,11 +5859,6 @@ body._touch .menu__list > li._active .menu__arrow {
     display: none;
   }
 }
-@media only screen and (max-width: 427px) {
-  .steps__star_blue {
-    display: none;
-  }
-}
 .steps__star-2_blue {
   position: absolute;
   display: none;
@@ -5963,6 +5924,12 @@ body._touch .menu__list > li._active .menu__arrow {
     bottom: -21%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .steps__spiral {
+    display: none;
+  }
+}
+
 .steps-card {
   position: relative;
   max-width: 328px;
