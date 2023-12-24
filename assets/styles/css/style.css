@@ -5785,12 +5785,12 @@ body._touch .menu__list > li._active .menu__arrow {
   max-width: fit-content;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 74px;
+  gap: 64px;
   margin: 90px auto 120px;
 }
 @media only screen and (max-width: 1919px) {
   .steps__cards {
-    gap: 55px;
+    gap: 44px;
     margin: 67px auto 90px;
   }
 }
@@ -5799,8 +5799,7 @@ body._touch .menu__list > li._active .menu__arrow {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
-    gap: 30px;
-    margin: 27px auto 50px;
+    margin: 50px auto 70px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -5809,13 +5808,13 @@ body._touch .menu__list > li._active .menu__arrow {
     grid-template-rows: repeat(4, 1fr);
     place-items: center;
     gap: 50px;
-    margin: 40px auto 77px;
+    margin: 50px auto 107px;
   }
 }
 @media only screen and (max-width: 427px) {
   .steps__cards {
     gap: 40px;
-    margin: 30px auto 50px;
+    margin: 30px auto 90px;
   }
 }
 .steps__arrow {
@@ -5837,7 +5836,7 @@ body._touch .menu__list > li._active .menu__arrow {
   .steps__arrow {
     width: 15px;
     height: 27px;
-    right: -23px;
+    right: -15%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -5846,7 +5845,14 @@ body._touch .menu__list > li._active .menu__arrow {
     height: 27px;
     right: 50%;
     rotate: 90deg;
-    top: 113%;
+    top: 110%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .steps__arrow {
+    width: 25px;
+    height: 25px;
+    top: 105%;
   }
 }
 .steps__button {
@@ -5877,33 +5883,112 @@ body._touch .menu__list > li._active .menu__arrow {
   outline: none;
   outline-offset: 0;
 }
-
+.steps__star_blue {
+  position: absolute;
+  top: -490%;
+  left: 20%;
+}
+@media only screen and (max-width: 767px) {
+  .steps__star_blue {
+    display: none;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .steps__star_blue {
+    display: none;
+  }
+}
+.steps__star-2_blue {
+  position: absolute;
+  display: none;
+  left: 10%;
+  top: -30%;
+}
+@media only screen and (max-width: 1439px) {
+  .steps__star-2_blue {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .steps__star-2_blue {
+    left: -30%;
+    top: -25%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .steps__star-2_blue {
+    left: -10%;
+    top: -22%;
+  }
+}
+.steps__wave_1 {
+  position: absolute;
+  top: 28%;
+  left: 58%;
+}
+@media only screen and (max-width: 1439px) {
+  .steps__wave_1 {
+    top: 19%;
+    left: 70%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .steps__wave_1 {
+    display: none;
+  }
+}
+.steps__wave_2 {
+  position: absolute;
+  left: 2%;
+  top: 81%;
+}
+@media only screen and (max-width: 1439px) {
+  .steps__wave_2 {
+    top: 85%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .steps__wave_2 {
+    display: none;
+  }
+}
+.steps__spiral {
+  animation: rotate 20s linear infinite;
+  position: absolute;
+  right: -6%;
+  bottom: -80%;
+}
+@media only screen and (max-width: 1439px) {
+  .steps__spiral {
+    bottom: -21%;
+  }
+}
 .steps-card {
   position: relative;
-  max-width: 313px;
-  min-height: 266px;
+  max-width: 328px;
+  min-height: 270px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 30px;
+  gap: 35px;
+  padding: 35px 27px 27px 27px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
   z-index: 2;
   transition: 0.4s ease;
 }
 @media only screen and (max-width: 1919px) {
   .steps-card {
-    max-width: 235px;
+    max-width: 243px;
     min-height: 200px;
-    gap: 25px;
-    padding: 25px;
+    gap: 30px;
+    padding: 25px 15px 19px 15px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .steps-card {
-    max-width: 188px;
+    max-width: 202px;
     min-height: 148px;
-    gap: 15px;
-    padding: 15px;
+    gap: 17px;
+    padding: 20px 15px 15px 15px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -5961,45 +6046,6 @@ body._touch .menu__list > li._active .menu__arrow {
   .steps-card__title::after {
     bottom: -5px;
   }
-}
-
-.steps__star_blue {
-  position: absolute;
-  top: -490%;
-  left: 300px;
-}
-@media only screen and (max-width: 767px) {
-  .steps__star_blue {
-    display: none;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .steps__star_blue {
-    display: none;
-  }
-}
-
-.steps__star-2_blue {
-  display: none;
-}
-
-.steps__wave_1 {
-  position: absolute;
-  top: 28%;
-  left: 58%;
-}
-
-.steps__wave_2 {
-  position: absolute;
-  left: 2%;
-  top: 81%;
-}
-
-.steps__spiral {
-  animation: rotate 20s linear infinite;
-  position: absolute;
-  right: -10px;
-  bottom: -216px;
 }
 
 .consultations {
