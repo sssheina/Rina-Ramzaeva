@@ -127,16 +127,12 @@
 
     @include sm {
       width: 27px;
-      height: 15px;
+      height: 27px;
       right: 50%;
       rotate: 90deg;
       top: 113%;
     }
 
-    @include xs {
-      width: 20px;
-      height: 11px;
-    }
   }
 
   &__button {

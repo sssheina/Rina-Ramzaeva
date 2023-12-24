@@ -20,14 +20,14 @@
   }
 
   @include xs {
-    padding: 46px 0 80px;
+    padding: 46px 0 56px;
   }
 
   &__aside {
     left: -53px;
 
     @include md {
-      left: -42px;
+      left: -49px;
     }
   }
 
@@ -463,12 +463,12 @@
 
   &__waves_1 {
     position: absolute;
-    bottom: -14%;
+    bottom: -10%;
     left: 31%;
 
     @include md {
       bottom: -6%;
-      left: 31%;
+      left: 18%;
     }
 
     @include sm {
