@@ -134,6 +134,11 @@
     --h3-title-letter-spacing: 1.4px;
   }
 
+  @include xs {
+    --h3-title-font-size: 13px;
+    --h3-title-letter-spacing: 1.2px;
+  }
+
   /* paragraph - large */
   --paragraph-large-font-size: 21px;
   --paragraph-large-font-weight: 500;
@@ -320,6 +325,22 @@
   @include xs {
     --footnote-large-font-size: 11px;
     --footnote-large-line-height: 1.1;
+  }
+
+  // swiper-navigation-size
+
+  --swiper-navigation-size: 66px;
+
+  @include lg {
+    --swiper-navigation-size: 50px;
+  }
+  
+  @include md {
+    --swiper-navigation-size: 27px;
+  }
+    
+  @include xs {
+    --swiper-navigation-size: 20px; 
   }
 }
 

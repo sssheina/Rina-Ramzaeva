@@ -183,7 +183,7 @@ const swiper = new Swiper(".swiper", {
   loopedSlides: 3,
   watchOverflow: true,
   spaceBetween: 37,
-  slidesPerGroup: 2,
+  slidesPerGroup: 1,
   // centeredSlides: true,
   initialSlide: 0,
   freeMode: true,

@@ -22,6 +22,19 @@
   &__aside {
     position: absolute;
     left: -2px;
+    
+    @include lg {
+    }
+
+    @include md {
+      left: -21px;
+    }
+
+    @include sm {
+    }
+
+    @include xs {
+    }
   }
 
   &__wrapper {
@@ -152,7 +165,7 @@
   &__text-block {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     max-width: 1134px;
     background: linear-gradient(
       180deg,
@@ -162,19 +175,19 @@
     padding: 125px 105px 188px 230px;
 
     @include lg {
-      gap: 15px;
+      gap: 30px;
       max-width: 850px;
       padding: 93px 65px 145px 163px;
     }
 
     @include md {
-      gap: 15px;
+      gap: 25px;
       max-width: 454px;
       padding: 50px 30px 58px 60px;
     }
 
     @include sm {
-      gap: 10px;
+      gap: 20px;
       max-width: 348px;
       padding: 97px 26px 90px;
     }
@@ -341,13 +354,17 @@
 }
 
 @include lg {
+
 }
 
 @include md {
+
 }
 
 @include sm {
+
 }
 
 @include xs {
+  
 }
