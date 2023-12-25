@@ -8104,6 +8104,7 @@ input[type=checkbox] {
     font-size: 12px;
   }
 }
+
 details[open] summary::after {
   transform: rotate(0deg);
   height: 0;

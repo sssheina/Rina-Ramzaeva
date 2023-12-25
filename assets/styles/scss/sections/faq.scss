@@ -25,9 +25,6 @@
     z-index: 1;
     gap: 100px;
 
-    @include lg {
-    }
-
     @include md {
       gap: 100px;
     }
@@ -56,7 +53,7 @@
     }
 
     @include sm {
-text-align: start;
+      text-align: start;
     }
 
     @include xs {
@@ -117,22 +114,9 @@ text-align: start;
   &__aside {
     left: 32px;
 
-    @include lg {
-
-    }
-    
     @include md {
       left: 1%;
     }
-    
-    @include sm {
-    
-    }
-    
-    @include xs {
-      
-    }
-    
   }
 
   &__questions {
@@ -318,14 +302,11 @@ text-align: start;
 
     @include md {
       left: 21%;
-    bottom: 4%;
+      bottom: 4%;
     }
 
     @include sm {
       display: none;
-    }
-
-    @include xs {
     }
   }
 
@@ -334,21 +315,18 @@ text-align: start;
     top: 30%;
     left: 8%;
 
-    @include lg {
-    }
-
     @include md {
       top: 17%;
-    left: 8%;
+      left: 8%;
     }
 
     @include sm {
-      top:  6%;
-    left: 68%;
+      top: 6%;
+      left: 68%;
     }
 
     @include xs {
-      top:  4%;
+      top: 4%;
       left: 70%;
     }
   }
@@ -358,19 +336,13 @@ text-align: start;
     right: 0;
     top: 42%;
 
-    @include lg {
-    }
-
     @include md {
       right: 0;
-    top: 27%;
+      top: 27%;
     }
 
     @include sm {
       display: none;
-    }
-
-    @include xs {
     }
   }
 
@@ -378,10 +350,6 @@ text-align: start;
     position: absolute;
     top: 4%;
     left: 61%;
-
-    @include lg {
-      
-    }
 
     @include md {
       top: 2%;
@@ -402,18 +370,12 @@ text-align: start;
     top: 33%;
     left: 92%;
 
-    @include lg {
-    }
-
     @include md {
       top: 20%;
     }
 
     @include sm {
       display: none;
-    }
-
-    @include xs {
     }
   }
 
@@ -422,19 +384,13 @@ text-align: start;
     top: 92%;
     left: 76%;
 
-    @include lg {
-    }
-
     @include md {
       top: 96%;
-    left: 86%;
+      left: 86%;
     }
 
     @include sm {
       display: none;
-    }
-
-    @include xs {
     }
   }
 
@@ -443,19 +399,13 @@ text-align: start;
     top: 70%;
     left: 8%;
 
-    @include lg {
-    }
-
     @include md {
       top: 64%;
-    left: 12%;
+      left: 12%;
     }
 
     @include sm {
       display: none;
-    }
-
-    @include xs {
     }
   }
 
@@ -463,9 +413,6 @@ text-align: start;
     position: absolute;
     top: 55%;
     left: 18%;
-
-    @include lg {
-    }
 
     @include md {
       top: 33%;
@@ -475,9 +422,6 @@ text-align: start;
     @include sm {
       display: none;
     }
-
-    @include xs {
-    }
   }
 
   &__star_blue-6 {
@@ -485,28 +429,17 @@ text-align: start;
     top: 20%;
     left: 13%;
 
-    @include lg {
-    }
-
     @include md {
       top: 9%;
-    left: 11%;
+      left: 11%;
     }
 
     @include sm {
       display: none;
     }
-
-    @include xs {
-    }
   }
 
   &__questions-summary {
-    
-
-    @include lg {
-    }
-
     @include md {
       font-size: 12px;
     }
@@ -514,25 +447,15 @@ text-align: start;
     @include sm {
       font-size: 13px;
     }
-
-    @include xs {
-    }
   }
-  
+
   &__answers {
-
-    @include lg {
-    }
-
     @include md {
       font-size: 11px;
     }
 
     @include sm {
       font-size: 12px;
-    }
-
-    @include xs {
     }
   }
 }
