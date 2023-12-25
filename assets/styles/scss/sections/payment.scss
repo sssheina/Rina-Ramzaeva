@@ -2,14 +2,26 @@
   position: relative;
   padding: 220px 0 260px;
 
-  hr {
-    @include hr(285px, 30px auto 40px);
+  @include lg {
+    padding: 165px 0 195px;
+  }
+
+  @include md {
+    padding: 88px 0 100px;
+  }
+
+  @include sm {
+    padding: 115px 0 115px;
+  }
+
+  @include xs {
+    padding: 85px 0 80px;
   }
 
   &__title {
     text-align: center;
     margin-bottom: 70px;
-  @include title-line;
+    @include title-line;
   }
 
   &__cards {
@@ -19,21 +31,26 @@
     gap: 86px;
 
     @include lg {
+      margin: 100px 0 80px;
+      gap: 76px;
+    }
 
-    }
-    
     @include md {
-    
+      margin: 50px 0 70px;
+      gap: 18px;
+      justify-content: space-around;
     }
-    
+
     @include sm {
       flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin: 73px 0 77px;
     }
-    
+
     @include xs {
-    
+      margin: 45px 0 70px;
     }
-    
   }
 
   &__button {
@@ -54,183 +71,176 @@
       }
     }
   }
-}
 
-.payment__wrapper {
-  position: relative;
-}
-
-.payment__star-pink1 {
-  position: absolute;
-  top: -8%;
-  left: 10%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-  
-  @include xs {
-    
-  }
-}
-.payment__star-pink2 {
-  position: absolute;
-  top: 77%;
-  left: 77%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-  
-  @include xs {
-    
-  }
-}
-
-.payment__wave-blue1 {
-  position: absolute;
-  top: 17%;
-  left: 17%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-  
-  @include xs {
-    
-  }
-}
-
-.payment__wave-blue2 {
-  position: absolute;
-  top: 107%;
-  left: 58%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-    display: none;
-  }
-  
-  @include xs {
-    
-  }
-}
-
-.payment__spiral {
-  position: absolute;
-  animation: rotate 20s linear infinite;
-  top: 10%;
-  left: 80%;
-}
-
-.payment__star-blue {
-  position: absolute;
-  top: -225%;
-  left: 98%;
-
-  @include lg {
-
-  }
-  
-  @include md {
-  
-  }
-  
-  @include sm {
-  display: none;
-  }
-  
-  @include xs {
-    
-  }
-}
-
-.payment__dawn {
-  position: absolute;
-  animation: rotate 20s linear infinite;
-  top: 48%;
-  left: 0%;
-}
-
-.payment__aside {
-  left: 1px;
-}
-
-.payment__card {
-  max-width: 310px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 30px 30px 70px 35px;
-  transition: 0.4s ease;
-  z-index: 1;
-
-  &:hover {
-    transform: translateY(-4px);
+  &__wrapper {
+    position: relative;
   }
 
-  &:nth-child(1) {
-    background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
+  &__star-pink1 {
+    position: absolute;
+    top: -8%;
+    left: 10%;
+
+    @include sm {
+      display: none;
+    }
+  }
+  &__star-pink2 {
+    position: absolute;
+    top: 77%;
+    left: 77%;
+
+    @include sm {
+      display: none;
+    }
   }
 
-  &:nth-child(2) {
-    background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
+  &__wave-blue1 {
+    position: absolute;
+    top: 16%;
+    left: 17%;
+
+    @include md {
+      top: 11%;
+      left: 10%;
+    }
+
+    @include sm {
+      display: none;
+    }
   }
 
-  &:nth-child(3) {
-    background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
+  &__wave-blue2 {
+    position: absolute;
+    top: 107%;
+    left: 58%;
+
+    @include sm {
+      display: none;
+    }
   }
 
-  object {
-    width: 53.83px;
-    height: 42.5px;
+  &__spiral {
+    position: absolute;
+    animation: rotate 20s linear infinite;
+    top: 10%;
+    left: 80%;
+
+    @include md {
+      top: 8%;
+      left: 86%;
+    }
   }
 
-  h3 {
-    white-space: nowrap;
+  &__star-blue {
+    position: absolute;
+    top: -225%;
+    left: 98%;
+
+    @include sm {
+      display: none;
+    }
   }
 
-  hr {
-    @include hr(45px, 0);
+  &__dawn {
+    position: absolute;
+    animation: rotate 20s linear infinite;
+    top: 52%;
+    left: -2%;
+
+    @include md {
+      top: 62%;
+      left: -3%;
+    }
+
+    @include sm {
+      top: 4%;
+      left: 63%;
+      animation: none;
+    }
+  }
+
+  &__aside {
+    left: 1%;
+
+    @include md {
+      left: -2%;
+    }
+  }
+
+  &__card {
+    max-height: 400px;
+    height: 100%;
+    max-width: 310px;
     width: 100%;
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    padding: 30px 30px 70px 35px;
+    transition: 0.4s ease;
+    z-index: 1;
 
-  p {
-    max-width: 228px;
+    @include lg {
+      max-width: 225px;
+      max-height: 311px;
+      gap: 20px;
+      padding: 30px 20px 25px 20px;
+    }
+
+    @include md {
+      max-width: 182px;
+      height: 276px;
+      gap: 15px;
+      padding: 25px 15px 20px 15px;
+    }
+
+    @include sm {
+      max-width: 190px;
+      height: 238px;
+      gap: 15px;
+      padding: 25px 15px 20px 15px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+
+    &:nth-child(1) {
+      background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
+    }
+
+    object {
+      width: 53.83px;
+      height: 42.5px;
+    }
+
+    h3 {
+      white-space: nowrap;
+    }
+
+    hr {
+      @include hr(90px, 0);
+
+      @include lg {
+        @include hr(92px, 0);
+      }
+
+      @include md {
+        @include hr(60px, 0);
+      }
+
+      @include xs {
+        @include hr(45px, 0);
+      }
+    }
   }
 }
-
-
