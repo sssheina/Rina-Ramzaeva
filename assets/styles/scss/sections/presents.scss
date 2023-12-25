@@ -350,10 +350,6 @@
       @include hr(60px, 13px 0 15px);
     }
 
-    @include sm {
-      @include hr(60px, 13px 0 15px);
-    }
-
     @include xs {
       @include hr(45px, 10px 0 13px);
     }

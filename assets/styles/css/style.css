@@ -2784,6 +2784,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .about__dawn {
+    animation: none;
     left: 235%;
     top: -50%;
   }
@@ -4068,6 +4069,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 767px) {
   .help__party-star {
     top: 1%;
+    animation: none;
   }
 }
 .help__arrows {
@@ -5161,6 +5163,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .tv__dawn {
+    animation: none;
     top: 4.5%;
     right: 3%;
   }
@@ -5583,8 +5586,9 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .education__spiral {
-    top: 6%;
-    right: 1%;
+    top: 7%;
+    right: 0;
+    animation: none;
   }
 }
 @media only screen and (max-width: 427px) {
@@ -6598,16 +6602,24 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   padding: 220px 0 260px;
 }
-.payment hr {
-  width: 285px;
-  margin: 30px auto 40px;
-  background-color: #635d5d;
-  height: 2px;
-  border: none;
+@media only screen and (max-width: 1919px) {
+  .payment {
+    padding: 165px 0 195px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .payment {
+    padding: 88px 0 100px;
+  }
 }
 @media only screen and (max-width: 767px) {
-  .payment hr {
-    height: 1px;
+  .payment {
+    padding: 115px 0 115px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .payment {
+    padding: 85px 0 80px;
   }
 }
 .payment__title {
@@ -6654,9 +6666,30 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: center;
   gap: 86px;
 }
+@media only screen and (max-width: 1919px) {
+  .payment__cards {
+    margin: 100px 0 80px;
+    gap: 76px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .payment__cards {
+    margin: 50px 0 70px;
+    gap: 18px;
+    justify-content: space-around;
+  }
+}
 @media only screen and (max-width: 767px) {
   .payment__cards {
     flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 73px 0 77px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .payment__cards {
+    margin: 45px 0 70px;
   }
 }
 .payment__button {
@@ -6677,11 +6710,9 @@ body._touch .menu__list > li._active .menu__arrow {
   outline: none;
   outline-offset: 0;
 }
-
 .payment__wrapper {
   position: relative;
 }
-
 .payment__star-pink1 {
   position: absolute;
   top: -8%;
@@ -6704,8 +6735,14 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .payment__wave-blue1 {
   position: absolute;
-  top: 17%;
+  top: 16%;
   left: 17%;
+}
+@media only screen and (max-width: 1439px) {
+  .payment__wave-blue1 {
+    top: 11%;
+    left: 10%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .payment__wave-blue1 {
@@ -6728,7 +6765,12 @@ body._touch .menu__list > li._active .menu__arrow {
   top: 10%;
   left: 80%;
 }
-
+@media only screen and (max-width: 1439px) {
+  .payment__spiral {
+    top: 8%;
+    left: 86%;
+  }
+}
 .payment__star-blue {
   position: absolute;
   top: -225%;
@@ -6742,15 +6784,33 @@ body._touch .menu__list > li._active .menu__arrow {
 .payment__dawn {
   position: absolute;
   animation: rotate 20s linear infinite;
-  top: 48%;
-  left: 0%;
+  top: 52%;
+  left: -2%;
 }
-
+@media only screen and (max-width: 1439px) {
+  .payment__dawn {
+    top: 62%;
+    left: -3%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .payment__dawn {
+    top: 4%;
+    left: 63%;
+    animation: none;
+  }
+}
 .payment__aside {
-  left: 1px;
+  left: 1%;
 }
-
+@media only screen and (max-width: 1439px) {
+  .payment__aside {
+    left: -2%;
+  }
+}
 .payment__card {
+  max-height: 400px;
+  height: 100%;
   max-width: 310px;
   width: 100%;
   display: flex;
@@ -6760,6 +6820,30 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 30px 30px 70px 35px;
   transition: 0.4s ease;
   z-index: 1;
+}
+@media only screen and (max-width: 1919px) {
+  .payment__card {
+    max-width: 225px;
+    max-height: 311px;
+    gap: 20px;
+    padding: 30px 20px 25px 20px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .payment__card {
+    max-width: 182px;
+    height: 276px;
+    gap: 15px;
+    padding: 25px 15px 20px 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .payment__card {
+    max-width: 190px;
+    height: 238px;
+    gap: 15px;
+    padding: 25px 15px 20px 15px;
+  }
 }
 .payment__card:hover {
   transform: translateY(-4px);
@@ -6781,20 +6865,58 @@ body._touch .menu__list > li._active .menu__arrow {
   white-space: nowrap;
 }
 .payment__card hr {
-  width: 45px;
+  width: 90px;
   margin: 0;
   background-color: #635d5d;
   height: 2px;
   border: none;
-  width: 100%;
 }
 @media only screen and (max-width: 767px) {
   .payment__card hr {
     height: 1px;
   }
 }
-.payment__card p {
-  max-width: 228px;
+@media only screen and (max-width: 1919px) {
+  .payment__card hr {
+    width: 92px;
+    margin: 0;
+    background-color: #635d5d;
+    height: 2px;
+    border: none;
+  }
+}
+@media only screen and (max-width: 1919px) and (max-width: 767px) {
+  .payment__card hr {
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .payment__card hr {
+    width: 60px;
+    margin: 0;
+    background-color: #635d5d;
+    height: 2px;
+    border: none;
+  }
+}
+@media only screen and (max-width: 1439px) and (max-width: 767px) {
+  .payment__card hr {
+    height: 1px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .payment__card hr {
+    width: 45px;
+    margin: 0;
+    background-color: #635d5d;
+    height: 2px;
+    border: none;
+  }
+}
+@media only screen and (max-width: 427px) and (max-width: 767px) {
+  .payment__card hr {
+    height: 1px;
+  }
 }
 
 .registration {
@@ -8343,20 +8465,6 @@ details[open] summary ~ * {
   }
 }
 @media only screen and (max-width: 1439px) and (max-width: 767px) {
-  .presents__webinar-hr {
-    height: 1px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .presents__webinar-hr {
-    width: 60px;
-    margin: 13px 0 15px;
-    background-color: #635d5d;
-    height: 2px;
-    border: none;
-  }
-}
-@media only screen and (max-width: 767px) and (max-width: 767px) {
   .presents__webinar-hr {
     height: 1px;
   }

@@ -310,8 +310,9 @@
     }
 
     @include sm {
-      top: 6%;
-      right: 1%;
+      top: 7%;
+      right: 0;
+      animation: none;
     }
 
     @include xs {
