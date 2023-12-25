@@ -62,6 +62,11 @@
     position: absolute;
     top: -30%;
     right: 15%;
+
+    @include xs {
+      top: 12%;
+      right: 8%;
+    }
   }
 
   &__wave-blue {
