@@ -2,17 +2,66 @@
   position: relative;
   padding: 220px 0 260px;
 
+  @include lg {
+    padding: 165px 0 195px;
+  }
+
+  @include md {
+    padding: 88px 0 100px;
+  }
+
+  @include sm {
+    padding: 115px 0 115px;
+  }
+
+  @include xs {
+    padding: 85px 0 80px;
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
     justify-content: space-around;
     z-index: 1;
+    gap: 100px;
+
+    @include lg {
+    }
+
+    @include md {
+      gap: 100px;
+    }
+
+    @include sm {
+      flex-direction: column;
+      gap: 70px;
+    }
+
+    @include xs {
+      gap: 50px;
+    }
   }
 
   &__title {
     position: relative;
     height: fit-content;
     margin-top: 35px;
+
+    @include lg {
+      margin-top: 35px;
+    }
+
+    @include md {
+      margin-top: 15px;
+    }
+
+    @include sm {
+text-align: start;
+    }
+
+    @include xs {
+      margin-top: 12px;
+    }
 
     &::before,
     &::after {
@@ -22,79 +71,468 @@
       width: 101px;
       height: 2px;
       background: $color-black;
+
+      @include lg {
+        width: 76px;
+      }
+
+      @include md {
+        width: 40px;
+      }
+
+      @include xs {
+        width: 30px;
+      }
     }
 
     &::before {
       top: -35px;
+
+      @include lg {
+        top: -15px;
+      }
+
+      @include xs {
+        top: -12px;
+      }
     }
 
     &::after {
       bottom: -35px;
+
+      @include lg {
+        top: -15px;
+      }
+
+      @include md {
+        top: 40px;
+      }
+
+      @include xs {
+        top: 33px;
+      }
     }
   }
-}
 
-.faq__aside {
-  left: 32px;
-}
+  &__aside {
+    left: 32px;
 
+    @include lg {
 
-.faq__questions {
-  display: flex;
-  flex-direction: column;
-  gap: 33px;
+    }
+    
+    @include md {
+      left: 1%;
+    }
+    
+    @include sm {
+    
+    }
+    
+    @include xs {
+      
+    }
+    
+  }
 
-  details {
+  &__questions {
     display: flex;
-    max-width: 1004px;
-    transition: 0.2s ease-in-out;
+    flex-direction: column;
+    gap: 33px;
 
-    &:hover {
-      transform: translateY(-2px);
+    @include lg {
+      gap: 25px;
     }
 
-    &:nth-child(3n + 1) summary {
-      background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
+    @include md {
+      max-width: 400px;
+      width: 100%;
+      gap: 20px;
     }
 
-    &:nth-child(3n + 2) summary {
-      background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
+    @include xs {
+      gap: 17px;
     }
 
-    &:nth-child(3n + 3) summary {
-      background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
-    }
-
-    & summary {
-      position: relative;
-      cursor: pointer;
+    details {
       display: flex;
-      align-items: center;
-      min-height: 106px;
-      padding: 0 50px 0 25px;
-      box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+      max-width: 1004px;
+      transition: 0.2s ease-in-out;
 
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        right: 37px;
-        top: 50%;
-        width: 32px;
-        height: 3px;
-        background: $color-black;
-        transform: translateY(-50%);
-        transition: 0.4s;
+      @include lg {
+        max-width: 953px;
       }
 
-      &::after {
-        transform: rotate(90deg);
+      @include md {
+        max-width: 348px;
+      }
+
+      @include xs {
+        max-width: 260px;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      &:nth-child(3n + 1) summary {
+        background: linear-gradient(180deg, #ffdada 0%, #fff 100%);
+      }
+
+      &:nth-child(3n + 2) summary {
+        background: linear-gradient(180deg, #d9f0ff 0%, #fff 100%);
+      }
+
+      &:nth-child(3n + 3) summary {
+        background: linear-gradient(180deg, #bfebe3 0%, #fff 100%);
+      }
+
+      & summary {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        min-height: 106px;
+        padding: 0 50px 0 25px;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+        @include lg {
+          min-height: 80px;
+          padding: 0 40px 0 20px;
+        }
+
+        @include md {
+          min-height: 80px;
+          padding: 0 40px 0 20px;
+        }
+
+        @include sm {
+          min-height: 80px;
+          padding: 0 40px 0 20px;
+        }
+
+        @include xs {
+          min-height: 121px;
+          padding: 0 30px 0 15px;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          right: 37px;
+          top: 50%;
+          width: 32px;
+          height: 3px;
+          background: $color-black;
+          transform: translateY(-50%);
+          transition: 0.4s;
+
+          @include lg {
+            right: 27px;
+          }
+
+          @include md {
+            right: 18px;
+            width: 15px;
+            height: 1px;
+          }
+
+          @include sm {
+            right: 18px;
+            width: 15px;
+            height: 1px;
+          }
+
+          @include xs {
+            right: 12px;
+            width: 11px;
+            height: 1px;
+          }
+        }
+
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+
+      p {
+        margin: 33px auto 0;
+        max-width: 800px;
+
+        @include lg {
+          margin: 25px auto 0;
+          max-width: 600px;
+        }
+
+        @include md {
+          margin: 20px auto 0;
+          max-width: 308px;
+        }
+
+        @include sm {
+          margin: 20px auto 0;
+          max-width: 308px;
+        }
+
+        @include xs {
+          margin: 17px auto 0;
+          max-width: 230px;
+        }
       }
     }
+  }
 
-    p {
-      margin: 33px auto 0;
-      max-width: 800px;
+  &__wave_1 {
+    position: absolute;
+    top: 5%;
+    left: 9%;
+
+    @include lg {
+      top: 6%;
+    }
+
+    @include md {
+      top: 3%;
+    }
+
+    @include sm {
+      top: 5%;
+      left: 5%;
+    }
+
+    @include xs {
+      top: 3%;
+      left: 5%;
+    }
+  }
+
+  &__wave_2 {
+    position: absolute;
+    left: 21%;
+    bottom: 6%;
+
+    @include lg {
+      bottom: 5%;
+    }
+
+    @include md {
+      left: 21%;
+    bottom: 4%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__spiral {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 17%;
+    left: 8%;
+    }
+
+    @include sm {
+      top:  6%;
+    left: 68%;
+    }
+
+    @include xs {
+      top:  4%;
+      left: 70%;
+    }
+  }
+
+  &__shell {
+    position: absolute;
+    right: 0;
+    top: 42%;
+
+    @include lg {
+    }
+
+    @include md {
+      right: 0;
+    top: 27%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__star_blue-1 {
+    position: absolute;
+    top: 4%;
+    left: 61%;
+
+    @include lg {
+      
+    }
+
+    @include md {
+      top: 2%;
+    }
+
+    @include sm {
+      top: 3%;
+      left: 55%;
+    }
+
+    @include xs {
+      top: 2%;
+    }
+  }
+
+  &__star_blue-2 {
+    position: absolute;
+    top: 33%;
+    left: 92%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 20%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__star_blue-3 {
+    position: absolute;
+    top: 92%;
+    left: 76%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 96%;
+    left: 86%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__star_blue-4 {
+    position: absolute;
+    top: 70%;
+    left: 8%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 64%;
+    left: 12%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__star_blue-5 {
+    position: absolute;
+    top: 55%;
+    left: 18%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 33%;
+      left: 23%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__star_blue-6 {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+
+    @include lg {
+    }
+
+    @include md {
+      top: 9%;
+    left: 11%;
+    }
+
+    @include sm {
+      display: none;
+    }
+
+    @include xs {
+    }
+  }
+
+  &__questions-summary {
+    
+
+    @include lg {
+    }
+
+    @include md {
+      font-size: 12px;
+    }
+
+    @include sm {
+      font-size: 13px;
+    }
+
+    @include xs {
+    }
+  }
+  
+  &__answers {
+
+    @include lg {
+    }
+
+    @include md {
+      font-size: 11px;
+    }
+
+    @include sm {
+      font-size: 12px;
+    }
+
+    @include xs {
     }
   }
 }
@@ -112,275 +550,5 @@ details[open] summary ~ * {
   }
   100% {
     opacity: 1;
-  }
-}
-
-.faq__wave_1 {
-  position: absolute;
-  top: 5%;
-  left: 9%;
-}
-
-.faq__wave_2 {
-  position: absolute;
-  left: 15%;
-  bottom: 8%;
-}
-
-.faq__spiral {
-  position: absolute;
-  top: 30%;
-  left: 8%;
-}
-
-.faq__shell {
-  position: absolute;
-  right: 0;
-  top: 42%;
-}
-
-.faq__star_blue {
-  position: absolute;
-
-  &:nth-child(6) {
-    top: 4%;
-    left: 61%;
-  }
-
-  &:nth-child(7) {
-    top: 33%;
-    right: 7%;
-  }
-
-  &:nth-child(8) {
-    left: 7%;
-    bottom: 28%;
-  }
-
-  &:nth-child(9) {
-    left: 77%;
-    bottom: 5%;
-  }
-}
-
-.faq__star_blue-inner {
-  position: absolute;
-
-  &:nth-child(1) {
-    top: 17%;
-    left: 12%;
-  }
-
-  &:nth-child(2) {
-    left: 7%;
-    bottom: 30%;
-  }
-}
-
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .faq {
-    padding: 165px 0 195px;
-
-    &__title {
-      margin-top: 35px;
-
-      &::before,
-      &::after {
-        width: 76px;
-      }
-    }
-  }
-
-  .faq__questions {
-    gap: 25px;
-
-    details {
-      max-width: 753px;
-
-      summary {
-        min-height: 80px;
-        padding: 0 40px 0 20px;
-
-        &::before,
-        &::after {
-          right: 27px;
-        }
-      }
-
-      p {
-        margin: 25px auto 0;
-        max-width: 600px;
-      }
-    }
-  }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .faq {
-    padding: 78px 0 100px;
-
-    &__title {
-      margin-top: 15px;
-
-      &::before,
-      &::after {
-        width: 40px;
-      }
-
-      &::before {
-        top: -15px;
-      }
-
-      &::after {
-        bottom: -15px;
-      }
-    }
-  }
-
-  .faq__questions {
-    gap: 15px;
-
-    details {
-      max-width: 348px;
-
-      summary {
-        min-height: 80px;
-        padding: 0 40px 0 20px;
-
-        &::before,
-        &::after {
-          right: 18px;
-          width: 15px;
-          height: 1px;
-        }
-      }
-
-      p {
-        margin: 20px auto 0;
-        max-width: 308px;
-      }
-    }
-  }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .faq {
-    padding: 115px 0;
-
-    &__wrapper {
-      flex-direction: column;
-      gap: 70px;
-    }
-
-    &__title {
-      margin-top: 15px;
-
-      &::before,
-      &::after {
-        width: 40px;
-      }
-
-      &::before {
-        top: -15px;
-      }
-
-      &::after {
-        bottom: -15px;
-      }
-    }
-  }
-
-  .faq__questions {
-    gap: 15px;
-
-    details {
-      max-width: 348px;
-
-      summary {
-        min-height: 80px;
-        padding: 0 40px 0 20px;
-
-        &::before,
-        &::after {
-          right: 18px;
-          width: 15px;
-          height: 1px;
-        }
-      }
-
-      p {
-        margin: 20px auto 0;
-        max-width: 308px;
-      }
-    }
-  }
-
-  .faq__wave_2 {
-    display: none;
-  }
-}
-
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .faq {
-    padding: 85px 0;
-
-    &__wrapper {
-      flex-direction: column;
-      gap: 50px;
-    }
-
-    &__title {
-      margin-top: 12px;
-
-      &::before,
-      &::after {
-        width: 30px;
-      }
-
-      &::before {
-        top: -12px;
-      }
-
-      &::after {
-        bottom: -12px;
-      }
-    }
-  }
-
-  .faq__questions {
-    gap: 12px;
-
-    details {
-      max-width: 260px;
-
-      summary {
-        min-height: 60px;
-        padding: 0 30px 0 15px;
-
-        &::before,
-        &::after {
-          right: 12px;
-          width: 11px;
-          height: 1px;
-        }
-      }
-
-      p {
-        margin: 17px auto 0;
-        max-width: 230px;
-      }
-    }
-  }
-
-  .faq__wave_2 {
-    display: none;
   }
 }
