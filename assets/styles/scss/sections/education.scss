@@ -361,6 +361,11 @@
     top: 65%;
     left: -6%;
 
+    @include md {
+      top: 60%;
+      left: -3%;
+    }
+
     @include sm {
       display: none;
     }
@@ -393,11 +398,14 @@
     &__arrows-1 {
       display: none;
       position: absolute;
-      top: -90%;
-      left: 88%;
+      top: 79%;
+      left: 85%;
       
       @include md {
         display: block;
+      }
+      @include sm {
+        display: none;
       }
       }
 }

@@ -267,11 +267,11 @@
   }
 
   @include sm {
-    --banner-medium-font-size: 11px;
+    --banner-medium-font-size: 13px;
   }
 
   @include xs {
-    --banner-medium-font-size: 9px;
+    --banner-medium-font-size: 10px;
   }
 
   /* button - text */

@@ -1183,12 +1183,12 @@ textarea {
 }
 @media only screen and (max-width: 767px) {
   :root {
-    --banner-medium-font-size: 11px;
+    --banner-medium-font-size: 13px;
   }
 }
 @media only screen and (max-width: 427px) {
   :root {
-    --banner-medium-font-size: 9px;
+    --banner-medium-font-size: 10px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -4433,6 +4433,17 @@ body._touch .menu__list > li._active .menu__arrow {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 767px) {
+  .numbers__wrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .numbers__wrapper {
+    gap: 20px;
+  }
+}
 .numbers__numbers {
   display: flex;
   flex-direction: column;
@@ -4453,14 +4464,16 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 767px) {
   .numbers__numbers {
+    flex-direction: row-reverse;
+    justify-content: space-between;
     gap: 12px;
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 @media only screen and (max-width: 427px) {
   .numbers__numbers {
     gap: 8px;
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 .numbers__star {
@@ -5622,6 +5635,12 @@ body._touch .menu__list > li._active .menu__arrow {
   top: 65%;
   left: -6%;
 }
+@media only screen and (max-width: 1439px) {
+  .education__dawn {
+    top: 60%;
+    left: -3%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .education__dawn {
     display: none;
@@ -5655,12 +5674,17 @@ body._touch .menu__list > li._active .menu__arrow {
 .education__arrows-1 {
   display: none;
   position: absolute;
-  top: -90%;
-  left: 88%;
+  top: 79%;
+  left: 85%;
 }
 @media only screen and (max-width: 1439px) {
   .education__arrows-1 {
     display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .education__arrows-1 {
+    display: none;
   }
 }
 
@@ -5855,7 +5879,7 @@ body._touch .menu__list > li._active .menu__arrow {
   top: -490%;
   left: 20%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1439px) {
   .steps__star_blue {
     display: none;
   }
