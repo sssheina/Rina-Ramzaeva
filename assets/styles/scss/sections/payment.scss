@@ -13,7 +13,7 @@
   }
 
   &__cards {
-    margin: 125px 0 125px;
+    margin: 162px 0 125px;
     display: flex;
     justify-content: center;
     gap: 86px;
@@ -64,23 +64,87 @@
   position: absolute;
   top: -8%;
   left: 10%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+    
+  }
 }
 .payment__star-pink2 {
   position: absolute;
   top: 77%;
   left: 77%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+    
+  }
 }
 
 .payment__wave-blue1 {
   position: absolute;
   top: 17%;
   left: 17%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+    
+  }
 }
 
 .payment__wave-blue2 {
   position: absolute;
   top: 107%;
   left: 58%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+    display: none;
+  }
+  
+  @include xs {
+    
+  }
 }
 
 .payment__spiral {
@@ -94,6 +158,22 @@
   position: absolute;
   top: -225%;
   left: 98%;
+
+  @include lg {
+
+  }
+  
+  @include md {
+  
+  }
+  
+  @include sm {
+  display: none;
+  }
+  
+  @include xs {
+    
+  }
 }
 
 .payment__dawn {
