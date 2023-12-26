@@ -5,6 +5,25 @@
     display: grid;
     grid-template-columns: 45% 55%;
     padding: 220px 0 286px;
+
+    @include lg {
+      padding: 175px 0 155px;
+    }
+
+    @include md {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 50px;
+      padding: 88px 0 88px;
+    }
+
+    @include sm {
+      padding: 115px 0 115px;
+    }
+
+    @include xs {
+      padding: 85px 0 85px;
+    }
   }
 
   &__rights {
@@ -14,31 +33,194 @@
     gap: 15px;
     color: #fff;
     background: $color-black;
-    padding: 52px 0 60px;
+    padding: 47px 0 47px;
+
+    @include lg {
+      padding: 40px 0 40px;
+      font-size: 18px;
+    }
+
+    @include md {
+      font-size: 16px;
+    }
+
+    @include sm {
+      font-size: 12px;
+    }
+
+    @include xs {
+      padding: 30px 0 30px;
+      font-size: 11px;
+    }
 
     p:last-child {
       display: flex;
       align-items: center;
     }
   }
+
+  &__card:first-child {
+    h3 {
+      @include md {
+        text-align: center;
+      }
+    }
+
+    hr {
+      @include hr(130px, 30px 0 40px);
+
+      @include lg {
+        @include hr(92px, 23px 0 30px);
+      }
+
+      @include md {
+        @include hr(60px, 15px auto 40px);
+      }
+
+      @include sm {
+        @include hr(60px, 13px auto 40px);
+      }
+
+      @include xs {
+        @include hr(45px, 10px auto 30px);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include md {
+      gap: 110px;
+    }
+
+    @include sm {
+      gap: 54px;
+    }
+  }
+  &__wrapper-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper-card:last-child {
+    h3 {
+      text-align: right;
+
+      @include md {
+        text-align: left;
+      }
+    }
+
+    hr {
+      @include hr(130px, 30px 0 40px auto);
+
+      @include lg {
+        @include hr(92px, 23px 0 30px auto);
+      }
+
+      @include md {
+        @include hr(60px, 13px 0 30px);
+      }
+
+      @include sm {
+        @include hr(60px, 13px 0 25px);
+      }
+
+      @include xs {
+        @include hr(45px, 10px 0 20px);
+      }
+    }
+
+    nav a {
+      text-align: right;
+
+      @include md {
+        text-align: left;
+      }
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+
+    gap: 48px;
+
+    @include lg {
+      gap: 36px;
+    }
+
+    @include md {
+      gap: 76px;
+    }
+
+    @include xs {
+      gap: 63px;
+    }
+  }
+
+  &__social-icon {
+    max-width: 53.33px;
+    width: 100%;
+
+    @include lg {
+      max-width: 40px;
+    }
+
+    @include xs {
+      max-width: 40px;
+    }
+  }
+
+  &__logo {
+    width: 37px;
+
+    @include lg {
+      width: 30px;
+    }
+
+    @include md {
+      width: 18px;
+    }
+
+    @include xs {
+      width: 15px;
+    }
+  }
 }
 
-.footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer__card {
+.card {
   max-width: fit-content;
 
   hr {
     @include hr(167px, 20px 0 40px);
+
+    @include lg {
+      @include hr(125px, 16px 0 31px);
+    }
+
+    @include md {
+      @include hr(66px, 15px 0 30px);
+    }
+
+    @include sm {
+      @include hr(66px, 15px 0 25px);
+    }
+
+    @include xs {
+      @include hr(50px, 10px 0 20px);
+    }
   }
 
   nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include xs {
+      gap: 30px;
+    }
 
     a {
       text-decoration: none;
@@ -48,155 +230,5 @@
         color: $color-blackhover;
       }
     }
-  }
-}
-
-.footer__wrapper .footer__card:last-child {
-  h3 {
-    text-align: right;
-  }
-
-  hr {
-    margin-left: auto;
-  }
-
-  nav a {
-    text-align: right;
-  }
-}
-
-.footer__social-icons {
-  display: flex;
-  gap: 48px;
-}
-
-// Desktop 1440px
-
-@media all and (min-width: 1440px) and (max-width: 1919px) {
-  .footer {
-    &__content {
-      padding: 175px 0 155px;
-    }
-  }
-
-  .footer__card {
-    hr {
-      @include hr(125px, 16px 0 31px);
-    }
-  }
-
-  .footer__social-icons {
-    gap: 36px;
-  }
-
-  .footer__social-icon {
-    max-width: 40px;
-  }
-}
-
-// Tablet 768px
-
-@media all and (min-width: 768px) and (max-width: 1439px) {
-  .footer {
-    &__content {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      gap: 50px;
-      padding: 88px 0 70px;
-    }
-  }
-
-  .footer__wrapper {
-    gap: 110px;
-  }
-
-  .footer__card {
-    hr {
-      @include hr(66px, 15px 0 40px);
-    }
-
-    nav {
-      gap: 40px;
-    }
-  }
-
-  .footer__card:first-child {
-    h3 {
-      text-align: center;
-    }
-
-    hr {
-      margin: 15px auto 40px;
-    }
-  }
-
-  .footer__wrapper .footer__card:first-child {
-    hr {
-      margin-left: 0;
-    }
-  }
-
-  .footer__wrapper .footer__card:last-child {
-    h3 {
-      text-align: left;
-    }
-
-    hr {
-      margin-left: 0;
-    }
-
-    nav a {
-      text-align: left;
-    }
-  }
-
-  .footer__social-icons {
-    gap: 40px;
-  }
-}
-
-// Mobile 428px
-
-@media all and (min-width: 428px) and (max-width: 767px) {
-  .footer {
-    &__content {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding: 115px 0 51px;
-    }
-  }
-
-  .footer__wrapper {
-    gap: 54px;
-  }
-}
-
-// Mobile 320px
-
-@media all and (min-width: 320px) and (max-width: 427px) {
-  .footer {
-    &__content {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      gap: 30px;
-      padding: 85px 0 42px;
-    }
-  }
-
-  .footer__card {
-    hr {
-      @include hr(50px, 10px 0 30px);
-    }
-
-    nav {
-      gap: 30px;
-    }
-  }
-
-  .footer__social-icons {
-    gap: 30px;
-  }
-  .footer__social-icon {
-    max-width: 30px;
   }
 }
