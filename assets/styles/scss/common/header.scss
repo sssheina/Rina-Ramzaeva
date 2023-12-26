@@ -62,6 +62,22 @@
     height: 100%;
     gap: 20px;
 
+    @include lg {
+      gap: 13px;
+    }
+    
+    @include md {
+    
+    }
+    
+    @include sm {
+    
+    }
+    
+    @include xs {
+      
+    }
+
     li:nth-child(11) {
       position: relative;
       cursor: pointer;
@@ -167,3 +183,8 @@ body._touch .menu__list > li._active .menu__arrow {
   margin: 10px 0px 0px 0px;
   transform: rotate(-180deg);
 }
+
+.link-span {
+  color: $color-black;
+}
+
