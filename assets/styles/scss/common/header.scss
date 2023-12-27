@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   max-height: 100px;
   height: 100%;
   z-index: 11;
@@ -10,6 +10,7 @@
   justify-content: center;
   background: transparent;
   transition: background 0.3s ease-in-out;
+  box-sizing: border-box;
 
   @include lg {
     max-height: 75px;

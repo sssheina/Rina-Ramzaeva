@@ -24,10 +24,15 @@
   }
 
   &__aside {
-    left: -53px;
+    left: -3%;
+
+
+    @include lg {
+      // left: -3.9%;
+    }
 
     @include md {
-      left: -49px;
+      left: -5.2%;
     }
   }
 
@@ -304,7 +309,7 @@
   }
 
   &__button {
-    background: $color-pinkdark;
+    background-color: $color-pinklight;
     width: 667px;
 
     @include lg {
@@ -324,7 +329,8 @@
     }
 
     &:hover {
-      background-color: $color-pinklight;
+      background: $color-pinkdark;
+      
       @include btn-hover;
     }
   }

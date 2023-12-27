@@ -20,12 +20,13 @@
   }
 
   &__aside {
-    left: -43px;
+    left: -2.5%;
 
     @include lg {
     }
 
     @include md {
+      left: -4.5%;
     }
   }
 
@@ -140,7 +141,7 @@
   }
 
   &__button {
-    background-color: $color-green;
+    background-color: $color-greenlight;
     width: 667px;
 
     @include lg {
@@ -156,7 +157,7 @@
     }
 
     &:hover {
-      background-color: $color-bluelight;
+      background-color: $color-green;
       @include btn-hover;
     }
     &:focus {
@@ -178,7 +179,7 @@
 
   &__btn-close {
     position: absolute;
-    top: 8%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0.5rem 0.75rem;
@@ -186,6 +187,31 @@
     border-radius: 50%;
     border: none;
     z-index: 11;
+
+    @include lg {
+      padding: 0.3rem 0.67rem;
+      width: 35px;
+      height: 35px;
+    }
+    
+    @include md {
+      padding: 0.3rem 0.5rem;
+      width: 28px;
+      height: 28px;
+      top: 10%;
+    }
+    
+    @include sm {
+      width: 28px;
+      height: 28px;
+      top: 23%;
+    }
+    
+    @include xs {
+      padding: 0.17rem 0.41rem;
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__btn-close:hover {

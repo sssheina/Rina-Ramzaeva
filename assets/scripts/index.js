@@ -5,35 +5,6 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
 
-// ----------Firefox
-
-
-// window.addEventListener('DOMContentLoaded', (event) => {
-//   // Проверяем, является ли браузер Firefox
-//   const isFirefox = typeof InstallTrigger !== 'undefined';
- 
-//   // Если браузер Firefox, то добавляем линейный градиент
-//   if (isFirefox) {
-//     // Создаем новые элементы div
-//     const gradientBefore = document.createElement('div');
-//     const gradientAfter = document.createElement('div');
- 
-//     // Добавляем классы и стили
-//     gradientBefore.className = 'gradient-before';
-//     gradientAfter.className = 'gradient-after';
-//     gradientBefore.style.backgroundImage = 'linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6))';
-//     gradientAfter.style.backgroundImage = 'linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6))';
- 
-//     // Добавляем новые элементы в DOM
-//     const gradientElement = document.querySelector('.gradient');
-//     gradientElement.appendChild(gradientBefore);
-//     gradientElement.appendChild(gradientAfter);
-//   }
-//  });
-
-
-
-
 // ----- Education PIC-ZOOM -----
 
 document.querySelectorAll(".education__pic").forEach((image) => {
@@ -133,6 +104,18 @@ modalPrivacy.addEventListener("keydown", function (e) {
     closeModalPrivacy();
   }
 });
+
+document
+  .querySelector(".privacy-policy__concent")
+  .addEventListener("show.bs.modal", function () {
+    document.body.style.overflow = "hidden";
+  });
+
+document
+  .querySelector(".privacy-policy__concent")
+  .addEventListener("hide.bs.modal", function () {
+    document.body.style.overflow = "";
+  });
 
 //  ----- BURGER MENU -----
 const iconMenu = document.querySelector(".menu__icon");
@@ -282,56 +265,6 @@ document
     }
   });
 
-// // ----- Privacy Policy -----
-
-// const modalPrivacy = document.querySelector(".privacy-policy__concent");
-// const overlayPrivacy = document.querySelector(".privacy-policy");
-// const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
-// const closeModalBtnPrivacy = document.querySelector(".privacy-policy__btn-close");
-
-// const openModalPrivacy = function () {
-//   modalPrivacy.classList.remove("hidden");
-//   overlayPrivacy.classList.remove("hidden");
-// };
-
-// openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
-
-// const closeModalPrivacy = function () {
-//   modalPrivacy.classList.add("hidden");
-//   overlayPrivacy.classList.add("hidden");
-// };
-
-// closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
-
-// overlayPrivacy.addEventListener("click", closeModalPrivacy);
-
-// modalPrivacy.addEventListener("keydown", function (e) {
-//   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
-//     closeModalPrivacy ();
-//   }
-// });
-
-// const privacyPolicyLink = document.querySelector(".privacy-policy__link");
-// const privacyPolicy = document.querySelector(".privacy-policy");
-// const closePopupBtn = document.querySelector(".privacy-policy__btn-close");
-
-// privacyPolicyLink.addEventListener("click", () => {
-//   privacyPolicy.style.display = "block";
-// });
-// closePopupBtn.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   privacyPolicy.style.display = "none";
-// });
-
-// _________________________________________________
-
-// // ----- Smooth scrollbar -----
-// var Scrollbar = window.Scrollbar;
-// const options = {
-//   damping: 0.05,
-// };
-// Scrollbar.init(document.querySelector("#my-scrollbar"), options);
-
 // ____________________________PHPMailer__________________________
 
 async function submitForm() {
@@ -396,8 +329,6 @@ const errorsInfo = document.querySelector("#errorsInfo");
 const whatsappInput = document.querySelector("#whatsApp");
 
 let submitted = false;
-
-// const whatsappRegex = /\+[0-9]{1,3}\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
 
 // Registration form validation functions
 //----------------------------------------
@@ -522,354 +453,9 @@ document.getElementById("checkboxPrivat").addEventListener("click", (event) => {
   validateRegForm(true);
 });
 
-// function validateEmail(email) {
-// const re =
-// /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
-// return re.test(email);
-// }
-
 function validateCheckboxes(checkboxes) {
   return [...checkboxes].some((checkbox) => checkbox.checked);
 }
-
-/*
-form.addEventListener("submit", (e) => {
-  if (!submitted) {
-    submitted = true;
-  }
-
-  let errors = [];
-
-  if (userName.value === "") {
-    // Check if the username field is empty
-    errors.push("Имя обязательно");
-  }
-
-  if (email.value === "") {
-    // Check if the email field is empty
-    errors.push("Email обязателен");
-  } else if (!validateEmail(email.value)) {
-    // Check if the email format is valid
-    errors.push("Недействительный адрес электронной почты");
-  }
-
-  if (!validateCheckboxes(checkboxAdult)) {
-    errors.push("Подтверди, что тебе больше 18 лет");
-  }
-
-  if (!validateCheckboxes(checkboxPrivat)) {
-    errors.push("Необходимо согласиться с условиями");
-  }
-
-  // if (!whatsappRegex.test(whatsappInput.value)) {
-  //   errors.push('Поле WhatsApp может содержать только цифры, "-", "+", "()" и пробелы');
-  // }
-
-  if (errors.length > 0) {
-    e.preventDefault();
-    errorsInfo.innerHTML = errors.join("<br>");
-    errorsInfo.style.color = "#fb7070";
-  } else {
-    errorsInfo.innerHTML = "";
-    form.submit();
-  }
-});
-*/
-
-// input.onblur = function() {
-//   if (!input.value.includes('@')) { // не email
-//     input.classList.add('invalid');
-//     error.innerHTML = 'Пожалуйста, введите правильный email.'
-//   }
-// };
-
-// input.onfocus = function() {
-//   if (this.classList.contains('invalid')) {
-//     // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-//     this.classList.remove('invalid');
-//     error.innerHTML = "";
-//   }
-// };
-
-// email.onblur = function() {
-// if (email.value === "") {
-//Check if the email field is empty
-// email.classList.add('invalid');
-// errorsInfo.innerHTML = 'Email обязателен'
-// }
-// else if (!validateEmail(email.value)) { // не email
-// email.classList.add('invalid');
-// errorsInfo.innerHTMLL = 'Пожалуйста, введи правильный email.'
-// }
-// };
-
-// email.onfocus = function() {
-// if (this.classList.contains('invalid')) {
-//удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-// this.classList.remove('invalid');
-// errorsInfo.innerHTML = "";
-// }
-// };
-
-// userName.addEventListener("input", () => {
-// if (submitted) errorsInfo.innerHTML = "";
-// });
-
-// email.addEventListener("input", () => {
-// if (submitted) errorsInfo.innerHTML = "";
-// });
-
-// whatsappInput.addEventListener("input", () => {
-// if (submitted) errorsInfo.innerHTML = "";
-// });
-
-// checkboxAdult.forEach((checkbox) => {
-// checkbox.addEventListener("change", () => {
-// if (submitted) errorsInfo.innerHTML = "";
-// });
-// });
-
-// checkboxPrivat.forEach((checkbox) => {
-// checkbox.addEventListener("change", () => {
-// if (submitted) errorsInfo.innerHTML = "";
-// });
-// });
-
-// const whatsappRegex = /\+[0-9]{1,3}\s\([0-9]{3}\)\s[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
-
-// function validateEmail(email) {
-//   const re =
-//     /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
-//   return re.test(email);
-// }
-
-// function validateCheckboxes(checkboxes) {
-//   return [...checkboxes].some((checkbox) => checkbox.checked);
-// }
-
-/*
-form.addEventListener("submit", (e) => {
-  if (!submitted) {
-    submitted = true;
-  }
-
-  let errors = [];
-
-  if (userName.value === "") {
-    // Check if the username field is empty
-    errors.push("Имя обязательно");
-  }
-
-  if (email.value === "") {
-    // Check if the email field is empty
-    errors.push("Email обязателен");
-  } else if (!validateEmail(email.value)) {
-    // Check if the email format is valid
-    errors.push("Недействительный адрес электронной почты");
-  }
-
-  if (!validateCheckboxes(checkboxAdult)) {
-    errors.push("Подтверди, что тебе больше 18 лет");
-  }
-
-  if (!validateCheckboxes(checkboxPrivat)) {
-    errors.push("Необходимо согласиться с условиями");
-  }
-
-  // if (!whatsappRegex.test(whatsappInput.value)) {
-  //   errors.push('Поле WhatsApp может содержать только цифры, "-", "+", "()" и пробелы');
-  // }
-
-  if (errors.length > 0) {
-    e.preventDefault();
-    errorsInfo.innerHTML = errors.join("<br>");
-    errorsInfo.style.color = "#fb7070";
-  } else {
-    errorsInfo.innerHTML = "";
-    form.submit();
-  }
-});
-*/
-
-// input.onblur = function() {
-//   if (!input.value.includes('@')) { // не email
-//     input.classList.add('invalid');
-//     error.innerHTML = 'Пожалуйста, введите правильный email.'
-//   }
-// };
-
-// input.onfocus = function() {
-//   if (this.classList.contains('invalid')) {
-//     // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-//     this.classList.remove('invalid');
-//     error.innerHTML = "";
-//   }
-// };
-
-// email.onblur = function () {
-//   if (email.value === "") {
-//     // Check if the email field is empty
-//     email.classList.add("invalid");
-//     errorsInfo.innerHTML = "Email обязателен";
-//   } else if (!validateEmail(email.value)) {
-//     // не email
-//     email.classList.add("invalid");
-//     errorsInfo.innerHTMLL = "Пожалуйста, введи правильный email.";
-//   }
-// };
-
-// email.onfocus = function () {
-//   if (this.classList.contains("invalid")) {
-//     // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-//     this.classList.remove("invalid");
-//     errorsInfo.innerHTML = "";
-//   }
-// };
-
-// userName.addEventListener("input", () => {
-//   if (submitted) errorsInfo.innerHTML = "";
-// });
-
-// email.addEventListener("input", () => {
-//   if (submitted) errorsInfo.innerHTML = "";
-// });
-
-// whatsappInput.addEventListener("input", () => {
-//   if (submitted) errorsInfo.innerHTML = "";
-// });
-
-// checkboxAdult.forEach((checkbox) => {
-//   checkbox.addEventListener("change", () => {
-//     if (submitted) errorsInfo.innerHTML = "";
-//   });
-// });
-
-// checkboxPrivat.forEach((checkbox) => {
-//   checkbox.addEventListener("change", () => {
-//     if (submitted) errorsInfo.innerHTML = "";
-//   });
-// });
-
-// // ____________________________PHPMailer__________________________
-
-// async function submitForm(event) {
-//   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
-//  try {
-
-//    // Validating the form
-//    if(!validateRegForm(false)){
-// 	   return;
-//    }
-
-//    // Формируем запрос
-//    const response = await fetch("send.php", {
-//      method: "POST",
-//      body: new FormData(emailform),
-//    });
-//    // проверяем, что ответ есть
-//    if (!response.ok)
-//      throw `Ошибка при обращении к серверу: ${response.status}`;
-//    // проверяем, что ответ действительно JSON
-//    const contentType = response.headers.get("content-type");
-//    if (!contentType || !contentType.includes("application/json")) {
-//      throw "Ошибка обработки. Ответ не JSON";
-//    }
-//    // обрабатываем запрос
-//    const json = await response.json();
-//    if (json.result === "success") {
-//      // в случае успеха
-//      showThankYouMessage();
-//     //  alert(json.info);
-//    } else {
-//      // в случае ошибки
-//      console.log(json);
-//      throw json.info;
-//    }
-//  } catch (error) {
-//    // обработка ошибки
-//    alert(error);
-//  }
-// }
-
-// function showThankYouMessage() {
-//   modal.style.display = "block";
-// }
-
-// async function submitForm(event) {
-//   event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
-//   try {
-//     // Формируем запрос
-//     const response = await fetch("send.php", {
-//       method: "POST",
-//       body: new FormData(emailform),
-//     });
-//     // проверяем, что ответ есть
-//     if (!response.ok)
-//       throw `Ошибка при обращении к серверу: ${response.status}`;
-//     // проверяем, что ответ действительно JSON
-//     const contentType = response.headers.get("content-type");
-//     if (!contentType || !contentType.includes("application/json")) {
-//       throw "Ошибка обработки. Ответ не JSON";
-//     }
-//     // обрабатываем запрос
-//     const json = await response.json();
-//     if (json.result === "success") {
-//       // в случае успеха
-//       showThankYouMessage();
-//       //  alert(json.info);
-//     } else {
-//       // в случае ошибки
-//       console.log(json);
-//       throw json.info;
-//     }
-//   } catch (error) {
-//     // обработка ошибки
-//     alert(error);
-//   }
-// }
-
-// function showThankYouMessage() {
-//   modal.style.display = "block";
-// }
-
-//  ----- Посточные ошибки в инпутах -----
-
-// JavaScript
-// document.getElementById('username').addEventListener('input', function (e) {
-//   let target = e.target;
-//   let error = document.getElementById('usernameError');
-
-//   if (target.value === '') {
-//       error.textContent = 'Username is required';
-//       error.style.display = 'block';
-//   } else {
-//       error.style.display = 'none';
-//   }
-// });
-
-// document.getElementById('email').addEventListener('input', function (e) {
-//   let target = e.target;
-//   let error = document.getElementById('emailError');
-
-//   if (target.value === '') {
-//       error.textContent = 'Email is required';
-//       error.style.display = 'block';
-//   } else if (!target.validity.valid) {
-//       error.textContent = 'Please enter a valid email';
-//       error.style.display = 'block';
-//   } else {
-//       error.style.display = 'none';
-//   }
-// });
-
-// document.getElementById('myForm').addEventListener('submit', function (e) {
-//   let username = document.getElementById('username');
-//   let email = document.getElementById('email');
-
-//   if (username.value === '' || email.value === '' || !email.validity.valid) {
-//       e.preventDefault();
-//   }
-// });
 
 // ----- BUTTON UP -----
 

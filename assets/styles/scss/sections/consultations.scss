@@ -20,7 +20,7 @@
   }
 
   &__aside {
-    left: -1%;
+    left: -1.5%;
 
     @include md {
       left: -3%;
@@ -122,7 +122,8 @@
     & button {
       max-width: 800px;
       width: 100%;
-      background: $color-pinklight;
+      background-color: $color-pinklight;
+      
 
       @include lg {
         max-width: 600px;
@@ -137,6 +138,8 @@
       }
 
       &:hover {
+        
+        background: $color-pinkdark;
         @include btn-hover;
       }
     }

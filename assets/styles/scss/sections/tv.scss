@@ -19,12 +19,13 @@
   }
 
   &__aside {
-    left: -46px;
+    left: -2.8%;
 
     @include lg {
     }
 
     @include md {
+      left: -4.8%;
     }
 
     @include sm {
@@ -403,7 +404,8 @@
   &__button {
     width: 667px;
     margin: 0 auto;
-    background-color: $color-pinkdark;
+    background-color: $color-pinklight;
+    
 
     @include lg {
       width: 500px;
@@ -418,7 +420,8 @@
     }
 
     &:hover {
-      background-color: $color-pinklight;
+      background-color: $color-pinkdark;
+      
       @include btn-hover;
     }
     &:focus {

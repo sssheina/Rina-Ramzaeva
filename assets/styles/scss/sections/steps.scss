@@ -19,19 +19,17 @@
   }
 
   &__aside {
-    left: -49px;
+    left: -2.8%;
 
     @include lg {
-      left: -50px;
+      
     }
 
     @include md {
-      left: -27px;
+      left: -5%; 
     }
 
-    @include sm {
-      display: none;
-    }
+
   }
 
   &__wrapper {
@@ -144,7 +142,8 @@
     button {
       max-width: 667px;
       width: 100%;
-      background: $color-greenlight;
+      
+      background-color: $color-greenlight;
 
       @include lg {
         max-width: 500px;
@@ -159,8 +158,12 @@
       }
 
       &:hover {
+        background: $color-green;
         @include btn-hover;
       }
+      // &:hover {
+      //   @include btn-hover;
+      // }
     }
   }
 

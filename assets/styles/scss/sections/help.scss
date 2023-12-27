@@ -86,7 +86,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $color-blue;
+    background: $color-bluelight;
     max-width: 667px;
     width: 100%;
     margin: 0 auto;
@@ -104,7 +104,8 @@
     }
 
     &:hover {
-      background: $color-bluelight;
+      
+      background: $color-blue;
       @include btn-hover;
     }
 
@@ -114,10 +115,10 @@
   }
 
   &__aside {
-    left: -2px;
+    left: -2.87%;
 
     @include md {
-      left: -21px;
+      left: -5.2%;
     }
   }
 

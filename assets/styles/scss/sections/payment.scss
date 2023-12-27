@@ -57,9 +57,11 @@
     display: flex;
     justify-content: center;
 
+
     & button {
       max-width: 387px;
       width: 100%;
+      
       background: $color-pinklight;
 
       &:focus {
@@ -67,6 +69,7 @@
       }
 
       &:hover {
+        background: $color-pinkdark;
         @include btn-hover;
       }
     }
@@ -161,10 +164,10 @@
   }
 
   &__aside {
-    left: 1%;
+    left: 0;
 
     @include md {
-      left: -2%;
+      left: -1%;
     }
   }
 

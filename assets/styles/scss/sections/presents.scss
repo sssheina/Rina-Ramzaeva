@@ -23,12 +23,22 @@
   }
 
   &__aside {
-    left: -2px;
+    left: -0.5%;
 
     @include lg {
-    }
 
+    }
+    
     @include md {
+      left: -1.2%;
+    }
+    
+    @include sm {
+    
+    }
+    
+    @include xs {
+      
     }
   }
 
@@ -194,7 +204,7 @@
   &__guide-button {
     max-width: 386px;
     width: 100%;
-    background-color: $color-pinkdark;
+    background-color: $color-pinklight;
 
     @include lg {
       max-width: 290px;
@@ -217,7 +227,7 @@
     }
 
     &:hover {
-      background-color: $color-pinklight;
+      background-color: $color-pinkdark;
       @include btn-hover;
     }
   }

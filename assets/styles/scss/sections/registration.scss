@@ -20,12 +20,13 @@
   }
 
   &__aside {
-    left: 2px;
+    left: 0;
 
     @include lg {
     }
 
     @include md {
+      left: -1%;
     }
   }
 
