@@ -893,54 +893,63 @@ textarea {
   src: url(./../../fonts/Montserrat-Regular.ttf);
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-Italic.ttf);
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-Medium.ttf);
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-MediumItalic.ttf);
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-SemiBold.ttf);
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-Bold.ttf);
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-BoldItalic.ttf);
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-ExtraBold.ttf);
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url(./../../fonts/Montserrat-Black.ttf);
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 :root {
   --font-main: "Montserrat", sans-serif;
