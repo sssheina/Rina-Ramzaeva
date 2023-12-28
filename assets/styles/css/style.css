@@ -4680,7 +4680,7 @@ body._touch .menu__list > li._active .menu__arrow {
   .swiper__text_en {
     bottom: -7px;
     max-width: 187px;
-    max-height: 325px;
+    max-height: 307px;
     gap: 15px;
     padding: 15px;
   }
@@ -5048,6 +5048,34 @@ body._touch .menu__list > li._active .menu__arrow {
     height: 445px;
   }
 }
+.tv__marker-box_en {
+  width: 130px;
+  height: 520px;
+}
+@media only screen and (max-width: 1919px) {
+  .tv__marker-box_en {
+    width: 96px;
+    height: 390px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .tv__marker-box_en {
+    width: 52px;
+    height: 322px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .tv__marker-box_en {
+    width: 43px;
+    height: 358px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .tv__marker-box_en {
+    width: 32px;
+    height: 377px;
+  }
+}
 .tv__marker_blue {
   width: 39px;
   height: 520px;
@@ -5074,6 +5102,34 @@ body._touch .menu__list > li._active .menu__arrow {
   .tv__marker_blue {
     width: 11px;
     height: 476px;
+  }
+}
+.tv__marker_blue_en {
+  width: 39px;
+  height: 520px;
+  background-color: #d9f0ff;
+}
+@media only screen and (max-width: 1919px) {
+  .tv__marker_blue_en {
+    width: 29px;
+    height: 390px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .tv__marker_blue_en {
+    width: 15px;
+    height: 322px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .tv__marker_blue_en {
+    height: 358px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .tv__marker_blue_en {
+    width: 11px;
+    height: 377px;
   }
 }
 .tv__text-wrap {
@@ -5103,6 +5159,35 @@ body._touch .menu__list > li._active .menu__arrow {
   .tv__text-wrap {
     width: 226px;
     height: 478px;
+  }
+}
+.tv__text-wrap_en {
+  width: 1100px;
+  height: 520px;
+  z-index: 1;
+}
+@media only screen and (max-width: 1919px) {
+  .tv__text-wrap_en {
+    width: 840px;
+    height: 390px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .tv__text-wrap_en {
+    width: 515px;
+    height: 322px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .tv__text-wrap_en {
+    width: 303px;
+    height: 358px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .tv__text-wrap_en {
+    width: 226px;
+    height: 377px;
   }
 }
 .tv__title {
@@ -6461,7 +6546,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .steps__star-2_blue {
     left: -10%;
-    top: -22%;
+    top: -27%;
   }
 }
 .steps__wave_1 {

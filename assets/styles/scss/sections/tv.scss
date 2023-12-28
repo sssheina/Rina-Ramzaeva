@@ -98,6 +98,31 @@
     }
   }
 
+  &__marker-box_en {
+    width: 130px;
+    height: 520px;
+
+    @include lg {
+      width: 96px;
+      height: 390px;
+    }
+
+    @include md {
+      width: 52px;
+      height: 322px;
+    }
+
+    @include sm {
+      width: 43px;
+      height: 358px;
+    }
+
+    @include xs {
+      width: 32px;
+      height: 377px;
+    }
+  }
+
   &__marker_blue {
     width: 39px;
     height: 520px;
@@ -120,6 +145,31 @@
     @include xs {
       width: 11px;
       height: 476px;
+    }
+  }
+
+  &__marker_blue_en {
+    width: 39px;
+    height: 520px;
+    background-color: $color-bluelight;
+
+    @include lg {
+      width: 29px;
+      height: 390px;
+    }
+
+    @include md {
+      width: 15px;
+      height: 322px;
+    }
+
+    @include sm {
+      height: 358px;
+    }
+
+    @include xs {
+      width: 11px;
+      height: 377px;
     }
   }
 
@@ -146,6 +196,32 @@
     @include xs {
       width: 226px;
       height: 478px;
+    }
+  }
+
+  &__text-wrap_en {
+    width: 1100px;
+    height: 520px;
+    z-index: 1;
+
+    @include lg {
+      width: 840px;
+      height: 390px;
+    }
+
+    @include md {
+      width: 515px;
+      height: 322px;
+    }
+
+    @include sm {
+      width: 303px;
+      height: 358px;
+    }
+
+    @include xs {
+      width: 226px;
+      height: 377px;
     }
   }
 
