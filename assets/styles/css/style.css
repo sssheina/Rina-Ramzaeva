@@ -2516,7 +2516,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1919px) {
   .cover__left-side {
-    padding: 217px 0 106px;
+    padding: 217px 0 100px;
   }
 }
 @media only screen and (max-width: 1439px) {
@@ -2572,11 +2572,11 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__title {
   max-width: 685px;
   width: 100%;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
 }
 @media only screen and (max-width: 1919px) {
   .cover__title {
-    margin: 0 0 11px 0;
+    margin: 0 0 18px 0;
   }
 }
 @media only screen and (max-width: 1439px) {
@@ -2618,23 +2618,13 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__button {
   z-index: 1;
   width: 515px;
-  margin-top: 34px;
+  margin-top: 56px;
   background: #fdacac;
-}
-.cover__button:focus {
-  outline: 3px solid #fdacac;
-  box-shadow: 0 0 4px 3px #fdacac;
-  outline-offset: 7px;
-}
-.cover__button:hover {
-  background-color: #ffdada;
-  outline: none;
-  outline-offset: 0;
 }
 @media only screen and (max-width: 1919px) {
   .cover__button {
     width: 387px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 @media only screen and (max-width: 1439px) {
@@ -2653,6 +2643,16 @@ body._touch .menu__list > li._active .menu__arrow {
     width: 260px;
     margin-top: 49px;
   }
+}
+.cover__button:focus {
+  outline: 3px solid #fdacac;
+  box-shadow: 0 0 4px 3px #fdacac;
+  outline-offset: 7px;
+}
+.cover__button:hover {
+  background-color: #ffdada;
+  outline: none;
+  outline-offset: 0;
 }
 .cover__pic {
   position: absolute;
@@ -5218,6 +5218,34 @@ body._touch .menu__list > li._active .menu__arrow {
     min-height: 220px;
   }
 }
+.tv__card-text_en {
+  width: 540px;
+  min-height: 260px;
+}
+@media only screen and (max-width: 1919px) {
+  .tv__card-text_en {
+    width: 410px;
+    min-height: 192px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .tv__card-text_en {
+    width: 230px;
+    min-height: 220px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .tv__card-text_en {
+    width: 309px;
+    min-height: 180px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .tv__card-text_en {
+    width: 233px;
+    min-height: 220px;
+  }
+}
 .tv__button {
   width: 667px;
   margin: 0 auto;
@@ -6041,6 +6069,26 @@ body._touch .menu__list > li._active .menu__arrow {
     max-width: 233px;
   }
 }
+.steps__subtitle_en {
+  margin: 0 auto;
+  max-width: 435px;
+  text-align: center;
+}
+@media only screen and (max-width: 1919px) {
+  .steps__subtitle_en {
+    max-width: 281px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .steps__subtitle_en {
+    max-width: 229px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .steps__subtitle_en {
+    max-width: 233px;
+  }
+}
 .steps__cards {
   position: relative;
   max-width: fit-content;
@@ -6474,13 +6522,13 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: center;
 }
 .consultations__button button {
-  max-width: 800px;
+  max-width: 667px;
   width: 100%;
   background-color: #ffdada;
 }
 @media only screen and (max-width: 1919px) {
   .consultations__button button {
-    max-width: 600px;
+    max-width: 500px;
   }
 }
 @media only screen and (max-width: 1439px) {
@@ -6738,6 +6786,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .consultations-card__cost {
   font-size: 32px;
   font-weight: 400;
+  color: #635d5d;
 }
 @media only screen and (max-width: 1919px) {
   .consultations-card__cost {
@@ -6965,9 +7014,14 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: center;
 }
 .payment__button button {
-  max-width: 387px;
+  max-width: 600px;
   width: 100%;
   background: #ffdada;
+}
+@media only screen and (max-width: 1439px) {
+  .payment__button button {
+    max-width: 347px;
+  }
 }
 .payment__button button:focus {
   outline: 3px solid #ffdada;
@@ -6975,6 +7029,25 @@ body._touch .menu__list > li._active .menu__arrow {
   outline-offset: 7px;
 }
 .payment__button button:hover {
+  background: #fdacac;
+  outline: none;
+  outline-offset: 0;
+}
+.payment__button_en {
+  display: flex;
+  justify-content: center;
+}
+.payment__button_en button {
+  max-width: 600px;
+  width: 100%;
+  background: #ffdada;
+}
+.payment__button_en button:focus {
+  outline: 3px solid #ffdada;
+  box-shadow: 0 0 4px 3px #ffdada;
+  outline-offset: 7px;
+}
+.payment__button_en button:hover {
   background: #fdacac;
   outline: none;
   outline-offset: 0;
@@ -7404,14 +7477,14 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 .registration__button {
-  width: 386px;
+  width: 600px;
   background-color: #fdacac;
   align-self: center;
   margin-top: 72px;
 }
 @media only screen and (max-width: 1919px) {
   .registration__button {
-    width: 290px;
+    width: 500px;
     margin-top: 54px;
   }
 }
@@ -7525,7 +7598,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .registration__star4 {
   position: absolute;
   top: 90%;
-  left: 26%;
+  left: 22%;
 }
 @media only screen and (max-width: 1439px) {
   .registration__star4 {
@@ -7662,25 +7735,38 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 @media only screen and (max-width: 1439px) {
   .input-checkmark-name {
-    left: 68%;
-    top: 30%;
+    left: 47%;
   }
 }
 @media only screen and (max-width: 767px) {
   .input-checkmark-name {
     left: 68%;
-    top: 30%;
   }
 }
 @media only screen and (max-width: 427px) {
   .input-checkmark-name {
     left: 80%;
-    top: 30%;
   }
 }
 
-.input-checkmark-enName {
-  left: 264px;
+.input-checkmark-name_en {
+  left: 32%;
+}
+@media only screen and (max-width: 1919px) {
+  .input-checkmark-name_en {
+    left: 37%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input-checkmark-name_en {
+    left: 55%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input-checkmark-name_en {
+    left: 63%;
+  }
 }
 
 .input-checkmark-email {
@@ -7695,24 +7781,32 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 1439px) {
   .input-checkmark-email {
     left: 49%;
-    top: 30%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .input-checkmark-email {
-    left: 49%;
-    top: 30%;
   }
 }
 @media only screen and (max-width: 427px) {
   .input-checkmark-email {
     left: 57%;
-    top: 30%;
   }
 }
 
-.input-checkmark-enEmail {
-  left: 169px;
+.input-checkmark-email_en {
+  left: 20.5%;
+}
+@media only screen and (max-width: 1919px) {
+  .input-checkmark-email_en {
+    left: 24%;
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .input-checkmark-email_en {
+    left: 35%;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .input-checkmark-email_en {
+    left: 41%;
+  }
 }
 
 .check {
@@ -8792,7 +8886,7 @@ details[open] summary ~ * {
   display: none;
   max-width: 386px;
   width: 100%;
-  background-color: #fdacac;
+  background-color: #ffdada;
 }
 @media only screen and (max-width: 1919px) {
   .presents__guide-button_hide {
@@ -8823,7 +8917,7 @@ details[open] summary ~ * {
   outline-offset: 7px;
 }
 .presents__guide-button_hide:hover {
-  background-color: #ffdada;
+  background-color: #fdacac;
   outline: none;
   outline-offset: 0;
 }

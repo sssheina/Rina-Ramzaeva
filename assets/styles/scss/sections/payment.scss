@@ -59,10 +59,62 @@
 
 
     & button {
-      max-width: 387px;
+      max-width: 600px;
       width: 100%;
-      
       background: $color-pinklight;
+
+      @include lg {
+
+      }
+      
+      @include md {
+        max-width: 347px;
+      }
+      
+      @include sm {
+      
+      }
+      
+      @include xs {
+        
+      }
+
+      &:focus {
+        @include btn-focus($color-pinklight);
+      }
+
+      &:hover {
+        background: $color-pinkdark;
+        @include btn-hover;
+      }
+    }
+  }
+
+  &__button_en {
+    display: flex;
+    justify-content: center;
+
+
+    & button {
+      max-width: 600px;
+      width: 100%;
+      background: $color-pinklight;
+
+      @include lg {
+
+      }
+      
+      @include md {
+      
+      }
+      
+      @include sm {
+      
+      }
+      
+      @include xs {
+        
+      }
 
       &:focus {
         @include btn-focus($color-pinklight);

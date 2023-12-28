@@ -401,6 +401,31 @@
     }
   }
 
+  &__card-text_en {
+    width: 540px;
+    min-height: 260px;
+
+    @include lg {
+      width: 410px;
+      min-height: 192px;
+    }
+
+    @include md {
+      width: 230px;
+      min-height: 220px;
+    }
+
+    @include sm {
+      width: 309px;
+      min-height: 180px;
+    }
+
+    @include xs {
+      width: 233px;
+      min-height: 220px;
+    }
+  }
+
   &__button {
     width: 667px;
     margin: 0 auto;

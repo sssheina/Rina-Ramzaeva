@@ -236,7 +236,7 @@
     display: none;
     max-width: 386px;
     width: 100%;
-    background-color: $color-pinkdark;
+    background-color: $color-pinklight;
 
     @include lg {
       display: none;
@@ -262,7 +262,7 @@
     }
 
     &:hover {
-      background-color: $color-pinklight;
+      background-color: $color-pinkdark;
       @include btn-hover;
     }
   }

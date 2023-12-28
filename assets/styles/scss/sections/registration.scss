@@ -206,13 +206,13 @@
   }
 
   &__button {
-    width: 386px;
+    width: 600px;
     background-color: $color-pinkdark;
     align-self: center;
     margin-top: 72px;
 
     @include lg {
-      width: 290px;
+      width: 500px;
       margin-top: 54px;
     }
 
@@ -339,7 +339,7 @@
   &__star4 {
     position: absolute;
     top: 90%;
-    left: 26%;
+    left: 22%;
     @include lg {
     }
 
@@ -482,24 +482,36 @@
   }
   
   @include md {
-    left: 68%;
-    top: 30%;
+    left: 47%;
   }
 
   @include sm {
     left: 68%;
-    top: 30%;
   }
 
   @include xs {
     left: 80%;
-    top: 30%;
   }
 }
 
-.input-checkmark-enName {
-  left: 264px;
+.input-checkmark-name_en {
+  left: 32%;
+
+  @include lg {
+    left: 37%;
+    top: 30%;
+  }
+  
+  @include md {
+    left: 55%;
+  }
+
+
+  @include xs {
+    left: 63%;
+  }
 }
+
 
 .input-checkmark-email {
   left: 232px;
@@ -511,24 +523,32 @@
   
   @include md {
     left: 49%;
-    top: 30%;
   }
-  
-  @include sm {
-    left: 49%;
-    top: 30%;
-  }
-  
+    
   @include xs {
     left: 57%;
-    top: 30%;
   }
   
 }
 
-.input-checkmark-enEmail {
-  left: 169px;
+.input-checkmark-email_en {
+  left: 20.5%;
+
+  @include lg {
+    left: 24%;
+    top: 30%;
+  }
+  
+  @include md {
+    left: 35%;
+  }
+    
+  @include xs {
+    left: 41%;
+  }
+  
 }
+
 
 .check {
   font-weight: 500;
