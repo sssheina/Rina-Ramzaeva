@@ -196,7 +196,7 @@
   height: 2px;
   border: none;
 
-  @include sm {
+  @include md {
     height: 1px;
   }
 

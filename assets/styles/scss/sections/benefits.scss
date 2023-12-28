@@ -120,7 +120,7 @@
     width: 470px;
 
     @include lg {
-      width: 270px;
+      width: 286px;
       padding-bottom: 15px;
     }
 
@@ -163,6 +163,32 @@
       margin: 0 0 13px 0;
     }
   }
+
+  &__text-1_en {
+    width: 272px;
+    margin-right: 116px;
+
+    @include lg {
+      width: 208px;
+      margin-right: 64px;
+    }
+
+    @include md {
+      width: 137px;
+      margin-right: 23px;
+    }
+
+    @include sm {
+      width: 348px;
+      margin: 0 0 20px 0;
+    }
+
+    @include xs {
+      width: 260px;
+      margin: 0 0 13px 0;
+    }
+  }
+
 
   &__text-2 {
     width: 488px;

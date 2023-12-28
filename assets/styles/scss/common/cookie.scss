@@ -6,33 +6,32 @@
     gap: 30px;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding: 10px;
     background-color: #333;
     color: #fff;
     text-align: center;
-    z-index: 11;
+    z-index: 999;
+    box-sizing: border-box;
+    line-height: 150%;
 
-    @include lg {
-
-    }
     
     @include md {
-    font-size: 10px;
+    font-size: 13px;
     }
     
     @include sm {
-    font-size: 10px;
+    font-size: 12px;
     }
     
     @include xs {
-      
+        font-size: 10px;
     }
 }
 
 .cookieButton {
     @include md {
-        font-size: 10px;
+        font-size: 13px;
         }
         
         @include sm {
