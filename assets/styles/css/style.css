@@ -2425,6 +2425,36 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 
+#cookieConsent {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  z-index: 11;
+}
+@media only screen and (max-width: 1439px) {
+  #cookieConsent {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #cookieConsent {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .cookieButton {
+    font-size: 10px;
+  }
+}
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;
