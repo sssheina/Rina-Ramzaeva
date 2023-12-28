@@ -26,13 +26,16 @@
   &__aside {
     left: -3%;
 
-
-    @include lg {
-      // left: -3.9%;
-    }
-
     @include md {
       left: -5.2%;
+    }
+  }
+
+  &__aside_en {
+    left: -0.6%;
+
+    @include md {
+      left: -2.3%;
     }
   }
 
@@ -330,7 +333,7 @@
 
     &:hover {
       background: $color-pinkdark;
-      
+
       @include btn-hover;
     }
   }

@@ -104,7 +104,6 @@
     }
 
     &:hover {
-      
       background: $color-blue;
       @include btn-hover;
     }
@@ -119,6 +118,14 @@
 
     @include md {
       left: -5.2%;
+    }
+  }
+
+  &__aside_en {
+    left: -3.5%;
+
+    @include md {
+      left: -6.6%;
     }
   }
 

@@ -57,26 +57,22 @@
     display: flex;
     justify-content: center;
 
-
     & button {
       max-width: 600px;
       width: 100%;
       background: $color-pinklight;
 
       @include lg {
-
       }
-      
+
       @include md {
         max-width: 347px;
       }
-      
+
       @include sm {
-      
       }
-      
+
       @include xs {
-        
       }
 
       &:focus {
@@ -94,26 +90,21 @@
     display: flex;
     justify-content: center;
 
-
     & button {
       max-width: 600px;
       width: 100%;
       background: $color-pinklight;
 
       @include lg {
+      }
 
-      }
-      
       @include md {
-      
       }
-      
+
       @include sm {
-      
       }
-      
+
       @include xs {
-        
       }
 
       &:focus {
@@ -220,6 +211,14 @@
 
     @include md {
       left: -1%;
+    }
+  }
+
+  &__aside_en {
+    left: -0.6%;
+
+    @include md {
+      left: -2.3%;
     }
   }
 

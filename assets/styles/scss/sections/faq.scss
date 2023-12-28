@@ -113,9 +113,13 @@
 
   &__aside {
     left: 1.5%;
+  }
+
+  &__aside_en {
+    left: 1.4%;
 
     @include md {
-      
+      left: 0.6%;
     }
   }
 

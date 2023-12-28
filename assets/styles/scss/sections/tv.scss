@@ -21,17 +21,16 @@
   &__aside {
     left: -2.8%;
 
-    @include lg {
-    }
-
     @include md {
       left: -4.8%;
     }
+  }
 
-    @include sm {
-    }
+  &__aside_en {
+    left: -3.1%;
 
-    @include xs {
+    @include md {
+      left: -6.3%;
     }
   }
 
@@ -430,7 +429,6 @@
     width: 667px;
     margin: 0 auto;
     background-color: $color-pinklight;
-    
 
     @include lg {
       width: 500px;
@@ -446,7 +444,7 @@
 
     &:hover {
       background-color: $color-pinkdark;
-      
+
       @include btn-hover;
     }
     &:focus {
@@ -505,7 +503,6 @@
     @include md {
       display: none;
     }
-
   }
 
   &__star-8 {
@@ -531,7 +528,6 @@
     @include md {
       display: none;
     }
-
   }
 
   &__star-9 {
@@ -553,7 +549,6 @@
     position: absolute;
     top: 33%;
     left: 36%;
-
 
     @include md {
       top: 30%;
@@ -579,7 +574,6 @@
     @include md {
       display: none;
     }
-
   }
 
   &__star-10 {

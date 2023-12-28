@@ -22,18 +22,18 @@
   &__aside {
     position: absolute;
     left: -0.3%;
-    
-    @include lg {
-    }
 
     @include md {
       left: -1.3%;
     }
+  }
 
-    @include sm {
-    }
+  &__aside_en {
+    position: absolute;
+    left: -0.8%;
 
-    @include xs {
+    @include md {
+      left: -2.6%;
     }
   }
 
@@ -355,17 +355,13 @@
 }
 
 @include lg {
-
 }
 
 @include md {
-
 }
 
 @include sm {
-
 }
 
 @include xs {
-  
 }

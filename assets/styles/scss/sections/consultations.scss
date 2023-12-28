@@ -27,6 +27,14 @@
     }
   }
 
+  &__aside_en {
+    left: 0.5%;
+
+    @include md {
+      left: -0.5%;
+    }
+  }
+
   &__wrapper {
     position: relative;
   }
@@ -123,7 +131,6 @@
       max-width: 667px;
       width: 100%;
       background-color: $color-pinklight;
-      
 
       @include lg {
         max-width: 500px;
@@ -138,7 +145,6 @@
       }
 
       &:hover {
-        
         background: $color-pinkdark;
         @include btn-hover;
       }

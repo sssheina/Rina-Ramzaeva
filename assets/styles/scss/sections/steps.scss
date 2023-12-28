@@ -21,15 +21,17 @@
   &__aside {
     left: -2.8%;
 
-    @include lg {
-      
+    @include md {
+      left: -5%;
     }
+  }
+
+  &__aside_en {
+    left: -3.4%;
 
     @include md {
-      left: -5%; 
+      left: -6.7%;
     }
-
-
   }
 
   &__wrapper {
@@ -160,7 +162,7 @@
     button {
       max-width: 667px;
       width: 100%;
-      
+
       background-color: $color-greenlight;
 
       @include lg {

@@ -22,11 +22,16 @@
   &__aside {
     left: 0;
 
-    @include lg {
-    }
-
     @include md {
       left: -1%;
+    }
+  }
+
+  &__aside_en {
+    left: -2.3%;
+
+    @include md {
+      left: -5%;
     }
   }
 
@@ -154,37 +159,29 @@
     gap: 10px;
 
     @include lg {
+    }
 
-    }
-    
     @include md {
-    
     }
-    
+
     @include sm {
-    
     }
-    
+
     @include xs {
-    
     }
 
     &:first-child {
       margin-bottom: 12px;
       @include lg {
+      }
 
-      }
-      
       @include md {
-      
       }
-      
+
       @include sm {
-      
       }
-      
+
       @include xs {
-      
       }
     }
 
@@ -194,11 +191,11 @@
       @include lg {
         font-size: 15px;
       }
-      
+
       @include md {
-        font-size: 12px; 
+        font-size: 12px;
       }
-      
+
       @include xs {
         font-size: 11px;
       }
@@ -266,13 +263,12 @@
 
     @include md {
       top: -5%;
-    left: 11%;
+      left: 11%;
     }
 
     @include sm {
       display: none;
     }
-
   }
 
   &__star1 {
@@ -281,23 +277,20 @@
     left: 74%;
 
     @include lg {
+    }
 
-    }
-    
     @include md {
-    
     }
-    
+
     @include sm {
       top: 9%;
       left: 84%;
     }
-    
+
     @include xs {
       top: 8%;
       left: 84%;
     }
-    
   }
 
   &__star2 {
@@ -345,7 +338,7 @@
 
     @include md {
       top: 60%;
-    left: 16%;
+      left: 16%;
     }
 
     @include sm {
@@ -379,7 +372,7 @@
 
     @include md {
       top: 30%;
-    left: 4%;
+      left: 4%;
     }
 
     @include sm {
@@ -448,7 +441,6 @@
 
   @include xs {
     font-size: 13px;
-    
   }
 }
 
@@ -459,15 +451,15 @@
   @include lg {
     top: 22px;
   }
-  
+
   @include md {
     top: 22px;
   }
-  
+
   @include sm {
     top: 22px;
   }
-  
+
   @include xs {
     top: 22px;
   }
@@ -480,7 +472,7 @@
     left: 47%;
     top: 30%;
   }
-  
+
   @include md {
     left: 47%;
   }
@@ -501,17 +493,15 @@
     left: 37%;
     top: 30%;
   }
-  
+
   @include md {
     left: 55%;
   }
-
 
   @include xs {
     left: 63%;
   }
 }
-
 
 .input-checkmark-email {
   left: 232px;
@@ -520,15 +510,14 @@
     left: 33%;
     top: 30%;
   }
-  
+
   @include md {
     left: 49%;
   }
-    
+
   @include xs {
     left: 57%;
   }
-  
 }
 
 .input-checkmark-email_en {
@@ -538,17 +527,15 @@
     left: 24%;
     top: 30%;
   }
-  
+
   @include md {
     left: 35%;
   }
-    
+
   @include xs {
     left: 41%;
   }
-  
 }
-
 
 .check {
   font-weight: 500;
@@ -628,11 +615,11 @@
   @include lg {
     font-size: 15px;
   }
-  
+
   @include md {
     font-size: 13px;
   }
-    
+
   @include xs {
     font-size: 11px;
   }
@@ -653,15 +640,15 @@
   @include lg {
     left: 9%;
   }
-  
+
   @include md {
     left: 16%;
   }
-  
+
   @include sm {
     left: 16%;
   }
-  
+
   @include xs {
     left: 19%;
   }
@@ -676,7 +663,6 @@ input[type="checkbox"] {
     width: 25px;
     height: 25px;
   }
- 
 }
 
 .form {

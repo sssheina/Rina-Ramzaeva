@@ -25,20 +25,16 @@
   &__aside {
     left: -0.5%;
 
-    @include lg {
-
-    }
-    
     @include md {
       left: -1.2%;
     }
-    
-    @include sm {
-    
-    }
-    
-    @include xs {
-      
+  }
+
+  &__aside_en {
+    left: 1%;
+
+    @include md {
+      left: 0.1%;
     }
   }
 
