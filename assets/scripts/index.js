@@ -1,20 +1,3 @@
-function acceptCookies() {
-  document.getElementById('cookieConsent').style.display = 'none';
-  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-  // Активация кода отслеживания Google Analytics
-  gtag('config', 'GTM-5M7R6KBB');
-}
-
-
-function acceptCookies1() {
-  document.getElementById('cookieConsent').style.display = 'none';
-  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-  // Активация кода отслеживания Google Analytics
-  gtag('config', 'GTM-5M7R6KBB');
-}
- 
-
-
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
@@ -543,3 +526,21 @@ if (menuLinks.length > 0) {
     });
   });
 })();
+
+// ---------Cookie------
+function acceptCookies() {
+  document.getElementById('cookieConsent').style.display = 'none';
+  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
+  // Активация кода отслеживания Google Analytics
+  gtag('config', 'GTM-5M7R6KBB');
+}
+
+
+function acceptCookies1() {
+  document.getElementById('cookieConsent').style.display = 'none';
+  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
+  // Активация кода отслеживания Google Analytics
+  gtag('config', 'GTM-5M7R6KBB');
+}
+ 
+
