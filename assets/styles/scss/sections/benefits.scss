@@ -6,6 +6,7 @@
   align-items: center;
   position: relative;
   padding: 95px 0 165px;
+  background-color: $color-white;
 
   @include lg {
     padding: 85px 0 155px;

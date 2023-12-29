@@ -3,6 +3,27 @@
 }
 html {
   scroll-behavior: smooth;
+  
+  @include lg {
+    max-width: 1920px;
+    width: 100vw;
+    overflow-x:hidden !important;
+  }
+  
+  @include md {
+    max-width: 1440px;
+    width: 100vw;
+  }
+  
+  @include sm {
+    max-width: 768px;
+    width: 100vw;
+  }
+  
+  @include xs {
+    max-width: 428px;
+    width: 100vw;
+  }
 }
 body {
   margin: 0 auto;
@@ -10,6 +31,10 @@ body {
   height: 100vh;
   font-family: var(--font-main);
   // overflow: auto;
+  overflow-x: hidden;
+  background-color: lightblue;
+  box-sizing: border-box;
+
 }
 
 @keyframes rotate {
