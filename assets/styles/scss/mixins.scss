@@ -77,14 +77,6 @@
   }
 }
 
-// hover
-// @mixin any-hover() {
-//   @media (any-hover: hover) {
-//     &:hover {
-//       @content;
-//     }
-//   }
-// }
 
 // aside
 @mixin aside-before {
@@ -163,7 +155,6 @@
     content: "";
     left: 28%;
     transform: translate(-50%);
-    // bottom: -25%;
     top: 24%;
     width: 140px;
     height: 2px;
@@ -215,56 +206,3 @@
   outline-offset: 0;
 }
 
-// br for adaptive text
-
-// @mixin desktop-br_1920 {
-//   display: block;
-
-//   @include lg {
-//     display: none;
-//   }
-// }
-
-// @mixin desktop-br_1440 {
-//   display: none;
-
-//   @include lg {
-//     display: block;
-//   }
-
-//   @include md {
-//     display: none;
-//   }
-// }
-
-// @mixin mobile-br_768 {
-//   display: none;
-
-//   @include md {
-//     display: block;
-//   }
-
-//   @include sm {
-//     display: none;
-//   }
-// }
-
-// @mixin mobile-br_468 {
-//   display: none;
-
-//   @include sm {
-//     display: block;
-//   }
-
-//   @include xs {
-//     display: none;
-//   }
-// }
-
-// @mixin mobile-br_320 {
-//   display: none;
-
-//   @include xs {
-//     display: block;
-//   }
-// }

@@ -63,17 +63,8 @@
       width: 100%;
       background: $color-pinklight;
 
-      @include lg {
-      }
-
       @include md {
         max-width: 347px;
-      }
-
-      @include sm {
-      }
-
-      @include xs {
       }
 
       &:focus {
@@ -95,18 +86,6 @@
       max-width: 600px;
       width: 100%;
       background: $color-pinklight;
-
-      @include lg {
-      }
-
-      @include md {
-      }
-
-      @include sm {
-      }
-
-      @include xs {
-      }
 
       &:focus {
         @include btn-focus($color-pinklight);
@@ -374,5 +353,4 @@
       }
     }
   }
-
 }

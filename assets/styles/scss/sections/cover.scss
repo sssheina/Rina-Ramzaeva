@@ -15,9 +15,6 @@
 
 .gradient {
   background: transparent;
-  // background: url('../../../images/photos/gradient.png') no-repeat center center;
-  // background-size: cover;
-  // border-radius: inherit;
 }
 
 .gradient::before,
@@ -36,7 +33,6 @@
     var(--clr-6)
   );
   border-radius: inherit;
-  // animation: rotation 10s linear infinite;
 
   -webkit-animation: rotation 10s linear infinite;
   -moz-animation: rotation 10s linear infinite;
@@ -58,12 +54,7 @@
 
 .cover {
   position: relative;
-  margin: 0 auto;
-  width: 100%;
-  // background: url('../../../images/photos/gradient.png') no-repeat center center;
-  // background-size: cover;
-  // border-radius: inherit;
-
+  
   &__wrapper {
     display: flex;
     align-items: center;
@@ -127,7 +118,6 @@
 
   &__title {
     max-width: 685px;
-    width: 100%;
     margin: 0 0 20px 0;
 
     @include lg {
@@ -210,13 +200,11 @@
     z-index: 3;
 
     img {
-      width: 100%;
       height: auto;
       display: block;
 
       @include lg {
         max-width: 825px;
-        width: 100%;
         max-height: 800px;
         height: 100%;
       }
@@ -440,40 +428,3 @@
     }
   }
 }
-
-// @media screen and (-moz-images-in-menus), screen and (-moz-windows-compositor) {
-//   .gradient::before, .gradient::after {
-//   content: "";
-//   position: absolute;
-//   inset: 0rem;
-//   z-index: -1;
-//   background-image: linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
-//   border-radius: inherit;
-//   }
-//  }
-
-//  @media screen and (-moz-appearance: none) {
-//   .gradient::before, .gradient::after {
-//   content: "";
-//   position: absolute;
-//   inset: 0rem;
-//   z-index: -1;
-//   background-image: linear-gradient(45deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6));
-//   border-radius: inherit;
-//   }
-//  }
-
-// @media screen and (-moz-images-in-menus), screen and (-moz-windows-compositor)
-// @media screen and (-moz-appearance: none)
-
-// @media screen and (-moz-images-in-menus), screen and (-moz-windows-compositor) {
-//   .gradient::before, .gradient::after {
-//     content: "";
-//     position: absolute;
-//     inset: 0rem;
-//     z-index: -1;
-//     background: url('../../../images/photos/gradient.png') no-repeat center center;
-//     background-size: cover;
-//     border-radius: inherit;
-//   }
-//  }

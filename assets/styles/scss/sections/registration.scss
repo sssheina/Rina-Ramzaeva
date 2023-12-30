@@ -42,7 +42,6 @@
   }
 
   &__title {
-    // text-align: center;
     @include title-line;
     margin-bottom: 100px;
 
@@ -158,31 +157,8 @@
     align-items: center;
     gap: 10px;
 
-    @include lg {
-    }
-
-    @include md {
-    }
-
-    @include sm {
-    }
-
-    @include xs {
-    }
-
     &:first-child {
       margin-bottom: 12px;
-      @include lg {
-      }
-
-      @include md {
-      }
-
-      @include sm {
-      }
-
-      @include xs {
-      }
     }
 
     label {
@@ -225,13 +201,14 @@
 
     &:hover {
       background-color: $color-pinklight;
-      &:hover {
-        @include btn-hover;
-      }
+      
+      @include btn-hover;
     }
+
     &:focus {
       @include btn-focus($color-pinkdark);
     }
+
     &:disabled {
       background-color: $color-pinklight;
     }
@@ -258,9 +235,6 @@
     top: -8%;
     left: 11%;
 
-    @include lg {
-    }
-
     @include md {
       top: -5%;
       left: 11%;
@@ -275,12 +249,6 @@
     position: absolute;
     top: 8%;
     left: 74%;
-
-    @include lg {
-    }
-
-    @include md {
-    }
 
     @include sm {
       top: 9%;
@@ -298,9 +266,6 @@
     top: 69%;
     left: 84%;
 
-    @include lg {
-    }
-
     @include md {
       top: 62%;
       left: 80%;
@@ -316,9 +281,6 @@
     top: 105%;
     left: 76%;
 
-    @include lg {
-    }
-
     @include md {
       top: 103%;
       left: 76%;
@@ -333,9 +295,7 @@
     position: absolute;
     top: 90%;
     left: 22%;
-    @include lg {
-    }
-
+    
     @include md {
       top: 60%;
       left: 16%;
@@ -350,11 +310,6 @@
     position: absolute;
     top: 18%;
     left: 8%;
-    @include lg {
-    }
-
-    @include md {
-    }
 
     @include sm {
       display: none;
@@ -366,9 +321,6 @@
     animation: rotate 40s linear infinite;
     top: 50%;
     left: 0%;
-
-    @include lg {
-    }
 
     @include md {
       top: 30%;
@@ -384,12 +336,6 @@
     position: absolute;
     top: 8%;
     left: 90%;
-
-    @include lg {
-    }
-
-    @include md {
-    }
 
     @include sm {
       display: none;
@@ -414,7 +360,6 @@
   @include lg {
     height: 68px;
     font-size: 18px;
-    // height: 73px;
   }
 
   @include md {
@@ -592,18 +537,11 @@
   visibility: visible;
   opacity: 1;
   bottom: 80%;
-  // scale: 0.9;
 }
 
 .input:not(:placeholder-shown) ~ .input-checkmark {
   visibility: hidden;
 }
-
-// .terms {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 15px;
-// }
 
 .error {
   font-size: 16px;
