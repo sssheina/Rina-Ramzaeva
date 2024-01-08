@@ -10,7 +10,7 @@
   justify-content: center;
   background: transparent;
   transition: background 0.3s ease-in-out;
-  box-sizing: border-box;
+  // box-sizing: border-box;
 
   @include lg {
     max-height: 75px;
@@ -38,9 +38,8 @@
   &.scrolled {
     background: $color-white;
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
-    padding: 0;
-    margin: 0;
-
+    // padding: 0;
+    // margin: 0;
   }
 }
 
@@ -58,17 +57,14 @@
     @include lg {
       gap: 13px;
     }
-    
+
     @include md {
-    
     }
-    
+
     @include sm {
-    
     }
-    
+
     @include xs {
-      
     }
 
     li:nth-child(11) {
@@ -162,6 +158,7 @@ body._touch .menu__arrow {
   border-right: 5px solid transparent;
   border-top: 10px solid $color-pinkdark;
   cursor: pointer;
+  border: 2px solid rgb(29, 57, 60);
 }
 
 body._touch .menu__list > li._active .menu__sub-list {
@@ -180,4 +177,3 @@ body._touch .menu__list > li._active .menu__arrow {
 .link-span {
   color: $color-black;
 }
-

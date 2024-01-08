@@ -14,32 +14,40 @@
     text-decoration: none;
     color: $color-pinkdark;
     transition: 0.4s ease;
-  }
-  &__link:hover {
-    text-decoration: underline;
-    color: $color-blackhover;
+
+    &:hover {
+      text-decoration: underline;
+      color: $color-blackhover;
+    }
   }
 
   &__concent {
     position: absolute;
     left: 50%;
-    top: 75%;
-    transform: translate(-50%, -50%);
-    width: 901px;
-    height: 65vh;
+    // top: 55%;
+    top: 5%;
+    transform: translateX(-50%);
+    // width: 901px;
+    // height: 1934px;
+    max-width: 901px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 4rem;
+    padding: 0 4rem 4rem 4rem;
     background: $color-white;
     z-index: 1001;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
     -webkit-animation: fade 0.6s;
     -moz-animation: fade 0.6s;
     animation: fade 0.6s;
-
-    overflow: auto;
-    max-height: calc(100vh - 100px);
+    // overflow: auto;
+    overflow: hidden;
+    max-height: calc(95vh - 50px);
+    overflow-y: scroll;
+    // overscroll-behavior: contain;
+    // -ms-overflow-style: none; /* IE and Edge */
+    // scrollbar-width: none; /* Firefox */
 
     @include lg {
       width: 901px;
@@ -51,17 +59,36 @@
 
     @include sm {
       width: 378px;
-      padding: 2rem;
+      padding: 0 2rem 2rem 2rem;
     }
 
     @include xs {
       width: 260px;
-      padding: 1.5rem;
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      
     }
+
+
+    // &::-webkit-scrollbar {
+    //   display: none; /* Chrome, Safari and Opera */
+    // }
 
     h4 {
       @include xs {
         font-size: 12px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 150%;
+
+      @include sm {
+        font-size: 13px;
+      }
+
+      @include xs {
+        font-size: 11px;
       }
     }
   }
@@ -82,83 +109,75 @@
       font-size: 13px;
     }
   }
-  &__concent > p {
-    font-size: 14px;
-    line-height: 150%;
-
-    @include sm {
-      font-size: 13px;
-    }
-
-    @include xs {
-      font-size: 11px;
-    }
-  }
 
   &__btn-close {
-    position: absolute;
+    // position: absolute;
+    position: sticky;
     transform: translate(10px, -20px);
-    padding: 0.5rem 0.75rem;
-    top: 6.5%;
-    right: 4.5%;
+    padding: 0.4rem 0.6rem;
+      width: 30px;
+      height: 30px;
+    top: 5%;
+    // right: 4.5%;
+    left: 100%;
+    // margin-left: 10px;
+
+    // top: 20px;
+    // right: 20px;
     background: $color-pinklight;
     border-radius: 50%;
     border: none;
 
     @include lg {
-      padding: 0.3rem 0.67rem;
-      width: 35px;
-      height: 35px;
+      padding: 0.3rem 0.55rem;
     }
 
     @include md {
       padding: 0.4rem 0.5rem;
-      width: 32px;
-      height: 32px;
     }
 
     @include sm {
       padding: 0.3rem 0.3rem;
-      right: 5.5%;
+      // right: 5.5%;
       width: 28px;
       height: 28px;
     }
 
     @include xs {
       top: 7.5%;
-      right: 8%;
+      // right: 8%;
       padding: 0.19rem 0.3rem;
       width: 25px;
       height: 25px;
     }
-  }
 
-  &__btn-close:hover {
-    background: $color-pinkdark;
+    &:hover {
+      background: $color-pinkdark;
+    }
   }
+}
 
-  @-moz-keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+@-moz-keyframes fade {
+  from {
+    opacity: 0;
   }
-  @-webkit-keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

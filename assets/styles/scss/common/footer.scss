@@ -188,6 +188,16 @@
       width: 15px;
     }
   }
+
+  &__link-studio {
+    text-decoration: none;
+      transition: 0.3s ease;
+      color: $color-white;
+
+      &:hover {
+        color: $color-blackhover;
+  }
+}
 }
 
 .card {

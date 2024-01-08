@@ -104,25 +104,50 @@ const openModalPrivacy = function () {
   modalPrivacy.classList.remove("hidden");
   overlayPrivacy.classList.remove("hidden");
   document.body.style.overflow = "hidden"; 
-};
-
-openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
-
-const closeModalPrivacy = function () {
+ };
+ 
+ openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
+ 
+ const closeModalPrivacy = function () {
   modalPrivacy.classList.add("hidden");
   overlayPrivacy.classList.add("hidden");
-  document.body.style.overflow = ""; // Разблокируем прокрутку
-};
-
-closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
-
-overlayPrivacy.addEventListener("click", closeModalPrivacy);
-
-modalPrivacy.addEventListener("keydown", function (e) {
+  document.body.style.overflow = "auto"; 
+ };
+ 
+ closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
+ 
+ overlayPrivacy.addEventListener("click", closeModalPrivacy);
+ 
+ modalPrivacy.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
     closeModalPrivacy();
   }
-});
+ });
+
+// const openModalPrivacy = function () {
+//   modalPrivacy.classList.remove("hidden");
+//   overlayPrivacy.classList.remove("hidden");
+//   document.body.style.overflow = "hidden"; 
+// };
+
+// openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
+
+// const closeModalPrivacy = function () {
+//   modalPrivacy.classList.add("hidden");
+//   overlayPrivacy.classList.add("hidden");
+//   // document.body.style.overflow = ""; // Разблокируем прокрутку
+//   document.body.style.overflow = "auto"; // Разблокируем прокрутку
+// };
+
+// closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
+
+// overlayPrivacy.addEventListener("click", closeModalPrivacy);
+
+// modalPrivacy.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
+//     closeModalPrivacy();
+//   }
+// });
 
 document
   .querySelector(".privacy-policy__concent")
@@ -133,7 +158,8 @@ document
 document
   .querySelector(".privacy-policy__concent")
   .addEventListener("hide.bs.modal", function () {
-    document.body.style.overflow = "";
+    // document.body.style.overflow = "";
+    document.body.style.overflow = "auto";
   });
 
 // ----- BURGER MENU -----
@@ -541,19 +567,19 @@ if (menuLinks.length > 0) {
 })();
 
 // ---------Cookie------
-function acceptCookies() {
-  document.getElementById('cookieConsent').style.display = 'none';
-  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-  // Активация кода отслеживания Google Analytics
-  gtag('config', 'GTM-5M7R6KBB');
-}
+// function acceptCookies() {
+//   document.getElementById('cookieConsent').style.display = 'none';
+//   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
+//   // Активация кода отслеживания Google Analytics
+//   gtag('config', 'GTM-5M7R6KBB');
+// }
 
 
-function acceptCookies1() {
-  document.getElementById('cookieConsent').style.display = 'none';
-  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-  // Активация кода отслеживания Google Analytics
-  gtag('config', 'GTM-5M7R6KBB');
-}
+// function acceptCookies1() {
+//   document.getElementById('cookieConsent').style.display = 'none';
+//   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
+//   // Активация кода отслеживания Google Analytics
+//   gtag('config', 'GTM-5M7R6KBB');
+// }
  
 
