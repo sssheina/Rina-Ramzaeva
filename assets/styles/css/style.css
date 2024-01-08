@@ -1270,6 +1270,7 @@ html {
 body {
   margin: 0 auto;
   font-family: var(--font-main);
+  overflow-x: hidden;
   background-color: lightblue;
 }
 body._lock {

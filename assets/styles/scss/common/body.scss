@@ -10,7 +10,7 @@ html {
 body {
   margin: 0 auto;
   font-family: var(--font-main);
-  // overflow-x: hidden;
+  overflow-x: hidden;
   background-color: lightblue;
 
   &._lock {
