@@ -8690,6 +8690,7 @@ input[type=checkbox] {
   justify-content: space-around;
   z-index: 1;
   gap: 100px;
+  width: 100%;
 }
 @media only screen and (max-width: 1439px) {
   .faq__wrapper {
@@ -8821,12 +8822,12 @@ input[type=checkbox] {
 }
 .faq__questions details {
   display: flex;
-  max-width: 1004px;
+  width: 1004px;
   transition: 0.2s ease-in-out;
 }
 @media only screen and (max-width: 1919px) {
   .faq__questions details {
-    max-width: 953px;
+    width: 800px;
   }
 }
 @media only screen and (max-width: 1439px) {
@@ -8863,6 +8864,7 @@ input[type=checkbox] {
 @media only screen and (max-width: 1919px) {
   .faq__questions details summary {
     min-height: 80px;
+    max-width: 756px;
     padding: 0 40px 0 20px;
   }
 }
@@ -8926,30 +8928,31 @@ input[type=checkbox] {
 }
 .faq__questions details p {
   margin: 33px auto 0;
-  max-width: 800px;
+  width: 800px;
+  width: 100%;
 }
 @media only screen and (max-width: 1919px) {
   .faq__questions details p {
     margin: 25px auto 0;
-    max-width: 600px;
+    width: 600px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .faq__questions details p {
     margin: 20px auto 0;
-    max-width: 308px;
+    width: 308px;
   }
 }
 @media only screen and (max-width: 767px) {
   .faq__questions details p {
     margin: 20px auto 0;
-    max-width: 308px;
+    width: 308px;
   }
 }
 @media only screen and (max-width: 427px) {
   .faq__questions details p {
     margin: 17px auto 0;
-    max-width: 230px;
+    width: 230px;
   }
 }
 .faq__wave_1 {
@@ -9138,6 +9141,9 @@ input[type=checkbox] {
   .faq__star_blue-6 {
     display: none;
   }
+}
+.faq__questions-summary {
+  overflow: auto;
 }
 @media only screen and (max-width: 1439px) {
   .faq__questions-summary {
