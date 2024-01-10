@@ -1452,7 +1452,6 @@ body._touch .menu__arrow {
   border-right: 5px solid transparent;
   border-top: 10px solid #fdacac;
   cursor: pointer;
-  border: 2px solid rgb(29, 57, 60);
 }
 
 body._touch .menu__list > li._active .menu__sub-list {
@@ -6025,13 +6024,13 @@ body._touch .menu__list > li._active .menu__arrow {
   z-index: 12;
 }
 .education__btn-close {
+  position: absolute;
   z-index: 11;
-  position: sticky;
   padding: 0.4rem 0.6rem;
   width: 30px;
   height: 30px;
-  top: 0;
-  margin-left: 1rem;
+  top: 2%;
+  right: 3%;
   background: #ffdada;
   border-radius: 50%;
   border: none;
