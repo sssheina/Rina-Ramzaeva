@@ -4,27 +4,26 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   margin: 0 auto;
   font-family: var(--font-main);
-  overflow-x: hidden;
-  background-color: lightblue;
+  background: radial-gradient(#a3e7da, #ffcaca 70%, #b2e1ff);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &._lock {
     overflow: hidden;
   }
-
 }
-
-
 
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
-
 }
 
+.main {
+  overflow-x: hidden;
+}

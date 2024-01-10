@@ -104,50 +104,25 @@ const openModalPrivacy = function () {
   modalPrivacy.classList.remove("hidden");
   overlayPrivacy.classList.remove("hidden");
   document.body.style.overflow = "hidden"; 
- };
- 
- openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
- 
- const closeModalPrivacy = function () {
+};
+
+openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
+
+const closeModalPrivacy = function () {
   modalPrivacy.classList.add("hidden");
   overlayPrivacy.classList.add("hidden");
-  document.body.style.overflow = "auto"; 
- };
- 
- closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
- 
- overlayPrivacy.addEventListener("click", closeModalPrivacy);
- 
- modalPrivacy.addEventListener("keydown", function (e) {
+  document.body.style.overflow = ""; // Разблокируем прокрутку
+};
+
+closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
+
+overlayPrivacy.addEventListener("click", closeModalPrivacy);
+
+modalPrivacy.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
     closeModalPrivacy();
   }
- });
-
-// const openModalPrivacy = function () {
-//   modalPrivacy.classList.remove("hidden");
-//   overlayPrivacy.classList.remove("hidden");
-//   document.body.style.overflow = "hidden"; 
-// };
-
-// openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
-
-// const closeModalPrivacy = function () {
-//   modalPrivacy.classList.add("hidden");
-//   overlayPrivacy.classList.add("hidden");
-//   // document.body.style.overflow = ""; // Разблокируем прокрутку
-//   document.body.style.overflow = "auto"; // Разблокируем прокрутку
-// };
-
-// closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
-
-// overlayPrivacy.addEventListener("click", closeModalPrivacy);
-
-// modalPrivacy.addEventListener("keydown", function (e) {
-//   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
-//     closeModalPrivacy();
-//   }
-// });
+});
 
 document
   .querySelector(".privacy-policy__concent")
@@ -158,8 +133,7 @@ document
 document
   .querySelector(".privacy-policy__concent")
   .addEventListener("hide.bs.modal", function () {
-    // document.body.style.overflow = "";
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "";
   });
 
 // ----- BURGER MENU -----
@@ -313,6 +287,15 @@ async function submitForm() {
       openModal(REG_FORM_VALIDATION_MESSAGE_GENERAL);
       return;
     }
+    
+    // Check for profanity
+   let userName = document.getElementById("userName").value;
+   let email = document.getElementById("email").value;
+   let comment = document.getElementById("comment").value;
+   if (!validateInput(userName) || !validateInput(email) || !validateInput(comment)) {
+     openModal(REG_FORM_VALIDATION_MESSAGE_PROFANITY);
+     return;
+   }
 
     // Формируем запрос
     const response = await fetch("send.php", {
@@ -339,6 +322,7 @@ async function submitForm() {
     if (json.result === "success") {
       // в случае успеха
       openModal(REG_FORM_THANKS_MODAL_CONTENT);
+       clearFormFields();
     } else {
       // в случае ошибки
       console.log(json);
@@ -358,7 +342,9 @@ function showThankYouMessage() {
   modal.style.display = "block";
 }
 
-//  ----- REGISTRATION FORM -----
+
+//___________Registration form______________________________
+
 
 const form = document.querySelector(".formWithValidation");
 //const email = document.querySelector("#email");
@@ -368,6 +354,30 @@ const errorsInfo = document.querySelector("#errorsInfo");
 const whatsappInput = document.querySelector("#whatsApp");
 
 let submitted = false;
+
+const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал','трахаю','шлюха', 'сперма', 'блядь']; // Add more words as needed
+
+// Function to check for angle brackets and profanity
+function validateInput(input) {
+ if (/<|>/.test(input)) {
+   return false; // Found angle brackets
+ }
+ for (let word of profanityList) {
+   if (input.toLowerCase().includes(word)) {
+     return false; // Found profanity
+   }
+ }
+ return true;
+}
+
+// Function to clear form fields
+function clearFormFields() {
+  document.getElementById('userName').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('whatsApp').value = '';
+  document.getElementById('telegram').value = '';
+  document.getElementById('comment').value = '';
+}
 
 // Registration form validation functions
 //----------------------------------------
@@ -380,7 +390,7 @@ function validateRegFormName(needShowMessages) {
   let el = document.getElementById("userName");
   let elError = document.getElementById("errorUserName");
 
-  if (el.value === null || el.value === "") {
+  if (el.value === null || el.value === "" || !validateInput(el.value)) {
     result = false;
   }
 
@@ -567,19 +577,17 @@ if (menuLinks.length > 0) {
 })();
 
 // ---------Cookie------
-// function acceptCookies() {
-//   document.getElementById('cookieConsent').style.display = 'none';
-//   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-//   // Активация кода отслеживания Google Analytics
-//   gtag('config', 'GTM-5M7R6KBB');
-// }
+function acceptCookies() {
+  document.getElementById('cookieConsent').style.display = 'none';
+  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
+  // Активация кода отслеживания Google Analytics
+  gtag('config', 'GTM-5M7R6KBB');
+}
 
 
-// function acceptCookies1() {
-//   document.getElementById('cookieConsent').style.display = 'none';
-//   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-//   // Активация кода отслеживания Google Analytics
-//   gtag('config', 'GTM-5M7R6KBB');
-// }
- 
-
+function acceptCookies1() {
+  document.getElementById('cookieConsent').style.display = 'none';
+  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
+  // Активация кода отслеживания Google Analytics
+  gtag('config', 'GTM-5M7R6KBB');
+}

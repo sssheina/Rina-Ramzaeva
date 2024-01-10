@@ -30,7 +30,8 @@ if(langCode === "en"){
 	REG_FORM_VALIDATION_MESSAGE_AGE = "You should be older than 18 years old";
 	REG_FORM_VALIDATION_MESSAGE_PRIVACY = "You have to accept the Privacy Policy";
 	REG_FORM_VALIDATION_MESSAGE_GENERAL = "There are errors in the entered data. Check the messages under the input fields.";
-	REG_FORM_THANKS_MODAL_CONTENT = `<h3>Thank you! <br>The request is submitted!</h3>
+	REG_FORM_VALIDATION_MESSAGE_PROFANITY = "There are incorrect characters in the data being sent. Replace them and try again.";
+	REG_FORM_THANKS_MODAL_CONTENT = `<h3 style="font-weight: 600;">Thank you! <br>The request is submitted!</h3><br>
                             <p class="text">
                                 I'll contact you soon to discuss the details.
                             </p>`;
@@ -47,7 +48,8 @@ else{
 	REG_FORM_VALIDATION_MESSAGE_AGE = "Отметь, если тебе есть 18 лет";
 	REG_FORM_VALIDATION_MESSAGE_PRIVACY = "Прочти и подтверди согласие";
 	REG_FORM_VALIDATION_MESSAGE_GENERAL = "В отправляемых данных есть ошибки. Проверь сообщения под полями ввода.";
-	REG_FORM_THANKS_MODAL_CONTENT = `<h3>Спасибо! <br>Заявка отправлена!</h3>
+	REG_FORM_VALIDATION_MESSAGE_PROFANITY = "В отправляемых данных есть некорректные символы. Замените их и попробуйте ещё раз.";
+	REG_FORM_THANKS_MODAL_CONTENT = `<h3 style="font-weight: 600;">Спасибо! <br>Заявка отправлена!</h3><br>
                             <p class="text">
                                 Я свяжусь с тобой в ближайшее время для уточнения деталей и назначения времени
                                 консультации.
