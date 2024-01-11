@@ -209,7 +209,7 @@
     }
 
     @include xs {
-      @include hr(117px, 0);
+      @include hr(117px, 7px 0);
     }
   }
 

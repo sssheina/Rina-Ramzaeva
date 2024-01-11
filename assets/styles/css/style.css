@@ -3174,7 +3174,7 @@ body._touch .menu__list > li._active .menu__arrow {
 @media only screen and (max-width: 427px) {
   .about__hr-title {
     width: 117px;
-    margin: 0;
+    margin: 7px 0;
     background-color: #635d5d;
     height: 2px;
     border: none;
