@@ -8407,47 +8407,46 @@ body._touch .menu__list > li._active .menu__arrow {
   }
 }
 
-.input-checkmark-name {
+.input-checkmark-name.ru {
   left: 325px;
 }
 @media only screen and (max-width: 1919px) {
-  .input-checkmark-name {
+  .input-checkmark-name.ru {
     left: 47%;
     top: 30%;
   }
 }
 @media only screen and (max-width: 1439px) {
-  .input-checkmark-name {
-    left: 47%;
+  .input-checkmark-name.ru {
+    left: 68%;
   }
 }
 @media only screen and (max-width: 767px) {
-  .input-checkmark-name {
+  .input-checkmark-name.ru {
     left: 68%;
   }
 }
 @media only screen and (max-width: 427px) {
-  .input-checkmark-name {
+  .input-checkmark-name.ru {
     left: 80%;
   }
 }
-
-.input-checkmark-name_en {
+.input-checkmark-name.en {
   left: 32%;
 }
 @media only screen and (max-width: 1919px) {
-  .input-checkmark-name_en {
+  .input-checkmark-name.en {
     left: 37%;
     top: 30%;
   }
 }
 @media only screen and (max-width: 1439px) {
-  .input-checkmark-name_en {
+  .input-checkmark-name.en {
     left: 55%;
   }
 }
 @media only screen and (max-width: 427px) {
-  .input-checkmark-name_en {
+  .input-checkmark-name.en {
     left: 63%;
   }
 }

@@ -201,7 +201,7 @@
 
     &:hover {
       background-color: $color-pinklight;
-      
+
       @include btn-hover;
     }
 
@@ -295,7 +295,7 @@
     position: absolute;
     top: 90%;
     left: 22%;
-    
+
     @include md {
       top: 60%;
       left: 16%;
@@ -411,40 +411,42 @@
 }
 
 .input-checkmark-name {
-  left: 325px;
+  &.ru {
+    left: 325px;
 
-  @include lg {
-    left: 47%;
-    top: 30%;
+    @include lg {
+      left: 47%;
+      top: 30%;
+    }
+
+    @include md {
+      left: 68%;
+    }
+
+    @include sm {
+      left: 68%;
+    }
+
+    @include xs {
+      left: 80%;
+    }
   }
 
-  @include md {
-    left: 47%;
-  }
+  &.en {
+    left: 32%;
 
-  @include sm {
-    left: 68%;
-  }
+    @include lg {
+      left: 37%;
+      top: 30%;
+    }
 
-  @include xs {
-    left: 80%;
-  }
-}
+    @include md {
+      left: 55%;
+    }
 
-.input-checkmark-name_en {
-  left: 32%;
-
-  @include lg {
-    left: 37%;
-    top: 30%;
-  }
-
-  @include md {
-    left: 55%;
-  }
-
-  @include xs {
-    left: 63%;
+    @include xs {
+      left: 63%;
+    }
   }
 }
 
