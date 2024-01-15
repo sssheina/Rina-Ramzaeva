@@ -3,9 +3,13 @@
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
+require 'dbfunctions/dbmain.php';
 
 # проверка, что ошибки нет
 if (!error_get_last()) {
+
+    $recordNumber = getNextRecordNumber();
+    $recordNumberS = strval($recordNumber);
 
     // Переменные, которые отправляет пользователь
     $name = $_POST['name'] ;
@@ -14,25 +18,13 @@ if (!error_get_last()) {
     $telegram = $_POST['telegram'];
     $text = $_POST['text'];
     //$file = $_FILES['myfile'];
-    
-    
-    // Формирование самого письма
-   // $title = "Заголовок письма";
-    //$body = "111";
-    //$body = "
-    //<h2>Новое письмо</h2>
-    //<b>Имя:</b> $name<br>
-    //<b>Почта:</b> $email<br>
-    //<b>WhatsApp:</b> $whatsApp<br>
-    //<b>Telegram:</b> $telegram<br><br>
-    //<b>Сообщение:</b><br>$text
-    //";
-    
+        
     // Формирование самого письма
     $title = "Заголовок письма";
 
     // Load HTML template
-    $html = file_get_contents("template.html");
+    // $html = file_get_contents("template.html");
+    $html = trim(file_get_contents("template.html"));
 
     // Replace placeholders with actual data
     $html = str_replace("{NAME}", $name, $html);
@@ -40,6 +32,7 @@ if (!error_get_last()) {
     $html = str_replace("{WHATSAPP}", $whatsApp, $html);
     $html = str_replace("{TELEGRAM}", $telegram, $html);
     $html = str_replace("{TEXT}", $text, $html);
+    $html = str_replace("{RECORDNUMBER}", $recordNumber, $html);
 
     // Set the email body
     $body = $html;
@@ -49,22 +42,25 @@ if (!error_get_last()) {
     
     $mail->isSMTP();
     $mail->CharSet = "UTF-8";
-    $mail->SMTPAuth   = true;
+    $mail->SMTPAuth = true;
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['data']['debug'][] = $str;};
-    
+  
     // Настройки вашей почты
-    $mail->Host       = ''; // SMTP сервера вашей почты
-    $mail->Username   = ''; // Логин на почте
-    $mail->Password   = ''; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
+    $mail->Host = ''; // SMTP сервера вашей почты
+    $mail->Username = ''; // Логин на почте
+    $mail->Password = ''; // Пароль на почте
+    $mail->SMTPSecure = '';
+    $mail->Port = 0;
     $mail->setFrom('', ''); // Адрес самой почты и имя отправителя
-    
+  
     // Получатель письма
-    //$mail->addAddress('');
-    $mail->addAddress(''); // Ещё один, если нужен
-    
+    $mail->addAddress('registration@rina-ramzaeva.com'); 
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;
+
+
     // Прикрипление файлов к письму
     /*if (!empty($file['name'][0])) {
         for ($i = 0; $i < count($file['tmp_name']); $i++) {
@@ -77,6 +73,7 @@ if (!error_get_last()) {
     $mail->isHTML(true);
     $mail->Subject = $title;
     $mail->Body = $body;
+    
     
   // Проверяем отправленность сообщения
   if ($mail->send()) {
