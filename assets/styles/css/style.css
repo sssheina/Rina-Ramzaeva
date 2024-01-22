@@ -3535,11 +3535,11 @@ body._touch .menu__list > li._active .menu__arrow {
 .benefits__title {
   padding-bottom: 28px;
   text-align: start;
-  width: 470px;
+  width: 499px;
 }
 @media only screen and (max-width: 1919px) {
   .benefits__title {
-    width: 286px;
+    width: 352px;
     padding-bottom: 15px;
   }
 }
