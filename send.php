@@ -10,6 +10,8 @@ if (!error_get_last()) {
 
     $recordNumber = getNextRecordNumber();
     $recordNumberS = strval($recordNumber);
+    $emailSettings = getEmailSettings();
+
 
     // Переменные, которые отправляет пользователь
     $name = $_POST['name'] ;
@@ -18,7 +20,8 @@ if (!error_get_last()) {
     $telegram = $_POST['telegram'];
     $text = $_POST['text'];
     //$file = $_FILES['myfile'];
-        
+    
+    
     // Формирование самого письма
     $title = "Заголовок письма";
 
@@ -45,17 +48,16 @@ if (!error_get_last()) {
     $mail->SMTPAuth = true;
     //$mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['data']['debug'][] = $str;};
-  
-    // Настройки вашей почты
-    $mail->Host = ''; // SMTP сервера вашей почты
-    $mail->Username = ''; // Логин на почте
-    $mail->Password = ''; // Пароль на почте
-    $mail->SMTPSecure = '';
-    $mail->Port = 0;
-    $mail->setFrom('', ''); // Адрес самой почты и имя отправителя
+    
+    $mail->Host = $emailSettings->host; // SMTP сервера вашей почты
+    $mail->Username = $emailSettings->username; // Логин на почте
+    $mail->Password = $emailSettings->password; // Пароль на почте
+    $mail->SMTPSecure = $emailSettings->smtpsecure;
+    $mail->Port = $emailSettings->port;
+    $mail->setFrom($emailSettings->fromaddress, $emailSettings->fromname); // Адрес самой почты и имя отправителя
   
     // Получатель письма
-    $mail->addAddress('registration@rina-ramzaeva.com'); 
+    $mail->addAddress($emailSettings->toaddress); 
     $mail->isHTML(true);
     $mail->Subject = $title;
     $mail->Body = $body;
@@ -73,6 +75,8 @@ if (!error_get_last()) {
     $mail->isHTML(true);
     $mail->Subject = $title;
     $mail->Body = $body;
+    
+
     
     
   // Проверяем отправленность сообщения
