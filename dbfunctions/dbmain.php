@@ -1,5 +1,7 @@
 <?php
 
+require 'dbinclude.php';
+
 const DB_RETURN_CODE_OK = 0;
 const DB_RETURN_CODE_CONNECTION_FAILED = 1;
 //define(DB_RETURN_CODE_OK, 0);
@@ -19,14 +21,11 @@ class EmailSettings{
 
 
 function getNextRecordNumber(){
-    $servername = "localhost";
-    $database = "u788686832_main_db";
-    $username = "u788686832_ekaterina_ramz";
-    $password = "Lm0O=aiu9/Q^";
+    $dbcredentials = $GLOBALS["dbcredentials"];
     $retval = 0;
- 
+    
     // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $database);
+    $conn = mysqli_connect($dbcredentials->servername, $dbcredentials->username, $dbcredentials->password, $dbcredentials->database);
     
     if (!$conn) {
         throw new Exception("Cannot connect to the database");
@@ -63,17 +62,13 @@ function getNextRecordNumber(){
 
 
 function getEmailSettings(){
-    $servername = "localhost";
-    $database = "u788686832_main_db";
-    $username = "u788686832_ekaterina_ramz";
-    $password = "Lm0O=aiu9/Q^";
-    $retval = 0;
+    $dbcredentials = $GLOBALS["dbcredentials"];
  
     // Create return object
     $retval = new EmailSettings();
     
     // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $database);
+    $conn = mysqli_connect($dbcredentials->servername, $dbcredentials->username, $dbcredentials->password, $dbcredentials->database);
     
     if (!$conn) {
         throw new Exception("Cannot connect to the database");
