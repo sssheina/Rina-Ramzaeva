@@ -50,7 +50,7 @@ https://github.com/sssheina/Psychologist-landing-page/assets/108290460/f323a8f5-
 ## View our Website:
 >Click the image below to view our website!
 
-[<img width="700" src="https://github.com/sssheina/Psychologist-landing-page/assets/108290460/59477ac8-3ff4-4d0a-bd56-7ba5d146dde4"/>](https://rina-ramzaeva.com/en.html)
+[<img width="700" src="https://github.com/sssheina/Psychologist-landing-page/assets/108290460/59477ac8-3ff4-4d0a-bd56-7ba5d146dde4"/>](https://rina-ramzaeva.netlify.app/)
 
 <br>
 <br>
